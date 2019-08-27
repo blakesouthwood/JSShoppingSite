@@ -1,0 +1,1596 @@
+
+<!--  iphone test -->
+<!DOCTYPE html>
+<html>
+<title>Modern Day News</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
+<link rel="stylesheet" href="/lib/w3-theme-teal.css">
+<body style="max-width:600px">
+
+
+<style>
+
+
+/* mouse over link */
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:hover {
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+
+.fixed-size-square {
+    display: table;
+    width: 20px;
+    height: 20px;
+    background: #4DF54E;
+}
+.fixed-size-square span {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+    color: white
+}
+
+
+
+div.staticfun {
+     position: relative;
+    left: 50px;
+    top: 250px
+    
+}
+
+
+div.upcomingevents {     /* what happens here */
+     position: relative;
+    left: 2px;   /*  this was 100 */
+     top: 50px;
+}
+
+
+div.static10 { 
+     position: relative;
+    left: 0px;   /*  this was 99 */
+     top: 24px;
+}
+
+div.static9 { 
+     position: relative;
+    left: 0px;
+     top: 10px;
+}
+
+
+/*   nice comments       */
+
+
+div.static1 {
+     position: relative;
+    left: 380px;
+}
+
+div.staticfooter {
+     position: relative;
+    left: 338px;
+    bottom: 5px;
+}
+
+
+
+
+
+
+
+div.menulist {
+     position: relative;
+    left: 50px;
+}
+
+
+div.staticiframe {
+     position: relative;
+    left: 25px;
+}
+
+
+div.cool {
+    position: absolute;
+    top: 400px;
+    left: 200px;
+    width: 750px;
+}
+
+
+div.linktable {
+    position: relative;
+    top: 80px;
+    left: 200px;
+}
+
+
+div.topwords {
+     position: absolute;
+     width: 500px; 
+     height: 40px;
+     left: 300px;
+     z-index: 2;
+}
+
+.thetable {
+     position: absolute;
+     bottom: 300px;
+     left: 300px;
+  }
+
+
+.showbox {
+    height:10px;
+    width:10px;
+    background: #7FFFD4; 
+    border: 2px solid #fff;
+    border-radius: 25px;
+    box-shadow: 0px 1px 5px #888888;
+    transform-origin:50% 50%;
+    transform:scale(1);
+    animation: pulse 0.6s infinite linear alternate;
+    -webkit-animation: pulse 0.6s infinite linear alternate;
+}
+@keyframes pulse {
+    to {
+        transform:scale(1.3);
+    }
+}
+@-webkit-keyframes pulse {
+    to {
+        transform:scale(1.3);
+    }
+}
+
+
+  table#table1 {
+    width:70%; 
+    margin-left:4%; 
+    margin-top: 2%;
+    margin-right:15%;
+  }
+  
+   table#table2 {
+    width:70%; 
+    margin-left:4%; 
+    margin-top: 2%;
+    margin-right:15%;
+  }
+  
+   table#table3 {
+    width:70%; 
+    margin-left:4%; 
+    margin-top: 2%;
+    margin-right:15%;
+  }
+  table#table00 {
+    width:70%; 
+    margin-left:4%; 
+    margin-top: 2%;
+    margin-right:15%;
+  }
+   table#table01 {
+    width:70%; 
+    margin-left:4%; 
+    margin-top: 2%;
+    margin-right:15%;
+  }
+ 
+ 
+.zu
+
+
+/*    left nav css   */
+
+.odd {
+  background-color: white;
+}
+.evn {
+  background-color: white;
+}
+.selodd {
+  background-color: #F8C471    ;
+}
+.selevn {
+  background-color: #F8C471    ;
+}
+/*
+footer {
+    position: relative;
+    left: 287px;
+    bottom: 4px;
+}
+*/
+
+
+div.static {
+     position: relative;
+    left: 75px;
+}
+
+
+
+.list1 tr:hover{
+background-color:#76D7C4;
+
+}
+
+
+</style>
+
+<script>
+
+//===================#####################============#############===============
+//=======#########============############============#########========#######=====
+//=======#########============############============#########========#######=====
+//=======#########============############============#########========#######=====
+//this is the data for idtag info
+
+	 var arrayLength= 8;  //add 1 more to it to make it work due to row 0 has nothing  //IMPORTANT this number must be the same as the number of excelDB rows
+    //be sure to change this number if more rows are added otherwise it won't see that data
+    
+    
+	 var detailsDB = new Array(arrayLength);
+    for(var i = 0;i< detailsDB.length;i++){
+      detailsDB[i] = new Array(arrayLength);
+    } //end loop
+    
+//I will need to store two image names or 1 and then call them front.#.jpg and back.#.jpg
+//                    0      1        2      3        4          5               6                 7
+ detailsDB[0][0]  = ['0',  'id_M0', 'data']; 
+ detailsDB[0][1]  = ['1',  'id_M1', '1 testing...strawberries'];
+ detailsDB[0][2]  = ['2',  'id_M2', 'this is 2','need VW GTI', 'any pickup F150 right now'];
+ detailsDB[0][3]  = ['3',  'id_M3', 'starbucks here','thanksgiving','GTI'];
+ detailsDB[0][4]  = ['4',  'id_M4', 'pumpkin pie', 'Porsche Carrera', 'new york times and chronicle' ];
+ detailsDB[0][5]  = ['5',  'id_M5', '5 pumpkin pie about this article and its all we need starbucks'];
+ detailsDB[0][6]  = ['6',  'id_M6', '6 is information about<br>this article and its all we need'];
+ detailsDB[0][7]  = ['7',  'id_M7', '7the heaven is information charlie brown about', 'christmas stuff here', 'new years eve'];
+ 
+//===================#####################============#############===============
+//=======#########============############============#########========#######=====
+//=======#########============############============#########========#######=====
+//=======#########============############============#########========#######=====
+
+
+
+
+
+
+
+/* GO TO BASKET */
+
+//<a href='#'  style='display:block;text-decoration:none';  onclick='gotocheckou(); return false;'>
+
+
+
+function gotobasket(){
+ window.location.href = "iphone_merchandise_basket.html";
+} //end function
+
+
+
+
+
+function gotonav(){
+ window.location.href = "iphone_merchandise_filter.html";
+} //end function
+
+
+
+
+
+
+function setmemory(v1,v2){  //key and value both strings
+   eval("localStorage.setItem('" + v1 + "','"  +  v2 + "'" + ");" );
+} 
+
+
+
+
+function setflag(){
+setmemory('recent_page_memory_flag','checkout');
+} //end func
+
+
+
+
+/*  MY COUNTER FUNCTION  */
+function mycounter(){
+//I need to create the counter elsewhere like on the filter page - sounds like good plan
+//here i just add 1 to it
+//I think that I need it to check in memory and I need to have it turned on on the home page
+//if(counter_value == "0"){
+
+
+// this is new   ============================
+  setmemory('flag_for_counter', "false");
+  
+  //before time stamp go thru the beginning of the function to determine if
+  // this is the first pass or not  (9 remember ==="undeclared"  comparison or !== "undeclared"
+  //#############################
+  //#############################
+  //I will need a counter inside of this function for itself the tiny_counter
+  // and it is set to false at the top as it flows down and then set to true at the bottom
+  // that it has run thru once so in the future it will skip the code.
+  
+  
+  var angel = getmemory("control_valve");
+  if(angel === "undefined"){  // what is the error message though if control_value doesn't exist?
+     getinitialtime() //this intializes this flag with a time stamp
+  } //end if
+  
+  if(angel !== "undefined"){ // that means that it's been initialized
+  
+  
+  } //end if
+  
+  //==============================
+  //this part down here can only run once
+  // just had a thought, what if the first time thru it doesn't access lecounter
+  // and it fills lecounter with 0 at the bottom that might decrease the complexity of it all.
+  
+  
+  setmemory('lecounter','0');
+  getmemory('lecounter');
+  var cool = getmemory("lecounter");
+  
+
+
+  var myvalue = parseInt(getmemory('lecounter'));
+  myvalue = myvalue -0;
+  myvalue = myvalue -0;
+  myvalue = parseInt(myvalue);
+
+  //adding 1 to the counter -
+  //myvalue = myvalue + 1;
+// now put the number into the counter memory slot
+setmemory('lecounter',myvalue);   //this puts it into memory
+
+} //end func
+//----------------------
+
+
+
+
+
+
+/*     checkout_beta.html
+
+generate dynamic table of what is in the basket here 
+//what is different is that I am NOT adding to the counter
+// I am not adding a new row item from CoffeeBean
+//so I don't need coffeebean whatsoever
+
+i need to know the counter value
+I need to grab data from teh slots and use a loop
+to generate the table rows
+
+
+//I was using snoopytime() on the basket page
+and so I changed the name on the checkout to snoopytime2();
+
+
+*/
+/*
+	               checkout page 
+	
+	*/
+	
+	
+
+//################## this determines a fork if last item in row clicked or elsewhere
+//##################
+/*         TRAFFIC LIGHT        */
+function  trafficlight2(x){ 
+ 
+var  numberchosen =numberchosen.toString(); //just added this 
+ var counter_value = parseInt(getmemory('lecounter')); 
+ counter_value = counter_value.toString(); //just added this
+  var counter_value = parseInt(getmemory('lecounter')); 
+  var answer= getmemory('last_row_deleted'); //this is either true or false   
+  if (answer == 'false'){ //meaning any item was clicked on except the bottom one not the last one
+     mrcoffee();   //mrcoffee() is only called if selected row is not the last item in the list 
+     showcounter();
+     snoopytime2(); 
+  }else{    //if  answer == 'true' means number chosen = counter value is the last one 
+    showcounter();
+    snoopytime2(); //this redraws the new rows at the top after deleting one
+}//end if
+} //end function
+//--------------------------------------
+
+
+
+//hollister calls snoopytime at the end of it
+
+/*  HOLLISTER  */ //==========================================================
+
+//what this function is grabbing the selected memory on details page and 
+// putting it into a new emmory slot based on the counter number
+// and therefore adding the slot memoory so that on the basket page it's loaded.
+// so this means that every time hollister is being called it's 
+// adding  a new row and filling it with what is in the CoffeeBean memory slot.
+
+
+function hollister(){
+
+var counter_value = parseInt(getmemory('lecounter')); //this grabs the counter number
+var bean = getmemory('CoffeeBean'); //this grabs the selected item and puts it into a memory slot daaaa
+//this puts the selected item CoffeeBean into a slot memory
+var iphone = counter_value;
+var xmas = iphone.toString();
+eval("setmemory('slot" + xmas +"',bean);"); 
+snoopytime2();
+} //end function
+//-----------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+//===================#####################============#############===============
+//=======#########============############============#########========#######=====
+//=======#########============############============#########========#######=====
+//=======#########============############============#########========#######=====
+// tuesday , november 21st, 2017 starbucks  11:31 am 
+	/*
+	   this will be info data for description accessed from the idtag
+	  // searches based on idtag comopared with idtag in input[1]
+      // var  num = 1;  //so this too is a dynamic database - needs a name.
+	*/
+		//        array[5] this is where the id tag address within the slotmemory
+		
+		//look in CoffeeBean and in ChocolateBean
+        // array[5] is the idtag location in the array 
+        // array[8] is frontpic, array[9] is backpic
+        
+
+		//I need to get the address in the array number now 
+		// that will be fed into input[1] for searching in real-time
+		
+		
+		
+		
+	/*    GO NOW  FUNCTION    */
+	function gonow(x){  //perhaps put an argument in here, yes this works  
+	var testing = 0;
+	var input = new Array();
+	    input[input.length]  = "";
+	    input[input.length]  = x; //"id_M5";  //this is input[1];
+	    // alert(input[1]);
+	     // so I just need to put the idtag name into input[1] and
+	     // then the gap search engine will return the data
+	     // for that item.
+	     //so all of the data description for each item is within this database.
+	     //and if I have it write it to a div it can be added after the output
+	     // has been created for the basket page and the div # will be teh same
+	     // as the z number for flipping the pics perhaps.  
+	     
+	     
+/*         GAP SEARCH ENGINE            */
+   
+/* THE GAP SEARCH ENGINE DATABASE ID TAGS */   //<===== the database is at the top
+//============= LOOP ===================
+for(var j = 0;j< detailsDB.length;j++){  
+           if((detailsDB[0][j][1] == input[1]) ){   //matches what we are searching for the idtag.
+
+
+//I will need to add data
+// to write this dynamically to a div using innerHTML
+
+
+
+//I will need to put the info into either an array or into slot memory
+
+break;// we are done we found it if there is a match
+   // row_capture[first_row_num] = detailsDB[0][j][0];
+   } //end if
+} //END LOOP 
+} //end function
+//---------------------------------------------------------------------------
+
+//=======#########============############============#########========#######=====
+//=======#########============############============#########========#######=====
+//=======#########============############============#########========#######=====
+
+
+
+
+
+
+
+
+
+/*  ADD 2 NUMBERS FUNCTION  */ 
+function addtwonumbers(x,y){
+	var c = x + y; 
+	return c;
+}//end add2numbers function
+
+
+
+
+
+
+
+/* ADD NUMBERS IN AN ARRAY FUNCTION */
+function add_numbers_array(sample){   //giving it an array as an argument
+var total=0;  
+for(var i in sample) { 
+    total += parseInt(sample[i]); 
+ } //end for LOOP
+   return total;
+} //end function adding number
+
+
+
+
+
+
+
+/*  x_times_y(x,y) multiplying function   */
+function x_times_y(x,y){
+var x = parseInt(x);
+    x = x -0;
+    var y = parseInt(y);
+    y = y -0;
+    var z = x * y;
+return z;
+}//end function x_times_y
+
+
+
+
+
+
+
+
+// friday, november 10th, 2017 halfmoon bay starbucks
+
+//it looks like I have the same code on checkout as on the basket page
+// and I need to not having anything similar.
+
+
+
+
+/*  show counter value */  //added on monday november 13ths in emeryville to see what the machine sees
+
+function show_counter_value(){
+var cheese = parseInt(getmemory('lecounter')); 
+if(cheese === "undefined" || cheese == null){
+//alert("it's undefined or null");
+cheese = "undefined";
+} //end if
+
+cheese = cheese.toString();
+
+ //document.getElementById("counter_real_time").value=cheese; 
+ document.getElementById("f_counter_now").value   = cheese;
+ //document.getElementById("countervalue").value=counter_value;
+}
+
+
+
+
+
+
+
+
+
+//####################################################################################################
+
+/* snoopy time makes the output of the selected items saved in the memory slots */
+
+//-------------------------
+/*  SNOOPY TIME FUNCTION */
+//-------------------------
+function snoopytime2(){
+
+var counter_value = parseInt(getmemory('lecounter')); 
+
+//this turns counter_value from a string into a number for math
+counter_value = counter_value -0;
+counter_value = counter_value +1;  // adding 1 here to counter_value
+
+/*       pumpkin rows div     */
+
+var halfmoonbay = new Array();  //this array is added to for adding together the subtotals
+    halfmoonbay[halfmoonbay.length] = parseInt(0);
+    
+ var jumba = "<div id='pumpkin_rows'>";
+     jumba += "<table  bgcolor= palegreen width = 750>"; //will change width to 500 for production
+
+  // LOOP STARTS HERE 
+ //===========================================================
+for(x =0; x < counter_value; x++){  //looping based on the number of the counter
+if(x == 0){ //skips 0 since I am not using position 0 for slots
+  continue;
+} //end if
+
+//so x should start from 1 at this point after skipping 0
+var xmas = x;
+//this grabs each memory slot one by one starting from the first and loops
+// thru all of them based on the counter
+
+xmas = xmas.toString(); //so it sees it as a string and not a number
+var fish = eval("getmemory('slot" + xmas +"');"); //this finally works!!!!
+
+var temp = [];
+var temp = fish.split(','); //this takes the commas out of the array
+
+    jumba += "<tr><td bgcolor=yellow width=120>";   
+   
+    // item number right here 
+
+    jumba += "&nbsp;"  //edit item
+    jumba += x; //loop number showing the item 
+    jumba += "&nbsp;::</font></td><td>"; 
+    jumba += temp[0];
+    jumba += "&nbsp;"
+    jumba += "<td width= 4>";
+    //------------
+      jumba += x;         //loop number showing the item see if it works
+      jumba += "</td>";
+ 
+      jumba += "<td width= 28 >&nbsp;"
+    if(temp[1] == "hats"){
+      jumba += "hat";
+     }// end if
+     
+     //------------------------------
+     if(temp[4] != "longsleeve" && temp[4] != "hoodie" && temp[1] == "shirts"){
+       jumba += "shirt";
+     } //end if
+     
+     //-----------
+    if(temp[4] == "longsleeve"){
+          jumba += "lslv";
+     }// end if
+     
+    if(temp[4] == "hoodie" &&  temp[1] != "hats"){
+          jumba += "hdy";
+     }// end if
+  
+    jumba += "</td>";
+    jumba += "<td>";
+    jumba += temp[2];
+    jumba += "&nbsp;"
+    jumba += temp[3];
+    jumba += "</td>";
+    jumba += "<td>";
+    jumba += temp[4];
+    jumba += "&nbsp;"
+    jumba += temp[5];
+    jumba += "</td>";
+    jumba += "<td>";
+    jumba += temp[6];
+    jumba += "&nbsp;"
+    jumba += temp[7];
+    jumba += "</td>";
+    jumba += "<td>";
+    jumba += temp[8];
+    jumba += "&nbsp;"
+    jumba += temp[9];
+    jumba += "</td>";
+    jumba += "<td>";
+    jumba += temp[10];
+    jumba += "&nbsp;"
+    jumba += temp[11];
+    jumba += "</td>";
+    
+    //just added these 2 numbers for quantity and color from menus oct 30 rwc starbucks whipple
+   
+    var shirt_color;
+    
+     if(temp[12] == '1'){
+       shirt_color = "white";
+     }//end if
+     if(temp[12] == '2'){
+       shirt_color = "grey";
+     }//end if
+     if(temp[12] == '3'){
+       shirt_color = "black";
+     }// end if
+     if(temp[12] == '4'){
+       shirt_color = "blue";
+     }// end if
+     if(temp[12] == '5'){
+      shirt_color = "pink";
+     }// end if
+     
+     jumba += "<td ";
+     jumba += "bgcolor="; //color for the tds in the row for the color
+     
+     if(shirt_color == "blue"){
+      jumba += "skyblue"; //special scenario if blue
+     }//end if
+     
+     if(shirt_color != "blue"){
+      jumba += shirt_color; 
+     } //end if
+     //jumba += 
+     jumba += ">";
+     
+    if(shirt_color == "black"){
+    jumba += "<font color=white>";
+    jumba += shirt_color; 
+    jumba += "</font>";
+    } //end if
+    
+    if(shirt_color != "black"){
+    jumba += shirt_color;
+    } //end if
+    
+    jumba += "</td>";
+    
+    
+    
+    
+    
+    
+    //#################################################
+    // thursday, november 2, 2017 9am at Peet's Coffee in Half Moon Bay
+//put edit button here that is based on the current slot number and jump to the details selected page
+//but I will need a flag to let it know that it's the same except it needs to know the information
+// for that item from memory and have the correct color and quantity and size and price
+// and have "save changes" "delete" but not 'add to basket';;
+
+
+    jumba += "</tr>";
+ 
+//=======================================================
+// just add another table row here showing price x quantity and total
+//7 and 11 and the total then I need to take the total and add it to my subtotal_adder
+
+ var theprice    = parseInt(temp[7]);
+ var thequantity = parseInt(temp[11]);
+ var cocacola = x_times_y(theprice,thequantity);
+      jumba += "<tr>";
+      jumba += "<td>&nbsp;";
+      jumba += theprice;
+      jumba += "&nbsp;</td>";
+      jumba += "<td bgcolor=lavender>&nbsp;";
+      jumba += thequantity;
+      jumba += "&nbsp;</td>";
+      jumba += "<td bgcolor=orange>&nbsp;";
+      jumba += cocacola;  // x times y
+      jumba += "&nbsp;</td>";
+      jumba += "</tr>";
+
+ //this adds the current subtotal to array halfmoon bab
+ halfmoonbay[halfmoonbay.length] = parseInt(cocacola);
+ 
+} // end for loop ========================= end for loop =================================
+// END LOOP
+// THIS ADDS THE NUMBERS OF ALL THE SUBTOTALS FROM THE ARRAY HALFMOONBAY
+var all_rows_subtotals = add_numbers_array(halfmoonbay);
+    jumba += "<tr bgcolor=skyblue><td>&nbsp;$";
+    jumba += all_rows_subtotals;
+    jumba += "</td></tr>";
+    
+    //new row 
+    jumba += "<tr><td>";
+    //jumba += counter_value;
+    jumba += "&nbsp;</td></tr>"
+    jumba += "</table></div>";
+    document.getElementById("pumpkin_rows").innerHTML = jumba;
+    //this div below this line is at the top of the page above the items in memory
+     counter_value = counter_value -1;
+     coolnow   = "<div id = 'show_row'>";
+     coolnow  += "<table bgcolor=lightyellow width = 350><tr><td>&nbsp;";
+     
+     //################################
+     //this will be reduced by one number when an item is deleted and the page is regenerated
+     // Nov 2 HMB Peet's Coffee
+     coolnow  += counter_value;
+     if(counter_value == 1){
+     coolnow  += "&nbsp;item";
+     } //end if
+     
+     if(counter_value > 1){
+     coolnow  += "&nbsp;items"; 
+     }
+      coolnow += " in your basket</td></tr></table></div>";
+    document.getElementById("show_row").innerHTML = coolnow;
+//this puts the number of items (rows) that are output in the basket for use when deleting items 
+var counter_value = parseInt(getmemory('lecounter'));
+    setmemory('bluejaybackup',counter_value);
+}//end snoopytime2 function
+//---------------------------------------------------\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FUNCTION MULTIPLY THE PRICE BY QUANTITY */
+function multiply_the_price_by_quantity(){
+//grab this from CoffeeBean
+var candy  = getmemory('CoffeeBean'); 
+     money  = new Array();
+ var money  = apple.split(',');
+ var theprice    = parseInt(money[7]);
+ var thequantity = parseInt(money[11]);
+ var cocacola    = x_times_y(theprice,thequantity);
+ } //end function multiply price by quantity
+
+
+
+
+
+
+
+
+
+
+
+/*  X TIMES Y FUNCTION RETURN Z */
+function x_times_y(x,y){
+var x = parseInt(x);
+    x = x -0;
+var y = parseInt(y);
+    y = y -0;
+    var z = x * y;
+    return z;
+}//end function x_times_y
+
+
+
+
+
+
+
+/*   SHOW COUNTER FUNCTION */
+function showcounter(){
+var cheesey = parseInt(getmemory('lecounter')); 
+  document.getElementById("target4").value = cheesey;
+} //end function
+
+
+
+/*   SHOW THECOUNTER FUNCTION */
+function showthecounter(){
+var cheesey = parseInt(getmemory('lecounter')); 
+ // document.getElementById("target4").value = cheesey;
+  alert("counter = " + cheesey);
+} //end function
+
+
+
+
+/*  ADD 2 NUMBERS FUNCTION  */ 
+function addtwonumbers(x,y){
+var c = x + y; 
+return c;
+}//end add2numbers function
+
+
+
+
+
+
+
+
+/* ADD NUMBERS IN AN ARRAY FUNCTION */
+function add_numbers_array(sample){   //giving it an array as an argument
+var total=0;  
+for(var i in sample) { 
+    total += parseInt(sample[i]); 
+ } //end for LOOP
+   return total;
+} //end function adding number
+
+
+
+/*  ADD CUSTOMER INFO    */
+function add_customer_info(){
+
+// get values from each field and end with &;
+var first_name      =  window.document.customer.firstname.value;   
+var last_name       =  window.document.customer.lastname.value;  
+var street_address  =  window.document.customer.streetaddress.value;   
+var apartment_number=  window.document.customer.apartmentnumber.value;   
+var more_address1   =  window.document.customer.moreaddress1.value;   
+var more_address2   =  window.document.customer.moreaddress2.value;   
+var city            =  window.document.customer.cityname.value;   
+var state           =  window.document.customer.statename.value;   
+var country         =  window.document.customer.countryname.value;   
+var postalcode      =  window.document.customer.postalcode.value;   
+var phonenumber     =  window.document.customer.phonenumber.value;   
+var message_number  =  window.document.customer.messagenumber.value;   
+var email_address   =  window.document.customer.emailaddress.value;   
+
+
+var dot = "&";
+var moreinfo =      first_name + dot + last_name            +
+              dot + street_address + dot + apartment_number + 
+              dot + more_address1 + dot + more_address2     + 
+              dot + city + dot + state + dot + country      + 
+              dot + postalcode + dot + phonenumber          + 
+              dot + message_number + dot + email_address;
+
+
+
+setmemory("cust_info", moreinfo);
+var ohyeah = getmemory('cust_info');
+alert(ohyeah);
+} //end func
+
+
+
+
+
+
+
+
+
+
+/*  x_times_y(x,y) multiplying function   */
+function x_times_y(x,y){
+var x = parseInt(x);
+    x = x -0;
+    var y = parseInt(y);
+    y = y -0;
+    var z = x * y;
+return z;
+}//end function x_times_y
+
+
+
+
+
+
+
+
+/*  set memory  */
+function setmemory(v1,v2){  //key and value both strings
+   eval("localStorage.setItem('" + v1 + "','"  +  v2 + "'" + ");" );
+} 
+
+
+
+
+
+
+//==================================
+/*    getmemory()   get memory   */
+function getmemory(x1){  //using the key it returns the value
+    eval("var atm = localStorage.getItem(" + "'" + x1 + "');" );
+  return atm;
+}//end func
+
+
+
+
+
+
+//=====================================
+/*   deletememory()  delete memory      */
+function deletememory(x1){
+ eval("localStorage.removeItem('" + x1 + "');");
+}//end func
+
+
+
+
+
+
+/*  ADD 2 NUMBERS FUNCTION  */ 
+function addtwonumbers(x,y){
+var c = x + y; 
+return c;
+}//end add2numbers function
+
+
+
+
+
+
+
+
+/* ADD NUMBERS IN AN ARRAY FUNCTION */
+function add_numbers_array(sample){   //giving it an array as an argument
+var total=0;  
+for(var i in sample) { 
+    total += parseInt(sample[i]); 
+ } //end for LOOP
+   return total;
+} //end function adding number
+
+
+
+
+
+
+
+
+
+/*  x_times_y(x,y) multiplying function   */
+function x_times_y(x,y){
+var x = parseInt(x);
+    x = x -0;
+    var y = parseInt(y);
+    y = y -0;
+    var z = x * y;
+return z;
+}//end function x_times_y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*       COUNTER MINUS ONE     */
+ function counterminusone(){
+//grab counter value
+  var counter_value = parseInt(getmemory('lecounter')); 
+  var starting_value = counter_value;
+  //turn counter value string into a number to do math on it
+  counter_value = counter_value - 0; //turning a string into a number
+  counter_value = counter_value - 0; 
+  counter_value = counter_value - 1; //subtracting 1 here at this point
+  
+  //now turn it into a string
+  var bicycle = counter_value.toString();
+  
+  // put the new counter value into the memoryslot lecounter
+  setmemory('lecounter', bicycle);
+  }//end func
+//-----------------
+
+//-------------------------------------------------------------
+//doing subtotal Math
+//monday, nov 27th, 2017
+/* ADD TAXES    */
+function addtaxes(){
+	var subtotal =  "650";   //what was above 
+	var shipping = "18.50";  //example
+	subtotal = parseFloat(subtotal);
+	shipping = parseFloat(shipping);
+	var grandtotal = addtwonumbers(subtotal,shipping);
+alert("grandtotal =" + grandtotal);
+} //end func
+
+
+
+/*  ADD 2 NUMBERS FUNCTION  */ 
+function addtwonumbers(x,y){
+	var c = x + y; 
+	return c;
+}//end add2numbers function
+
+
+
+
+
+
+/*   RESET COUNTER   */
+
+function resetcounter(){
+  deletememory('slot1');  //which makes it go away so the counter can be restarted
+  //redirect
+  window.location.href = "iphone_home.html";
+} //end function
+      
+ function navmenu(){
+   alert("testing menu system");
+} //end function
+
+
+//---------------------                                                    
+function setmemory(v1,v2){  //key and value both strings
+    eval("localStorage.setItem('" + v1 + "','"  +  v2 + "'" + ");" );
+} // end func
+
+function getmemory(x1){  //using the key it returns the value
+  eval("var atm = localStorage.getItem(" + "'" + x1 + "');" );
+  return atm;
+}//end func
+
+
+function setflag(){
+setmemory('recent_page_memory_flag','aboutus');
+} //end func
+
+
+/* NAV MENU HAMBURGER OVERLAY */
+function navmenu(){
+   //alert("testing menu system");
+} //end function
+
+
+
+//each page would have it's own preset id which is the number
+// and the variable is set on the second line of the same function
+// on each page. 
+
+
+
+
+
+//#######################################
+//      OPEN MENU 
+//#######################################
+function open_menu(){ 
+  hamburger_id_of_page_came_from();
+}
+//-------------------
+//########################################
+//     HAMBURGER ID OF PAGE CAME FROM 
+//#########################################
+function hamburger_id_of_page_came_from(){
+var this_page = "6.5";    
+setmemory('fedex',this_page);                                            
+window.location.href = "iphone_hamburger_menu.html";                                           
+  } //end                                                        
+//---------------------                                                    
+                                                     
+
+
+</script>
+</head>
+<body onload="setflag();show_counter_value();">
+<!--
+<table width = 500>
+<tr><td width = 110></td><td><font face="Menlo"><font size=4>Modern Day News</font></td></tr>
+</table>
+-->
+<!--
+<table width = 500>
+<tr><td width=25 height = 18 valign=center align=right>
+<a href='#' onclick='open_menu();return false;'>
+<img src="hamburger2.jpg" alt="navigation" height="20" width="20"></a>   </td>
+<td width = 95></td><td><font face="Menlo"><font size=4>Modern Day News&nbsp;<font color=mediumpurple><font size=1><b></b></font></font></td></tr>
+</table>
+-->
+
+<table width = 500>
+<tr><td width=25 height = 18 valign=bottom align=left>
+<a href='#' onclick='open_menu();return false;'>
+<img src="hamburger2.jpg" alt="navigation" height="16" width="20"></a>   </td>
+<td width = 95></td><td><font face="Menlo"><font size=4>Modern Day News&nbsp;<font color=mediumpurple><font size=1><b></b></font></font></td></tr>
+</table>
+
+
+<table   CELLPADDING='3' style='border-collapse:collapse;border: 
+1px solid black; '  width = 410  border = 1 bgcolor=white  >
+<tr><td  align=center><font size=1><font face='Menlo'><a href='iphone_home.html' 
+style='display:block;text-decoration:none'><FONT COLOR=BLACK>Home</a></td>
+
+
+     <td align=center><font size=1><font face='Menlo'><a href='iphone_characters.html'
+      style='display:block;text-decoration:none'>Characters</a></td>
+      
+     <td align=center ><font size=1><font face='Menlo'><a href='iphone_news.html' 
+     style='display:block;text-decoration:none'>News</a></td>
+     
+     <td align=center><font size=1><font face='Menlo'><a href='iphone_videos.html' 
+     style='display:block;text-decoration:none'>Videos</a></td>
+     
+   
+     
+    <td align=center bgcolor=palegreen><font size=1><font face='Menlo'><a href='#' 
+     style='display:block;text-decoration:none'>Merchandise</a></td>
+     
+      <td align=center nowrap><font size=1><font face='Menlo'><a href='iphone_aboutus.html'
+      style='display:block;text-decoration:none'>About Us</a></td>
+     
+     <td align=center nowrap><font size=1><font face='Menlo'><a href='iphone_contactus.html'
+      style='display:block;text-decoration:none'>Contact Us</a></td>
+     </tr></table>
+     
+     
+     
+<table   CELLPADDING='1' style="border-collapse:collapse;border: 1px solid #e8e8e8; "  width = 410  border = 1 bgcolor=white  >
+<tr><td  width= 20%  bgcolor=white align=center><font size=1><font face='Menlo'><a href='iphone_merchandise_filter.html' style='text-decoration:none'><FONT COLOR=black>Filter </a></font></td>
+<td width= 20% bgcolor=white align=center><font size=1><font face='Menlo'><a href='iphone_merchandise_shop.html' style='text-decoration:none'><FONT COLOR=black><font color=black>Shop</a></font></td>
+<td width= 20% bgcolor=white align=center><font size=1><font face='Menlo'><font color=lightgrey>Details</font></td>
+<td width= 20%  align=center><font size=1><font face='Menlo'><a href='iphone_merchandise_basket.html' style='text-decoration:none'><font color=black>Basket</a></font></td>
+<td width= 20%  bgcolor=#81D4FA align=center><font size=1><font face='Menlo'><a href='' style='text-decoration:none'><font color=black>Check Out</a></font></td>
+</tr></table
+ 
+
+<br><!-- this orange box will appear until the x is clicked to close it -->
+
+
+<br>
+<!-- dynamically generated soon just like what is on shopping basket page -->
+
+
+ <table bgcolor=lavender border=0 spacing = 0 width = 155 style="border: 1px solid #D8D8D8;">
+ <tr><td align=center>Order Summary</td></tr></table>
+<table><tr><td height =5></td></tr></table>
+
+ <table width = 420><tr><td align=left vaign=top width= 10></td><td align=left valign=top>
+
+<!--  number of items at top displayed here  -->
+<script>
+//--------------
+//--------------
+//just have the code here 
+var counter_value = parseInt(getmemory('lecounter'));  //get counter total here 
+var printout = "<table bgcolor=lightyellow   border=0 spacing = 0 "; 
+    printout += " width = 250 style='border:"; 
+    printout += " 1px solid #D8D8D8;'><tr><td align=center>";
+    printout += counter_value; //number of items which is the same as the counter number
+    
+    //==========================================================================
+    //===== all new code inserted nov 25 for scenario of counter = NaN and it 
+    // therefore resets the counter to 0 and shows 0 items in basket display at top.
+    
+    //var dodgeball = counter_value
+    //dodgeball = dodgeball.toString()
+    var counter_value = parseInt(getmemory('lecounter')); 
+    //using a flag here so that the counter is only reset once
+  
+    var flagfortrue = "false";
+    if (isNaN(counter_value) == 'true'){  //not a number
+      printout += "0 items in your basket";
+      mycounter(); //restarts the counter at 0 since it's showing NaN
+      flagfortrue = "true";
+    } //end if
+    
+   var testing = counter_value;
+       testing = testing.toString();
+   if(testing == "NaN" && flagfortrue == "false"){
+      printout += "0 items in your basket";
+      mycounter();
+   } //end if 
+   /////////////// 
+    
+    ////===============================================================
+    
+    if(counter_value == 1 ){
+    printout += " item in your basket";
+    }else{ //implies here greater than 1
+    printout += " items in your basket";
+    } //end if else
+    printout += "</td></tr></table>";
+    document.write(printout);
+
+</script>
+<!--  end of number of items -->
+<table width = 405 border=1  CELLPADDING='2' style="border-collapse:collapse;border: 1px solid #D8D8D8; ">
+ <tr bgcolor=aliceblue><td width= 30 align=center colspan=2>Type</td><td width = 130 align=center nowrap>Description</td>
+ <td width = 4 align=center>Gn</td>
+ <td width = 8 align=center>Siz</td><td width = 8 align=center>Color</td><td width= 20  align=right>Qty</td>
+ <td width= 25 align=center>Prc</td><td width = 20 align=right>Total</td></tr>
+<!-- loop here -->
+<script>
+/// start JavaScript code here ##
+
+//there is NO FUNCTION being called - this is dynamically generated immediately like JSPs.
+
+//  Description   Gender  Size  Item  Quantity   Price  Color  subtotal
+// get counter number
+//loop thru the slots in memory that's it
+var counter_value = parseInt(getmemory('lecounter')); 
+//adding 1 to the loop since the 0 isn't counted for my slots and it has to do one more 
+counter_value = counter_value -0;
+counter_value = counter_value +1; 
+// var jumba = "<div id='checkout_rows'>";
+  //   jumba += "<table  bgcolor= palegreen width = 750>"; //will change width to 500 for production
+  
+ 
+  
+  // LOOP STARTS HERE  friday, november 10th
+ //what this does is create each row of output for the summary on checkout
+ //filling each row with the current slot# accessed from the loop 
+ //this simplifies the code since it reduces any overhead of extra functions
+ // and it's pointless to recalculate everything and this way what
+ //happens on the checkout page will be the same as on the basket page in theory.
+ 
+    var jumba = "";
+
+
+    
+//=================================================================
+//LOOP STARTS  and grabs data from slot memories using the counter
+for(x =0; x < counter_value; x++){  //looping based on the counter number
+if(x == 0){ //skips 0 since I am not using position 0 for slots
+  continue;  //skip 0 
+} //end if
+
+//so x should start from 1 at this point since 0 is skipped
+
+var xmas = x;  //this is the counter number
+
+
+//this grabs each memory slot one by one starting from the first and loops
+// thru all of them based on the counter
+
+xmas = xmas.toString(); //so it sees it as a string and not a number
+
+var fish = eval("getmemory('slot" + xmas +"');"); 
+var temp = [];
+var temp = fish.split(','); //this takes the commas out of the array
+var deck =getmemory('slotnumbers');
+var purple = [];
+var purple = deck.split(','); //this takes the commas out of the array
+
+
+// it has to start using table rows and not a table tag
+  //loop number showing the item see if it works should be the item number 
+    jumba += "<tr>";
+    jumba += "<td align=center>";
+    jumba += x;          
+    jumba += " </font></td><td>"; 
+
+    
+    if(temp[1] == "hats"){
+     jumba += "hat";
+    }//end if
+    
+     if(temp[1] == "shirts" && temp[4] == "longsleeve"){
+       jumba += "lslv";
+    
+    }//end if
+    
+     if( temp[1] == "shirts"  && temp[4] == "hoodie" ){
+       jumba += "hdy";
+     }// end if
+    
+    if(temp[4] != "longsleeve" && temp[4] != "hoodie" && temp[1] == "shirts"){
+       jumba += "shirt";
+     } //end if
+    ///=========
+    
+    jumba += "</td><td>&nbsp;"
+  
+    jumba += temp[6];  
+ 
+    jumba += "</td>";
+    jumba += "<td align=center>";
+    if(temp[2] == "mens"){
+    jumba += "M";
+    } //end if
+     if(temp[2] == "womens"){
+    jumba += "W";
+    } //end if
+    
+     if(temp[2] == "girls"){
+    jumba += "G";
+    } //end if
+    
+    if(temp[2] == "boys"){
+    jumba += "B";
+    } //end if
+      
+    jumba += "&nbsp;</td>";
+    jumba += "<td align=center>";
+ 
+    //==========================
+    jumba += temp[3];
+    jumba += "&nbsp;"
+    jumba += "</td>";
+    jumba += "<td align=center>";
+  
+     if(temp[12] == "1"){
+      jumba += "White";
+    }//end if
+    
+       if(temp[12] == "2"){
+      jumba += "Grey";
+    }//end if
+    
+       if(temp[12] == "3"){
+      jumba += "Black";
+    }//end if
+    
+     if(temp[12] == "4"){
+      jumba += "Blue";
+    }//end if
+    
+       if(temp[12] == "5"){
+      jumba += "Pink";
+    }//end if
+
+    jumba += "</td>";
+    jumba += "<td align=center>";
+    jumba += temp[11];   
+    jumba += "</td>";
+    jumba += "<td align=right>";
+    jumba += temp[7];
+    jumba += "&nbsp;"
+    jumba += "</td>";
+    jumba += "<td align=right>";
+    jumba += "&nbsp;"
+    jumba += purple[x];       //subtotal
+    jumba += "</td></tr>";
+    
+    } //end loop
+    
+ // I will add teh math calculations from another slot number from the other page later 
+ //now I decided to fill a special slot with math totals from the basket page
+ // and then I will access it on this page checkout for output
+ 
+ 
+ //----------------------------------------------------------------------------
+ //================================ starbucks friday november 10th ============
+ 
+ 
+
+//this is after the loop is finished
+//new row 
+var cc = counter_value;
+    jumba += "</table><table width = 405 border=1  CELLPADDING='2' style='border-collapse:collapse;border: 1px solid #D8D8D8; '>";
+    jumba += " <td align=right  >SubTotal&nbsp;$&nbsp;";
+    
+    // if the total is nonexistent if no data 
+      if (isNaN(cc) == 'true'){ 
+           
+           jumba += '0';   //grand total     
+      }else{
+           jumba += purple[cc];  
+    } //end if else    
+    // if the total is nonexistent if no data
+      
+    jumba += "</td></tr>"
+    jumba += "</table></div>"; //don't think I need the </div> at this point but it won't hurt
+    
+ 
+    document.write(jumba);
+
+// add "</table>" to the end to close the table 
+</script>
+<!-- end loop  -->
+
+
+
+
+
+
+
+<br>
+ <table width = 420>
+ <tr><td width = 2></td><td>
+
+
+<table bgcolor=honeydew    style='border:1px solid black;'   width=180><tr><td align=center><a href='#'  style='display:block;text-decoration:none';  onclick='gotonav(); return false;'>Continue Shopping</a></td></tr></table></td>
+
+ <td width= 10>&nbsp;</td> <td><table bgcolor=LavenderBlush     style='border:1px solid black;'   width=180><tr><td align=center><a href='#'  style='display:block;text-decoration:none';  onclick='gotobasket(); return false;'>Edit or Delete Item</a></td> </tr></table>
+</td></tr></table>
+
+
+
+
+<hr>
+
+<table  bgcolor=lavender border=0 spacing = 0 width = 135 style="border: 1px solid #D8D8D8;"><tr><td align=left>Information</td></tr></table>
+<form name ="customer">
+<table width = 375>
+<tr><td>First Name</td><td align=left>Last Name</td></tr>
+<tr><td><input type = text name = "firstname" size = 15></td><td align=left><input type = text name ="lastname" size = 20></td></tr>
+<tr><td>Street Address</td><td align=left>Apartment Number</td></tr>
+<tr><td><input type = text name = "streetaddress" size = 15></td><td align=left><input type = text name ="apartmentnumber" size = 20></td></tr>
+<tr><td>More Address</td><td align=left>More Address</td></tr>
+<tr><td><input type = text name = "moreaddress1" size = 15></td><td align=left><input type = text name ="moreaddress2" size = 20></td></tr>
+
+<tr><td>City</td><td align=left>State</td></tr>
+<tr><td><input type = text name = "cityname" size = 15></td><td align=left><input type = text name ="statename" size = 20></td></tr>
+
+<tr><td>Country</td><td align=left>Postal Code</td></tr>
+<tr><td><input type = text name = "countryname" size = 15></td><td align=left><input type = text name ="postalcode" size = 20></td></tr>
+<tr><td>Phone Number</td><td align=left>Message Number/Text</td></tr>
+<tr><td><input type = text name = "phonenumber" size = 15></td><td align=left><input type = text name ="messagenumber" size = 20></td></tr>
+<tr><td colspan=2>Email Address </td><td align=left></td></tr>
+<tr><td colspan=2><input type = text name = "emailaddress" size = 37></td></tr>
+
+</table>
+</form>
+
+<hr>
+
+ <table bgcolor=lavender border=0 spacing = 0 width = 135 style="border: 1px solid #D8D8D8;">
+ <tr><td align=left>Delivery</td></tr></table>
+<table><tr><td height =2></td></tr></table>
+<form action="">
+ <table width = 420><tr><td align=left vaign=top width= 10></td><td align=left valign=top>
+
+ <table width = 380 border=1  CELLPADDING='2' style="border-collapse:collapse;border: 1px solid #D8D8D8; ">
+ <tr><td><input type="radio" name="gender" value="standard"></td><td >&nbsp;3 day</td><td>3 to 4 biz days&nbsp;&nbsp;&nbsp;</td><td align=right>$15.00&nbsp;&nbsp;&nbsp;</td></tr>
+<tr><td><input type="radio" name="gender" value="2day"></td><td>&nbsp;2 day </td><td >&nbsp;2 to 3 biz days</td><td align=right>&nbsp;$16.95&nbsp;&nbsp;&nbsp;</td></tr>
+<tr><td><input type="radio" name="gender" value="priority"></td><td>&nbsp;USPS Priority</td><td >&nbsp;1 day &nbsp;</td><td align=right>&nbsp;$45.00&nbsp;&nbsp;&nbsp;</td></tr>
+<tr><td><input type="radio" name="gender" value="regular" checked></td><td>&nbsp;6 day</td><td >&nbsp;Mon thru Sat</td><td align=right>&nbsp;$22.00&nbsp;&nbsp;&nbsp;</td></tr>
+
+</table>
+</form>
+
+<br>
+this clears out all memory slots and resets the counter on the home page
+<!-- new test code here -->
+<table bgcolor=skyblue><tr><td><a href='#' onclick="resetcounter();return false;">Pretend this confirms order</a></td></tr></table>
+<br><br>
+
+
+<br>
+<table bgcolor=lavender border=0 spacing = 0 width = 135 style="border: 1px solid #D8D8D8;"><tr><td align=center>Payment</td></tr></table>
+
+
+
+
+<br>
+
+
+
+<table width = 160>
+<tr bgcolor=deepskyblue><td>&nbsp;&nbsp;Payment Details</td></tr>
+</table>
+
+<table width =300><tr><td><img src="paypallogo.jpg" alt="none" id="none" height= "125px;" width="150;"></td></tr></table>
+<table width = 140>
+<tr><td>
+step 1 Ship To address info
+step 2 payment and billing information
+PayPal  GooglePay
+Billing Information
+
+Basket Summary
+order subtotal
+shipping
+estimated tax
+Total
+
+Submit Order
+</table>
+
+
+
+
+<br>
+
+
+<form name = cool>
+<input type = hidden id="f_counter_now"  name ="counter_real_time" size = 4><br>
+</form>
+
+
+
+
+
+
+
+
+<table bgcolor=white width = 386><tr><td align=center>
+<font color=silver><font size=1><a href='#' onclick='showthecounter();return false;'>Copyright 2018 Modern Day News.</a></font>
+</td></tr></table>
+</body>
+</html>
