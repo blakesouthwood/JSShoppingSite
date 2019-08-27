@@ -1,0 +1,439 @@
+
+<!--  iphone test -->
+<!DOCTYPE html>
+<html>
+<title>Modern Day News</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
+<link rel="stylesheet" href="/lib/w3-theme-teal.css">
+<body style="max-width:600px">
+
+
+
+<style>
+
+.bronze-box {   /*  make this size  */
+  position: absolute;
+  z-index: 15; 
+  background: white;  
+  width: 2%;
+  left: 2%;
+  top: 4px;
+  height: -34em;
+  opacity: 1.0;
+}
+
+
+div.static {
+     position: relative;
+    left: 100px;
+}
+
+div.toplogo {
+     position: relative;
+    left: 150px;
+    top: 50px;
+}
+
+
+
+div.circlelogo {
+     position: absolute;
+    left: 10px;
+}
+
+
+div.static1 {
+     position: relative;
+    left: 350px;
+}
+
+div.staticiframe {
+     position: relative;
+    left: 25px;
+}
+
+
+
+
+
+
+
+
+.showbox {
+    height:10px;
+    width:10px;
+    background: orange; //#00ff00; //powerderblue
+    border: 2px solid #fff;
+    border-radius: 25px;
+    box-shadow: 0px 1px 5px #888888;
+    transform-origin:50% 50%;
+    transform:scale(1);
+    animation: pulse 0.6s infinite linear alternate;
+    -webkit-animation: pulse 0.6s infinite linear alternate;
+}
+@keyframes pulse {
+    to {
+        transform:scale(1.3);
+    }
+}
+@-webkit-keyframes pulse {
+    to {
+        transform:scale(1.3);
+    }
+}
+
+ .bg{background-color:yellow; !important;}
+
+
+.zu
+</style>
+
+
+<script>
+
+
+
+
+//================================
+/*    setmemory() set memory    */
+
+function setmemory(v1,v2){  //key and value both strings
+eval("localStorage.setItem('" + v1 + "','"  +  v2 + "'" + ");" );
+} // end func
+
+
+
+
+    function zapishly(){/// this one is the one that I am going to put the hamburger
+  
+      }
+ 
+
+
+//==================================
+/*    getmemory()   get memory   */
+
+function getmemory(x1){  //using the key it returns the value
+  eval("var atm = localStorage.getItem(" + "'" + x1 + "');" );
+  return atm;
+}//end func
+
+
+
+
+
+
+
+
+//=====================================
+/*   deletememory()  delete memory      */
+function deletememory(x1){
+   eval("localStorage.removeItem('" + x1 + "');");
+}//end func
+//-------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+also program it so that if menu is displayed
+and the user clicks on the hamburger it closes the menu
+and returns to the page.
+
+when someone arrives on the menu hamburger page
+it needs to select the correct tab above and give it the green color.
+
+
+the tricky part is knowing what page a person was on
+when they clicked the hamburger icon so  I will
+create an id name for each page  for simplicity
+like I did with row remainder in coffeeplant.
+
+I need a Page_ID_Name for each specific page.
+
+
+I will need an "on" "off" switch for the burger menu
+if the burger menu is on or off and then create the
+necessary behavior
+
+so if menu is on and user clicks on burger again it returns
+to the page that they just came from just like when they click the red X.
+
+
+
+*/
+//rename it something other than tahoe
+// this is how I get the name of the web page that the person came
+// from when they clicked on the hamburger logo
+
+
+//this is where the page memory is stored
+//when the jumbo tron menu page (this one ) opens what it does
+// is capture the page memory from fedex and puts it into gold array onload
+//and when the person closes the jumbo tron and doesn't click another page
+// and uses eitehr the red X or the hamburger they return to the page
+// that they just came from in this case the characters page 
+
+var gold = [];
+gold[gold.length] = "";
+gold[gold.length] = "";
+
+//#############################
+//        GET PAGE INFO      //called when opening the menu 
+//#############################
+function get_page_info(){
+   var dog = localStorage.getItem('fedex'); 
+       dog = dog.toString();
+   var choices = [];
+      choices[choices.length] = dog.charAt(0); 
+      choices[choices.length] = dog.charAt(1);
+      choices[choices.length] = dog.charAt(2);
+      gold[0] = choices[0]; //copy array choices slot 0 into array gold slot 0
+}//end function
+//---------------------------------
+
+
+function setmemory(v1,v2){  //key and value both strings
+    eval("localStorage.setItem('" + v1 + "','"  +  v2 + "'" + ");" );
+} // end func
+
+
+function getmemory(x1){  //using the key it returns the value
+  eval("var atm = localStorage.getItem(" + "'" + x1 + "');" );
+  return atm;
+}//end func
+
+
+
+
+
+
+//the memory of where I came from  most recently to get here
+//so this is where I came from so if the person bails then
+//I would go thru  switch case matching this number with going to the correct html page
+
+
+// for the jumbo tron menu triggered from the burger icon when tapped 
+//############################
+//  GO TO MOST RECENT PAGE
+//############################
+ function go_to_most_recent_page(){
+var god = getmemory('fedex');
+switch(god){
+case  "1"  : window.location.href = "iphone_home.html";                 break;
+case  "2"  : window.location.href = "iphone_characters.html";           break; 
+case  "2.1": window.location.href = "iphone_charprofile1.html";         break;
+case  "2.2": window.location.href = "iphone_charprofile2.html";         break;
+case  "2.3": window.location.href = "iphone_charprofile3.html";         break;
+case  "2.4": window.location.href = "iphone_charprofile4.html";         break;
+case  "2.5": window.location.href = "iphone_charprofile5.html";         break;
+case  "2.6": window.location.href = "iphone_charprofile6.html";         break;
+case  "2.7": window.location.href = "iphone_charprofile7.html";         break;
+case  "2.8": window.location.href = "iphone_charprofile8.html";         break;
+case  "3"  : window.location.href = "iphone_news.html";                 break;
+case  "3.1": window.location.href = "iphone_news_article_links.html";   break;
+case  "3.2": window.location.href = "iphone_news_upcoming_videos.html"; break;
+case  "3.3": window.location.href = "iphone_news_upcoming_events.html"; break;
+case  "4"  : window.location.href = "iphone_videos.html";               break;
+case  "4.1": window.location.href = "iphone_autoplay.html";             break;
+case  "5"  : window.location.href = "iphone_upcomingvideos.html";       break;
+case  "6.1": window.location.href = "iphone_merchandise_filter.html";   break;
+case  "6.2": window.location.href = "iphone_merchandise_shop.html";     break;
+case  "6.3": window.location.href = "iphone_merchandise_details.html";  break;
+case  "6.4": window.location.href = "iphone_merchandise_basket.html";   break;
+case  "6.5": window.location.href = "iphone_merchandise_checkout.html"; break;
+case  "7"  : window.location.href = "iphone_aboutus.html";              break;
+case  "7.1": window.location.href = "iphone_profile1.html";             break;
+case  "7.2": window.location.href = "iphone_profile2.html";             break;
+case  "7.3": window.location.href = "iphone_profile3.html";             break;
+case  "7.4": window.location.href = "iphone_profile4.html";             break;
+case  "7.5": window.location.href = "iphone_profile5.html";             break;
+case  "7.6": window.location.href = "iphone_profile6.html";             break;
+case  "7.7": window.location.href = "iphone_profile7.html";             break;
+case  "7.8": window.location.href = "iphone_profile8.html";             break;
+case  "8"  : window.location.href = "iphone_contactus.html";            break;
+default:                                                                break;
+}//end switch case
+} //end function
+//---------------------------
+
+
+ 
+ 
+ 
+ 
+// CLOSE MENU function is right here 
+function close_menu(){ //red box do nothing return to where you came from 
+     go_to_most_recent_page();   
+}
+
+function go_home(){
+window.location.href = "iphone_home.html";
+}
+
+function go_characters(){
+    window.location.href = "iphone_characters.html";
+}
+
+function go_news(){
+    window.location.href = "iphone_news.html";
+}
+
+function go_videos(){
+window.location.href = "iphone_videos.html";
+}
+
+function go_upcomingvideos(){
+window.location.href = "iphone_upcomingvideos.html";
+}
+
+function go_merchandise_filter(){
+window.location.href = "iphone_merchandise_filter.html";
+}
+
+function go_merchandise_shop(){
+window.location.href = "iphone_merchandise_shop.html";
+}
+
+function go_basket(){
+   window.location.href = "iphone_merchandise_basket.html";
+}
+
+function go_checkout(){
+window.location.href = "iphone_merchandise_checkout.html";
+}
+
+function go_aboutus(){
+window.location.href = "iphone_aboutus.html";
+}
+
+function go_contactus(){
+window.location.href = "iphone_contactus.html";
+}
+
+//################
+//     TESTING 
+//################
+function testing(){
+  get_page_info();
+}//end function
+
+</script>
+</head>
+<body onload= "testing();"> 
+
+<!-- close_menu -->
+<table width = 500 border=0>
+<tr><td width=25 height = 18 valign=bottom align=left>
+<a href='#' onclick='close_menu();return false;'>
+<img src="hamburger2.jpg" alt="navigation" height="16" width="20"></a> </td>
+<td width = 95></td><td><font face="Menlo"><font size=4>Modern Day News&nbsp;<font color=mediumpurple><font size=1><b></b></font></font></td></tr>
+</table>
+
+
+
+
+
+<table border = 0 bgcolor=white width = 400 >
+<tr></table>
+
+
+<!--
+<this page is dynamically created and the current menu is known from wher ethey came from
+and what page they were on.
+-->
+
+
+<table bgcolor=white><tr><td height = 30 width = 350></td></tr> </table>
+
+<table width = 400 bgcolor=white ><tr><td width = 65>&nbsp;</td><td align = left valign=top>
+<table width = 280 border=1  bgcolor= white CELLPADDING='8' 
+        style='border-collapse:collapse;border: 1px solid lightgrey;'>
+        
+     
+        <tr bgcolor=white  ><td  align=center bgcolor=#6cb6ff >
+        
+    <font face='Menlo'><font size=3><font color=black><b>Menu</b></td>
+    <td width =30 align=center > <a href='#' onclick='close_menu();return false;'>
+    <img src="closebox.jpg" alt="" height="22" width="22"></a></td></tr>
+        
+        
+        <tr onclick='go_home();return false;'   bgcolor=white  ><td colspan= 2 align=left>
+        <a href='iphone_home.html' style='display:block;text-decoration:none'>
+    <font face='Menlo'><font size=3><font color=black>&nbsp;&nbsp;Home</a></td></tr>
+    
+    
+            <tr onclick='go_videos();return false;' ><td align=left colspan= 2>
+        <a href='#' style='display:block;text-decoration:none'><font face='Menlo'>
+        <font size=3><font color=black>&nbsp;&nbsp;Videos</a></td></tr>
+        
+        
+    <tr  onclick='go_characters();return false;' ><td align=left colspan= 2>
+        <font face='Menlo'><a href='#' onclick='go_characters(); return false;' style='display:block;text-decoration:none'>
+        <font size=3><font color=black>&nbsp;&nbsp;Characters</a></td></tr>
+        
+        <tr onclick='go_news();return false;' ><td align=left colspan= 2>
+        <a href='#' onclick = "go_news(); return false;" style='display:block;text-decoration:none'><font face='Menlo'>
+        <font size=3><font color=black>&nbsp;&nbsp;News</a></td></tr>
+        
+
+      <!-- 
+        <tr onclick='go_upcomingvideos(); return false;' ><td align=left colspan= 2>
+       <a href='#' style='display:block;text-decoration:none'> 
+       <font face='Menlo'><font size=3><font color=black>&nbsp;&nbsp;Upcoming Videos</a></td></tr>
+        -->
+        <!--
+        <tr onclick='go_merchandise_filter();return false;' ><td align=left colspan= 2>
+        <a href='#'  style='display:block;text-decoration:none'><font face='Menlo'>
+        <font size=3><font color=black>&nbsp;&nbsp;Merchandise</a></td></tr>
+        -->
+        
+        <tr onclick='go_aboutus();return false;' ><td align=left colspan= 2>
+        <a href='#'  style='display:block;text-decoration:none'><font face='Menlo'>
+        <font size=3><font color=black>&nbsp;&nbsp;About Us</td></tr>
+        
+        <tr onclick='go_contactus();'><td align=left colspan= 2>
+       <a href='iphone_contactus.html'  style='display:block;text-decoration:none'> <font face='Menlo'>
+       <font size=3><font color=black>&nbsp;&nbsp;Contact Us</a></td></tr>
+        </table></td></tr></table> 
+     
+ <!--
+           logic:clicking on burger in this view does nothing
+           to change the page but returns the user back to the
+           page that they were on.
+           if they tap on the red X same result, same page.
+           
+ 
+ I need to capture the site name that it coming to the menu so that
+ the correct selected tab at the top shows up.
+ I need to put it into memory and then read it when the menu hamburger page
+ opens up. 
+ 
+
+ -->
+
+</body>
+</html>
