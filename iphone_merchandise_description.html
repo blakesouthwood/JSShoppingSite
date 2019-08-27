@@ -1,0 +1,384 @@
+
+<!--  iphone test -->
+<!DOCTYPE html>
+<html>
+<title>Modern Day News</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
+<link rel="stylesheet" href="/lib/w3-theme-teal.css">
+<body style="max-width:600px">
+
+
+<style>
+
+
+/* mouse over link */
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:hover {
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+
+.fixed-size-square {
+    display: table;
+    width: 20px;
+    height: 20px;
+    background: #4DF54E;
+}
+.fixed-size-square span {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+    color: white
+}
+
+
+
+div.staticfun {
+     position: relative;
+    left: 50px;
+    top: 250px
+    
+}
+
+
+div.upcomingevents {     /* what happens here */
+     position: relative;
+    left: 2px;   /*  this was 100 */
+     top: 50px;
+}
+
+
+div.static10 { 
+     position: relative;
+    left: 0px;   /*  this was 99 */
+     top: 24px;
+}
+
+div.static9 { 
+     position: relative;
+    left: 0px;
+     top: 10px;
+}
+
+
+/*   nice comments       */
+
+
+div.static1 {
+     position: relative;
+    left: 380px;
+}
+
+div.staticfooter {
+     position: relative;
+    left: 338px;
+    bottom: 5px;
+}
+
+
+
+
+
+
+
+div.menulist {
+     position: relative;
+    left: 50px;
+}
+
+
+div.staticiframe {
+     position: relative;
+    left: 25px;
+}
+
+
+div.cool {
+    position: absolute;
+    top: 400px;
+    left: 200px;
+    width: 750px;
+}
+
+
+div.linktable {
+    position: relative;
+    top: 80px;
+    left: 200px;
+}
+
+
+div.topwords {
+     position: absolute;
+     width: 500px; 
+     height: 40px;
+     left: 300px;
+     z-index: 2;
+}
+
+.thetable {
+     position: absolute;
+     bottom: 300px;
+     left: 300px;
+  }
+
+
+.showbox {
+    height:10px;
+    width:10px;
+    background: #7FFFD4; 
+    border: 2px solid #fff;
+    border-radius: 25px;
+    box-shadow: 0px 1px 5px #888888;
+    transform-origin:50% 50%;
+    transform:scale(1);
+    animation: pulse 0.6s infinite linear alternate;
+    -webkit-animation: pulse 0.6s infinite linear alternate;
+}
+@keyframes pulse {
+    to {
+        transform:scale(1.3);
+    }
+}
+@-webkit-keyframes pulse {
+    to {
+        transform:scale(1.3);
+    }
+}
+
+
+  table#table1 {
+    width:70%; 
+    margin-left:4%; 
+    margin-top: 2%;
+    margin-right:15%;
+  }
+  
+   table#table2 {
+    width:70%; 
+    margin-left:4%; 
+    margin-top: 2%;
+    margin-right:15%;
+  }
+  
+   table#table3 {
+    width:70%; 
+    margin-left:4%; 
+    margin-top: 2%;
+    margin-right:15%;
+  }
+  table#table00 {
+    width:70%; 
+    margin-left:4%; 
+    margin-top: 2%;
+    margin-right:15%;
+  }
+   table#table01 {
+    width:70%; 
+    margin-left:4%; 
+    margin-top: 2%;
+    margin-right:15%;
+  }
+ 
+ 
+.zu
+
+
+/*    left nav css   */
+
+.odd {
+  background-color: white;
+}
+.evn {
+  background-color: white;
+}
+.selodd {
+  background-color: #F8C471    ;
+}
+.selevn {
+  background-color: #F8C471    ;
+}
+/*
+footer {
+    position: relative;
+    left: 287px;
+    bottom: 4px;
+}
+*/
+
+
+div.static {
+     position: relative;
+    left: 75px;
+}
+
+
+
+.list1 tr:hover{
+background-color:#76D7C4;
+
+}
+
+
+</style>
+
+<script>
+
+
+ function smartypants(){
+ document.getElementById("field_one").value = "front";
+ document.getElementById("field_two").value = "front";
+   //each picture will need a default setting of "front" for this to work
+ }
+ 
+ //this code swaps the image from front to back and back to front on mouseclick.
+ // Monday, September 19th, 2017
+ 
+ function change1(){
+ var image = document.getElementById('circle1'); //name of the shirt or hat
+ if(document.getElementById("field_one").value == "back"){
+     image.src='greyshirt.jpg';  //front view
+     document.getElementById("field_one").value = "front";
+   }else{
+     image.src='longsleeveshirt.jpg';  //back view
+     document.getElementById("field_one").value = "back";
+   }//end if
+  }//end function
+  
+   function change2(){
+  var image = document.getElementById('circle2');
+  if(document.getElementById("field_two").value == "back"){
+     image.src='greyshirt.jpg';  //front view
+     document.getElementById("field_two").value = "front";
+   }else{
+     image.src='blackshirt.jpg';  //back view
+     document.getElementById("field_two").value = "back";
+  }//end if
+ } //end function
+      
+
+</script>
+
+</head>
+
+<body onload="smartypants(); ">
+
+<table width = 500>
+<tr><td width = 110></td><td><font face="Menlo"><font size=4>Modern Day News</font></td></tr>
+</table>
+
+
+<table   CELLPADDING='1' style='border-collapse:collapse;border: 
+1px solid black; '  width = 410  border = 1 bgcolor=white  >
+<tr><td><font size=1><font face='Menlo'><a href='iphone_home.html' style='text-decoration:none'><FONT COLOR=BLACK>&nbsp;Home</a></td>
+     <td><font size=1><font face='Menlo'><a href='iphone_aboutus.html' style='text-decoration:none'>&nbsp;About</a></td>
+     <td ><font size=1><font face='Menlo'><a href='iphone_news.html' style='text-decoration:none'>&nbsp;News</a></td>
+     <td><font size=1><font face='Menlo'><a href='iphone_videos.html' style='text-decoration:none'>&nbsp;Videos</a></td>
+     <td><font size=1><font face='Menlo'><a href='iphone_characterprofiles.html' style='text-decoration:none'>&nbspCharacters</a></td>
+     <td bgcolor=palegreen><font size=1><font face='Menlo'><a href='#' style='text-decoration:none'>&nbsp;Merchandise</a></td>
+     <td><font size=1><font face='Menlo'><a href='iphone_contactus.html' style='text-decoration:none'>&nbsp;Contact</a></td>
+     </tr></table>
+  <table   CELLPADDING='1' style='border-collapse:collapse;border: 
+1px solid #D8D8D8; '  width = 410  border = 1 bgcolor=white  >
+<tr><td width=20% align=center><font size=1><font face='Menlo'><a href='iphone_merchandise_filter.html' style='display:block;text-decoration:none;'><FONT COLOR=black>Filter </a></font></td>
+
+<td width = 20% bgcolor=white align=center><font size=1><font face='Menlo'><a href='iphone_merchandise_shop.html'style='display:block;text-decoration:none;'><FONT COLOR=black><font color=black>Shop</a></font></td>
+<td width= 20% bgcolor=dodgerblue align=center><font size=1><font face='Menlo'><a href='#' style='text-decoration:none'><font color=white>Details</a></font></td>
+
+     <td width= 20% align=center><font size=1><font face='Menlo'><a href='iphone_merchandise_basket.html' style='text-decoration:none'><font color=black>Basket</a></font></td>
+     <td width= 20% align=center><font size=1><font face='Menlo'><a href='iphone_merchandise_checkout.html' style='text-decoration:none'><font color=black>Check Out</a></font></td>
+         
+
+    </tr></table
+ 
+<br><br><!--  ======= shirts start here ==========  -->
+
+<table width = 245><tr><td align=center>
+<table style='border: 1px solid #D8D8D8;' width = 230 bgcolor=lightyellow>
+     <tr><td><font face='Arial'><font size=2>&nbsp;&nbsp;Product Name </font></td></tr></table>
+</td><td align=left valign=top>
+<table width = 150><tr><td align=right>
+<a href='iphone_merchandise_shop.html' style='text-decoration:none'>&lt; Back To Shop</a>
+</td></tr></table></td></tr></table>
+<table><tr><td height =5></td></tr></table>
+
+
+<table><tr><td height =5></td></tr></table>
+<table width = 420><tr><td valign=top align=center>
+<table width = 400 border=1>
+<tr><td>data data data data data data data data data <br> 
+data data data data data data data data 
+</td></tr>
+<tr><td>data data data data data data data data data <br> 
+data data data data data data data data 
+</td></tr>
+<tr><td>data data data data data data data data data <br> 
+data data data data data data data data 
+</td></tr>
+<tr><td>data data data data data data data data data <br> 
+data data data data data data data data 
+</td></tr>
+</table>
+</td></tr></table>
+<table width=420>
+<tr><td align=center bgcolor=white><img src="greyshirt.jpg" alt="Circle"  height= "250px;" width="180px;" onclick="change1();"> </td><td align=center><img src="longsleeveshirt.jpg" alt="Circle"  height= "250px;" width="180px;" onclick="change2();"> </td></tr>
+<tr><td align=center>front view</td><td align=center>back view</td></tr>
+</table>
+<table width = 420><tr><td valign=top align=center>
+<table width = 400 border=1>
+<tr><td>data data data data data data data data data <br> 
+data data data data data data data data 
+</td></tr>
+<tr><td>data data data data data data data data data <br> 
+data data data data data data data data 
+</td></tr>
+<tr><td>data data data data data data data data data <br> 
+data data data data data data data data 
+</td></tr>
+<tr><td>data data data data data data data data data <br> 
+data data data data data data data data 
+</td></tr>
+</table>
+</td></tr></table>
+<br>
+<table width = 420><tr><td valign=top align=center>
+<table width = 400 border=1>
+<tr><td>data data data data data data data data data <br> 
+data data data data data data data data 
+</td></tr>
+<tr><td>data data data data data data data data data <br> 
+data data data data data data data data 
+</td></tr>
+<tr><td>data data data data data data data data data <br> 
+data data data data data data data data 
+</td></tr>
+<tr><td>data data data data data data data data data <br> 
+data data data data data data data data 
+</td></tr>
+</table>
+</td></tr></table>
+<form name = cool>
+ <input type = hidden id="field_one"  name ="one" size = 10>
+ <input type = hidden id="field_two"  name ="two" size = 10>
+ </form>
+
+
+
+
+
+<table bgcolor=white width = 386><tr><td align=center>
+<font color=silver><font size=1>Copyright 2017 Modern Day News.</font>
+</td></tr></table>
+</body>
+</html>
+<!-- coded by Mr. Blake Southwood Software Engineer -->
