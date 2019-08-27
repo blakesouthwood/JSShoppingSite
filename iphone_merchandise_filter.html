@@ -1,0 +1,2869 @@
+<!DOCTYPE html>
+<html>
+<title>Modern Day News</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
+<link rel="stylesheet" href="/lib/w3-theme-teal.css">
+
+<body style="max-width:600px" >
+<head>
+<style>
+
+
+.dashed-box { 
+  position: relative;
+  z-index:2;
+  border: dashed;
+  height: 38em;
+  margin-bottom: 1em;
+  margin-top: 222em;
+  margin-left: 2em;
+}
+
+
+.gold-box { 
+  position: absolute;
+  z-index: -100; /* put .gold-box above .green-box and .dashed-box */
+  background: gold;
+  width: 80%;
+  left: 2px;
+  top: 30em;
+   opacity: 0.6;
+}
+
+
+.green-box { /* make this category */
+  position: absolute;
+  z-index: 1; /* put .green-box above .dashed-box */
+  background: white;  /* lightgreen  */
+  width: 28%;
+  left: 6%;
+  top: 98px;
+  height: -5em;
+  opacity: 1.0;
+  
+}
+
+
+.silver-box {   /*  make this gender     */
+  position: absolute;
+  z-index: -1; /* put .green-box above .dashed-box */
+  background: white;  /* lightgreen  */
+  width: 28%;
+  left: 1.5%;
+  top: 49px;
+  height: -4em;
+  opacity: 1.0;
+  overflow: visible;
+}
+
+.bronze-box {   /*  make this size  */
+  position: absolute;
+  z-index: -2; 
+  background: white;  
+  width: 28%;
+  left: 1.5%;
+  top: 92px;
+  height: -4em;
+  opacity: 1.0;
+}
+
+
+.cardboard-box {   /*  make this type   */
+  position: absolute;
+  z-index: -3; 
+  background: white;  
+  width: 28%;
+  left: 1.5%;
+  top: 136px;
+  height: -4em;
+  opacity: 1.0;
+}
+
+
+
+
+.red-box { 
+  position: absolute;
+  z-index: 6; /* put .green-box above .dashed-box */
+  background: white;  /* lightgreen  */
+  width: 28%;
+  left: 1%;
+  top: 4px;
+  height: -4em;
+  opacity: 1.0;
+}
+
+
+
+
+/*  ==============  */
+
+
+
+
+</style>
+
+
+<script>
+ 
+ 
+ /*
+ I NEED THE INPUT DATA HERE
+ 
+ 
+ */
+ 
+ 
+
+
+//========================
+//trex array created here initialized 
+var trex = [];
+
+
+     trex[trex.length] = "";  //first slot 0 is empty
+     
+//  @@@ Monday Night @@@ solving the problem of lateral pass
+//this is where I grab what is in the fields at the bottom
+//and insert them into ups variable
+//this is triggered when the search engine button is clicked after changing
+// filter navigation settings by the user
+
+
+
+//this musical chairs is called when the search button is clicked
+
+/* show counter value at bottom */
+
+function show_counter_value(){
+//alert("counter called");
+  var cheese = parseInt(getmemory('lecounter')); 
+  if(cheese === "undefined" || cheese == null){
+    cheese = "undefined";
+  } //end if
+  cheese = cheese.toString();
+  document.getElementById("f_counter_now").value   = cheese;
+}// end function
+
+
+
+
+
+//================================
+/*    setmemory() set memory    */
+
+function setmemory(v1,v2){  //key and value both strings
+  eval("localStorage.setItem('" + v1 + "','"  +  v2 + "'" + ");" );
+} // end func
+
+
+
+
+
+
+
+
+//==================================
+/*    getmemory()   get memory   */
+
+function getmemory(x1){  //using the key it returns the value
+  eval("var atm = localStorage.getItem(" + "'" + x1 + "');" );
+  return atm;
+}//end func
+
+
+
+
+
+
+
+
+
+
+//==============================
+
+
+/*  MY COUNTER FUNCTION  */
+function mycounter(){
+//alert("mycounter called");
+setmemory('flag_for_counter', "false");
+  
+  //before time stamp go thru the beginning of the function to determine if
+  // this is the first pass or not  (9 remember ==="undeclared"  comparison or !== "undeclared"
+  //#############################
+  //#############################
+  //I will need a counter inside of this function for itself the tiny_counter
+  // and it is set to false at the top as it flows down and then set to true at the bottom
+  // that it has run thru once so in the future it will skip the code.
+  
+  
+  var angel = getmemory("control_valve");
+  if(angel === undefined){  // what is the error message though if control_value doesn't exist?
+    // getinitialtime() //this intializes this flag with a time stamp
+  //get intialtime doesn't exist yet as a function
+  } //end if
+
+  
+  //==============================
+  //this part down here can only run once
+  // just had a thought, what if the first time thru it doesn't access lecounter
+  // and it fills lecounter with 0 at the bottom that might decrease the complexity of it all.
+  
+  
+  setmemory('lecounter','0');
+  getmemory('lecounter');
+  var cool = getmemory("lecounter");
+  var myvalue = parseInt(getmemory('lecounter'));
+  myvalue = myvalue -0;
+  myvalue = myvalue -0;
+  myvalue = parseInt(myvalue);
+// now put the number into the counter memory slot
+setmemory('lecounter',myvalue);   //this puts it into memory
+
+} //end func
+//----------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  SET FLAG  */
+function setflag(){
+ setmemory('recent_page_memory_flag','home');
+} //end func
+
+
+
+
+
+
+
+
+
+
+//###########################
+/*  FLUSH MEMORY FUNCTION */
+//##########################
+function flushmemory(){
+  deletememory('slotNaN'); //just added this as a precaution since it crops up from time to time
+  setmemory('slot0', null); //this is new
+  deletememory('CoffeeBean'); //nukes CoffeeBean selected item
+  
+  var counter_value = parseInt(getmemory('lecounter')); 
+  counter_value = counter_value - 0; //turning a string into a number
+  counter_value = counter_value - 0; //forcing the string into a number by doing it twice
+  var flag_to_skip; //setting the flag and giving it a value below
+ if(counter_value == 0){
+     flag_to_skip = 'true';
+ }else{
+     flag_to_skip = 'false';
+}
+if (flag_to_skip == 'false'){ //proceed
+ counter_value ++; //+1  this adds one to the counter value due to the machine
+ // starting from 0 and not 1 which makes absolutely no sense whatsoever
+ //loop here 
+ for(x = 0; x < counter_value;x++){ // loop
+ if(x == 0){
+     continue;
+ } //end if
+
+    x = x - 0; //turning a string into a number
+    x = x - 0; //forcing the string into a number by doing it twice
+ 
+   var y = x.toString();
+   var theslot = "slot" + y; //please tell me it's not that easy.
+   eval("deletememory('" +  theslot + "');" ); //deletememory('slot1');
+    } //end for loop
+  } //end if
+ if( flag_to_skip == 'false'){
+  mycounter(); // this nukes the counter and resets it to 0 but only if the initial value was > than 0.
+  }//this means that this was only done if the memory slots were erased from existence. 
+ } //end function
+
+//======---------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//this makes sure that the counter is started
+// and is the filter to determine the state of this page.
+
+ 
+/*      TOLL BOOTH   */
+
+function tollbooth(){
+var counter_value = parseInt(getmemory('lecounter')); 
+var newmagic = counter_value;
+    newmagic = newmagic.toString();
+//if (!isNaN(num)) { //means if it is a number == 'true'
+//however I am testing for if the value in the lecounter memory = NaN which I converted to a string
+
+//a series of tests to make sure that the counter is on
+if (newmagic == 'NaN'){  //now do I have to put true in quotes like this 'true'
+mycounter();
+return; //ends the function
+} //end if
+
+//added Friday, November 17th in Keizer Oregon
+//do something to turn on the counter because it's definitely not on
+ var counter_value = parseInt(getmemory('lecounter')); 
+if (counter_value ===undefined || counter_value == null){  //now do I have to put true in quotes like this 'true'
+mycounter();  //this resets the counter
+return; //ends the function
+} //end if
+ 
+ 
+ 
+ //the memory for the counter hinges on whether slot1 exists 
+  var masterflag = getmemory('slot1');
+  if (masterflag === undefined || masterflag == null){  
+    flushmemory();
+    setmemory('deleteditem', 'false'); //this starts it and it's for removing items on basket page
+    return; //leaves this function 
+  }else{
+   //this phase currently does nothing
+   if(masterflag == "off"){
+   
+ } //end if
+   
+   if(masterflag == "on"){
+    
+   }// end if
+   
+    //----------------
+    } // end big if 
+
+}//end function
+//--------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//=====================================
+/*   deletememory()  delete memory      */
+
+function deletememory(x1){
+    eval("localStorage.removeItem('" + x1 + "');");
+//deletes memory x1 which is the key's name nuking the contents
+}//end func
+
+
+
+
+
+
+
+
+
+
+//#######################
+/*   TURN ON COUNTER   */
+//######################
+function turn_on_counter(){ //only turned on once
+     setmemory('lecounter','0');
+    var cheese = parseInt(getmemory('lecounter')); //this just will show me what's in it
+} //end function
+//-------------------------------
+
+
+
+
+
+
+
+
+
+
+/*  SHOW STORAGE VALUES   */
+
+function showstoragevalues(){
+    for(var j=0; j<localStorage.length;j++) { // Iterate all stored names
+      var a = localStorage.key(j);
+      //alert("key = " + localStorage.key(j) + "      value= " + getmemory(a));
+    } //end loop
+} //end func
+
+
+
+
+
+
+
+
+
+
+
+//thursday, dec 7th, 2017  
+//this checks if the Type menu has been selected and if not sets it to shirt by default
+// so the search engine works.
+
+/* DETOUR TO SET LAST MENU */
+function detour_to_set_last_menu(){ //deactivated on dec 26 this was setting the type menu numberr 4 to shirt
+//var fastcheck = window.document.thetest.f1.value;
+// if(fastcheck == '2'){ //checking if hats mode
+// return; //end function
+// } //end if
+//var checkit =window.document.thetest.f4.value;
+//if(checkit == '1' || checkit == '2' || checkit == '3'){
+ //  return; //end function
+ //}else{   //end if
+ 
+    //window.document.thetest.f4.value = '1';
+   // window.document.thetest.four.value = "shirts";
+   // the_type_shirts();
+ //}//end if else
+ 
+//if(last menu set to anything) then
+//  return;
+//end if
+
+//if(lastmenu not set) then
+ // set it to shirt
+//end if
+
+} //end function
+//=========================
+
+
+
+// january 23, 2018 bug I just found on iphone version of error messages
+//###################################################
+//      ERROR MESSAGE IF HATS MODE EQUAL TRUE BUT MENUS NOT SELECTED
+//###################################################
+function error_message_if_hats_mode_equal_true_but_menus_not_selected(){
+//this proposes that the hat mode has been selected and therefore is only checking for gender and size are selected too (also)
+//this will be identical to the hats version but the last menu (is for shirts) and can remain unchanged and/or unselected
+}//end function
+//----------------
+
+
+
+
+
+//keep track of menus open but not closed. 
+/*
+//I will implement this tonight 
+Rule set:If a menu is clicked on the select top then it will open by default
+until the user clicks on either the top or a rectangle below it will remain open indefinitely.
+I need to use a field or array to hold the status of each menu
+then check it to know if more than one menu is open and if so then close the initial menu that was opened.
+
+if one menu is open no problem. but if it remains open and nothing is selected
+AND then a second menu is selected(and open) THEN the first menu that is still 
+opened will be closed and return to the selected item it was previously
+
+
+*/
+
+
+var window_into_menus = [];
+      window_into_menus[0] = ""; //starting meaning all closed not selected and open 
+      window_into_menus[1] = "closed";
+      window_into_menus[2] = "closed";
+      window_into_menus[3] = "closed";
+      window_into_menus[4] = "closed";
+      window_into_menus[5] = "";  //current number open 
+
+  var selected_menus = [];
+      selected_menus[0] = ""; //starting meaning all closed not selected and open 
+      selected_menus[1] = "0";
+     
+      
+      var selected_category = [];
+      selected_category[0] = ""; //starting meaning all closed not selected and open 
+      selected_category[1] = "0";
+     
+      
+      var selected_gender = [];
+      selected_gender[0] = ""; //starting meaning all closed not selected and open 
+      selected_gender[1] = "0";
+
+      
+     
+      var selected_size = [];
+      selected_size[0] = ""; //starting meaning all closed not selected and open 
+      selected_size[1] = "0";
+     
+      
+      var selected_shirt_type = [];
+      selected_shirt_type[0] = ""; //starting meaning all closed not selected and open 
+      selected_shirt_type[1] = "0";
+   
+
+
+
+
+
+
+//######################################################
+//      MENU JUST SELECTED NOW AT THIS MOMENT IN TIME
+//######################################################
+function menu_just_selected_now(x){
+   window_into_menus[0] = x;
+  // alert(window_into_menus[0]); 
+}
+//-----------------------------------
+
+
+
+
+/*
+What this does is if a pull down menu is open but not selected and then
+the user decided of their own free will to click on SECOND pull down menu
+THEN the first menu that they opened will close automatically.
+
+*/
+//##############################################
+//       MANAGE CLOSING MENUS LEFT UNFURLED      
+//##############################################  
+function manage_closing_menus_left_unfurled(){
+ var just_selected =  window_into_menus[0] ; //1, 2, 3, 4
+//I need to know which ones were selected
+     var menu1      =  window_into_menus[1]; //closed or open
+     var menu2      =  window_into_menus[2];
+     var menu3      =  window_into_menus[3];
+     var menu4      =  window_into_menus[4];
+
+     var the_cat    = selected_category[1];
+     var gender     = selected_gender[1];
+     var size       = selected_size[1];
+     var shirttype  = selected_shirt_type[1];
+     
+  //I need to get the selected number of a menu that opens, is selected (thereby closing)
+      //======================
+      // menu1 and menu2
+    if (menu1 == "open" &&  menu2 == "open"  &&  just_selected  == "2"){
+         //closes menu 1 so get it's proper recent setting 
+          if(the_cat == "shirts"){  type_shirts(); return; }
+          if(the_cat == "hats"){    type_hats();   return; }
+      }//end if 
+      
+     //================================================================ 
+      
+    if(menu1 == "open"  &&  menu2 == "open" && just_selected  == "1"){
+        //close menu2 so it returns to the previously selected value for the gender menu
+        if(gender  == "mens"){   mens();           return; }
+        if(gender  == "womens"){ womens();         return; }
+        if(gender  == "girls"){  girls();          return; }
+        if(gender  == "boys"){   boys();           return; }
+      }//end if
+      
+      //=============================================================
+      //menu1 and menu3
+       if (menu1 == "open" &&  menu3 == "open" && just_selected  == "1"){
+         //close menu3
+         if(size == "S"){      small();            return; }
+         if(size == "M"){      medium();           return; }
+         if(size == "L"){      large();            return; }
+         if(size == "XL"){     xl();               return; }
+         if(size == "2XL"){    twoxl();            return; }
+        }//end if
+       
+       //===============================================================
+      if (menu1 == "open"  &&  menu3 == "open"  &&  just_selected  == "3"){
+           // close menu1  also need scenario if nothing was actually previously selected on this menu
+           if(the_cat == "shirts"){ type_shirts(); return; }
+           if(the_cat == "hats"){   type_hats();   return; }
+        }//end if 
+        
+       //================================================================
+       //menu2 and menu3
+         if (menu2 == "open"  && menu3 == "open" && just_selected  == "3"){
+             //close menu2 
+           if(gender  == "mens"){   mens();        return; }
+           if(gender  == "womens"){ womens();      return; }
+           if(gender  == "girls"){  girls();       return; }
+           if(gender  == "boys"){   boys();        return; }
+         } //end if
+         
+       //=================================================================
+       if (menu2 == "open" && menu3 == "open" && just_selected  == "2"){
+            //close menu3
+         if(size == "S"){      small();            return; }
+         if(size == "M"){      medium();           return; }
+         if(size == "L"){      large();            return; }
+         if(size == "XL"){     xl();               return; }
+         if(size == "2XL"){    twoxl();            return; }
+        } //end if 
+        
+        //==================================================================
+        //menu3 and menu4
+          if (menu3 == "open"  &&  menu4 == "open" && just_selected  == "3"){
+             // close menu 4 
+           if(shirttype == "shirts"){  shirt();        return; }
+           if(shirttype == "longsleeve"){longsleeve(); return; }
+           if(shirttype == "hoodie"){        hoodie(); return; }
+         } //end if
+         
+         //==================================================================
+        if (menu3 == "open"  &&  menu4 == "open"  && just_selected  == "4"){
+         // close menu 3
+         if(size == "S"){      small();             return; }
+         if(size == "M"){      medium();            return; }
+         if(size == "L"){      large();             return; }
+         if(size == "XL"){     xl();                return; }
+         if(size == "2XL"){    twoxl();             return; }
+         } //end if
+         
+          //===================================================================
+        //menu1 and menu4
+         if (menu1 == "open"  && menu4 == "open" &&  just_selected  == "1"){   
+           // close menu4 
+             if(shirttype == "shirts"){          the_type_shirts();       return; }
+             if(shirttype == "longsleeve"){   the_type_longsleeve();      return; }
+             if(shirttype == "hoodie"){         the_type_hoodie();        return; }
+        } //end if
+        
+         //=====================================================================
+        if (menu1 == "open"    && menu4 == "open"    &&   just_selected  == "4"){
+           //close menu1
+           // close menu1  also need scenario if nothing was actually previously selected on this menu
+           if(the_cat == "shirts"){ type_shirts(); return; }
+           if(the_cat == "hats"){   type_hats();   return; }
+         } //end if
+         
+        //========================================================================
+        //menu2 and menu4
+         if (menu2== "open"    && menu4 == "open"    &&    just_selected  == "2"){
+            //close menu4
+          if(shirttype == "shirts"){       the_type_shirts();            return; }
+          if(shirttype == "longsleeve"){   the_type_longsleeve();        return; }
+          if(shirttype == "hoodie"){       the_type_hoodie();            return; }
+        }//end if
+        
+        //========================================================================= 
+        if (menu2 == "open" && menu4 == "open"       &&   just_selected  == "4"){
+            //close menu 2 
+        if(gender  == "mens"){   mens();        return; }
+        if(gender  == "womens"){ womens();      return; }
+        if(gender  == "girls"){  girls();       return; }
+        if(gender  == "boys"){   boys();        return; }
+         } //end if
+
+} //end function
+//------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Tuesday, January 23, 2018
+//########@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//
+// 	WHAT I NEED TO CODE NOW this is irregardless and unattached to the search, but 
+//  is only triggered after a search obviously failed but isn't tested. except for
+//  seeing that the error message below is currently red and showing
+//  so if error message = true and menus changed to selected when previously not selected
+//  then and only then clear the error message 
+
+//  what I need to do is when the individual menus are selected and not at the default unselected mode
+//  then and only then will it erase the red message of alert input error and this way the annoying red alert is removed before waiting to click search again
+//  so the user isn't confused of an error message still lingering after changing the menus state
+//
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
+
+
+
+
+// call this when menus are set by the user ONLY 
+// if filternmenu is NOT selected = true after musical chairs called (search engine clicked)
+//#########################################
+//    CHECK  IF  FILTER  MENUS  SELECTED   //this is called only AFTER each menu is changed from being equal to 0 meaning unselecteed. 
+//#########################################
+function  check_if_filter_menus_selected(){ //meaning changed from default grey unselected state
+ var menu1_notselected = 'false';
+ var menu2_notselected = 'false';
+ var menu3_notselected = 'false';
+ var menu4_notselected = 'false';
+ /// this tests for if the filter menus have not been selected and doesn't leave the page
+var test1 = window.document.thetest.one.value;  //-1 if default zapped
+var test2 = window.document.thetest.two.value;
+var test3 = window.document.thetest.three.value;
+var test4 = window.document.thetest.four.value; 
+
+ if(test1 == -1 || test1 == 0){
+  menu1_notselected = 'true';
+  window.document.thetest.one.value= 0; 
+}else{
+  menu1_notselected = 'false';
+}
+
+if(test2 == -1 || test2 == 0){
+  menu2_notselected = 'true';
+  window.document.thetest.two.value= 0; 
+}else{
+  menu2_notselected = 'false';
+}
+
+if(test3 == -1 || test3 == 0){
+  menu3_notselected = 'true';
+  window.document.thetest.three.value= 0; 
+}else{
+  menu3_notselected = 'false';
+}
+
+if(test4 == -1 || test4 == 0){
+   menu4_notselected = 'true';
+   window.document.thetest.four.value= 0; 
+ }else{
+   menu4_notselected = 'false';
+ }
+//###############
+//checks if each menu has been selected - and if so then clear the error messages before clicking on search now
+//so the interface matches expectations for the user about what should happen after changing a menu the eror message should dissappear
+//and now it does. 
+
+ if ((menu1_notselected  == 'false'   &&   menu2_notselected  == 'false'   &&  menu3_notselected  == 'false'   &&   menu4_notselected  == 'false' )){        
+      filter_menu_not_selected[0] == "false" //resets flag to false
+      clear_error_messages();// makes Invalid input red error below vanish in an instant before clicking on search button again 
+} //end if
+
+//special case for hats
+//EXPERIMENTAL 
+var fish = window.document.thetest.one.value; 
+if(fish == "hats"){
+ if ((menu1_notselected  == 'false'   &&   menu2_notselected  == 'false'   &&  menu3_notselected  == 'false'  )){        
+      filter_menu_not_selected[0] == "false" //resets flag to false
+      clear_error_messages();// makes Invalid input red error below vanish in an instant before clicking on search button again 
+    
+  } //end if
+}//end if for hats true
+}  //end function
+//----------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+//called when search button is clicked on filter page
+//#################################
+/*     MUSICAL CHAIRS FUNCTION           */     //this is activated when the search button is clicked.
+//#################################
+function musical_chairs(){
+if(window.document.thetest.four.value == "shirts"){
+   window.document.thetest.f4.value = "1";
+}
+
+if(window.document.thetest.four.value == "longsleeve"){
+  window.document.thetest.f4.value = "2";
+}
+
+if(window.document.thetest.four.value == "hoodie"){
+   window.document.thetest.f4.value = "3";
+}
+
+//TOLLBOOTH CALLED HERE
+tollbooth();//this makes sure that the counter is turned on.
+
+//musical chairs is called only when the search button is clicked !!
+
+ var menu1_notselected = 'false';
+ var menu2_notselected = 'false';
+ var menu3_notselected = 'false';
+ var menu4_notselected = 'false';
+ 
+// line 472
+//############ dec 26th preventing error of no input on search to say so
+//I need to test here what menus have been selected
+//tests to see what menus have been selected or if they are not selected 
+
+/// this tests for if the filter menus have not been selected and doesn't leave the page
+var test1 = window.document.thetest.one.value;  //-1 if default zapped
+var test2 = window.document.thetest.two.value;
+var test3 = window.document.thetest.three.value;
+var test4 = window.document.thetest.four.value; 
+ 
+if(test1 == -1 || test1 == 0){
+  menu1_notselected = 'true';
+  window.document.thetest.one.value= 0; 
+}
+
+if(test2 == -1 || test2 == 0){
+  menu2_notselected = 'true';
+  window.document.thetest.two.value= 0; 
+}
+
+if(test3 == -1 || test3 == 0){
+  menu3_notselected = 'true';
+  window.document.thetest.three.value= 0; 
+}
+
+if(test4 == -1 || test4 == 0){
+   menu4_notselected = 'true';
+   window.document.thetest.four.value= 0; 
+ }
+//###############
+
+//======================================
+//  SKIP INPUT ERROR  label block STARTS here 
+skip_input_error: {     //label
+//======================================
+
+var fish = window.document.thetest.one.value;  //it's the category I am checking
+
+//only do this if shirts == true  so this is checking for shirts that all 4 menus are selected and not default off
+//only one menu needs to be not selected to trigger this condition to be true in shirt mode.
+
+// CONDITION FOR IF SHIRTS MODE (NOT HATS) but it's really all 4 no matter what
+
+
+//  SHIRTS SELECTED
+if(( fish != "hats" ) && 
+  (menu1_notselected  == 'true' ||  
+   menu2_notselected  == 'true' || 
+   menu3_notselected  == 'true' ||  
+   menu4_notselected  == 'true' )){          
+
+   //=========================
+   //  BREAK SKIP_INPUT_ERROR  jumps to end of label
+   //=========================
+   break skip_input_error;     //which comes next down below                  
+
+} //end if condition 
+
+//======================================
+
+//   HATS SELECTED 
+if(( fish == "hats" ) && 
+  (menu1_notselected  == 'true' ||  
+   menu2_notselected  == 'true' || 
+   menu3_notselected  == 'true' )){          
+   //=========================
+   //  BREAK SKIP_INPUT_ERROR jumps to end of label
+   //=========================
+   break skip_input_error;     //which comes next down below                  
+
+} //end if condition 
+
+
+
+
+//I need to do a test now for hat's mode just the top 3 need to be selected
+// to avoid confusion I will make a switch for hats mode or shirts mode
+
+// otherwise run this code chunk below
+
+ var orange1;
+ var apple2;
+ var apple3;
+ var apple4;
+ var space = " ";
+ //grabs the numerical values from the fields at the bottom of the page 
+ // and converts to a variable and then adds in a string concatenation
+ // and then put into localstorage value Tahoe.
+ 
+  orange1 = window.document.thetest.f1.value;  //apple1 variable name caused a bug on Mac FireFox and Chrome and cache full error
+  apple2  = window.document.thetest.f2.value;
+  apple3  = window.document.thetest.f3.value;
+  apple4  = window.document.thetest.f4.value;
+ 
+  var ups =  orange1 + space + apple2 + space + apple3 + space + apple4;
+  localStorage.setItem('Tahoe',ups); //so this rewrites the data to the Tahoe memory
+  //the memory values are put into Tahoe here where they are later used on the search engine
+  // on the shop page.
+
+   setTimeout(function(){window.location.href = "iphone_merchandise_shop.html"; }, 25); 
+   return;// jump to end of function brilliant little hop over gecko()
+   //============
+  } //END LABEL 
+  //=============
+    gecko(); //INPUT ERROR FUNCTION
+  } //end musical chairs
+  //--------------------------------
+
+
+
+
+
+ 
+ /*
+ I have shirts for type and when I come back to the filter page it
+ is putting type by default saying 0
+ */
+ 
+ 
+// added january 23, 2018
+var filter_menu_not_selected = [];
+     filter_menu_not_selected[0] = "false"; //default setting 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // what this does
+ // error message if a menu hasn't been selected for filter
+ //################
+ //     GECKO 
+ //################
+ function gecko(){
+  filter_menu_not_selected[0] = "true";  //this sets flag to true that a filter menu hasn't been selected
+                                                          //only after this flag is set to false can the eror message below be erased.
+  
+ // when gecko is called there is an error to set flag for input error occurred due to one or more nonselected menus - I should count them though
+ // since it will be known beforehand, but the state of each menu as long at it's not -1 or 0 it's selected.
+ 
+  input_error();    //writes input error where it says show instrutions
+   var readthis = "<div id='big_info_instruct'>";
+       readthis += "<table width = 200><tr><td align=left><table bgcolor=#FBBBB9 width = 200 ><tr><td align=left>";
+       
+       // tuesday, january 23, 2018 10:48pm
+       
+       //if any of these are = 0 then they haven't been selected
+       //and based on which one(s) are =0 I know which menus to check above to clear the error message
+       // I need to trigger a flag that certain menus were not selected and after they are clear the message 
+       // I will need the status of a menu (after it's changed). 
+      
+       /*
+        so flag condition if any menus are not selected
+        after all menus are selected it clears the error message below 
+       
+       */
+       
+     var a1 = window.document.thetest.f1.value
+     var a2 = window.document.thetest.f2.value
+     var a3 = window.document.thetest.f3.value
+     var a4 = window.document.thetest.f4.value
+
+     if(a1 == 0){ //menu1_notselected  == 'true'
+         readthis += "<tr><td><font color=black>Menu Category Not Selected.</td></tr>";
+      }
+      
+      if(a2 == 0){//menu2_notselected  == 'true'
+         readthis += "<tr><td><font color=black>Menu Gender Not Selected.</td></tr>";
+      }
+      
+      if(a3 == 0){//menu3_notselected  == 'true'
+        readthis += "<tr><td><font color=black>Menu Size Not Selected.</td></tr>";
+      }
+      
+      //what this does is bypass an error message for the Type of hat if hats are selected and the Type menu isn't selected
+      var  fish = window.document.thetest.one.value;  
+      if(a4 == 0 && fish != "hats"){//menu4_notselected  == 'true'
+        readthis += "<tr><td><font color=black>Menu Type Not Selected.</td></tr>";
+      }
+      
+    	readthis += "</table></td></tr></table></div>";
+        document.getElementById("big_info_instruct").innerHTML = readthis;
+} //end func
+//-------------------------------
+
+
+
+
+
+
+
+ 
+//########################
+//      INPUT ERROR
+//########################
+ function input_error(){
+  var inst  = "<a href='#'  style='display:block;text-decoration:none;'>";
+      inst += "<div id='instruct_box'>";
+      inst += "<table width = 200><tr><td align=left>";
+      inst += "<table style='border: 1px solid #D8D8D8;' width = 200 bgcolor=#FBBBB9 >";
+      inst += "<tr><td align=center><font face='Arial'>";
+      inst += "<font size=3><font color=black>&nbsp;&nbsp;Input Error!</font></td></tr></table>";
+      inst += "</td><td><td align=right>";
+      inst += "</td></tr></table></div></a>";
+      document.getElementById("instruct_box").innerHTML = inst;
+} //end function
+//---------------------------
+
+
+
+
+
+
+
+
+//#####################
+// CLEAR ERROR MESSAGES       //ACTUALLY IT SHOULD REVERT BACK TO THE MESSAGE DEFAULT
+//#####################
+function clear_error_messages(){  
+          show_instruct_box(); //clears top error message for INPUT ERROR
+           // this clear the lower message of menus not selected 
+           var readthis    = "";
+            readthis += "<div='big_info_instruct'><table bgcolor=white>"
+            readthis += "<tr><td>&nbsp;</td></tr>";
+            readthis += "</table></td></tr></table></div>";
+            document.getElementById("big_info_instruct").innerHTML = readthis;
+} //end function
+//--------------------
+
+
+
+
+
+
+  
+ 
+//#######################
+//	    GOTO BASKET
+//####################### 
+function goto_basket(){
+  setTimeout(function(){window.location.href = "iphone_merchandise_basket.html"; }, 25); 
+}
+
+  
+  
+   
+  
+  function showthecounter(){
+  var cheesey = parseInt(getmemory('lecounter')); 
+  //alert("counter = " + cheesey);
+} //end function
+
+
+
+  
+
+     var air = []; //creating array air.
+     air[air.length] = ""; //empty position 0
+
+
+ /*
+ 
+ the function grab_memory is called on load which is called every time that I return to
+ the filter page. looks like loader() isn't doing --- anything - remarkable. 
+ I am filling fields with what was in the memory using getItem
+ 
+ */    
+ 
+ 
+
+
+
+
+
+
+ //#########################
+ /*   GRAB MEMORY FUNCTION */
+ //#########################    
+function grab_memory(){
+var dog = localStorage.getItem('Tahoe'); //memory of 4 menu seetings in memory slot called Tahoe
+if(dog === null){
+  air[air.length] = '1';
+  air[air.length] = '1';
+  air[air.length] = '3';
+  air[air.length] = '1';
+  mycounter();  // sets the counter at 0 to start with
+}else{
+  air[air.length] = dog.charAt(0);
+  air[air.length] = dog.charAt(2);
+  air[air.length] = dog.charAt(4);
+  air[air.length] = dog.charAt(6);
+} //end if
+
+//this loads what is in memory into the text fields at bottom of the page
+//overwriting what is there by default with the current settings. 
+document.getElementById("f_cat").value      = air[1];
+document.getElementById("f_gender").value   = air[2];
+document.getElementById("f_size").value     = air[3];
+document.getElementById("f_type").value     = air[4];
+//location.reload(true); //reloads the page to set the buttons to what they were just selected by user
+//so apparently I need to call the correct functions
+// to change the buttons to selected
+// the machine has zero intelligence
+//so the grabmemory () function calls the menu buttons of the previous settings
+// good to know.
+
+} //end function
+//--------------------------------------------
+//=============================================
+
+
+
+
+
+
+//--------------------------------------------
+//=============================================
+
+//########################
+//     LOADER
+//########################
+function loader(){
+document.getElementById("f_cat").value      = "1";
+document.getElementById("f_gender").value   = "1";
+document.getElementById("f_size").value     = "2";
+document.getElementById("f_type").value     = "1";
+//this is new november 10th half moon bay a flag
+setmemory('recent_page_memory_flag','filter');
+} //end func
+
+
+
+
+
+
+
+ 
+ 
+ //============= dmz ===============
+ //===================================
+ 
+ 
+/*
+Friday, December 1st 2017
+Now remember that when they use a pull down menu
+it will show the chosen item at the top that they have chosen and
+that changes the div pic and when that same item is clicked
+then it will show the whole menu to select from.
+So work on that one but it shouldn't be too difficult.
+
+If you click one and don't select something
+and then click another menu the first one is unclicked - ha ha
+
+
+
+*/
+//clearing new array
+  var inputdata = [];
+      inputdata[inputdata.length] = "0";
+
+ function setmemory(v1,v2){  //key and value both strings
+   eval("localStorage.setItem('" + v1 + "','"  +  v2 + "'" + ");" );
+ } 
+
+
+  function setflag(){
+    setmemory('recent_page_memory_flag','contactus');
+  } //end func
+
+//=================
+
+
+   /*
+   this will require a flag.
+   I could also have it so that if a menu is selected and not selected in 5 seconds then
+   it will close automatically.
+   
+   I might add a rule so that if a menu is selected and then a second menu
+   is selected without choosing an item from the first menu then
+   the first menu is unselected silently in the background 
+   
+ */
+ 
+ //----------------------------------
+    function time_delay1(){setTimeout( magic1, 10);}  //============here
+    function magic1(){marquelights1(); second_time_delay1();}
+    function second_time_delay1(){setTimeout( magic1a, 250);}
+    function magic1a(){ type_shirts();organize_input();}
+   //==============================================
+   //----------------------------------
+    function time_delay2(){setTimeout( magic2, 10);}    //======== and here 
+    function magic2(){marquelights2();second_time_delay2();}
+    function second_time_delay2(){setTimeout( magic2a, 250);}
+    function magic2a(){type_hats();organize_input();}
+    
+    //###########
+ //==============================================
+  //----------------------------------
+    function time_delay3(){setTimeout( magic3, 10);}
+    function magic3(){marquelights3();second_time_delay3();}
+    function second_time_delay3(){setTimeout( magic3a, 250);}
+    function magic3a(){girls();organize_input();}
+ //==============================================
+  //----------------------------------
+    function time_delay4(){setTimeout( magic4, 10);}
+    function magic4(){marquelights4();second_time_delay4();}
+    function second_time_delay4(){setTimeout( magic4a, 250);}
+    function magic4a(){boys();organize_input();}
+ //==============================================
+//down menus for search engine for iphone
+ //----------------------------------
+    function s_time_delay1(){setTimeout(  s_magic1, 10);}
+    function s_magic1(){marquelights1_2();s_second_time_delay1();}
+    function s_second_time_delay1(){setTimeout( s_magic1a, 250);}
+    function s_magic1a(){mens();organize_input();}
+ //==============================================
+   //----------------------------------
+    function s_time_delay2(){setTimeout( s_magic2, 10);}
+    function s_magic2(){marquelights2_2();s_second_time_delay2();}
+    function s_second_time_delay2(){setTimeout( s_magic2a, 250);}
+    function s_magic2a(){womens();organize_input();}
+ //==============================================
+  //----------------------------------
+    function s_time_delay3(){setTimeout( s_magic3, 10); }
+    function s_magic3(){marquelights3_2(); s_second_time_delay3(); }
+    function s_second_time_delay3(){setTimeout( s_magic3a, 250);}
+    function s_magic3a(){ girls();organize_input();}
+ //==============================================
+ //----------------------------------
+    function s_time_delay4(){setTimeout( s_magic4, 10); }
+    function s_magic4(){ marquelights4_2();s_second_time_delay4();}
+    function s_second_time_delay4(){setTimeout( s_magic4a, 250);}
+    function s_magic4a(){boys();organize_input();}
+    //========  
+    //not called   
+    function s_time_delay5(){setTimeout( s_magic5, 10); }
+    function s_magic5(){marquelights5_2();s_second_time_delay5();}
+    function s_second_time_delay5(){setTimeout( s_magic5a, 250);}
+    function s_magic5a(){twoxl();organize_input();}
+ //==========----------------------------
+ //dec 2, 2017 nearly 10:30pm at night rainstorm outside
+     //type shirts
+    function time_delay8(){setTimeout( super_magic8, 10);}
+    function super_magic8(){frosty1();  super_second_time_delay8();}
+    function super_second_time_delay8(){setTimeout( super_magic8a, 250);}
+    function super_magic8a(){small();organize_input();} //this makes the shirts selected for this menu
+ //==============================================
+    function time_delay9(){setTimeout( super_magic9, 10);}
+    function super_magic9(){frosty2(); super_second_time_delay9();}
+    function super_second_time_delay9(){ setTimeout( super_magic9a, 250);}
+    function super_magic9a(){medium(); organize_input();}
+   
+   //10
+    function time_delay10(){setTimeout( super_magic10, 10);}
+    function super_magic10(){frosty3(); super_second_time_delay10();}
+    function super_second_time_delay10(){ setTimeout( super_magic10a, 250);}
+    function super_magic10a(){large(); organize_input();}
+   //11
+    function time_delay11(){setTimeout( super_magic11, 10);}
+    function super_magic11(){frosty4(); super_second_time_delay11();}
+    function super_second_time_delay11(){ setTimeout( super_magic11a, 250);}
+    function super_magic11a(){xl(); organize_input();}
+   //12
+    function time_delay12(){setTimeout( super_magic12, 10);}
+    function super_magic12(){frosty5(); super_second_time_delay12();}
+    function super_second_time_delay12(){ setTimeout( super_magic12a, 250);}
+    function super_magic12a(){twoxl();organize_input(); }
+     //-----------
+    function time_delay_santa1(){ setTimeout( super_magic_santa1, 10);}
+    function super_magic_santa1(){ type_one();  super_second_time_delay_santa1();}
+    function super_second_time_delay_santa1(){ setTimeout( super_magic_santa1a, 250);}
+    function super_magic_santa1a(){ snowflake_one();organize_input(); }
+    //===
+     //type longsleeve bottom
+    function time_delay_santa2(){setTimeout( super_magic_santa2, 10); }
+    function super_magic_santa2(){type_two(); super_second_time_delay_santa2();}
+    function super_second_time_delay_santa2(){setTimeout( super_magic_santa2a, 250); }
+    function super_magic_santa2a(){snowflake_two();organize_input();}
+     //type hoodie bottom
+    function time_delay_santa3(){setTimeout( super_magic_santa3, 10);}
+    function super_magic_santa3(){type_three();  super_second_time_delay_santa3();}
+    function super_second_time_delay_santa3(){setTimeout( super_magic_santa3a, 250);}
+    function super_magic_santa3a(){snowflake_three(); organize_input();}
+        
+           
+        
+
+//let's have it so if you click outside the rectangle of a box it calls a function
+// to close the menu. why not. can i Have it know if clicked outside of zone.
+
+//if nothing selected from menus
+//put up error message in a div in red
+// and don't go to shop page when they click on search button.
+//and dim shop page from filter page
+
+//if gender not chosen error message
+//if categor not chosen error message
+//if type not chosen if shirt chosen error message
+
+//##################################
+//##################################
+    
+    function moonblast(){  //keep it simple; simplicity is beauty
+   //decided only to show blue gender highlight on first time clicked
+    
+    var jumba = ""; //in this mode nothing has been selected
+        jumba += "<div id ='smart'><table width = 110 border=1  bgcolor= white CELLPADDING='3' ";
+        jumba += "style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr onclick='zap();reset_one();'   bgcolor=#BCC6CC   ><td align=center><a href='#' style='text-decoration:none'>";
+        jumba += "<font face='Menlo'><font color=black>Category</td></tr>";
+        jumba += "<tr onclick='time_delay1()' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>Shirts</td></tr>";  //it was out turn green
+        jumba += "<tr onclick='time_delay2();' ><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>Hats</td></tr>";
+        jumba += "</table>";
+        document.getElementById("smart").innerHTML = jumba; 
+        window_into_menus[1] = "open";
+        menu_just_selected_now(1);
+        manage_closing_menus_left_unfurled();
+         //check_if_filter_menus_selected(); //testing this jan 23
+      }  
+ 
+
+//=====================
+
+
+     
+    function moonblast_darkside(){  //keep it simple; simplicity is beauty
+    var jumba = "";
+        jumba += "<div id ='minion'><table width = 110 border=1  bgcolor= white CELLPADDING='3' ";
+        jumba += "style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr onclick='zapish();reset_two();'  bgcolor=#BCC6CC  ><td align=center><a href='#' style='text-decoration:none'>";
+        jumba += "<font face='Menlo'><font color=black>Gender</td></tr>";
+        jumba += "<tr onclick='s_time_delay1()' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>Men's</td></tr>";  //it was out turn green
+        jumba += "<tr onclick='s_time_delay2();' ><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>Women's</td></tr>";
+        jumba += "<tr onclick='s_time_delay3();' ><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>Girls'</td></tr>";
+        jumba += "<tr onclick='s_time_delay4();' ><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>Boys'</td></tr>";
+        jumba += "</table>";
+        document.getElementById("minion").innerHTML = jumba; 
+        window_into_menus[2] = "open";
+        menu_just_selected_now(2);
+        manage_closing_menus_left_unfurled();
+         //check_if_filter_menus_selected(); //testing this jan 23
+      }  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+//this one zapishly
+  function moonblast_darkside_back(){  //keep it simple; simplicity is beauty
+    var jumba = "";
+        jumba += "<div id ='trainwhistle'><table width = 110 border=1  bgcolor= white CELLPADDING='3' ";
+        jumba += "style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr onclick='zapishly();reset_three();'  bgcolor=#BCC6CC  ><td align=center>";
+        jumba += "<a href='#' style='text-decoration:none'>";
+        jumba += "<font face='Menlo'><font color=black>Size</td></tr>";
+        jumba += "<tr onclick='time_delay8()' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>S</td></tr>"; 
+        jumba += "<tr onclick='time_delay9();' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>M</td></tr>";
+        jumba += "<tr onclick='time_delay10();' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>L</td></tr>";
+        jumba += "<tr onclick='time_delay11();' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>XL</td></tr>";
+        jumba += "<tr onclick='time_delay12();' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>2XL</td></tr>";
+        jumba += "</table>";
+        document.getElementById("trainwhistle").innerHTML = jumba; 
+        window_into_menus[3] = "open";
+        menu_just_selected_now(3);
+        manage_closing_menus_left_unfurled();
+        // check_if_filter_menus_selected(); //testing htis jan 23
+      }  
+ 
+
+  function moonblast_darkside_back_moretoo(){  //keep it simple; simplicity is beauty
+  //alert("calling moonblast darkside back moretoo")
+   var jumba = "";
+        jumba += "<div id ='xmaswhite'><table width = 110 border=1  bgcolor= white CELLPADDING='3' ";
+        jumba += "style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr onclick='zapishlymore();reset_four();'  bgcolor=#BCC6CC  ><td align=center>";
+        jumba += "<a href='#' style='text-decoration:none'>";
+        jumba += "<font face='Menlo'><font color=black>Type</td></tr>";
+        jumba += "<tr onclick='time_delay_santa1();' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>Shirts</td></tr>";     //it was out turn green
+        jumba += "<tr onclick='time_delay_santa2();' ><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>L. Sleeve</td></tr>";
+        jumba += "<tr onclick='time_delay_santa3();' ><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>Hoodie</td></tr>";
+        jumba += "</table></div>";
+        document.getElementById("xmaswhite").innerHTML = jumba; 
+        window_into_menus[4] = "open";
+        menu_just_selected_now(4);
+        manage_closing_menus_left_unfurled();
+         //check_if_filter_menus_selected(); //testing this jan 23
+      }  
+ 
+
+
+ //==========
+ 
+ 
+ 
+ 
+    //example of it was out turned green for a bit over a second
+   function marquelights1(){  //higlight menu tag      greenhilghted it was out
+    var  jumba = "";
+         jumba += "<div id ='smart'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+         jumba += "<tr onclick='moonblast();reset_one();'   bgcolor=#BCC6CC  ><td align=center><a href='#' style='text-decoration:none'>";
+         jumba += "<font face='Menlo'><font color=black>Category</td></tr>";
+         jumba += "<tr  bgcolor=#C3FDB8      onclick='#'><td align=center>"; //green it was out
+         jumba += "<font face='Menlo'><font color=black>Shirts</td></tr>";
+         jumba += "<tr  onclick='#'><td align=center>&nbsp;";
+         jumba += "<font face='Menlo'><font color=black>Hats</td></tr>";
+         jumba += "<tr onclick='#'><td align=center>&nbsp;";
+         jumba += "</table></span></div></div>";
+         document.getElementById("smart").innerHTML = jumba; 
+         // check_if_filter_menus_selected(); //testing this jan 23
+        }  
+      
+      
+      
+ 
+  //example of it was out turned green for a bit over a second
+   function marquelights2(){  //higlight menu tag      greenhilghted
+    var jumba = "";
+        jumba += "<div id ='smart'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr onclick='moonblast()' bgcolor=#BCC6CC  ><td align=center><a href='#' style='text-decoration:none'>";
+        jumba += "<font face='Menlo'><font color=black>Category</td></tr>";
+        jumba += "<tr   onclick='#'><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>Shirts</td></tr>";
+        jumba += "<tr   bgcolor=#C3FDB8    onclick='#'><td align=center>&nbsp;"; //green village host
+        jumba += "<font face='Menlo'><font color=black>Hats</td></tr>";
+        jumba += "</table>";
+        document.getElementById("smart").innerHTML = jumba; 
+         //check_if_filter_menus_selected(); //testing this jan 23
+      }  
+ 
+ 
+ //don't use
+   function marquelights3(){  //higlight menu tag      greenhilghted
+    var jumba = "";
+        jumba += "<div id ='smart'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr onclick='moonblast()'   bgcolor=#BCC6CC  ><td align=center><a href='#' style='text-decoration:none'>";
+        jumba += "<font face='Menlo'><font color=black>Gender</td></tr>";
+        jumba += "<tr   onclick='#'><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>Men's</td></tr>";
+        jumba += "<tr   onclick='#'><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>Women's</td></tr>";
+        jumba += "<tr  bgcolor=#C3FDB8   onclick='#'><td align=center>&nbsp;";  //green marine world
+        jumba += "<font face='Menlo'><font color=black>Girls'</td></tr>";
+        jumba += "<tr onclick='#'><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>Boys'</td></tr>";
+        jumba += "</table>";
+        document.getElementById("smart").innerHTML = jumba; 
+         //check_if_filter_menus_selected(); //testing this jan 23
+      }  
+ 
+ 
+ 
+ 
+ //don'lt use
+    //example of it was out turned green for a bit over a second
+   function marquelights4(){  //higlight menu tag      greenhilghted
+    var jumba = "";
+        jumba += "<div id ='smart'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr onclick='moonblast_darkside()'  bgcolor=#BCC6CC  ><td align=center><a href='#' style='text-decoration:none'>";
+        jumba += "<font face='Menlo'><font color=black>Gender</td></tr>";
+        jumba += "<tr onclick='#'><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>Men's</td></tr>";
+        jumba += "<tr onclick='#'><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>Women's</td></tr>";
+        jumba += "<tr onclick='#' ><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>Girls'</td></tr>";
+        jumba += "<tr  bgcolor=#C3FDB8  onclick='#'><td align=center>&nbsp;";  //green ralston ave
+        jumba += "<font face='Menlo'><font color=black>Boys'</td></tr>";
+        jumba += "</table>";
+        document.getElementById("smart").innerHTML = jumba; 
+         //check_if_filter_menus_selected(); //testing this jan 23
+      }  
+ 
+
+
+
+
+
+//=============================
+//=============================
+
+   function marquelights1_2(){  //higlight menu tag      greenhilghted it was out
+   var   jumba = "";
+         jumba += "<div id ='minion'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+         jumba += "<tr onclick='moonblast_darkside()' bgcolor=#BCC6CC  ><td align=center><a href='#' style='text-decoration:none'>";
+         jumba += "<font face='Menlo'><font color=black>Gender</td></tr>";
+         jumba += "<tr  bgcolor=#C3FDB8  onclick='#'><td align=center>"; //green it was out
+         jumba += "<font face='Menlo'><font color=black>Men's</td></tr>";
+         jumba += "<tr  onclick='#'><td align=center>&nbsp;";
+         jumba += "<font face='Menlo'><font color=black>Women's</td></tr>";
+         jumba += "<tr onclick='#'><td align=center>&nbsp;";
+         jumba += "<font face='Menlo'><font color=black>Girls'</td></tr>";
+         jumba += "<tr onclick='#' ><td align=center>&nbsp;";
+         jumba += "<font face='Menlo'><font color=black>Boys'</td></tr>";
+         jumba += "</table></span></div></div>";
+         document.getElementById("minion").innerHTML = jumba; 
+          //check_if_filter_menus_selected(); //testing this jan 23
+        }  
+      
+      
+   function marquelights2_2(){  //higlight menu tag      greenhilghted it was out
+    var  jumba = "";
+         jumba += "<div id ='minion'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+         jumba += "<tr onclick='moonblast_darkside()'  bgcolor=#BCC6CC    ><td align=center><a href='#' style='text-decoration:none'>";
+         jumba += "<font face='Menlo'><font color=black>Gender</td></tr>";
+         jumba += "<tr    onclick='#'><td align=center>"; //green it was out
+         jumba += "<font face='Menlo'><font color=black>Men's</td></tr>";
+         jumba += "<tr   bgcolor=#C3FDB8   onclick='#'><td align=center>&nbsp;";
+         jumba += "<font face='Menlo'><font color=black>Women's</td></tr>";
+         jumba += "<tr onclick='#'><td align=center>&nbsp;";
+         jumba += "<font face='Menlo'><font color=black>Girls'</td></tr>";
+         jumba += "<tr onclick='#' ><td align=center>&nbsp;";
+         jumba += "<font face='Menlo'><font color=black>Boys'</td></tr>";
+         jumba += "</table></span></div></div>";
+         document.getElementById("minion").innerHTML = jumba; 
+        //  check_if_filter_menus_selected(); //testing this jan 23
+        }  
+      
+      
+      
+         function marquelights3_2(){  //higlight menu tag      greenhilghted it was out
+    var  jumba = "";
+         jumba += "<div id ='minion'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+         jumba += "<tr onclick='moonblast_darkside()' bgcolor=#BCC6CC   ><td align=center><a href='#' style='text-decoration:none'>";
+         jumba += "<font face='Menlo'><font color=black>Gender</td></tr>";
+         jumba += "<tr  onclick='#'><td align=center>"; //green it was out
+         jumba += "<font face='Menlo'><font color=black>Men's</td></tr>";
+         jumba += "<tr onclick='#'><td align=center>&nbsp;";
+         jumba += "<font face='Menlo'><font color=black>Women's</td></tr>";
+         jumba += "<tr  bgcolor=#C3FDB8   onclick='#'><td align=center>&nbsp;";
+         jumba += "<font face='Menlo'><font color=black>Girls'</td></tr>";
+         jumba += "<tr onclick='#' ><td align=center>&nbsp;";
+         jumba += "<font face='Menlo'><font color=black>Boys'</td></tr>";
+         jumba += "</table></span></div></div>";
+         document.getElementById("minion").innerHTML = jumba; 
+         // check_if_filter_menus_selected(); //testing this jan 23
+        }  
+      
+      
+         function marquelights4_2(){  //higlight menu tag      greenhilghted it was out
+         var  jumba = "";
+         jumba += "<div id ='minion'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+         jumba += "<tr onclick='moonblast_darkside()' bgcolor=#BCC6CC  ><td align=center><a href='#' style='text-decoration:none'>";
+         jumba += "<font face='Menlo'><font color=black>Gender</td></tr>";
+         jumba += "<tr onclick='#'><td align=center>"; //green it was out
+         jumba += "<font face='Menlo'><font color=black>Men's</td></tr>";
+         jumba += "<tr onclick='#'><td align=center>&nbsp;";
+         jumba += "<font face='Menlo'><font color=black>Women's</td></tr>";
+         jumba += "<tr onclick='#'><td align=center>&nbsp;";
+         jumba += "<font face='Menlo'><font color=black>Girls'</td></tr>";
+         jumba += "<tr  bgcolor=#C3FDB8   onclick='#' ><td align=center>&nbsp;";
+         jumba += "<font face='Menlo'><font color=black>Boys'</td></tr>";
+         jumba += "</table></span></div></div>";
+         document.getElementById("minion").innerHTML = jumba; 
+        //  check_if_filter_menus_selected(); //testing this jan 23
+        }  
+        
+        //if one menu is open how do we know
+        
+        //this means that the user clicked the label and
+        // not on something in the menu therefore nothing is 
+        //selected for that particular menu
+        
+        /* RESET ONE */
+        function reset_one(){
+           window.document.thetest.one.value = '-1';
+           zap();organize_input();
+        }
+        
+        /*  RESET TWO  */
+        function reset_two(){
+          window.document.thetest.two.value = '-1';
+          zapish();organize_input();
+        }
+        
+        /* RESET THREE   */
+        function reset_three(){
+          window.document.thetest.three.value = '-1';
+          zapishly();organize_input();
+        }
+        
+        /*  RESET FOUR    */
+        function reset_four(){
+          window.document.thetest.four.value = '-1';
+          zapishlymore();organize_input();
+        }
+        
+        
+        
+        
+        
+        //===============================
+      //==========================================
+      
+         function marquelights5_2(){  //higlight menu tag      greenhilghted it was out
+        var  jumba = ""; //2XL green
+         jumba += "<div id ='trainwhistle'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+         jumba += "<tr onclick='zapish'  bgcolor=#BCC6CC  ><td align=center><a href='#' style='text-decoration:none'>";
+         jumba += "<font face='Menlo'><font color=black>Size</td></tr>";
+         jumba += "<tr  onclick='#'><td align=center>"; //green it was out
+         jumba += "<font face='Menlo'><font color=black>S</td></tr>";
+         jumba += "<tr onclick='#'><td align=center>";
+         jumba += "<font face='Menlo'><font color=black>M</td></tr>";
+         jumba += "<tr onclick='#'><td align=center>";
+         jumba += "<font face='Menlo'><font color=black>L</td></tr>";
+         jumba += "<tr onclick='#' ><td align=center>&";
+         jumba += "<font face='Menlo'><font color=black>XL</td></tr>";
+         jumba += "<tr bgcolor=#C3FDB8  onclick='#' ><td align=center>";
+         jumba += "<font face='Menlo'><font color=black>2XL</td></tr>";
+         jumba += "</table></span></div></div>";
+         document.getElementById("trainwhistle").innerHTML = jumba; 
+         // check_if_filter_menus_selected(); //testing this jan 23
+        }  
+      
+    
+      //========================= 
+    function zap(){
+     var jumba = "";
+         jumba += "<div id ='smart'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+         jumba += "<tr onclick='moonblast()'  bgcolor=#BCC6CC  ><td align=center><a href='#' style='text-decoration:none'>";
+         jumba += "<font face='Menlo'><font color=black>Category</td></tr>";
+         jumba += "</table></span></div></div>";
+         document.getElementById("smart").innerHTML = jumba; 
+              window.document.thetest.one.value = "-1";  
+                window_into_menus[1] = "closed";
+      }
+ 
+                
+        
+    function zapish(){
+     var jumba = "";
+         jumba += "<div id ='minion'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+         jumba += "<tr onclick='moonblast_darkside()'   bgcolor=#BCC6CC   ><td align=center><a href='#' style='text-decoration:none'>";
+         jumba += "<font face='Menlo'><font color=black>Gender</td></tr>";
+         jumba += "</table></span></div></div>";
+         document.getElementById("minion").innerHTML = jumba; 
+           window_into_menus[2] = "closed";
+     }
+ 
+   //put a timer if a menu is selected and
+   //not clicked on within 7 seconds it's reset.
+         
+    function zapishly(){
+     var jumba = "";
+         jumba += "<div id ='trainwhistile'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+         jumba += "<tr onclick='moonblast_darkside_back()' bgcolor=#BCC6CC  ><td align=center><a href='#' style='text-decoration:none'>";
+         jumba += "<font face='Menlo'><font color=black>Size</td></tr>";
+         jumba += "</table></span></div></div>";
+         document.getElementById("trainwhistle").innerHTML = jumba; 
+           window_into_menus[3] = "closed";
+      }
+ 
+          
+    function zapishlymore(){
+     var jumba  = "";
+         jumba += "<div id ='xmaswhite'><table width = 110 border=1  bgcolor= white ";
+         jumba += "CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+         jumba += "<tr onclick='moonblast_darkside_back_moretoo()'  bgcolor=#BCC6CC  >";
+         jumba += "<td align=center><a href='#' style='text-decoration:none'>";
+         jumba += "<font face='Menlo'><font color=black>Type</td></tr>";
+         jumba += "</table></span></div></div>";
+         document.getElementById("xmaswhite").innerHTML = jumba; 
+           window_into_menus[4] = "closed";
+      }
+ 
+ //=====================================
+ 
+ 
+ //I can look at the value of the field on the left hand side
+ // put the correct number on the right hand side column.
+ 
+ 
+ 
+ /*       MENS         */
+    function mens(){
+        window.document.thetest.two.value = "mens";// here maybe
+        selected_gender[1] = "mens";
+       var jumba = "";
+           jumba += "<div id ='minion'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+           jumba += "<tr onclick='moonblast_darkside()'  bgcolor=white ><td align=center><a href='#' style='text-decoration:none'>";
+           jumba += "<font face='Menlo'><font color=black>&nbsp;&nbsp;&nbsp;Men's&nbsp;&nbsp;</td></tr>";
+           jumba += "</table></span></div></div>";
+           document.getElementById("minion").innerHTML = jumba; 
+             window_into_menus[2] = "closed";
+              selected_menus[2] = "1";
+            check_if_filter_menus_selected();
+            
+       }
+ 
+ // when I come back to the page it will need to call the selected menu such as mens() and it will
+ // be based on the number system that I am using that i devised for the prototype.
+ 
+
+ 
+ /*       WOMENS         */
+    function womens(){
+        window.document.thetest.two.value = "womens";
+        selected_gender[1] = "womens";
+       var jumba = "";
+           jumba += "<div id ='minion'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+           jumba += "<tr onclick='moonblast_darkside()'  bgcolor=white ><td align=center><a href='#' style='text-decoration:none'>";
+           jumba += "<font face='Menlo'><font color=black>Women's</td></tr>";
+           jumba += "</table></span></div></div>";
+           document.getElementById("minion").innerHTML = jumba; 
+             window_into_menus[2] = "closed";
+             selected_menus[2] = "2";
+             check_if_filter_menus_selected();
+         }//end func    
+ 
+ 
+  /*       GIRLS         */
+    function girls(){
+        window.document.thetest.two.value = "girls";
+         selected_gender[1] = "girls";
+
+      var jumba = "";
+          jumba += "<div id ='minion'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+          jumba += "<tr onclick='moonblast_darkside()'  bgcolor=white ><td align=center><a href='#' style='text-decoration:none'>";
+          jumba += "<font face='Menlo'><font color=black>&nbsp;&nbsp;&nbsp;Girls'&nbsp;&nbsp;</td></tr>";
+          jumba += "</table></span></div></div>";
+          document.getElementById("minion").innerHTML = jumba; 
+            window_into_menus[2] = "closed";
+              selected_menus[2] = "3";
+           check_if_filter_menus_selected();
+           
+       }
+ 
+ 
+  /*       BOYS         */
+    function boys(){
+        window.document.thetest.two.value = "boys";
+        selected_gender[1] = "boys";
+       var jumba = "";
+           jumba += "<div id ='minion'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+           jumba += "<tr onclick='moonblast_darkside()'  bgcolor=white ><td align=center><a href='#' style='text-decoration:none'>";
+           jumba += "<font face='Menlo'><font color=black>&nbsp;&nbsp;&nbsp;Boys'&nbsp;&nbsp;</td></tr>";
+           jumba += "</table></span></div></div>";
+           document.getElementById("minion").innerHTML = jumba; 
+            window_into_menus[2] = "closed";
+               selected_menus[2] = "4";
+            check_if_filter_menus_selected();
+             
+        }
+ 
+ 
+ //==============-----------========--------=======------=====
+
+ ///=============================
+    function small(){
+       window.document.thetest.three.value = "S";
+       selected_size[1] = "S";
+       var jumba = "";
+           jumba += "<div id ='trainwhistle'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+           jumba += "<tr onclick='moonblast_darkside_back()'  bgcolor=white ><td align=center><a href='#' style='text-decoration:none'>";
+           jumba += "<font face='Menlo'><font color=black>S</td></tr>";
+           jumba += "</table></span></div></div>";
+           document.getElementById("trainwhistle").innerHTML = jumba; 
+            window_into_menus[3] = "closed";
+               selected_menus[3] = "1";
+            check_if_filter_menus_selected();
+             
+     }
+ 
+ 
+ 
+ 
+    function medium(){
+       window.document.thetest.three.value = "M";
+       selected_size[1] = "M";
+       
+       var jumba = "";
+           jumba += "<div id ='trainwhistle'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+           jumba += "<tr onclick='moonblast_darkside_back()'  bgcolor=white ><td align=center><a href='#' style='text-decoration:none'>";
+           jumba += "<font face='Menlo'><font color=black>M</td></tr>";
+           jumba += "</table></span></div></div>";
+           document.getElementById("trainwhistle").innerHTML = jumba; 
+             window_into_menus[3] = "closed";
+               selected_menus[3] = "2";
+            check_if_filter_menus_selected();
+            
+        }
+ 
+
+
+
+
+    function large(){
+          window.document.thetest.three.value = "L";
+          selected_size[1] = "L";
+          
+         var jumba = "";
+            jumba += "<div id ='trainwhistle'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+            jumba += "<tr onclick='moonblast_darkside_back()'  bgcolor=white ><td align=center><a href='#' style='text-decoration:none'>";
+            jumba += "<font face='Menlo'><font color=black>L</td></tr>";
+            jumba += "</table></span></div></div>";
+            document.getElementById("trainwhistle").innerHTML = jumba; 
+             window_into_menus[3] = "closed";
+                selected_menus[3] = "3";
+             check_if_filter_menus_selected();
+              
+       }
+ 
+ 
+ 
+ 
+
+    function xl(){
+          window.document.thetest.three.value = "XL";
+          selected_size[1] = "XL";
+       var jumba = "";
+       jumba += "<div id ='trainwhistle'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+       jumba += "<tr onclick='moonblast_darkside_back()'  bgcolor=white><td align=center><a href='#' style='text-decoration:none'>";
+       jumba += "<font face='Menlo'><font color=black>XL</td></tr>";
+       jumba += "</table></span></div></div>";
+       document.getElementById("trainwhistle").innerHTML = jumba; 
+        window_into_menus[3] = "closed";
+           selected_menus[3] = "4";
+        check_if_filter_menus_selected();
+        
+       }
+ 
+
+    
+    function twoxl(){
+         window.document.thetest.three.value = "2XL";
+         selected_size[1] = "2XL";
+         
+      var jumba = "";
+       jumba += "<div id ='trainwhistle'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+       jumba += "<tr onclick='moonblast_darkside_back()'  bgcolor=white ><td align=center><a href='#' style='text-decoration:none'>";
+       jumba += "<font face='Menlo'><font color=black>2XL</td></tr>";
+       jumba += "</table></span></div></div>";
+       document.getElementById("trainwhistle").innerHTML = jumba; 
+        window_into_menus[3] = "closed";
+           selected_menus[3] = "5";
+        check_if_filter_menus_selected();
+         
+       }
+ 
+ 
+ 
+ 
+ 
+ //////...///////////////////===================================
+//======
+    function shirt(){
+   selected_shirt_type[1] = "shirts";
+   var jumba = "";
+       jumba += "<div id ='xmaswhite'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+       jumba += "<tr onclick='moonblast_darkside_back_moretoo()'  bgcolor=white ><td align=center><a href='#' style='text-decoration:none'>";
+       jumba += "<font face='Menlo'><font color=black>Shirt</td></tr>";
+       jumba += "</table></span></div></div>";
+       document.getElementById("xmaswhite").innerHTML = jumba; 
+        window_into_menus[4] = "closed";
+        selected_menus[4] = "1";
+        check_if_filter_menus_selected();
+     
+      }
+ 
+
+     function longsleeve(){
+     selected_shirt_type[1] = "longsleeve";
+   var jumba = "";
+       jumba += "<div id ='xmaswhite'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+       jumba += "<tr onclick='moonblast_darkside_back_moretoo()'  bgcolor=white ><td align=center><a href='#' style='text-decoration:none'>";
+       jumba += "<font face='Menlo'><font color=black>L. Sleeve</td></tr>";
+       jumba += "</table></span></div></div>";
+       document.getElementById("xmaswhite").innerHTML = jumba; 
+        window_into_menus[4] = "closed";
+        selected_menus[4] = "2";
+        check_if_filter_menus_selected();
+         
+       }
+ 
+
+     function hoodie(){
+     selected_shirt_type[1] = "hoodie";
+      var jumba = "";
+       jumba += "<div id ='xmaswhite'><table width = 110 border=1  bgcolor= white CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>";
+       jumba += "<tr onclick='moonblast_darkside_back_moretoo()'  bgcolor=white><td align=center><a href='#' style='text-decoration:none'>";
+       jumba += "<font face='Menlo'><font color=black>Hoodie</td></tr>";
+       jumba += "</table></span></div></div>";
+       document.getElementById("xmaswhite").innerHTML = jumba; 
+         window_into_menus[4] = "closed";
+        selected_menus[4] = "3";
+        check_if_filter_menus_selected();
+       
+       }
+        
+
+ ///====================================
+    
+   
+    
+     //========
+      function frosty1(){  //keep it simple; simplicity is beauty
+      //shirts green mode 
+         var jumba = "";
+        jumba += "<div id ='trainwhistle'><table width = 110 border=1  bgcolor= white CELLPADDING='3' ";
+        jumba += "style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr onclick='#'  bgcolor=#BCC6CC ><td align=center><a href='#' style='text-decoration:none'>";
+        jumba += "<font face='Menlo'><font color=black>Size</td></tr>";
+        jumba += "<tr  bgcolor=#C3FDB8   onclick='#' ><td align=center>";
+        
+        jumba += "<font face='Menlo'><font color=black>S</td></tr>";  //it was out turn green
+        jumba += "<tr onclick='time_delay9();' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>M</td></tr>";
+        jumba += "<tr onclick='time_delay9();' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>L</td></tr>";
+        jumba += "<tr onclick='time_delay9();' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>XL</td></tr>";
+        jumba += "<tr onclick='time_delay9();' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>2XL</td></tr>";
+        jumba += "</table></div>";
+        document.getElementById("trainwhistle").innerHTML = jumba; 
+        // window_into_menus [3] = "open";
+        }  
+  
+      
+       function frosty2(){  //keep it simple; simplicity is beauty
+         //hats green mode 
+        var jumba = "";
+        jumba += "<div id ='trainwhistle'><table width = 110 border=1  bgcolor= white CELLPADDING='3' ";
+        jumba += "style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr onclick='#'    bgcolor=#BCC6CC  ><td align=center><a href='#' style='text-decoration:none'>";
+        jumba += "<font face='Menlo'><font color=black>Size</td></tr>";
+        jumba += "<tr onclick='time_delay8()' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>S</td></tr>";  //it was out turn green
+        jumba += "<tr bgcolor=#C3FDB8  onclick='#' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>M</td></tr>";
+        jumba += "<tr bgcolor=white onclick='#' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>L</td></tr>";
+        jumba += "<tr bgcolor=white onclick='#' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>XL</td></tr>";
+        jumba += "<tr bgcolor=white onclick='#' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>2XL</td></tr>";
+        jumba += "</table></div>";
+        document.getElementById("trainwhistle").innerHTML = jumba; 
+        }  
+ 
+     
+         function frosty3(){  //keep it simple; simplicity is beauty
+         //hats green mode 
+        var jumba = "";
+        jumba += "<div id ='trainwhistle'><table width = 110 border=1  bgcolor= white CELLPADDING='3' ";
+        jumba += "style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr onclick='#'  bgcolor=#BCC6CC ><td align=center><a href='#' style='text-decoration:none'>";
+        jumba += "<font face='Menlo'><font color=black>Size</td></tr>";
+        jumba += "<tr onclick='time_delay8()' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>S</td></tr>";  //it was out turn green
+        jumba += "<tr bgcolor=white onclick='#' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>M</td></tr>";
+        jumba += "<tr  bgcolor=#C3FDB8  onclick='#' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>L</td></tr>";
+        jumba += "<tr bgcolor=white onclick='#' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>XL</td></tr>";
+        jumba += "<tr bgcolor=white onclick='#' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>2XL</td></tr>";
+        jumba += "</table></div>";
+        document.getElementById("trainwhistle").innerHTML = jumba; 
+        }  
+ 
+     
+         function frosty4(){  //keep it simple; simplicity is beauty
+         //hats green mode 
+        var jumba = "";
+        jumba += "<div id ='trainwhistle'><table width = 110 border=1  bgcolor= white CELLPADDING='3' ";
+        jumba += "style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr onclick='#'   bgcolor=#BCC6CC  ><td align=center><a href='#' style='text-decoration:none'>";
+        jumba += "<font face='Menlo'><font color=black>Size</td></tr>";
+        jumba += "<tr onclick='time_delay8()' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>S</td></tr>";  //it was out turn green
+        jumba += "<tr bgcolor=white onclick='#' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>M</td></tr>";
+        jumba += "<tr bgcolor=white onclick='#' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>L</td></tr>";
+        jumba += "<tr  bgcolor=#C3FDB8  onclick='#' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>XL</td></tr>";
+        jumba += "<tr bgcolor=white onclick='#' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>2XL</td></tr>";
+        jumba += "</table></div>";
+        document.getElementById("trainwhistle").innerHTML = jumba; 
+        }  
+ 
+     
+     
+     
+          function frosty5(){  //keep it simple; simplicity is beauty
+         //hats green mode 
+        var jumba = "";
+        jumba += "<div id ='trainwhistle'><table width = 110 border=1  bgcolor= white CELLPADDING='3' ";
+        jumba += "style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr onclick='#'  bgcolor=#BCC6CC ><td align=center><a href='#' style='text-decoration:none'>";
+        jumba += "<font face='Menlo'><font color=black>Size</td></tr>";
+        jumba += "<tr onclick='time_delay8()' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>S</td></tr>";  //it was out turn green
+        jumba += "<tr bgcolor=white onclick='#' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>M</td></tr>";
+        jumba += "<tr bgcolor=white onclick='#' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>L</td></tr>";
+        jumba += "<tr bgcolor=white onclick='#' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>XL</td></tr>";
+        jumba += "<tr  bgcolor=#C3FDB8   onclick='#' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>2XL</td></tr>";
+        jumba += "</table></div>";
+        document.getElementById("trainwhistle").innerHTML = jumba; 
+        }  
+ 
+     
+     
+     //=============
+     //working on below this line right now 
+     
+     
+      
+      function type_shirts(){  //keep it simple; simplicity is beauty
+    var jumba = "";
+        jumba += "<div id ='smart'><table width = 110 border=1  bgcolor= white CELLPADDING='3' ";
+        jumba += "style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr bgcolor=white onclick='moonblast()'><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>Shirts</td></tr>";  
+        jumba += "</table></div>";
+        document.getElementById("smart").innerHTML = jumba; 
+        window.document.thetest.one.value = "shirts";
+         selected_category[1] = "shirts";
+         check_if_filter_menus_selected();
+            window_into_menus[1] = "closed";//new
+      }  
+  
+      
+      
+        function type_hats(){  //keep it simple; simplicity is beauty
+    var jumba = "";
+        jumba += "<div id ='smart'><table width = 110 border=1  bgcolor= white CELLPADDING='3' ";
+        jumba += "style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr bgcolor=white onclick='moonblast()' ><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>Hats</td></tr>";
+        jumba += "</table></div>";
+        document.getElementById("smart").innerHTML = jumba; 
+        window.document.thetest.one.value = "hats";
+           window_into_menus[1] = "closed"; //new
+         selected_category[1] = "hats";
+         check_if_filter_menus_selected();
+      }  
+  
+  //==================================================
+    //here
+        function the_type_shirts(){  //keep it simple; simplicity is beauty
+      //  alert('the type shirts()');
+    var jumba = "";
+        jumba += "<div id ='xmaswhite'><table width = 110 border=1  bgcolor= white CELLPADDING='3' ";
+        jumba += "style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr bgcolor=white onclick='moonblast_darkside_back_moretoo();' ><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>Shirts</td></tr>";
+        jumba += "</table></div>";  //  moonblast_darkside_back_moretoo()
+        document.getElementById("xmaswhite").innerHTML = jumba; 
+        window.document.thetest.four.value = "shirts";
+           window_into_menus[4] = "closed"; //new
+         check_if_filter_menus_selected();
+      }  
+      
+      
+      
+        function the_type_longsleeve(){  //keep it simple; simplicity is beauty
+        var jumba = "";
+        jumba += "<div id ='xmaswhite'><table width = 110 border=1  bgcolor= white CELLPADDING='3' ";
+        jumba += "style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr bgcolor=white onclick='moonblast_darkside_back_moretoo()' ><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>L. Sleeve</td></tr>";
+        jumba += "</table></div>";
+        document.getElementById("xmaswhite").innerHTML = jumba; 
+        window.document.thetest.four.value = "longsleeve";
+        window_into_menus[4] = "closed"; 
+        check_if_filter_menus_selected();
+      }  
+  
+  
+  
+    function the_type_hoodie(){  //keep it simple; simplicity is beauty
+        var jumba = "";
+        jumba += "<div id ='xmaswhite'><table width = 110 border=1  bgcolor= white CELLPADDING='3' ";
+        jumba += "style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr bgcolor=white onclick='moonblast_darkside_back_moretoo()' ><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>Hoodie</td></tr>";
+        jumba += "</table></div>";
+        document.getElementById("xmaswhite").innerHTML = jumba; 
+        window.document.thetest.four.value = "hoodie";
+        window_into_menus[4] = "closed"; 
+        check_if_filter_menus_selected();
+      }  
+  
+  
+  
+  
+  //type shirts is green 
+    function type_one(){  //keep it simple; simplicity is beauty
+    var jumba = "";
+        jumba += "<div id ='xmaswhite'><table width = 110 border=1  bgcolor= white CELLPADDING='3' ";
+        jumba += "style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr onclick='zapishlymore()'  bgcolor=#BCC6CC ><td align=center><a href='#' style='text-decoration:none'>";
+        jumba += "<font face='Menlo'><font color=black>Type</td></tr>";
+        jumba += "<tr   bgcolor=#C3FDB8     onclick='#' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>Shirts</td></tr>";  //it was out turn green
+        jumba += "<tr onclick='#' ><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>L. Sleeve</td></tr>";
+        jumba += "<tr onclick='#' ><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>Hoodie</td></tr>";
+        jumba += "</table></div>";
+        document.getElementById("xmaswhite").innerHTML = jumba; 
+         window_into_menus[4] = "open"; 
+         // check_if_filter_menus_selected();
+           manage_closing_menus_left_unfurled();
+      }  
+ 
+ 
+ 
+    //type longsleeve is green 
+   function type_two(){  //keep it simple; simplicity is beauty
+    var jumba = "";
+        jumba += "<div id ='xmaswhite'><table width = 110 border=1  bgcolor= white CELLPADDING='3' ";
+        jumba += "style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr onclick='zapishlymore()'  bgcolor=#BCC6CC  ><td align=center><a href='#' style='text-decoration:none'>";
+        jumba += "<font face='Menlo'><font color=black>Type</td></tr>";
+        jumba += "<tr onclick='#' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>Shirts</td></tr>";  //it was out turn green
+        jumba += "<tr  bgcolor=#C3FDB8   onclick='#' ><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>L. Sleeve</td></tr>";
+        jumba += "<tr onclick='#' ><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>Hoodie</td></tr>";
+        jumba += "</table></div>";
+        document.getElementById("xmaswhite").innerHTML = jumba; 
+         window_into_menus[4] = "open"; 
+          //check_if_filter_menus_selected();
+           manage_closing_menus_left_unfurled();
+      }  
+ 
+ 
+ 
+    //type hoodie is green 
+   function type_three(){  //keep it simple; simplicity is beauty
+    var jumba = "";
+        jumba += "<div id ='xmaswhite'><table width = 110 border=1  bgcolor= white CELLPADDING='3' ";
+        jumba += "style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr onclick='zapishlymore()'   bgcolor=#BCC6CC   ><td align=center><a href='#' style='text-decoration:none'>";
+        jumba += "<font face='Menlo'><font color=black>Type</td></tr>";
+        jumba += "<tr onclick='#' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>Shirts</td></tr>";  //it was out turn green
+        jumba += "<tr onclick='#' ><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>L. Sleeve</td></tr>";
+        jumba += "<tr  bgcolor=#C3FDB8   onclick='#' ><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>Hoodie</td></tr>";
+        jumba += "</table></div>";
+        document.getElementById("xmaswhite").innerHTML = jumba; 
+         window_into_menus[4] = "open"; 
+          check_if_filter_menus_selected();
+      }  
+ 
+ //=============
+ 
+       function snowflake_one(){
+        var jumba = "";
+        jumba += "<div id ='xmaswhite'><table width = 110 border=1  bgcolor= white CELLPADDING='3' ";
+        jumba += "style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr onclick='moonblast_darkside_back_moretoo();' ><td align=center>";
+        jumba += "<font face='Menlo'><font color=black>Shirts</td></tr>";  //it was out turn green
+        jumba += "</table></div>";
+        document.getElementById("xmaswhite").innerHTML = jumba; 
+        window.document.thetest.four.value  = "shirt";
+         window_into_menus[4] = "closed"; 
+          check_if_filter_menus_selected();
+      }  
+ 
+
+        function snowflake_two(){  //keep it simple; simplicity is beauty
+        var jumba = "";
+        jumba += "<div id ='xmaswhite'><table width = 110 border=1  bgcolor= white CELLPADDING='3' ";
+        jumba += "style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr onclick='moonblast_darkside_back_moretoo();' ><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>L. Sleeve</td></tr>";
+        jumba += "</table></div>";
+        document.getElementById("xmaswhite").innerHTML = jumba; 
+        window.document.thetest.four.value  = "longsleeve";
+         window_into_menus[4] = "closed"; 
+          check_if_filter_menus_selected();
+      }  
+      
+      
+         function snowflake_three(){
+        var jumba = "";
+        jumba += "<div id ='xmaswhite'><table width = 110 border=1  bgcolor= white CELLPADDING='3' ";
+        jumba += "style='border-collapse:collapse;border: 1px solid black;'>";
+        jumba += "<tr onclick='moonblast_darkside_back_moretoo();' ><td align=center>&nbsp;";
+        jumba += "<font face='Menlo'><font color=black>Hoodie</td></tr>";
+        jumba += "</table></div>";
+        document.getElementById("xmaswhite").innerHTML = jumba; 
+        window.document.thetest.four.value  = "hoodie";
+         window_into_menus[4] = "closed"; 
+          check_if_filter_menus_selected();
+      }  //end function
+      
+      //array to hold values of inputs from pull down menus in real-time
+
+
+
+
+
+
+
+
+
+// when clicked this calls function hide_instructions (which hides instructions column and switches
+// this hide instuctions box replacing it with the show instructions box 
+
+ var noinstruct = "<a href='#' onclick='hide_instructions()' style='display:block;text-decoration:none;'>";
+     noinstruct += "<div id='instruct_box'>";
+     noinstruct += "<table width = 200><tr><td align=left>";
+     noinstruct += "<table style='border: 1px solid #D8D8D8;' width = 200 bgcolor=lightyellow  >";
+     noinstruct += "<tr><td align=center><font face='Arial'>";
+     noinstruct += "<font size=3>&nbsp;&nbsp;Hide Instructions</font></td></tr></table>";
+     noinstruct += "</td><td><td align=right>";
+     noinstruct += "</td></tr></table></div></a>";
+function hide_instruct_box(){
+ document.getElementById("instruct_box").innerHTML = noinstruct;
+}
+
+//---------------------
+// when clicked this switches this box to say hide instructions and shows the big column of instructions beneath
+
+
+//#################
+//  SHOW INSTRUCT BOX
+//#################
+ function show_instruct_box(){
+ var noway = "<a href='#' onclick='show_instructions()' style='display:block;text-decoration:none;'>";
+     noway += "<div id='instruct_box'>";
+     noway += "<table width = 200><tr><td align=left>";
+     noway += "<table style='border: 1px solid #D8D8D8;' width = 200 bgcolor=lightyellow  >";
+     noway += "<tr><td align=center><font face='Arial'>";
+     noway += "<font size=3>&nbsp;&nbsp;Show Instructions</font></td></tr></table>";
+     noway += "</td><td><td align=right>";
+     noway += "</td></tr></table></div></a>";
+    document.getElementById("instruct_box").innerHTML = noway;
+}
+
+
+
+
+
+
+
+
+
+//called when yellow box clicked displaying show instructions
+function show_instructions(){  //trigged when show instructions yellow box clicked to reveal the instructions
+     hide_instruct_box();
+     show_big_column();
+// I will add the function to show the big column of instructions
+}
+
+
+
+
+//called when yellow box clicked displaying Hide Instructions
+function hide_instructions(){ //trigged when hide instructions yellow box clicked to hide the instructions 
+        show_instruct_box();
+        hide_big_column();
+//I will put the function here to HIDE the big column of instructions
+}
+
+
+
+
+
+
+function hide_big_column(){
+var victory = "<div id='big_info_instruct'>";
+    victory += "<table width = 400>";
+    victory += "<tr><td>&nbsp; </td></tr>";
+    victory += "</table></div>";
+    document.getElementById("big_info_instruct").innerHTML = victory;
+} //end func
+
+
+
+
+
+
+
+
+function show_big_column(){
+var readthis = "<div id='big_info_instruct'>";
+    readthis += "<table><tr><td height =5></td></tr></table>";
+    readthis += "<table width = 400 ><tr><td align=left>";
+    readthis += "<table bgcolor=white   border=0 spacing = 0 width = 380 style='border: 1px solid #D8D8D8;' >";
+    readthis += "<tr><td>Don't use the back button on your iPhone.<br></td></tr>";
+    readthis += "<tr><td>iPhone users empty your browser cache before starting and then reload this page.<br><br></td></tr>";
+    readthis += "<tr><td>You are on the filter subtab. &nbsp;&nbsp;&nbsp; </td></tr>";
+	readthis += "<tr><td>Tap Search after tapping on your criteria.></td></tr>";
+	readthis += "<tr><td></td></tr>";
+	readthis += "<tr><td> &nbsp;</td></tr>";
+	readthis += "<tr><td>Before proceeding to checkout: &nbsp;&nbsp;&nbsp; </td></tr>";
+	readthis += "<tr><td>To add items goto Shop. Use the search engine to filter your results. ";
+	readthis += "style='text-decoration:none'>shop</a>&nbsp;tab.</td></tr>";
+	readthis += "<tr><td>To remove items goto <a href='iphone_merchandise_basket.html'";
+	readthis += " style='text-decoration:none'>basket</a>&nbsp;tab. </td></tr>";
+	readthis += "<tr><td> &nbsp;</td></tr>";
+	readthis += "<tr><td>Tap on the image a second time to see the front. </td></tr>";
+	readthis += "<tr><td> &nbsp;</td></tr>";
+	readthis += "<tr><td>Search settings are set on this filter tab.</td></tr>";
+	readthis += "<tr><td>Whenever you want to change your search criteria</td></tr>";
+	readthis += "<tr><td>return to the filter tab by clicking on the </td></tr>";
+	readthis += "<tr><td>filter tab and change your settings and then</td></tr>";
+	readthis += "<tr><td>either click on Proceed to Shop> or click on</td></tr>";
+	readthis += "<tr><td>the shop subtab at top of the page. </td></tr>";
+	readthis += "<tr><td> &nbsp;</td></tr>";
+	readthis += "<tr><td>Tap on the image a second time to see the front. </td></tr>";
+	readthis += "<tr><td>When shopping click on 'select' below an image to select it. ";
+	readthis += "<a href='iphone_merchandise_basket.html' style='text-decoration:none'>";
+	readthis += "basket</a>&nbsp;tab. </td></tr>";
+	readthis += "<tr><td>A selected image will have a green 'selected' beneath it.<br>";
+	readthis += "</td></tr>";
+	readthis += "<tr><td>When an item is in selected mode you can set your criteria. </td></tr>";
+	readthis += "<tr><td>To change the size of the item you must do it from the filter.</td></tr>";
+	readthis += "<tr><td>Set the color and quantity of items. </td></tr>";
+	readthis += "<tr><td>For more information on an item tap on 'details' beneath image. </td></tr>";
+	readthis += "<tr><td>For a larger picture of item click on enlarge image.</td></tr>";
+	readthis += "<tr><td> &nbsp;</td></tr>";
+	readthis += "<tr><td>To add an item(s) to your basket click on the orange button 'add to basket'</td></tr>";
+	readthis += "<tr><td>which appears beneath a selected item surrounded by a green perimeter</td></tr>";
+	readthis += "<tr><td> &nbsp;</td></tr>";
+	readthis += "<tr><td>An item that has been added to your shopping cart</td></tr>";
+	readthis += "<tr><td>will be colored blue beneath the item and say '# in basket'</td></tr>";
+	readthis += "<tr><td>An example will be '1 in basket'.</td></tr>";
+	readthis += "<tr><td> &nbsp;</td></tr>";
+	readthis += "<tr><td>To deselect an item remove it from the shopping cart tab</td></tr>";
+	readthis += "<tr><td>by clicking on remove next to the item at the top right.</td></tr>";
+	readthis += "<tr><td> &nbsp;</td></tr>";
+	readthis += "<tr><td>Before going to check out subtab please review your order</td></tr>";
+	readthis += "<tr><td>on the basket subtab to make sure you have what you</td></tr>";
+	readthis += "<tr><td>think you have. And from the basket subtab you</td></tr>";
+	readthis += "<tr><td>can remove items and/or edit items very easily.</td></tr>";
+	readthis += "</table></td></tr></table></div>";
+
+    document.getElementById("big_info_instruct").innerHTML = readthis;
+} //end func
+
+
+
+
+
+
+
+//#############################
+//#############################
+// tuesday, december 5th and 22nd 2017
+//=================================
+
+
+/*     PREVIOUS MENU SETTINGS     */  //to set menus to what they last were
+function previous_menu_settings(){
+//this will need to be called onload 
+//but I will need to also determine if nothing was selected recently previously
+//I need to access memory for this
+var air = new Array();
+    air[air.length] = "";
+//fill it here 
+var dog = localStorage.getItem('Tahoe'); //memory of 4 menu seetings in memory slot called Tahoe
+if(dog === null){
+//alert("it's null sir");
+   air[air.length] = '1';
+   air[air.length] = '1';
+   air[air.length] = '3';
+   air[air.length] = '1';
+}else{
+   air[air.length] = dog.charAt(0);
+   air[air.length] = dog.charAt(2);
+   air[air.length] = dog.charAt(4);
+   air[air.length] = dog.charAt(6);
+}
+//this loads what is in memory into the text fields at bottom of the page
+//overwriting what is there by default with the current settings. 
+window.document.thetest.f1.value      = air[1];
+window.document.thetest.f2.value      = air[2];
+window.document.thetest.f3.value      = air[3];
+window.document.thetest.f4.value      = air[4];
+
+
+
+var coco = new Array();
+coco[coco.length] = " "; //chnage these field names to the correct ones
+coco[coco.length] = air[1];
+coco[coco.length] = air[2];
+coco[coco.length] = air[3];
+coco[coco.length] = air[4];
+
+//category
+
+if (coco[1] == "1"){
+  type_shirts();
+}//end if
+if (coco[1] == "2"){
+  type_hats();
+} //end if
+//---------------
+
+//gender
+if(coco[2] == '1'){   mens();    }
+if(coco[2] == '2'){ womens();    }
+if(coco[2] == '3'){  girls();    }
+if(coco[2] == '4'){   boys();    }
+//---------------
+
+//size
+if(coco[3]  == '1')  { small();  }
+if(coco[3]  == '2')  { medium(); }
+if(coco[3]  == '3')  { large();  }
+if(coco[3]  == '4')  { xl();     }
+if(coco[3]  == '5')  { twoxl();  }
+//----------------
+
+//shirt type
+if(coco[4]  == "1"){ shirt();    
+window.document.thetest.four.value = "shirts";
+ }
+if(coco[4]  == "2"){ longsleeve();
+window.document.thetest.four.value = "longsleeve";
+}
+if(coco[4]  == "3"){ hoodie();    
+window.document.thetest.four.value = "hoodie";
+}
+
+
+//----------------
+//put it into something that musicla chairs can grab it so into a memory slot
+var orange1;
+ var apple2;
+ var apple3;
+ var apple4;
+ var space = " ";
+ //grabs the numerical values from the fields at the bottom of the page 
+ // and converts to a variable and then adds in a string concatenation
+ // and then put into localstorage value Tahoe.
+ 
+ orange1 = document.getElementById("f_cat").value; 
+  apple2 = document.getElementById("f_gender").value;   
+  apple3 = document.getElementById("f_size").value;     
+  apple4 = document.getElementById("f_type").value;     
+ 
+ //code does exactly what you tell it to do.
+ // perhaps apple1 is a variable on an iphone
+ 
+var ups =  orange1 + space + apple2 + space + apple3 + space + apple4;
+localStorage.setItem('Tahoe',ups); //so this rewrites the data to the T
+
+
+  //this reroutes to the shop page and triggers the search engine onload on shop.html
+}
+//end function ------------
+//============================
+
+
+
+
+
+
+
+  
+  /*         ORGANIZE INPUT      */ //this is for setting the menus when the page opens
+  //so it represents the memory settings for the previous visit to the menu page what they
+  // were left at
+    function organize_input(){
+         var toast1, toast2, toast3, toast4;
+         var firstinput = window.document.thetest.one.value; // = "shirts or hats";
+      if(firstinput  == "shirts"){ toast1 = '1';
+        type_shirts();
+        window.document.thetest.one.value = "shirts";
+      }
+      if(firstinput  == "hats"){ toast1 = '2';
+        type_hats();
+        window.document.thetest.one.value = "hats";
+      }
+      
+      
+      var secondinput = window.document.thetest.two.value; //gender
+      if(secondinput == "mens"){       toast2 = '1';}
+      if(secondinput == "womens"){     toast2 = '2'; }
+      if(secondinput == "girls"){      toast2 = '3'; }
+      if(secondinput == "boys"){       toast2 = '4';  }
+      
+      var thirdinput = window.document.thetest.three.value;  //size
+      if(thirdinput  == "S"){           toast3 = '1';}  
+      if(thirdinput  == "M"){           toast3 = '2';}  
+      if(thirdinput  == "L"){           toast3 = '3';}  
+      if(thirdinput  == "XL"){          toast3 = '4';}  
+      if(thirdinput  == "2XL"){         toast3 = '5';} 
+     
+      var fourthinput = window.document.thetest.four.value; 
+    
+      if(fourthinput == "shirt"){      toast4 = '1';}
+      if(fourthinput == "longsleeve"){ toast4 = '2';}
+      if(fourthinput == "hoodie"){     toast4 = '3';}  
+       //shirt type
+    //window.document.thetest.four.value = fourthinput;
+      if(toast1 === undefined){ toast1 = '0';}
+      if(toast2 === undefined){ toast2 = '0';}
+      if(toast3 === undefined){ toast3 = '0';}
+      if(toast4 === undefined){ toast4 = '0';}
+    
+     
+      window.document.thetest.f1.value = toast1;
+      window.document.thetest.f2.value = toast2;
+      window.document.thetest.f3.value = toast3;
+      window.document.thetest.f4.value = toast4;
+   
+    }    //end function
+    
+
+   //for hats there is no type when searching on filter page
+  //categroy if hats set it to 0. but it ignorees it to just don't set it to 0
+    
+    
+    
+    
+    
+    
+    
+    
+     //this is new on dec 22, 2017 from laptop version should work fine
+    // I need to call this function onload of this page//its already set up
+    function trigger_shoppingcart_display(){
+      var verycool = "<div id='happy_shoppingcart'>";
+          verycool += "<table><tr><td height =30></td></tr></table>";
+          verycool += "<table cellpadding='2' width = 182  style='border: 1px solid #D8D8D8;' >";
+          verycool += "<tr><td  bgcolor=yellow><font size=2>&nbsp;<font face='Menlo'>  <a href='iphone_merchandise_basket.html' style='display:block;text-decoration:none'>Shopping Basket</a> </font></td></tr>";
+          verycool += "<tr><td height=1 bgcolor=white></td></tr>";
+          verycool += "<tr><td  bgcolor=white><font size=2>&nbsp;&nbsp;";
+          show_counter_value();
+         var thecounter =  document.getElementById("f_counter_now").value;
+         //alert("we have = " + thecounter);
+         if(thecounter != 0){
+          verycool += thecounter; 
+          }//end if
+          if(thecounter == 0){
+           verycool += " empty ";
+          }//end if
+          if(thecounter > 1){
+          verycool += " items ";
+          }else{ //meaning only 1 or 0
+            if(thecounter != 0){
+             verycool += " item ";
+             } //end if
+          } //end if else 
+          verycool += " </font></td></tr></table></div>";
+
+      document.getElementById("happy_shoppingcart").innerHTML = verycool;
+    }//end func
+    // trigger_shoppingcart_display()
+    
+    
+    
+    
+    function navmenu(){
+   alert("testing menu system");
+} //end function
+
+
+//---------------------                                                    
+function setmemory(v1,v2){  //key and value both strings
+    eval("localStorage.setItem('" + v1 + "','"  +  v2 + "'" + ");" );
+} // end func
+
+function getmemory(x1){  //using the key it returns the value
+  eval("var atm = localStorage.getItem(" + "'" + x1 + "');" );
+  return atm;
+}//end func
+
+
+function setflag(){
+setmemory('recent_page_memory_flag','aboutus');
+} //end func
+
+
+/* NAV MENU HAMBURGER OVERLAY */
+function navmenu(){
+   //alert("testing menu system");
+} //end function
+
+
+
+//each page would have it's own preset id which is the number
+// and the variable is set on the second line of the same function
+// on each page. 
+
+
+
+
+
+//#######################################
+//      OPEN MENU 
+//#######################################
+function open_menu(){ 
+  hamburger_id_of_page_came_from();
+}
+//-------------------
+//########################################
+//     HAMBURGER ID OF PAGE CAME FROM 
+//#########################################
+function hamburger_id_of_page_came_from(){
+var this_page = "6.1";    
+setmemory('fedex',this_page);                                            
+window.location.href = "iphone_hamburger_menu.html";                                           
+  } //end                                                        
+//---------------------                                                    
+                                                     
+
+
+</script>
+</head>
+<body onload="tollbooth();loader();grab_memory();previous_menu_settings();show_counter_value();trigger_shoppingcart_display();">
+<!--
+<table width = 500>
+<tr><td width = 110></td><td><font face="Menlo"><font size=4>Modern Day News</font></td></tr>
+</table>
+-->
+<table width = 500>
+<tr><td width=25 height = 18 valign=bottom align=left>
+<a href='#' onclick='open_menu();return false;'>
+<img src="hamburger2.jpg" alt="navigation" height="16" width="20"></a>   </td>
+<td width = 95></td><td><font face="Menlo"><font size=4>Modern Day News&nbsp;<font color=mediumpurple><font size=1><b></b></font></font></td></tr>
+</table>
+
+
+
+
+<table   CELLPADDING='3' style='border-collapse:collapse;border: 
+1px solid black; '  width = 410  border = 1 bgcolor=white  >
+<tr><td  align=center><font size=1><font face='Menlo'><a href='iphone_home.html' 
+style='display:block;text-decoration:none'><FONT COLOR=BLACK>Home</a></td>
+
+
+     <td align=center><font size=1><font face='Menlo'><a href='iphone_characters.html'
+      style='display:block;text-decoration:none'>Characters</a></td>
+      
+     <td align=center ><font size=1><font face='Menlo'><a href='iphone_news.html' 
+     style='display:block;text-decoration:none'>News</a></td>
+     
+     <td align=center><font size=1><font face='Menlo'><a href='iphone_videos.html' 
+     style='display:block;text-decoration:none'>Videos</a></td>
+     
+
+     
+    <td align=center bgcolor=palegreen><font size=1><font face='Menlo'><a href='#' 
+     style='display:block;text-decoration:none'>Merchandise</a></td>
+     
+      <td align=center nowrap><font size=1><font face='Menlo'><a href='iphone_aboutus.html'
+      style='display:block;text-decoration:none'>About Us</a></td>
+     
+     <td align=center nowrap><font size=1><font face='Menlo'><a href='iphone_contactus.html'
+      style='display:block;text-decoration:none'>Contact Us</a></td>
+     </tr></table>
+     
+     
+     
+     
+  <table   CELLPADDING='1' style='border-collapse:collapse;border: 
+1px solid #e8e8e8; '  width = 410  border = 1 bgcolor=white  >
+<tr>
+<td width= 20%   bgcolor=#81D4FA align=center><font size=1><font face="Menlo"><FONT COLOR=black><div style='position;absolute;left:10px; bottom:1px;'><div class='table-cell'>Filter</font></div></div></font></td></th>
+
+<td width= 20% bgcolor=white align=center><font size=1><font face='Menlo'>
+<a href='iphone_merchandise_shop.html' style='display:block;text-decoration:none'><font color=black>Shop</a></font></td>
+<td width= 20% bgcolor=white align=center><font size=1><font face='Menlo'>
+<font color=lightgrey>Details</font></td>
+
+     <td width= 20% align=center><font size=1><font face='Menlo'>
+     <a href='iphone_merchandise_basket.html' style='display:block;text-decoration:none'><font color=black>Basket</a></font></td>
+     <td width= 20% align=center><font size=1><font face='Menlo'>
+     <a href='iphone_merchandise_checkout.html' style='display:block;text-decoration:none'><font color=black>Check Out</a></font></td>
+    </tr></table>
+
+ <div id ='pumpkin'>
+<table><tr><td height = 17></td></tr></table> 
+<!-- <table bgcolor=yellow width = 70 style='border: 1px solid #D8D8D8;'><tr ><td align=left><font size=2>&nbsp;<font face='Menlo'>Filter</td></tr></table><br>-->
+<table bgcolor=white><tr><td bgcolor=white height = 9>&nbsp;</td></tr></table>
+<table width = 108>
+<tr><td align=right><font face="Menlo"><font color=grey></font></td></tr>
+<tr><td height=12></td></tr>
+<tr><td align=right><font face="Menlo"><font color=black></font></td></tr>
+<tr><td height=15></td></tr>
+<tr><td align=right><font face="Menlo"><font color=grey></font></td></tr>
+<tr><td height=15></td></tr>
+<tr><td align=right><font face="Menlo"><font color=grey></font></td></tr>
+</table></div>
+
+
+  <span class="green-box">
+<table width = 350 border=0 bgcolor=white>
+<tr><td>
+
+<div id ='smart'>
+
+<table width = 110 border=1  bgcolor= #efefef CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>
+<tr onclick='moonblast();'   bgcolor=#E5E4E2  ><td align=center><a href='#' style='text-decoration:none'>
+<font face='Menlo'><font color=black>Category</td></tr>
+ </table></span></div></div></span>
+        </td></tr>
+<tr><td>
+
+
+
+  <span class="silver-box">
+<div id ='minion'><table width = 110 border=1  bgcolor= #efefef CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>
+<tr onclick='moonblast_darkside()'  bgcolor=#C2DFFF ><td align=center><a href='#' style='text-decoration:none'>
+<font face='Menlo'><font color=black>Gender</td></tr>
+ </table></span></div></div>
+       </td></tr>
+       
+       
+   <tr><td>
+  <span class="bronze-box">
+<div id ='trainwhistle'><table width = 110 border=1  bgcolor= #efefef CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>
+<tr onclick='moonblast_darkside_back()'  bgcolor=#C2DFFF ><td align=center><a href='#' style='text-decoration:none'>
+<font face='Menlo'><font color=black>Size</td></tr>
+ </table></span></div></div>
+       </td></tr>
+       
+       
+        <tr><td>
+  <span class="cardboard-box">
+<div id ='xmaswhite'><table width = 110 border=1  bgcolor= #efefef CELLPADDING='3'style='border-collapse:collapse;border: 1px solid black;'>
+<tr onclick='moonblast_darkside_back_moretoo()'  bgcolor=#BCC6CC  ><td align=center><a href='#' style='text-decoration:none'>
+<font face='Menlo'><font color=black> Type</td></tr>
+ </table></span></div></div>
+       </td></tr>
+        </table> 
+
+</span>
+<br/>
+<table><tr><td height=40></td></tr></table>
+<table width = 370><td><td align=right>
+<table bgcolor=#FFFF99 width=200><tr><td align=center >Coming Soon In March</td></tr></table>
+</td></tr></table>
+
+
+
+
+     <!--   ============= SEARCH ===============  --> 
+           <div id ="search_button" > <table width = 100><tr><td align=center>
+     <table width = 50>
+     <tr><td><font face='Arial'><font size=4>&nbsp;&nbsp;</font></td></tr></table>
+     </td><td align=right valign=top width = 125>&nbsp;</td><td align=right>
+     <a href='#' onclick="musical_chairs()" style='text-decoration:none'><div>
+     <table bgcolor = #99FFCC   width = 45 style='border: 1px solid #D8D8D8;' >
+     <tr><td bgcolor=#99FFCC  align=center><font color=black>
+     &nbsp;Search&nbsp;</font></td></tr></table></div></a></td></tr></table></div>
+    <table><tr><td height=10></td></tr></table>
+     <div id="happy_shoppingcart"><table><tr><td>basket</td></tr></table></div>
+
+
+ <!--   =================== INSTRUCTIONS ===============  -->
+<!--   //by default instructions are not shown so as to not overwhelm the user -->
+<br>
+<div id='instruct_box'><a href='#' onclick='show_instructions();' style='display:block;text-decoration:none;'><table width = 200><tr><td align=left>
+  <table  style ='border: 1px solid #D8D8D8;' width = 200 bgcolor=lightyellow >
+  <tr><td align=center><font face='Arial'>
+  <font size=3>&nbsp;&nbsp;Show Instructions</font></td></tr></table>
+  </td><td><td align=right>
+  </td></tr></table></a></div>
+  
+
+<!--  =============== instructions column ==============-->
+
+<div id='big_info_instruct'>
+<table width = 400>
+<tr><td >&nbsp;</td></tr>
+</table></div>
+  
+  <!-- <table bgcolor=white><tr><td height = 10></td></tr></table> -->
+<table border = 0 bgcolor=white width = 400 >
+<tr>
+<td align=right><img src="bca_black.jpg" alt="logo pic" height="100" width="170"></td>
+</tr>
+</table>
+
+
+<form name="thetest">
+<input type = hidden name = 'one' size = 15><input type=hidden     name = 'f1' size = 5 ><br>
+<input type = hidden name = 'two' size = 15><input type=hidden      name = 'f2' size = 5 ><br>
+<input type = hidden name = 'three' size = 15><input type=hidden    name = 'f3' size = 5 ><br>
+<input type = hidden name = 'four' size = 15><input type=hidden     name = 'f4' size = 5 ><br>
+<input type = hidden name = 'five' size = 15><input type=hidden name = 'f5' size = 5 ><br>
+</form>
+
+<form name = cool><!-- here is the counter holder -->
+ <input type = hidden  id="f_counter_now"  name ="counter_real_time" size = 4><br>
+ <input type = hidden  id="f_cat"       name ="one" size = 20><br>
+ <input type = hidden  id="f_gender"    name ="two" size = 20><br>
+ <input type = hidden  id="f_size"      name ="three" size = 20><br>
+ <input type = hidden  id="f_type"      name ="four" size = 20><br>
+ <input type = hidden  id="f_5"         name ="five" size = 20><br>
+ <input type = hidden  id="f_6"         name ="six" size = 20><br>
+ <input type = hidden  id="f_7"         name ="seven" size = 20>
+ </form>
+ 
+<form name = "tahoeforest">
+<input type = hidden name = "one" size = 20>
+<input type = hidden name = "two" size = 20>
+<input type = hidden name = "three" size = 20>
+<input type = hidden name = "four" size = 20>
+</form>
+<table bgcolor=white><tr><td height = 143></td></tr></table>
+
+
+  
+
+<table height = 10 width = 100 bgcolor=white><tr><td>&nbsp;</td></tr></table>
+
+<table width = 330><tr><td height = 2 align=center><font size=1><font color=lightgrey>Copyright 2018 Modern Day News</font></td></tr></table>
+
+<!-- coded by Mr. Blake Southwood Software Engineer -->
+</body>
+</html>

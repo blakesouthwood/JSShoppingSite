@@ -1,0 +1,3077 @@
+
+<!--
+//cement factory layout
+<table width = 390 border=0>
+<tr><td align=center>Mode</td><td width=75 align=center bgcolor=palegreen>Edit</td><td width= 10px;></td>
+<td bgcolor=lightgrey align=center width=75  border-1>Delete</td><td>&nbsp;then tap on a row</tr>
+</table>
+<table><tr><td height = 20>&nbsp;</td></tr></table>
+
+
+<table width = 350 border=0>
+<tr><td align=center bgcolor=aliceblue>Keep Shopping</td><td width = 35>&nbsp;</td>
+<td bgcolor=aliceblue align=center>Go to Checkout</td></tr>
+</table>
+
+-->
+
+
+<!--  iphone test -->
+<!DOCTYPE html>
+<html>
+<title>Modern Day News</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
+<link rel="stylesheet" href="/lib/w3-theme-teal.css">
+<body style="max-width:600px">
+
+
+<style>
+
+
+/* mouse over link */
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:hover {
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+
+.fixed-size-square {
+    display: table;
+    width: 20px;
+    height: 20px;
+    background: #4DF54E;
+}
+.fixed-size-square span {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+    color: white
+}
+
+
+
+div.staticfun {
+     position: relative;
+    left: 50px;
+    top: 250px
+    
+}
+
+
+div.upcomingevents {     /* what happens here */
+     position: relative;
+    left: 2px;   /*  this was 100 */
+     top: 50px;
+}
+
+
+div.static10 { 
+     position: relative;
+    left: 0px;   /*  this was 99 */
+     top: 24px;
+}
+
+div.static9 { 
+     position: relative;
+    left: 0px;
+     top: 10px;
+}
+
+
+/*   nice comments       */
+
+
+div.static1 {
+     position: relative;
+    left: 380px;
+}
+
+div.staticfooter {
+     position: relative;
+    left: 338px;
+    bottom: 5px;
+}
+
+
+
+div.menulist {
+     position: relative;
+    left: 50px;
+}
+
+
+div.staticiframe {
+     position: relative;
+    left: 25px;
+}
+
+
+div.cool {
+    position: absolute;
+    top: 400px;
+    left: 200px;
+    width: 750px;
+}
+
+
+div.linktable {
+    position: relative;
+    top: 80px;
+    left: 200px;
+}
+
+
+div.topwords {
+     position: absolute;
+     width: 500px; 
+     height: 40px;
+     left: 300px;
+     z-index: 2;
+}
+
+.thetable {
+     position: absolute;
+     bottom: 300px;
+     left: 300px;
+  }
+
+
+.showbox {
+    height:10px;
+    width:10px;
+    background: #7FFFD4; 
+    border: 2px solid #fff;
+    border-radius: 25px;
+    box-shadow: 0px 1px 5px #888888;
+    transform-origin:50% 50%;
+    transform:scale(1);
+    animation: pulse 0.6s infinite linear alternate;
+    -webkit-animation: pulse 0.6s infinite linear alternate;
+}
+@keyframes pulse {
+    to {
+        transform:scale(1.3);
+    }
+}
+@-webkit-keyframes pulse {
+    to {
+        transform:scale(1.3);
+    }
+}
+
+
+  table#table1 {
+    width:70%; 
+    margin-left:4%; 
+    margin-top: 2%;
+    margin-right:15%;
+  }
+  
+   table#table2 {
+    width:70%; 
+    margin-left:4%; 
+    margin-top: 2%;
+    margin-right:15%;
+  }
+  
+   table#table3 {
+    width:70%; 
+    margin-left:4%; 
+    margin-top: 2%;
+    margin-right:15%;
+  }
+  table#table00 {
+    width:70%; 
+    margin-left:4%; 
+    margin-top: 2%;
+    margin-right:15%;
+  }
+   table#table01 {
+    width:70%; 
+    margin-left:4%; 
+    margin-top: 2%;
+    margin-right:15%;
+  }
+ 
+ 
+.zu
+
+
+/*    left nav css   */
+
+.odd {
+  background-color: white;
+}
+.evn {
+  background-color: white;
+}
+.selodd {
+  background-color: #F8C471    ;
+}
+.selevn {
+  background-color: #F8C471    ;
+}
+/*
+footer {
+    position: relative;
+    left: 287px;
+    bottom: 4px;
+}
+*/
+
+
+div.static {
+     position: relative;
+    left: 75px;
+}
+
+
+
+.list1 tr:hover{
+background-color:#76D7C4;
+
+}
+
+
+</style>
+
+<script>
+//###############################
+//tuesday november 21st, 2017 starbucks keizer 11:21 am
+//adding the swap picture function to clickable pictures
+//in the lower part of this page
+/*
+<img src="greyshirt.jpg"       lt='Circle1' id='circle1' height= '250px;' 
+width='180px;'                 onclick="swap_pics('greyshirt','redshirt','1');"> 
+
+*/  
+
+//this array must have all values = "front" and is used
+// for swapping the pictures
+
+  var minion = [];  //creation of array
+      minion[minion.length] = "";// nothing for slot 0
+      minion[1]   = "front";
+      minion[2]   = "front";
+      minion[3]   = "front";
+      minion[4]   = "front";
+      minion[5]   = "front";
+      minion[6]   = "front";
+      minion[7]   = "front";
+      minion[8]   = "front";
+      minion[9]   = "front";
+      minion[10]  = "front";
+      minion[11]  = "front";
+      minion[12]  = "front";
+      minion[13]  = "front";
+      minion[14]  = "front";
+      minion[15]  = "front";
+      minion[16]  = "front";            
+      minion[17]  = "front";
+      minion[18]  = "front";
+      minion[19]  = "front";
+      minion[20]  = "front";
+      minion[21]  = "front";
+      minion[22]  = "front";
+      minion[23]  = "front";
+      minion[24]  = "front";
+      minion[25]  = "front";
+      minion[26]  = "front";
+      minion[27]  = "front";
+ //NOVEMBER 22ND 2017 EDITING AND MODIFYING THE BASKET PAGE FOR DATA.
+ //I WILL ALSO USE THIS FOR DATA DESCRIPTION ON THE DETAILS PAGE.
+ 
+ 
+ /*  THIS IS USED TO STORE THE DESCRIPTION IN MEMORY SLOTS BASED ON THE ITEMS IDTAG NAME/NUMBER     */  
+//this is only declared once but needs to be called at least once and can be triggered
+//using the time stamp when the counter is set and that way we don't have to think about it.
+    
+//this is the setting of the description for each idtag which is cross referenced so it doesn't
+//clog up the 2d array with the other data rows
+//this also bypassing have to search thru a special 2d array that I orginally built
+//what I like is that I can put <br>s sprinkled throughout the string and it still works and displays correctly
+//this could be on any page and added dynmically when added but it should work in theory
+ //This is cross reference to the 2darray but the common link is the idtag number
+ //these are just memory slots with a memory name of the idtags themselves.
+
+
+
+ 
+
+// x front pic, y back pic, z circle#
+//uses the array minion in RAM to store the memory value front or back
+//LOGIC:
+/*  if front view then show back view
+    if back  view then show front view
+
+*/
+ /*       SWAP PICS NOW         */   
+ function swap_pics_now(x,y,z){
+ var image = eval("document.getElementById('circle" + z + "')"); 
+          if(eval("minion["     + z + "]")  == "front"){
+             eval("image.src='" + y + ".jpg';");                 
+             eval("minion["     + z + "]  = 'back'");            
+          }else{
+             eval("image.src='" + x + ".jpg';");                  
+             eval("minion["     + z + "]  = 'front'");            
+          } //end if 
+  }//end func
+ //------------------------------------------
+  
+
+  
+  
+
+
+
+
+
+
+//###############################
+
+
+
+/* BREAK POINT    */
+function breakpoint(){
+  debugger;
+} //end breakpoint function
+
+
+/*  SHOW THIS */
+function showthis(x){
+console.log(x);
+} //end function show this
+
+//#######################################################
+////this is a bug that I need to work on nov 21, 2017
+// keizer oregon testing now
+
+// near thanksgiving
+//what I need to do is if lecounter == nothing empty or NaN
+//then put 0 into it. that seems to fix the output feature to show 0 items in basket
+
+
+
+/*  MY COUNTER FUNCTION  */
+function mycounter(){
+setmemory('flag_for_counter', "false");
+var angel = getmemory("control_valve");
+  if(angel === "undefined"){  // what is the error message though if control_value doesn't exist?
+     getinitialtime() //this intializes this flag with a time stamp
+  } //end if
+ setmemory('lecounter','0');
+  getmemory('lecounter');
+  var cool = getmemory("lecounter");
+  var myvalue = parseInt(getmemory('lecounter'));
+  myvalue = myvalue -0;
+  myvalue = myvalue -0;
+  myvalue = parseInt(myvalue);
+setmemory('lecounter',myvalue);   //this puts it into memory
+
+} //end func
+
+
+
+
+
+
+
+
+
+
+
+// saturday coding at it's best  - also a new bug 
+//This redraws the number of items in the yellow box above the table summary at the top
+
+/* BEACH TIME FUNCTION  */
+function beachtime(){
+var counter_value = parseInt(getmemory('lecounter'));  //get counter total here 
+
+//esting for null 
+if(counter_value == null){
+setmemory('lecounter','0');
+var emptyflag = "true";
+//put message teh basket has 0 items
+}//end if
+if(counter_value =="" || counter_value == " "){
+//do something then return;
+}
+
+
+    //counter_value = counter_value-1; //from above 
+var jumba = "<table bgcolor=lightyellow   border=0 spacing = 0 "; 
+    jumba += " width = 250 style='border:"; 
+    jumba += " 1px solid #D8D8D8;'><tr><td align=center>";
+    //one pass loop to gain control
+    for(var r=0;r<1;r++){ 
+    if(emptyflag == "true"){ //meaning counter = null 
+      mycounter();
+       jumba += "0 items in your basket";
+       jumba += "</td></tr></table>";
+    break; //goto bottom of loop
+    } //end if
+    //otherwise do this
+    jumba += counter_value; //number of items which is the same as the counter number
+    if(counter_value == 1){
+     jumba += " item in your basket";
+    }else{ //implies here greater than 1
+     jumba += " items in your basket";
+    } //end if else
+    jumba += "</td></tr></table>";
+    } //end loop
+  
+     document.getElementById("number_of_items").innerHTML = jumba;
+     document.getElementById("f_counter_now").value =counter_value;  //da 
+     //this way the field at the bottom as the most current counter number 
+} //end function
+ //------------------------    
+     
+     
+
+
+
+
+
+
+
+
+
+
+//----------------------------------------------
+/*          MR COFFEE FUNCTION               */
+//----------------------------------------------
+function mrcoffee(){   // line 281
+
+ //Get current counter number from lecounter 5
+  var counter_value = getmemory('lecounter'); 
+  //get slot number chosen - that needs to be put into a memorstorage slot
+  var numberchosen = getmemory('rowclicked');//captures number clicked from row when clicking delete word
+   /* test for last item delete clicked */
+ 
+     var answer= getmemory('last_row_deleted'); 
+  
+   if(answer == 'true'){//not sure if it has to be 'true' or true
+
+
+  //if (numberchosen == counter_value ){ // meaning == to the last number
+  //alert("##code 06::  if numberchosen == counter_value assertion");
+//do last item scenario and skip the rest to the bottom
+//this just deletes the last item in the row 
+    eval("setmemory('slot" + numberchosen + "','0');");  //slot # still exists but put 0 into it
+    
+    setmemory('removeitem','false');   //this is a flag setting
+  //----------------
+        }else{ //otherwise
+  //---------------
+
+ // IF NOT THE LAST ITEM DO THIS CHUNK OF CODE
+  // if(counter_value > 1){ //this tests to make sure that there are more items then just one
+   ///otherwise it won't do this chunk of code.
+   //proceed
+// important: the flag removeitem = true if NOT the last item which turns ON doing the resequencing
+//            the flag removeitem = false if it IS the last item which turns OFF resequencing routine
+//this turned On to true because we are in the else since it's NOT the last item in the row list
+// and if there are more than 1 items in the list.
+// so the counter must be greater than 1
+
+
+setmemory('removeitem','true');   //this is a flag setting
+
+//Get slot number deleted put in target
+var target =numberchosen.toString();
+eval("setmemory('slot" + target + "');");  //might change this to set memory to 0
+counter_value = parseInt(counter_value);
+counter_value = counter_value -0;
+target = parseInt(target);
+target = target - 0;
+
+ 
+  //now grab the last row in the list
+  //alert("backup flag bluejaybackup set  to hold last row in the list");
+    var mycounter = getmemory('bluejaybackup');//example 12
+    var cheese = mycounter.toString(); 
+    var highway = "slot" + cheese;  
+    
+  //grabbing contents of the data from the last slot in the table of rows of the basket
+  var drivethru = eval("getmemory('" + highway  + "');" ); //this grabs the last row that wasn't chosen
+                
+  //I will need to check to see if this eval works with the slot number like this
+   //this is the row deleted the so called gap
+   var numberchosen = numberchosen.toString();
+   var seagull = "slot" + numberchosen;
+   eval("setmemory('" +  seagull + "'" + ", drivethru);" );
+   setmemory('removeitem','false'); //this resets the flag for deleting an item from basket
+
+/// I just need to put 0 into the last row which I grabbed it from
+  eval("setmemory('" + highway + "'" + ", '0');");
+} //end else if 
+
+
+
+//backup checker here 
+/*
+how many rows to start with 
+check if any slots == 0
+if so then try money copymemorydown('6') //maybe it's not working right
+
+
+
+*/
+} //end function
+//-----------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//november 8th 2017 wednesday
+//when someone from the basket page clicks on EDIT on left of a row
+//they will call edit_item(x) and then pandaexpresss_dirvethru(da)
+// and then be transported to the details page.
+//once again have it work in phases to gradually get there
+// to make sure that each stage works
+
+
+/* GO TO CHECKOUT  */
+function gotocheckout(){
+ window.location.href = "iphone_merchandise_checkout.html";
+} //end function
+
+
+
+/* GO TO NAV */
+function gotonav(){
+ window.location.href = "iphone_merchandise_filter.html";
+} //end function
+
+
+
+
+
+
+
+//this is clicked "edit" on left side of table summary on basket page
+
+//november 07-08, 2017 Skyline
+//##################################
+/*          EDIT ITEM            */
+//##################################
+//////////
+function edit_item(da){
+setmemory('editmode','true'); 
+//thursday, november 9th, starbucks designing and debugging
+//I need to put da into a localStorage to use on the details page
+setmemory('edit_this_slot_number', da);
+var fly = getmemory('edit_this_slot_number');
+
+//edit means selected item
+//so copy it into ChocolateBean just like from shopping page
+  pandaexpress_drivethru(da);
+  edit_line(); // new nov 24th
+}  //end func 
+//------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//######################## thursday, november 9th, 2017 half moon bay Starbucks testing 
+//######## experimental testing output to a div instead of an alert box which is so annoying
+function fudge(){
+
+}
+
+function funny(x){
+var output = "<table bgcolor=tomato><tr><td>";
+    output += "big storm outside &nbsp;";
+    output +=  x;
+    output += "</td></tr></table>";
+    //see if it works now
+    
+//document.getElementById("halfmoonbay").value = output;
+ document.getElementById("output_test").innerHTML = output;
+}
+
+
+
+
+
+
+
+
+
+
+
+//testing
+//enter function name in one field and argument in the other click button
+
+//this calls a function using eval from a field - utterly impossible
+//and I did it and I can test my code this way 
+//sweet() is called from clickme button at bottom
+function sweet(){
+//function name
+var jj = document.getElementById("target3").value;
+//argument
+var tt = document.getElementById("target6").value;  
+eval(jj + "('" + tt +  "');" );
+}
+
+//########## bottom of testing typing into a field to call an eval to test functions
+//#####################################################################
+
+
+
+
+
+
+
+
+
+
+
+// November 7-8, 2017  Skyline
+//##########################################  //this puts the slot# memory into ChocolateBean
+/*         PANDA EXPRESS DRIVE THRU       */  //sets flag editmode = true 
+//##########################################  // redirects to details page 
+//usage: pandaexpress_drivethru(2);
+function pandaexpress_drivethru(m){ //grab row number of selected item
+
+   var raindrop = m; //slot number to edit
+  
+   //put slot# memory chosen into ChocolateBean
+   //if m = 2 meaning slot2
+   var choice = "slot" + m;
+   var money = eval("getmemory('" + choice + "'" + ");");  //getmemory('slot2');
+   setmemory('ChocolateBean', money);
+     
+  //so now the slot# clicked on edit puts that row data from slot#memory into ChocolateBean memory
+  //set memory slot for flag now
+    setmemory('editmode','true');  
+    window.location.href = "iphone_merchandise_details.html";           
+} //end pandaexpress_drivethru
+
+///##############################################
+//###############################################
+
+
+
+
+
+
+
+
+
+//  target1, target2, target3, target4
+function fishy_loader(){ //starting dummy data
+
+  document.getElementById("target1").value = "1,1,1,1"; 
+  document.getElementById("target2").value = "2,2,2,2"; 
+ // document.getElementById("target3").value = "3,3,3,3"; 
+  document.getElementById("target4").value = "4,4,4,4"; 
+} //end func
+
+
+
+
+
+
+
+
+function setmemory(v1,v2){  //key and value both strings
+   eval("localStorage.setItem('" + v1 + "','"  +  v2 + "'" + ");" );
+} 
+
+
+
+
+
+
+
+//==================================
+/*    getmemory()   get memory   */
+
+function getmemory(x1){  //using the key it returns the value
+    eval("var atm = localStorage.getItem(" + "'" + x1 + "');" );
+  return atm;
+}//end func
+
+
+
+
+
+
+
+//=====================================
+/*   deletememory()  delete memory      */
+
+function deletememory(x1){
+ eval("localStorage.removeItem('" + x1 + "');");
+}//end func
+
+
+
+/*
+
+this takes in the rowitem deleted and 
+ compares it with the counter value to determine if this was the last row clicked ot delete
+this is the flag that I need to determine if the last row was selected to delete which is crucial. 
+flags are your friend
+
+
+*/
+
+
+
+
+
+
+//testing tuesday november 7th peet's coffee
+//##################
+//##################
+//fixing bug on november 24th friday
+/*  DELETE AN ITEM FUNCTION */
+function delete_an_item(x){ 
+setmemory('rowclicked',x); //puts row clicked into localStorage rowclicked
+ var counter_value = parseInt(getmemory('lecounter')); 
+
+if(x == counter_value) {
+  setmemory('last_row_deleted','true');
+}else{
+  setmemory('last_row_deleted','false');
+}//end if
+setmemory('deleteditem', 'true');  //this sets the flag turned on
+var y = x.toString();
+var theslot = "slot" + y;  
+eval("setmemory('" + theslot + "','0');");
+counterminusone();  //we are deleting one here don't need to do it elsewhere
+trafficlight(x);
+beachtime();
+delete_line();//this should work now
+}  //end function
+//-----------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* COUNTER MINUS ONE   */
+
+function counterminusone(){
+  var counter_value = parseInt(getmemory('lecounter')); 
+  var starting_value = counter_value;
+  
+  //if the counter value == 0 there is no point in continuing
+  // this isn't tested yet
+  if(counter_value == '0'){
+    return;  //end function
+  } //end if
+  //turn counter value string into a number to do math on it
+  
+  counter_value = counter_value - 0; //turning a string into a number
+  counter_value = counter_value - 0; 
+  counter_value = counter_value - 1; //subtracting 1 here at this point
+  
+  //now turn it into a string
+  var bicycle = counter_value.toString();
+  
+  // put the new counter value into the memoryslot lecounter
+  setmemory('lecounter', bicycle);
+  }//end func
+//-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*       COPY MEMORY DOWN       */
+                                         //how to use copymemorydown('9'); 
+function   copymemorydown(first){  //from key name, to key name. 
+ var xmas = first; //  needs to be a string
+      xmas = xmas.toString();
+  var candy = eval("getmemory('slot" + xmas +"');");                    //one eval
+ //subtract one
+  var changenumber = parseInt(xmas); 
+  //changenumber = changenumber -0;changenumber = changenumber -0;changenumber = changenumber -1; 
+  var iphone = parseInt(changenumber);
+  iphone =iphone-1; //see if this works it has to be one less than the top number
+  var xmas = iphone.toString();
+  eval("setmemory('slot" + xmas +"',candy);");                            //two eval
+    //test if a variable is ==="undefined" || variable == null) elsewhere
+  var highway1 = eval("getmemory('slot" + xmas +"');");                   //three eval
+          alert("starting slot '" + first + "'"    +
+                "\r\n value= " + candy             +
+                " \r\nslot number " + changenumber +
+                ";\r\n next search begins at "     +  highway1);
+
+}//end func
+//---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//testing tuesday november 7th peets coffee half moon bay
+//##################
+//##################
+/*         TRAFFIC LIGHT        */
+function  trafficlight(x){  //not first row and not last row and must be at least 3 rows
+	var numberchosen = getmemory('rowclicked');
+	numberchosen =numberchosen.toString(); //just added this 
+ 	var counter_value = parseInt(getmemory('lecounter')); 
+    counter_value = counter_value.toString(); //just added this
+    var counter_value = parseInt(getmemory('lecounter')); 
+
+// value != 1 && value != counter_value /* meaning last one  */ 
+
+//x came down from an argument to the function trafficlight
+ //if((x != '1' ) || (x != counter_value) || (counter_value < '3')){  //making numbers strings
+ //copymemorydown(x) //does the cascading of the memory slots before the rows 
+                   //are regenerated subtracting one
+  //var testing =counter_value + 1; //I had to had one because I deleted one from the counter in anotehr function
+ //this determines if the last row item was chosen which is eitehr true or false. 
+ // I need to test this flag and set to true at the moment of the deletion
+  
+ 
+  var answer= getmemory('last_row_deleted'); //this is either true or false
+   if (answer == 'false'){ //meaning any item was clicked on except the bottom one not the last one
+    
+      //so mrcoffee() is only called if not the last item in the list
+      mrcoffee();  
+      showcounter();
+      snoopytime(); 
+ 
+  }else{//end if
+  
+    //this means that if here answer == true meaning
+ 
+  //means number chosen = counter value is the last one 
+   showcounter();
+   snoopytime(); //this redraws the new rows at the top after deleting one
+}//end if
+} //end function
+//--------------------------------------
+
+//now showcounter() snoopytime() are only called once and not twice 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//I will need to also make a vanilla COPY MEMORY WITHOUT A counter variable.
+
+//for now I am using the counter variable to automatically determine the slot number
+
+/*       COPY MEMORY  using counter variable    */
+
+// I will need to test this to see if it really works.
+//==================================================================================
+
+/*
+   this takes in the selected row from 'CoffeeBean' and appends the menus quantity and color numbers
+   and then grabs the current counter number and copies what was in the CoffeeBean memory
+   and puts it into the slot memory number based on the counter number like into slot3.
+   In summary this takes in the selected item and copies it into a specific memory slot
+   and after they are added they will be generated in a summary and as individual items
+   on this page when it loads. 
+   Taking in selected item and added into memory and displaying the new results.
+*/
+
+// this is the CopyMemory(x,y) function  FROM CoffeeBean TO the appropriate slot memory 
+
+// this will be from CoffeeBean to a slot memory name using teh current counter value variable
+
+
+//the first attempt at copymemory worked!!! now testing eval to save coding and add beauty
+//==================================================================================
+/*    COPY MEMORY()   copy memory   */
+
+//totally new function testing copying memory with known input x value and y is created dynamically
+// monday, oct 23, 2017
+//I don't thinkt hat this is being called and putting a selected slot into slotmemory
+// thursday, oct 26, 2017
+//it doesn't seem as if a selected item is being put into memory
+// OR what is in slot memories is being written over and filled with 0's.
+// It's one or the other
+// or it's just not being called and therefore not doing it's job.
+
+//copymemory was just adding k2 data which I just commented out. 
+
+//so proud of my copymemory function!!!
+//I think that this copy memory ONLY copies from CoffeeBean into slot memories
+//this is good to know and discover. So I need a different CopyMemory function
+
+
+
+
+
+
+
+
+
+
+/*  COPY MEMORY FUNCTION   */
+function   copymemory(x,y){  
+//from key name, to key name. I really don't need either
+//it's using CoffeeBean as the default for x so I just need y which is the slot number
+  var candy = getmemory('CoffeeBean'); //remember it's a string of the row of the selected item 
+  var counter_value = parseInt(getmemory('lecounter')); 
+  counter_value = counter_value - 0; //turning a string into a number
+  counter_value = counter_value - 0; //forcing the string into a number by doing it twice
+  var snowfall = candy;      //adding the quantity and color to the tail end of coffeebean row data
+  var theslot = eval("slot" + counter_value);
+  eval("setmemory('" +  theslot + "'" + ", snowfall);" );
+//just changed some of this code so it's not adding k2 data because I added it above
+// I didn't foresee that problem . this is iphone_merchandise_basket.html oh yeah
+// at least I'm making some progress but it's a slow slog thru the swamp
+}//end func
+//------------------------
+
+
+
+
+
+
+//#############################
+// Nov 2 2017 HMB Peet's Coffee problem solving, thinking thru, designing, coding, debugging, testing
+
+// thursday coding for shifting memories after one is deleted to use this function
+
+/*       SPECIAL COPY MEMORY    will always copy right to left so example slot5 to slot4 so I only need starting slot  */
+// this copies one memory slot into another memory slot
+
+
+//so if I enter specialcopymemory(3); 
+//it would be slot3 on the the right of the gap 
+// and it would be copied into slot2
+
+
+
+
+
+
+/*       SPECIAL COPY MEMORY         */
+function   specialcopymemory(first){ 
+ //from key name, to key name. I really don't need either
+ // example   4 to 3 which represents slot4 to slot3
+ // but it's doing the same thing each time so I only need the first from slot number
+//it's using CoffeeBean as the default for x so I just need y which is the slot number
+ 
+  var thenumber = first.toString(); // it needs to be a string at this point
+  
+  //this grabs the from slot# and puts it's data into the variable candy
+  var candy = eval("getmemory('slot" + thenumber + "');");    // example slot4 remember it's a string of the row of the selected item 
+  
+  
+  //now I need to subtract one
+  var changenumber = parseInt(thenumber); //this turns the string number into a number for math
+  changenumber = changenumber -0;
+  changenumber = changenumber -0;
+  changenumber = changenumber -1; //subtract one from initial number here
+  //now I need to change it back into a string after subtracting 1 from it
+  var hmb = changenumber.toString();
+  
+  var theslot = eval("slot" + hmb);
+  //this puts the data from the first slot into the slot with -1
+  eval("setmemory('" +  theslot + "'" + ", candy);" );
+  //not sure yet if I need to do a deletememory too
+  
+var highway1 = eval("getmemory('" + theslot + "');");
+  
+  // I have not deleted anything yet
+}//end func
+
+// ######################
+
+
+
+
+
+
+
+
+//what if I looked for which field is empty
+// and then I would know the count instantly
+var panerabread = new Array();
+panerabread[panerabread.length] = " "; //1st true position is panerabread[0] has nothing in it
+
+
+
+
+
+
+  
+  
+  
+
+
+
+/*
+//===========================================================================================================================
+//===========================================================================================================================//
+plan of attack strategy for how this page will work
+
+
+
+
+thursday, october 19th, 2017 half moon bay coding starbucks
+
+there will be what is stored in memory thus far.
+
+And there will be what is a new arrival to this page.
+
+first I need to gradually add items to memory.
+
+1 grab what row item was selected and in memory in details site.
+
+1 grab the quanityt number and color chosen
+
+then output this dynamically while also adding it to a memory slot
+the memory slot position is determined by the counter number.
+
+I need to make a simple row first and then I can add the picture later and subtotal later
+so this will be jsut like the light yellow row on the shop page that is currently commented out. 
+
+I can just put a div at the top fo teh page and add some simple dynamic content there 
+
+
+
+
+//=======================================================================
+*/
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ //=================================================
+ /* SHOW STORAGE VALUES FUNCTION   */
+ //===========================================
+ /* but what I want to do is just print these babies out */
+ 
+ 
+function showstoragevalues(){
+  
+    //for(var j=0; j<localStorage.length;j++) { // Iterate all stored names
+     // var a = localStorage.key(j);
+      //I want to use a loop and put this in a div dynamically 
+      
+     // alert("key = " + localStorage.key(j) + "      value= " + getmemory(a));
+       //this is from JavaScript Definitive Guide but I wrote function getmemory
+
+    
+    //I need to write this dynamically to a div now!!!
+    // } //end loop
+
+} //end func show storage values
+
+
+
+
+
+
+
+/*         MINUS 1            */
+function minus1(x){ 
+  //alert("minus1 called")
+ return x-1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*       COUNTER MINUS ONE     */
+ function counterminusone(){
+ var counter_value = parseInt(getmemory('lecounter')); 
+  var starting_value = counter_value;
+  
+  //if the counter value == 0 there is no point in continuing
+ 
+  //turn counter value string into a number to do math on it
+  
+  counter_value = counter_value - 0; //turning a string into a number
+  counter_value = counter_value - 0; 
+  counter_value = counter_value - 1; //subtracting 1 here at this point
+  
+  //now turn it into a string
+  var bicycle = counter_value.toString();
+  
+  // put the new counter value into the memoryslot lecounter
+  setmemory('lecounter', bicycle);
+  
+  //var newcounter = parseInt(getmemory('lecounter'));
+  }//end func
+//------------------------------
+
+
+
+
+
+
+
+
+
+/*
+
+  show storage values()
+                 show counter()
+                 latte()
+                 
+*/
+
+
+
+
+
+/*   latte function */   //this prints out the row number and the data for a shirt/hat
+
+
+/*
+//######################
+// thursday november 9th' peet's coffee
+
+if counter = 0 on basket page just show 0 results
+//I need that to bypass the other stuff to save time
+
+
+*/
+
+
+
+
+
+
+
+
+
+//hollister calls snoopytime at the end of it
+
+/*  HOLLISTER  */ //==========================================================
+
+//what this function is grabbing the selected memory on details page and 
+// putting it into a new emmory slot based on the counter number
+// and therefore adding the slot memoory so that on the basket page it's loaded.
+// so this means that every time hollister is being called it's 
+// adding  a new row and filling it with what is in the CoffeeBean memory slot.
+
+
+//I need to put this elsewhere because it's 
+// not supposed to make a new memory slot UNLESS not in edit mode it's that simpole. 
+
+
+
+
+
+
+
+/* SHOW COUNTER VALUE */
+function show_counter_value(){
+	edit_line();  //onload this sets tehe edit mode as default
+	var cheese = parseInt(getmemory('lecounter')); 
+	if(cheese === "undefined" || cheese == null){
+		cheese = "undefined";
+	} //end if
+    cheese = cheese.toString();
+	document.getElementById("f_counter_now").value   = cheese;
+ }  //end function
+//------------------------------
+
+
+
+
+
+/*
+
+after clicking on edit I need to make sure that edit stays green and is selected
+after it's function trail finishes
+
+after clicking on delete I need to make sure that delete stays green and is
+selected after it's function trail finishes
+
+
+
+*/
+
+
+
+
+//global variable
+var bypassbuttons = 'false';
+
+
+
+//////// this is a filter to keep the basket page in edit mode
+///////  unless the user just clicked on add to basket on details page
+//////   to prevent the results row from being changed from CoffeeBean
+
+/*    HOLLISTER    */
+
+function hollister(){
+var page_memory = getmemory('recent_page_memory_flag');
+//this handles any errors with page_memory
+if(page_memory == null || page_memory ==="undefined"){
+ page_memory = "error";
+ } //end if
+ 
+//one time loop
+for(var x =0;x<1;x++){  //this is just a one time loop so I can use a break for a condition and use a beautiful if else
+var active = getmemory('adding_item_mode');
+if(active == 'true'){
+     break;
+     
+  }else{   
+  
+/*
+    I will put an if else here
+    so if just added to basket this switch case will be skipped
+    otherwise this will put everything into edit mode
+    where previously edit mode was false and tripping up the basket loading
+    in CoffeeBean instead of ChocolateBean and calling functions to 
+    mess up the basket table of items at the top
+*/
+//this switch case is only reached if active == 'false' meaning add to basket not clicked
+switch(page_memory){
+      case "error":
+        setmemory('editmode','true');
+        break;
+    case "shop":
+        setmemory('editmode','true');
+        break;
+    case "details":
+        setmemory('editmode','true');
+        break;
+    case "filter":
+        setmemory('editmode','true');
+        break;
+    case "checkout":
+         setmemory('editmode','true');
+        break;
+    case "home":
+        setmemory('editmode','true');
+        break;
+    case "aboutus":
+        setmemory('editmode','true');
+        break;
+    case "videos":
+        setmemory('editmode','true');
+        break;
+        
+        
+    default:   //do nothing at this point
+
+
+    }//end switch case
+  } //end if
+} //end loop
+
+
+
+var candy = localStorage.getItem('CoffeeBean'); //notice using CoffeeBean for new memory data for a row
+
+//#######################################
+//november 25th coding and debugging 
+//if the counter hasn't been initialized it's null and so I 
+// turn on the counter and then draw the tables with the yellow box 
+// showing 0 items in teh box 
+
+//tests if CoffeeBean is empty
+if(candy == null){
+   mycounter();
+   snoopytime();   //snoopy IS CALLED here 
+   bypassbuttons = 'true';
+   return;         //then leaves this function 
+ }//end if         //this means that hte CoffeeBean is empty or nonexistent
+                   //it means put up the message 0 items in basket
+                  //reset th counter to 0 and jump out of the function 
+
+/*
+
+so if candy is null the counter is null
+then everything below here in the rest of this if and the else
+beneath it. will. be. skipped. gotta love those returns; 
+
+*/
+
+    var overtime = new Array();
+    var  bean = candy.split(','); 
+    var counter_value = parseInt(getmemory('lecounter')); 
+    var fly = getmemory('edit_this_slot_number');
+   
+   
+ var tacobell = getmemory('editmode');
+ 
+if(tacobell == 'true'){
+
+//don't do anything here if in edit_mode = true
+
+}else{
+
+//I think is only when adding a row meaning it will add the last item 
+//grabbing coffeebean 
+var candy = localStorage.getItem('CoffeeBean'); //notice using CoffeeBean for new memory data for a row
+
+    var overtime = new Array();
+   var  bean = candy.split(','); 
+var xmas = parseInt(getmemory('lecounter')); 
+    eval("setmemory('slot" + xmas +"',bean);"); 
+    
+//here I can add the CoffeeBean for a new row putting into scounter 
+//meaning not in edit mode loading the basket
+
+} //end if else
+
+snoopytime(); //snoopy called here 
+
+} //end function
+//-----------------------------------------------------
+
+
+
+
+
+
+
+
+/*  ADD 2 NUMBERS FUNCTION  */ 
+function addtwonumbers(x,y){
+var c = x + y; 
+return c;
+}//end add2numbers function
+
+
+
+
+
+
+
+
+/* ADD NUMBERS IN AN ARRAY FUNCTION */
+function add_numbers_array(sample){   //giving it an array as an argument
+var total=0;  
+for(var i in sample) { 
+    total += parseInt(sample[i]); 
+ } //end for LOOP
+   return total;
+} //end function 
+
+
+
+
+
+
+
+
+
+/*  x_times_y(x,y) multiplying function   */
+
+function x_times_y(x,y){
+var x = parseInt(x);
+    x = x -0;
+    var y = parseInt(y);
+    y = y -0;
+    var z = x * y;
+return z;
+}//end function 
+
+
+
+
+
+
+
+
+//******############################ november 2, 2017 starbucks half moon bay ###################
+
+// I NEED TO REDUCE IT INTO REALLY SIMPLE BABY STEPS TO CONTROL IT WITH BRUTE FORCE
+// and I need to see what it's doing at every step to figure out where the logic is wrong
+
+
+
+//####################################################################################################
+
+/* snoopy time makes the output of the selected items saved in the memory slots */
+//I need to comment out the code in here that isn't just doing straight generation of rows
+
+ //THIS PRINTS OUT THE SELECTED ITEMS IN MEMORY (IN THEORY)
+//-------------------------
+/*  SNOOPY TIME FUNCTION */
+//-------------------------
+// thursday november 9th peet's coffee halfmoon bya this is what I need to fix 
+//that's the only one not working 
+//if in edit mode
+ //the solution is to ram chocolatebean into the last row
+
+ /*
+ I need to set and unset a flag to turn alerts on and off
+ that would save so much time
+ 
+ babyslots correspdonding to the main slot memories for holding the calculation numbers from the basket page
+ */
+ 
+ 
+ 
+ 
+ /*  SNOOPY TIME */
+function snoopytime(){
+
+var tacobell = getmemory('editmode');
+var counter_value = parseInt(getmemory('lecounter')); 
+
+//this turns counter_value from a string into a number
+counter_value = counter_value -0;
+counter_value = counter_value +1;  //which means the counter is somewhere
+// losing 1 each time . actually its since JS starts counting from 0 and not 1
+
+//this will temporarily store math totals to be fed into a slot and accessed on checkout page
+//so that the same numbers are guaranteed
+
+  fogbank  = new Array();
+  fogbank[fogbank.length] = ""; //0 position nothing
+
+
+/*       pumpkin rows div     */
+
+var halfmoonbay = new Array();  //this array is added to for adding together the subtotals
+    halfmoonbay[halfmoonbay.length] = parseInt(0);
+    
+ var jumba = "<div id='pumpkin_rows'>";
+     jumba += "<table  bgcolor= white width = 850>"; //will change width to 500 for production
+  
+  // LOOP STARTS HERE 
+  //===========================================================
+for(x =0; x < counter_value; x++){  //looping based on the number of the counter
+if(x == 0){ //skips 0 since I am not using position 0 for slots
+  continue;
+} //end if
+
+//so x should start from 1 at this point
+var xmas = x;
+//this grabs each memory slot one by one starting from the first and loops
+// thru all of them based on the counter
+
+xmas = xmas.toString(); //so it sees it as a string and not a number
+var fish = eval("getmemory('slot" + xmas +"');"); //this finally works!!!!
+var temp = [];
+var temp = fish.split(','); //this takes the commas out of the array
+
+    jumba += "<tr><td bgcolor=yellow width=120>";   
+  
+    /*
+        EDITING an item here triggered by clicking on the item
+        making this a link for editing and then putting this slot number which is based on the item number
+        and then redirecting to the details page and putting in the settings since this won't necessarily
+        be what is in CoffeeBean. But rather it will be what is in the slot number based on this item number
+        so I will need the item number
+    */
+    // new code here calling edit_item('x'); where is the edit_item() function though, need to add slot number 
+    // item number right here 
+    jumba += "<a href='#' style='display:block;text-decoration:none'  ";
+    jumba += " onclick=";
+    jumba += '"';
+    jumba += "edit_item('";
+    jumba += x;
+    jumba += "'";
+    jumba += ")";
+    jumba +=";";
+    jumba += "return false;";
+    jumba += '"';
+    jumba += ">";
+    jumba += "edit item</a>&nbsp;"  //edit item
+    jumba += x;                     //loop number showing the item see if it works
+    jumba += "&nbsp;::</font></td><td>";  
+    jumba += temp[0];
+    jumba += "&nbsp;"
+    jumba += temp[1];
+    jumba += "</td>";
+    jumba += "<td>";
+    jumba += temp[2];
+    jumba += "&nbsp;"
+    jumba += temp[3];
+    jumba += "</td>";
+    jumba += "<td>";
+    jumba += temp[4];
+    jumba += "&nbsp;"
+    jumba += temp[5];
+    jumba += "</td>";
+    jumba += "<td>";
+    jumba += temp[6];
+    jumba += "&nbsp;"
+    jumba += temp[7];
+    jumba += "</td>";
+    jumba += "<td>";
+    jumba += temp[8];
+    jumba += "&nbsp;"
+    jumba += temp[9];
+    jumba += "</td>";
+    jumba += "<td>";
+    jumba += temp[10];
+    jumba += "&nbsp;"
+    jumba += temp[11];
+    jumba += "</td>";
+    
+    //just added these 2 numbers for quantity and color from menus oct 30 rwc starbucks whipple
+   
+    var shirt_color;
+    
+     if(temp[12] == '1'){
+       shirt_color = "white";
+     }//end if
+     if(temp[12] == '2'){
+       shirt_color = "grey";
+     }//end if
+     if(temp[12] == '3'){
+       shirt_color = "black";
+     }// end if
+     if(temp[12] == '4'){
+       shirt_color = "blue";
+     }// end if
+     if(temp[12] == '5'){
+      shirt_color = "pink";
+     }// end if
+     
+     jumba += "<td ";
+     jumba += "bgcolor="; //color for the tds in the row for the color
+     
+     if(shirt_color == "blue"){
+      jumba += "skyblue"; //special scenario if blue
+     }//end if
+     
+     if(shirt_color != "blue"){
+      jumba += shirt_color; 
+     } //end if
+     //jumba += 
+     jumba += ">";
+     
+    if(shirt_color == "black"){
+    jumba += "<font color=white>";
+    jumba += shirt_color; 
+    jumba += "</font>";
+    } //end if
+    
+    if(shirt_color != "black"){
+    jumba += shirt_color;
+    } //end if
+    
+   
+    jumba += "</td>";
+    
+    
+    
+    
+  //########################################
+  //Nov 2 HMB Peet's Coffee editing code
+  //the number will be the item number which is the counter number
+    // function call delete('slot#');
+    //working on this tuesday, nov 7th at 10;30am hmb
+
+
+
+
+    jumba += "<td><a href='#' style='display:block;text-decoration:none' ";
+    jumba += " onclick =";
+    jumba += '"';
+    jumba += "delete_an_item('"; 
+    jumba +=  x;
+    jumba += "'";
+    jumba += ")";
+    jumba +=";";
+    jumba += "return false;";
+    jumba += '"';
+    jumba += ">";
+    jumba += " delete</a></td>";
+    
+   
+ var theprice    = parseInt(temp[7]);
+ var thequantity = parseInt(temp[11]);
+ var cocacola = x_times_y(theprice,thequantity);
+ //this adds it to the array fogbank - the price x quantity
+ 
+ fogbank[fogbank.length] = parseInt(cocacola);
+ 
+     
+      jumba += "<td>&nbsp;";
+      jumba += theprice;
+      jumba += "&nbsp;</td>";
+      
+      jumba += "<td bgcolor=lavender>&nbsp;";
+      jumba += thequantity;
+      jumba += "&nbsp;</td>";
+
+      jumba += "<td bgcolor=orange>&nbsp;";
+      jumba += cocacola;  // x times y   one result 
+      //========================================
+     
+    
+      //=====================================
+
+      jumba += "&nbsp;</td>";
+      jumba += "</tr>";
+
+ //this adds the current subtotal to array halfmoon bay
+ halfmoonbay[halfmoonbay.length] = parseInt(cocacola);
+ 
+} // end for loop ========================= end for loop =================================
+
+
+
+
+// THIS ADDS THE NUMBERS OF ALL THE SUBTOTALS FROM THE ARRAY HALFMOONBAY
+var all_rows_subtotals = add_numbers_array(halfmoonbay);
+    
+    fogbank[fogbank.length] = all_rows_subtotals; //this will be the last number in the array
+    jumba += "<tr bgcolor=skyblue><td>subtotal:&nbsp;$";
+    jumba += all_rows_subtotals;
+    jumba += "</td></tr>";
+    
+    //new row 
+    jumba += "<tr><td>";
+    jumba += "&nbsp;</td></tr>"
+    jumba += "</table></div>";
+  
+    
+    ////===================
+    //create an array, add the stuff to the array
+   // and then feed the array into a microslot memory
+    
+ 
+
+
+var newnumber = counter_value+1 ;//+ 1;
+
+for(var y =0; y< newnumber; y++){
+if(y == 0){ //skips 0 since I am not using position 0 for slots
+  continue;
+} //end if
+} //end for loop
+
+
+
+  // put the new counter value into the memoryslot lecounter
+  setmemory('slotnumbers', fogbank);
+
+
+
+//this puts the number of items (rows) that are output in the basket for use 
+//when deleting items 
+var counter_value = parseInt(getmemory('lecounter'));
+    setmemory('bluejaybackup',counter_value);
+    woodstock(); //  woodstock() into div peets_rows div called here to generate the offical rows beneath the prototype rows
+    drivethru(); // builds the items boxes at the bottom of the page 
+}//end snoopytime function
+//---------------------------------------------------\\
+//----------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*    GRAB MEMORY  */
+
+/* grab memory function snags data inside of memory Tahoe */
+   //this is the 4 digit code from the filter navigation page I don't need this or do I. 
+function grab_memory(){
+var dog = localStorage.getItem('Tahoe');
+air[air.length] = dog.charAt(0);
+air[air.length] = dog.charAt(2);
+air[air.length] = dog.charAt(4);
+air[air.length] = dog.charAt(6);
+
+
+//this loads what is in memory into the text fields at bottom of the page
+//overwriting what is there by default with the current settings. 
+document.getElementById("f_category").value = air[1];
+document.getElementById("f_gender").value   = air[2];
+document.getElementById("f_size").value     = air[3];
+document.getElementById("f_type").value     = air[4];
+//location.reload(true); //reloads the page to set the buttons to what they were just selected by user
+
+// the machine has zero intelligence
+if (air[1] == "1"){
+    raintime();
+} //end if
+
+
+if (air[1] == "2"){
+    raintime2();
+} //end if
+
+
+//////////////////////////
+if(air[2] == "1"){
+  gen1();
+} //end if
+
+
+if(air[2] == "2"){
+  gen4();
+} //end if
+
+
+if(air[2] == "3"){
+  gen3();
+} //end if
+
+
+if(air[2] == "4"){
+  gen2();
+} //end if
+
+///////////////////////
+if(air[3] == "1"){
+  thunder4();
+} //end if
+
+if(air[3] == "2"){
+  thunder1();
+} //end if
+
+
+if(air[3] == "3"){
+  thunder3();
+} //end if
+
+
+if(air[3] == "4"){
+  thunder2();
+} //end if
+
+
+if(air[3] == "5"){
+  thunder5();
+} //end if
+
+
+////////////
+if(air[4] == "1"){
+  nightfall1();
+} //end if
+
+if(air[4] == "2"){
+  nightfall2();
+} //end if
+
+
+if(air[4] == "3"){
+  nightfall3();
+} //end if
+} //end function
+//--------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FUNCTION MULTIPLY THE PRICE BY QUANTITY */
+function multiply_the_price_by_quantity(){
+//grab this from CoffeeBean
+var candy  = getmemory('CoffeeBean'); 
+     money  = new Array();
+ var money  = apple.split(',');
+ var theprice    = parseInt(money[7]);
+ var thequantity = parseInt(money[11]);
+ var cocacola    = x_times_y(theprice,thequantity);
+ } //end function multiply price by quantity
+//---------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+/*   ADD TO THE BASKET FUNCTION   */
+function add_to_the_basket(){
+	 var candy = localStorage.getItem('CoffeeBean'); 
+    var tree = new Array(); //[]; //new Array();
+     tree = candy.split(','); 
+     creates_memory_slots();
+ var treat = localStorage.getItem('K2'); // K2 memory here being accessed. 
+}//end function
+
+
+
+
+
+
+
+
+
+
+
+
+//**************************
+/*  CRITICAL INFORMATION TO MAKE THE COUNTER AND BASKET MEMORY SLOTS WORK */
+/*
+the design for the basket - it's an illusion of adding memory
+the memory slots are already predefined and I just utilize them
+I will use a separate memory with slots like an array to represent
+the status of the 25 memories with red for empty and green for occupied
+
+the issue is how do I create the memories once
+and then check if they have anything in them and 
+that way I am not constantly recreating them and erasing their contents
+so if I create them on the home page that should work
+and then if the person comes back to the home page onload 
+
+since it's known that the memory will be overwritten before
+recreating it (which will be necessary) getItem and fill an array with it (so it's a swap)
+and then when the new localStorage is created again have it read the array which exists
+so it's sort of like batter on deck.
+
+before the memory slot is reset onload 
+I need to put the contents into an array and into a field getElementBy
+as a precaution or I could actually store it into a different memory possibly.
+
+and add the new data to it then overwrite the localstorage memory
+it's also like wind shield wipers and the only way of preserving teh data that was in meomry
+was to save it to an array by reading it(feeding it) into an array
+then recreate the memory (empty by definition) and then refill it with the data.
+lame but it should work
+
+so getItem and fill an array I will call shadow
+then make whatever changes if any to that data in the array and 
+then set Item to refill the memory 
+so though it's a fact that every time I return to the filter page the memory
+will be overwritten I can actaully preserve and save that memory by dumping it into array
+and then after the array is overwritten with setItem to recreate the memory slot
+I refill it with the data from the array
+
+*/
+
+/*  END OF CRITICAL INFORMATION TO MAKE THE COUNTER AND BASKET MEMORY SLOTS WORK */
+
+
+
+
+
+
+
+/*  X TIMES Y FUNCTION RETURN Z */
+function x_times_y(x,y){
+var x = parseInt(x);
+    x = x -0;
+var y = parseInt(y);
+    y = y -0;
+    var z = x * y;
+    return z;
+ }//end function 
+
+
+
+
+
+
+
+
+
+
+
+//---------------------------------------
+
+
+function multiply_the_price_by_quantity(){
+//grab this from CoffeeBean
+var candy = getmemory('CoffeeBean'); 
+var money = new Array();
+ var money = candy.split(','); 
+ var mason = parseInt(money[7]);
+ var newmorning = parseInt(money[11]);
+ var cocacola = x_times_y(mason,newmorning);
+}
+
+
+
+
+
+
+
+/*   SHOW COUNTER FUNCTION */
+function showcounter(){
+var cheesey = parseInt(getmemory('lecounter')); 
+if(cheesey ==="undefined"){
+    mycounter();  //this should reset the counter
+    return; //just kills it
+} //end if
+  document.getElementById("target4").value = cheesey;
+} //end function
+
+
+
+
+
+
+
+/* SET FLAG EDIT MODE OFF  */
+function set_flag_edit_mode_off(){
+ setmemory('editmode','false');
+ //this has to be default so if the user jumps back to details page from basket page
+ // I need to determine if I will have nothing show up details page in such a scenario  
+} //end func
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//==============================================================================================
+
+/*  WOODSTOCK  *//*  WOODSTOCK  *//*  WOODSTOCK  *//*  WOODSTOCK  *//*  WOODSTOCK  *//*  WOODSTOCK  */
+/*  WOODSTOCK  *//*  WOODSTOCK  *//*  WOODSTOCK  *//*  WOODSTOCK  *//*  WOODSTOCK  *//*  WOODSTOCK  */
+/*  WOODSTOCK  *//*  WOODSTOCK  *//*  WOODSTOCK  *//*  WOODSTOCK  *//*  WOODSTOCK  *//*  WOODSTOCK  */
+
+// november 13,th 2017
+//============================
+//============================
+//============================
+/*   work on this in emervyille peet's generating the basket rows
+ */
+
+
+
+
+//THIS WILL GENERATE THE CORRECT ROWS OF DATA IN THE BASKET AND LOOK PRETTY
+
+/*     WOODSTOCK     */
+function woodstock(){
+ var tacobell = getmemory('editmode');
+ var counter_value = parseInt(getmemory('lecounter')); 
+
+//this turns counter_value from a string into a number
+counter_value = counter_value -0;
+counter_value = counter_value +1;  //which means the counter is somewhere
+// losing 1 each time . actually its since JS starts counting from 0 and not 1
+
+//this will temporarily store math totals to be fed into a slot and accessed on checkout page
+//so that the same numbers are guaranteed
+
+  fogbank  = new Array();
+  fogbank[fogbank.length] = ""; //0 position nothing
+
+
+/*       peets_rows div     */
+
+var halfmoonbay = new Array();  //this array is added to for adding together the subtotals
+    halfmoonbay[halfmoonbay.length] = parseInt(0);
+    
+ var jumba = "<div id='peets_rows'>";
+ 
+
+//space here
+   
+   
+   jumba += "<table  bgcolor= white width = 405  border=1 ";
+   jumba += " style='border-collapse:collapse;border: 1px solid #D8D8D8;'>"; 
+   jumba += "<tr bgcolor=aliceblue>";
+   jumba += " <td>It</td><td align=center width= 10>";
+   jumba += "Type</td><td width= 20 align=center>";
+   jumba += "Gen</td>";
+   jumba += "<td width=4 align=center>Siz";  
+   jumba += "</td><td width =118  align=center>Title";
+   jumba += "&nbsp;</td><td width=22 align=center>Color</td>";
+   jumba += " <td width=15 align=right>Qty";
+   jumba += "</td><td  align=center>Price</td><td "; 
+   jumba += "align=right width=25>Total</td>";
+   jumba += "</tr>"; 
+
+
+ 
+  // LOOP STARTS HERE   the added space probably &nbsp; must be in this loop. 
+//===========================================================
+for(x =0; x < counter_value; x++){  //looping based on the number of the counter
+if(x == 0){ //skips 0 since I am not using position 0 for slots
+  continue;
+} //end if
+
+//so x should start from 1 at this point
+var xmas = x;
+// this grabs each memory slot one by one starting from the first and loops
+// thru all of them based on the counter
+
+xmas = xmas.toString(); //so it sees it as a string and not a number
+var fish = eval("getmemory('slot" + xmas +"');"); //this finally works!!!!
+var temp = [];
+var temp = fish.split(','); //this takes the commas out of the array
+
+
+ //this capture a tap on a row in the dynamic table which then calls delete_row or edit_row
+    jumba += "<tr onClick='row_choice(";
+    jumba += x;
+    jumba += "); return false;'";
+    jumba += " >";
+     
+  
+    /*
+        EDITING an item here triggered by clicking on the item
+        making this a link for editing and then putting this slot number which is based on the item number
+        and then redirecting to the details page and putting in the settings since this won't necessarily
+        be what is in CoffeeBean. But rather it will be what is in the slot number based on this item number
+        so I will need the item number
+    */
+  
+      jumba += "<td width= 4>";
+    //------------
+      jumba += x;         //loop number showing the item see if it works
+      jumba += "</td>";
+      jumba += "<td width= 28 >&nbsp;"
+    if(temp[1] == "hats"){
+      jumba += "hat";
+     }// end if
+     
+     //------------------------------
+     if(temp[4] != "longsleeve" && temp[4] != "hoodie" && temp[1] == "shirts"){
+       jumba += "shirt";
+     } //end if
+     
+     //-----------
+    if(temp[4] == "longsleeve" && temp[1] == "shirts"){
+          jumba += "lslv";
+     }// end if
+     
+    if(temp[4] == "hoodie" &&  temp[1] != "hats"){
+          jumba += "hdy";
+     }// end if
+     
+
+    jumba += "</td>";
+    jumba += "<td>&nbsp;";
+    
+    if(temp[2] == "mens"){
+    jumba += "M";
+    }//end if
+   
+     if(temp[2] == "womens"){
+    jumba += "W";
+    }//end if
+    
+    if(temp[2] == "girls"){
+    jumba += "G";
+    }//end if
+   
+     if(temp[2] == "boys"){
+    jumba += "B";
+    }//end if
+    
+    jumba += "</td><td>";
+    jumba += temp[3];
+    jumba += "</td>";
+    jumba += "<td width= 125>&nbsp;";
+    jumba += temp[6];
+    jumba += "&nbsp;"
+    jumba += "</td>";
+
+
+    var shirt_color;
+    
+     if(temp[12] == '1'){
+       shirt_color = "White";
+     }//end if
+     if(temp[12] == '2'){
+       shirt_color = "Grey";
+     }//end if
+     if(temp[12] == '3'){
+       shirt_color = "Black";
+     }// end if
+     if(temp[12] == '4'){
+       shirt_color = "Blue";
+     }// end if
+     if(temp[12] == '5'){
+      shirt_color = "Pink";
+     }// end if
+     
+     jumba += "<td width= 25 align=center>";
+     jumba += shirt_color;
+     jumba += "</td>";
+     
+ var theprice    = parseInt(temp[7]);
+ var thequantity = parseInt(temp[11]);
+ var cocacola = x_times_y(theprice,thequantity);
+ //this adds it to the array fogbank - the price x quantity
+ 
+ fogbank[fogbank.length] = parseInt(cocacola);
+      jumba += "<td align=center width=10 >&nbsp;";
+      jumba += thequantity;
+      jumba += "&nbsp;</td>";
+      jumba += "<td bgcolor=white width=10 align=right>&nbsp;";
+      jumba += theprice;
+      jumba += "&nbsp;</td>";
+      jumba += "<td bgcolor=white align=right>&nbsp;";
+      jumba += cocacola;  // x times y   one result 
+      //========================================
+     
+      jumba += "&nbsp;</td>";
+      jumba += "</tr>";
+      
+ //this adds the current subtotal to array halfmoon bay
+ halfmoonbay[halfmoonbay.length] = parseInt(cocacola);
+ 
+} // end for loop ========================= end for loop =================================
+// END LOOP
+
+//########################################################
+// this discovery was made friday, november 24th, 2017
+//this could be it, this renders the control buttons initially before they are clicked on
+// from their baseline default positions and values 
+//this is inside the function woodstock. I should separate it and use a div instead for
+// more control.
+//########################################################
+
+
+// THIS ADDS THE NUMBERS OF ALL THE SUBTOTALS FROM THE ARRAY HALFMOONBAY
+var all_rows_subtotals = add_numbers_array(halfmoonbay);
+    fogbank[fogbank.length] = all_rows_subtotals; //this will be the last number in the array
+    jumba += "<tr bgcolor=white><td colspan=9 align=right>subtotal:&nbsp;$";
+    jumba += all_rows_subtotals;
+    jumba += "</td></tr>";
+    
+    //new row 
+   
+    jumba += "</table></div>";
+    jumba += "<br>";
+   
+    // TAP DANCER DIV IS HERE  this is what triggers the movement bug below these 
+    //these are the 4 buttons that now have stopped moving beneath the basket table.
+    
+    //flag here 
+    //if(counter == 0){
+   //################## friday november 24th, 2017
+    jumba += "<div id ='tapdancer'>";////////////<=========================
+    jumba += "<table bgcolor=white width = 425><tr><td align=right width = 40>Mode&nbsp;</td><td style='border:1px ";
+    jumba += " solid black;' align=center border=1 width=80 bgcolor= ";
+    
+    var fun = getmemory('tap_dancer_flag');
+     if(fun == "edit"){
+      var  other_color = "palegreen";        // if edit = 'true' palegreen otherwise lightgrey
+    jumba += other_color; 
+    }else{
+      var  other_color= "lightgrey";
+    jumba += other_color;
+    } //end if 
+    
+    //-------------------
+    //############ massive flag here to make the two buttons dissappear if no items in basket
+    //############
+    //this checks the counter and if the counter = 0 or null
+    // then don't show the Edit and Delete buttons beneath the table data that's empty
+    // with no rows to even click on
+    
+      var cartime = parseInt(getmemory('lecounter')); 
+    if(cartime == '0' || cartime == null){
+    //################## friday november 24th, 2017
+    jumba += "<div id ='tapdancer'>";////////////<=========================
+    jumba += "<table bgcolor=white width = 425><tr><td align=right width = 40>&nbsp;</td><td ";
+    jumba += " align=center border=1 width=80  ";
+    
+     //for EDIT mode    //palegreen 
+    jumba += ">";
+    jumba += "  &nbsp;</td></a>"; //EDIT   <<================
+    jumba += "<td width = 10></td><td align=center width = 80 >";
+    jumba += " ";  
+    jumba += " &nbsp;</td></tr></table><table><tr><td height= 20></td></tr></table></div>";  //new line here nov 24th
+     //====
+     //******
+       }else{
+     //******
+     //normal display of the buttons Edit and Delete when there are 1 or more items in the basket
+     //=====
+    //---------------------------------------------------
+     //for EDIT mode    //palegreen 
+    jumba += "><a href='#'  style='display:block;text-decoration:none';  onclick='edit_line(); return false;'>";
+    jumba += "  Edit</td></a>"; //EDIT   <<================
+    jumba += "<td width = 10></td><td style='border:1px solid black;' align=center width = 80 ";
+    jumba += " bgcolor=";  
+     var fun = getmemory('tap_dancer_flag');    //if delete = true palegreen otherewise lightrey
+      if(fun == "delete"){
+         var   other_color = "PALETURQUOISE";
+    jumba += other_color; 
+    }else{
+        var  other_color= "lightgrey";
+    jumba += other_color;
+    } //end if 
+
+    jumba += " ><font color=grey><a href='#'  style='display:block;text-decoration:none'; ";
+                                                    //DELETE
+    jumba += " onclick='delete_line(); return false;'>Delete</td></a><td width=120>&nbsp;then";
+    jumba += " tap a row</td></tr></table><table><tr><td height= 20></td></tr></table></div>";  //new line here nov 24th
+     
+     ///=====
+    } //end if else
+   //-------------------------------------------------
+     
+    document.getElementById("peets_rows").innerHTML = jumba;
+    //so this is at the bottom underneath the summary rows for what's in the basket.
+    }//end WOODSTOCK
+    //===============================
+  
+
+
+
+  
+
+
+// thanksgiving day bug fix 
+// tapdancer in woodstock for edit and delete buttons
+// triggers the movement bug of two buttons continue shopping and proceed to checkout
+// when going from delete mode to edit mode.
+// it only happens if I delete a row though, if I don't delete  row there is no bug motion
+// and it's triggered when I delete a row and then click from delete mode to edit mode.
+
+
+  
+
+temp = [];
+temp[temp.length] = "";
+temp[temp.length] = "1";
+temp[temp.length] = "2";
+temp[temp.length] = "3";
+temp[temp.length] = "4";
+temp[temp.length] = "5";
+
+
+
+
+  
+  
+  //this was in script tags but was returning undefined on last item so I stuck it into a div
+  //saturday november 18th keizer starbucks coding all day
+  //working on this on november 22nd
+  //about to attempt accessing the idtag database for the data description for each item
+  // which will be in strings
+  //%%%%%%%%%%%%%%%%%%
+  //%%%%%%%%%%%%%%%%%%00000000000000000000000000000000
+  //SOLUTION SOLVED PROBLEM WILL WORK ON IMPLEMENTING IT LATER TONIGHT
+  //now I am successfully getting data from memory slots
+  //so I just might make a memory slot with the name of each idtag
+  //and just access that to get the data strings out 
+  //and in theory it should work since I am getting the data for each item from
+  //the memory slots so it's definitely possible
+  // and this way it should definitely work the way that i want it to.
+  
+  
+    
+  function showthecounter(){
+  var cheesey = parseInt(getmemory('lecounter')); 
+  alert("counter = " + cheesey);
+} //end function
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ // this makes the row of items with pics and words beneath it
+  
+  /* DRIVE THRU FUNCTION */
+  function drivethru(){
+  var tacobell = getmemory('editmode');
+  var counter_value = parseInt(getmemory('lecounter')); 
+
+//this turns counter_value from a string into a number
+counter_value = counter_value -0;
+counter_value = counter_value +1;  //which means the counter is somewhere
+// losing 1 each time . actually its since JS starts counting from 0 and not 1
+
+//this will temporarily store math totals to be fed into a slot and accessed on checkout page
+//so that the same numbers are guaranteed
+
+  fogbank  = new Array();
+  fogbank[fogbank.length] = ""; //0 position nothing
+
+
+/*       peets_rows div     */
+
+/*
+
+I might have to go thru the loop of the idtags first
+and fill strings with the data before doing the item loop
+so I can have the strings to fill in, just a thought.
+
+
+*/
+var halfmoonbay = new Array();  //this array is added to for adding together the subtotals
+    halfmoonbay[halfmoonbay.length] = parseInt(0);
+    
+ var jumba = "<div id='peets_rows'>";
+
+  // ---------------LOOP STARTS HERE ----------------------------------
+   var train = 0; train = train -0;
+//===========================================================
+for(x =0; x < counter_value; x++){  //looping based on the number of the counter
+if(x == 0){ //skips 0 since I am not using position 0 for slots
+  continue;
+} //end if
+ 
+//so x should start from 1 at this point
+var xmas = x;  //COUNTER VALUE HERE 
+
+//this grabs each memory slot one by one starting from the first and loops
+// thru all of them based on the counter
+
+xmas = xmas.toString(); //so it sees it as a string and not a number
+var fish = eval("getmemory('slot" + xmas +"');"); //this finally works!!!!
+var temp = [];
+var temp = fish.split(','); //this takes the commas out of the array
+
+   jumba += "<style>";
+   jumba += ".floatedTable{";
+   jumba += "float:left;}";
+   jumba += ".inlineTable{";
+   jumba += "display: inline-block;}";
+   jumba += " hr.style1{";
+   jumba += "border-top: 1px solid #efefef;";
+   jumba += "  }";
+   jumba += "</style>";
+
+   
+   if(x == 1){ //only print this <br> for the first item
+   jumba += "<br>"; //hr on this row
+   } //end if
+   
+ 
+   jumba += "<table bgcolor=lightyellow border=0 spacing = 0 width = 100 "; 
+   jumba += " style='border: 1px solid #D8D8D8;'>";
+   jumba += "<tr><td align=center>Item&nbsp;";
+   jumba +=  x;   //Item #
+   jumba += "</td></tr></table>";
+   jumba += "<table width = 405 bgcolor= white border=1  CELLPADDING='2' ";
+   jumba += " style='border-collapse:collapse;border: 1px solid #D8D8D8; '>";
+   jumba += "<tr><td align=center>Size</td><td align=center>Color</td><td align=center>";
+   jumba += " Quantity</td><td align=center>Price</td>";
+   jumba += " <td  align=center colspan=2>";
+   jumba += "Gender</td></tr>";
+
+
+ // start loop =============   LOOP STARTS HERE   ======================================================
+   jumba += "<tr><td align=center> ";
+   jumba += temp[3];
+   jumba += "</td><td align=center>&nbsp;";
+   jumba += "<!-- color -->";
+  
+     if(temp[12] == '1'){
+       jumba += "White";
+     }//end if
+     if(temp[12] == '2'){
+       jumba += "Grey";
+     }//end if
+     if(temp[12] == '3'){
+       jumba += "Black";
+     }// end if
+     if(temp[12] == '4'){
+       jumba += "Blue";
+     }// end if
+     if(temp[12] == '5'){
+      jumba += "Pink";
+     }// end if
+
+ jumba += "&nbsp;</td><td align=center> &nbsp;";
+ // quantity 
+ 
+
+ jumba += temp[11];
+ jumba += "&nbsp;</td><td align=center>&nbsp;$";
+//price 
+ 
+ var theprice = "5";
+  jumba += temp[7];
+ 
+
+ jumba += "</td><td align=center>";
+
+  if(temp[2] == "womens"){
+  jumba += "Womens";
+  
+  } //end if
+   if(temp[2] == "mens"){
+  jumba += "Mens";
+  
+  } //end if
+   if(temp[2] == "girls"){
+  jumba += "Girls";
+ 
+  } //end if
+   if(temp[2] == "boys"){
+  jumba += "Boys";
+
+  } //end if
+  
+ jumba += "&nbsp;</td></tr>";
+ jumba += "</table>";  //closing table 
+
+  //========================
+  jumba += "<table border=0 bgcolor=white class='floatedTable'>";  //---------
+  jumba += "<tr><td valign=top align=left><table bgcolor=white height = 285><tr>"; 
+  jumba += "<td width=180 valign=top align=left>";
+ 
+   //this puts the current idtag into the variable funny to use to access the memory slot just below.
+  var funny = temp[5]; //should return 'id_M#'
+ 
+  //this grabs the string from memory for the idtag
+ var goodness = eval("getmemory('" + funny + "');");        // example getmemory('id_M7');
+ 
+
+  // november 22nd solution to getting output description for each item
+  //so if I have a memoryslot named based on the item_id name
+  //then I can get the item_id from temp[]
+  //and then access that slot memory with the name using eval
+  //and then output the whole string and then 
+  //add <br>s into a second string which is then outputted here
+  
+  
+  //now this will be one in a loop and it works with document.write
+  //but if called on load which it is it will work as innerHTML 
+  //since it's doing the whole page dynamically
+  
+//###### editing on wednesday, nov 22nd at Target
+    jumba += "<font color=black>";
+    if (goodness == null || goodness ==="undefined" ){
+    jumba += "no data.";
+    }else{
+    jumba += goodness;      // this is the long string stored in the memory slot based on the item idtag number
+    }//end if
+    jumba += "</font>";
+ //--------------------------
+    jumba += "</td></tr>";
+   //add here the implant ======================
+    jumba += " <tr><td valign=bottom align=center >";  //testing moving the two buttons down valign=bottom align=center
+  //---------------------=============================================
+  // ### editing november 22nd, 2017 at Target
+  
+    jumba += "<table ><tr><td height=12> &nbsp;</td></tr></table>";
+    jumba += "<table width = 200 bgcolor=white  border=0  bgcolor=white   CELLPADDING='2' ";
+    jumba += " style='border-collapse:collapse;";
+    jumba += "border: 0px solid black; '>";
+    jumba += "<tr>"; 
+ 
+ // edits to turn on remove and edit on large items beneath the table for the basket's page 
+ 
+
+    //-------------------------------------
+    jumba += "<td align=center CELLPADDING='2' style='border-collapse:collapse;border: 1px solid black; '";
+    jumba += "  bgcolor= #F5B7B1 width=50% ><a href='#' style='display:block;text-decoration:none' ";
+    jumba += " onclick =";
+    jumba += '"';
+    jumba += "delete_an_item('";  //delete_an_item(x); function call
+    jumba +=  x;
+    jumba += "'";
+    jumba += ")";
+    jumba +=";";
+    jumba += "return false;";
+    jumba += '"';
+    jumba += ">&nbsp;Remove";
+    
+    //----------------------------
+    
+    jumba += "&nbsp; </a></td><td width=15 >&nbsp;</td><td align=left>";
+    jumba += "<td align=center CELLPADDING='2' style='border-collapse:collapse;border: 1px solid black; ' ";
+    jumba += " bgcolor= #ffdb99 width=50% ><a href='#' style='display:block;text-decoration:none' ";
+    jumba += " onclick =";
+    jumba += '"';
+    jumba += "edit_item('";        //edit_item(x) function call
+    jumba +=  x;
+    jumba += "'";
+    jumba += ")";
+    jumba +=";";
+    jumba += "return false;";
+    jumba += '"';
+    jumba += ">";
+    jumba += " &nbsp;Edit&nbsp;";     //Edit is here 
+ //----------------------------------
+    jumba += "</a></td></tr>";
+    jumba += "</table>";
+ 
+//---------------------==================================
+    jumba += "</td></tr></table></td><td valign=top align=left>";
+    train = train + 1;  //add 1 to train here 
+    jumba += "<table border=0 width=180 bgcolor=white class='floatedTable'> <tr>";  //---------
+    jumba += "<td><img src='"
+    jumba += temp[8];  //FRONTPIC
+    jumba += ".jpg' alt='Circle'"; 
+    jumba += " id='circle";
+    jumba += train;   // this is the address for the pic to access it's pic for swapping
+    jumba += "' height= '250px;' width='180px;' onclick=";
+    jumba += '"';
+    jumba += "swap_pics_now('";        //swap pics now function does the swapping of the pictures
+    jumba += temp[8]; 
+    jumba += "','";
+    jumba += temp[9]; 
+    jumba += "','";
+    jumba += train;
+    jumba += "'); return false;";
+    jumba += '"';
+    jumba += "> </td>";
+  
+  //===================
+    jumba += "<tr><td align=center ><font face='Menlo'>";
+    jumba += temp[6];
+    jumba += "</font></td><td width =25>&nbsp;</td></tr></table>";
+    jumba += "</td></tr></table>";
+    jumba += "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+    jumba += "<hr class ='style1' width = 405 align=left><br>";
+
+} //end loop here   ================================================
+
+  document.getElementById("output_details_rows").innerHTML = jumba;
+} //end function
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+  
+  
+  
+  
+  //november 17th, 2017 starbucks coding 
+  
+  //------------------------------
+  /* 	DELETE LINE FUNCTION  */
+  //-----------------------------
+  
+  function delete_line(){ //make delete=green and edit=grey     end result delete turns green and calls delete line number 
+
+ //set flag tap_dancer_flag = edit or delete and edit by default
+   setmemory('tap_dancer_flag','delete');
+   var fun = getmemory('tap_dancer_flag');
+     document.getElementById("field_3").value = fun;
+  //if already selected based on flag then skip to bottom
+  //if already selected it's green, 
+ // if it's not selected till now turn it green and turn delete grey
+    jumba  = "<div id ='tapdancer'>";
+    jumba += "<table bgcolor=white width = 424><tr><td align=left width = 25>&nbsp;&nbsp;Mode</td><td style='border:1px ";
+    jumba += " solid black;' align=center border=1 width=80 bgcolor= lightgrey><a href='#' ";
+    jumba += "  style='display:block;text-decoration:none';  onclick='edit_line(";
+   //EDIT
+    jumba += "); return false;'> <font color=grey>Edit</td></a>";
+    jumba += "<td width = 10></td><td style='border:1px solid black;' align=center width = 79 ";
+    jumba += " bgcolor=palegreen ><a href='#'  style='display:block;text-decoration:none';  onclick='delete_line(";
+   //DELETE
+    jumba += "); return false;'><font color=black>Delete</td></a><td width=120>&nbsp;then tap a row</td></tr>";
+    jumba += " </table><table><tr><td height= 20></td></tr></table>";
+    
+    
+    //added lower buttons here so they are glued together
+    jumba += "<div id ='big_buttons'>  <!-- big_buttons div -->";
+    jumba += " <table width = 420 bgcolor=white>";
+    jumba += "<tr><td width = 2>&nbsp;</td><td>";
+    jumba += " <table width = 180 bgcolor=honeydew style='border:1px solid black;'><tr><td align=center "; 
+    jumba += " height=3><a href='#'  style='display:block;text-decoration:none'; "; 
+    jumba += " onclick='gotonav(); return false;'>Continue Shopping</a></td></tr></table></td>";
+    jumba += "<td align=left>";
+    jumba += "<table bgcolor=honeydew width =180 style='border:1px solid black;'><tr>";
+    jumba += " <td align=center ><a href='#'  style='display:block;text-decoration:none'; ";
+    jumba += "  onclick='gotocheckout(); return false;'>Proceed to CheckOut</a></td></tr></table>";
+    jumba += " </td></tr></table></div>";
+    jumba +="</div>";
+    document.getElementById("tapdancer").innerHTML = jumba;
+      setmemory('tap_dancer_flag','delete');
+   }
+  //-----------------------------
+  
+
+
+
+
+  /*
+  
+            Edit           Delete
+   
+      Keep Shopping       Go to Checkout 
+ 
+ 
+ */
+ 
+ 
+ 
+  //-------------------------
+   /* EDIT LINE FUNCTION  */
+  //------------------------- 
+   
+ // if already selected based on flag then do nothing skip to bottom
+  function edit_line(){  //make Edit = green  make Delete grey
+  setmemory('tap_dancer_flag','edit');
+  var fun = getmemory('tap_dancer_flag');
+  var wish= getmemory('tap_dancer_flag');
+     document.getElementById("field_3").value = fun;
+
+
+ var countertime = parseInt(getmemory('lecounter')); 
+    if(countertime == '0' || countertime == null){
+    jumba  = "<div id ='tapdancer'>";
+    jumba += "<table bgcolor=white border=0 width = 424 ><tr><td align=left ";
+    jumba += "width = 25>&nbsp;&nbsp;</td><td>";
+    jumba += "&nbsp;</td>";
+    jumba += "<td width = 10></td><td align=center width = 79> ";
+    jumba += " &nbsp;</td></a><td width=120>&nbsp;&nbsp;</td>";
+    jumba += " </tr></table><table><tr><td height= 20></td></tr></table>";
+    
+    }else{
+    //normal situation 
+    //--------------------------------------------------
+    jumba  = "<div id ='tapdancer'>";
+    jumba += "<table bgcolor=white border=0 width = 424 ><tr><td align=left ";
+    jumba += "width = 25>&nbsp;&nbsp;Mode</td><td style='border:1px ";
+    jumba += " solid black;' align=center border=1 width=80 bgcolor= palegreen><a href='#' ";
+    jumba += "  style='display:block;text-decoration:none';  onclick='edit_line(";
+     //EDIT   palegreen                          //Edit
+    jumba += "); return false;'><font color=black>Edit</td></a>";
+    jumba += "<td width = 10></td><td style='border:1px solid black;' align=center width = 79 ";
+     // DELETE   lightgrey
+    jumba += " bgcolor=lightgrey ><font color=grey><a href='#'  style='display:block;text-decoration:none'; ";
+    jumba += " onclick='delete_line(); return false;'>Delete</td></a><td width=120>&nbsp;then tap a row</td>";
+    jumba += " </tr></table><table><tr><td height= 20></td></tr></table>";
+     //added lower buttons here so they are glued together
+
+    //---------------------------------------------------
+    } //end if else
+    ////////////
+     //added lower buttons here so they are glued together
+    jumba += "<div id ='big_buttons'>  <!-- big_buttons div -->";
+    jumba += " <table width = 420 bgcolor=white>";
+    jumba += "<tr><td width = 2>&nbsp;</td><td>";
+    jumba += " <table width = 180 bgcolor=honeydew style='border:1px solid black;'><tr><td align=center "; 
+    jumba += " height=3><a href='#'  style='display:block;text-decoration:none'; "; 
+    jumba += " onclick='gotonav(); return false;'>Continue Shopping</a></td></tr></table></td>";
+    jumba += "<td align=left>";
+    jumba += "<table bgcolor=honeydew width =180 style='border:1px solid black;'><tr>";
+    jumba += " <td align=center ><a href='#'  style='display:block;text-decoration:none'; ";
+    jumba += "  onclick='gotocheckout(); return false;'>Proceed to CheckOut</a></td></tr></table>";
+    jumba += " </td></tr></table></div>";
+    jumba +="</div>";
+    jumba += "</div><table>";
+    
+              //Delete
+    //line 2981 lifter spacer nov 24rh 8;18am
+
+    document.getElementById("tapdancer").innerHTML = jumba;
+  } //end function
+  //--------------------------------------
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    //this grabs the flag value just set from the two button modes Edit and Delete below table rows
+    //either it's "edit"  or "delete"
+    //put flag here for if delete or edit mode
+    //then have an if else for calling delete_line(x) or delete_line(x);
+  
+  
+  //----------------------------------------
+  /*      ROW CHOICE       */
+  //----------------------------------------
+function row_choice(y){
+    var wish= getmemory('tap_dancer_flag');  
+     document.getElementById("field_3").value = wish;
+  if(wish == 'edit'){ //edit chosen so edit the current row 
+       eval("edit_item('" + y + "')");     //id is the captured row number 
+     }else{ 
+       //meaning it's 'delete'
+       eval("delete_an_item('" + y + "')");  //id is the captured row number 
+    }//end if
+} //end function
+//----------------------------------------
+ function navmenu(){
+   alert("testing menu system");
+} //end function
+
+//---------------------                                                    
+function setmemory(v1,v2){  //key and value both strings
+    eval("localStorage.setItem('" + v1 + "','"  +  v2 + "'" + ");" );
+} // end func
+
+function getmemory(x1){  //using the key it returns the value
+  eval("var atm = localStorage.getItem(" + "'" + x1 + "');" );
+  return atm;
+}//end func
+
+
+function setflag(){
+setmemory('recent_page_memory_flag','aboutus');
+} //end func
+
+
+/* NAV MENU HAMBURGER OVERLAY */
+function navmenu(){
+   //alert("testing menu system");
+} //end function
+
+
+
+//each page would have it's own preset id which is the number
+// and the variable is set on the second line of the same function
+// on each page. 
+
+
+
+
+
+//#######################################
+//      OPEN MENU 
+//#######################################
+function open_menu(){ 
+  hamburger_id_of_page_came_from();
+}
+//-------------------
+//########################################
+//     HAMBURGER ID OF PAGE CAME FROM 
+//#########################################
+function hamburger_id_of_page_came_from(){
+var this_page = "6.4";    
+setmemory('fedex',this_page);                                            
+window.location.href = "iphone_hamburger_menu.html";                                           
+  } //end                                                        
+//---------------------                                                    
+                                                     
+
+    
+    
+    //write to a div
+</script>
+</head>
+
+
+<!-- 
+                 body onload =
+                 show storage values()
+                 show counter()
+                 latte()
+                 
+-->
+
+<body onload="showcounter();hollister();show_counter_value();beachtime();"> 
+
+<table width = 500>
+<tr><td width=25 height = 18 valign=bottom align=left>
+<a href='#' onclick='open_menu();return false;'>
+<img src="hamburger2.jpg" alt="navigation" height="16" width="20"></a>   </td>
+<td width = 95></td><td><font face="Menlo"><font size=4>Modern Day News&nbsp;<font color=mediumpurple><font size=1><b></b></font></font></td></tr>
+</table>
+
+
+
+<table   CELLPADDING='3' style='border-collapse:collapse;border: 
+1px solid black; '  width = 410  border = 1 bgcolor=white  >
+<tr><td  align=center><font size=1><font face='Menlo'><a href='iphone_home.html' 
+style='display:block;text-decoration:none'><FONT COLOR=BLACK>Home</a></td>
+
+
+     <td align=center><font size=1><font face='Menlo'><a href='iphone_characters.html'
+      style='display:block;text-decoration:none'>Characters</a></td>
+      
+     <td align=center ><font size=1><font face='Menlo'><a href='iphone_news.html' 
+     style='display:block;text-decoration:none'>News</a></td>
+     
+     <td align=center><font size=1><font face='Menlo'><a href='iphone_videos.html' 
+     style='display:block;text-decoration:none'>Videos</a></td>
+     
+   
+     
+    <td align=center bgcolor=palegreen><font size=1><font face='Menlo'><a href='#' 
+     style='display:block;text-decoration:none'>Merchandise</a></td>
+     
+      <td align=center nowrap><font size=1><font face='Menlo'><a href='iphone_aboutus.html'
+      style='display:block;text-decoration:none'>About Us</a></td>
+     
+     <td align=center nowrap><font size=1><font face='Menlo'><a href='iphone_contactus.html'
+      style='display:block;text-decoration:none'>Contact Us</a></td>
+     </tr></table>
+     
+     
+     
+  <table   CELLPADDING='1' style='border-collapse:collapse;border: 
+1px solid #e8e8e8; '  width = 410  border = 1 bgcolor=white  >
+<tr><td width= 20%   bgcolor=white align=center><font size=1><font face='Menlo'><a href='iphone_merchandise_filter.html' style='display:block;text-decoration:none;'><FONT COLOR=black>Filter</a></font></td>
+
+<td width =20% bgcolor=white align=center><font size=1><font face='Menlo'><a href='iphone_merchandise_shop.html' style='display:block;text-decoration:none;'><FONT COLOR=black><font color=black>Shop</a></font></td>
+<td width= 20% bgcolor=white align=center><font size=1><font face='Menlo'><font color=lightgrey>Details</font></td>
+
+     <td width= 20%  bgcolor=#81D4FA align=center><font size=1><font face='Menlo'><a href='#' style='display:block;text-decoration:none;'><font color=black>Basket</a></font></td>
+     <td width= 20%  align=center><font size=1><font face='Menlo'><a href='iphone_merchandise_checkout.html' style='display:block;text-decoration:none;'><font color=black>Check Out</a></font></td>
+        </tr></table
+ 
+ <div id="output_test"></div>
+	
+	<table width = 25><tr><td height = 18></td></tr></table>
+
+        <div id="pumpkin_rows">
+        </div>
+    
+
+
+
+  <table bgcolor=lavender border=0 spacing = 0 width = 145 style="border: 1px solid #D8D8D8;">
+ <tr><td align=center><a href='#'  style='display:block;text-decoration:none'; 
+     onclick='gotonav(); return false;'>Shopping Basket</a></td></tr></table>
+<table><tr><td height =5></td></tr></table>
+
+
+
+<!--
+//fresh new code here  saturday starbucks  nov 18th
+//this puts teh items at the top
+-->
+
+ <div id="number_of_items">
+ <table width=450><tr><td></td></tr></table>
+ </div>
+<!-- make this dynamic -->
+<!--=============== item SUMMARY IN BASKET   ===================-->
+<!--  == peets_rows   outtpout here -->
+
+ <div id="peets_rows">
+ <table width=450><tr><td>dynamic output here </td></tr></table>
+ </div>
+ 
+
+<!--
+          buttons: continue shopping   and proceed to checkout. 
+
+
+-->
+
+
+
+<!--
+====================================================================================
+      start of template for printing items in order with more details
+      
+      work on this Saturday, November 18th, 2017  Starbucks
+      need the code to loop thru the items in the row
+      
+====================================================================================
+-->
+
+
+
+<script>
+
+//a
+
+
+
+//outputting a detailed item description with picture and information 
+
+</script>
+
+<div id='output_details_rows'>
+</div>
+
+<!-- //  end item info END LOOP   -->
+
+<!--
+=========================================================================
+      END of template for printing items in order with more details
+=========================================================================
+-->
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<form name = cool>
+<input type = hidden id="f_counter_now"  name ="counter_real_time" size = 4><br>
+ <input type = hidden id="field_3"  name ="one" size = 10>
+ <input type = hidden id="field_4"  name ="two" size = 50>
+ <input type = hidden id="poof"     name ="two" size = 100>
+<input type  = hidden id="target1"   name ="two" size = 100>
+<input type  = hidden id="target2"   name ="two" size = 100>
+
+ <input type = hidden id="target3"  name ="two" size = 20> 
+   <!-- argument -->
+   <input type = hidden id="target6"  name ="two" size = 10>
+   <br>
+   
+   <!-- counter&nbsp; -->
+   <input type = hidden id="target4"  name ="two" size = 10>
+    
+ </form>
+
+<table bgcolor=white width = 386><tr><td align=center>
+<font color=silver><font size=1><a href='#' onclick='showthecounter();return false;'>Copyright 2018 Modern Day News.</a></font>
+
+</td></tr></table>
+</body>
+</html>
+
+<!-- coded by Mr. Blake Southwood Software Engineer -->
+

@@ -1,0 +1,1787 @@
+	
+<!--  iphone test -->
+<!DOCTYPE html>
+<html>
+<title>Modern Day News</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
+<link rel="stylesheet" href="/lib/w3-theme-teal.css">
+<body style="max-width:600px">
+<style>
+
+</style>
+
+
+
+
+
+<script>
+//swappictures for the one picture that shows up for a selected item
+//nov 21, 2017 keizer starbucks
+//the picture is dynamically generated so this shouldn't be too tough
+// but here is the function I need and how to call it
+
+/*
+
+<img src="greyshirt.jpg"       lt='Circle1' id='circle1' height= '250px;' 
+width='180px;'                 onclick="swap_pics('greyshirt','redshirt','1');"> 
+
+//look in CoffeeBean and in ChocolateBean
+// array[5] is the idtag location in the array 
+// array[8] is frontpic,
+// array[9] is backpic
+
+//THIS IS THE MOST INFORMATION THAT YOU CAN PUT INTO A DESCRIPTION BOX
+//notice the right side ending with ' +
+//notice the left side starting with '
+//notice the end of the string with ');
+
+	setmemory('MDN745','avalanche closes highway 80 near Auburn '    +
+  	'keep adding more content here to see what we can put into this' +
+  	'and to manage the string length and how easy it is to update'   +
+  	'and only then will we know whats truly possible for now; just ' +
+  	'a little bit more.');
+  	
+  	
+*/  
+
+// id tags with stored memories of descriptions for details and basket page
+
+ 	setmemory('MDN755','this is INFORMA we need is more pizza');
+	setmemory('MDN002','Tahoe ski time .');
+	setmemory('MDN782','Strawberries.');
+ 	setmemory('MDN799','testing this out with new data christmas is on the way.');
+ 	setmemory('MDN735','none.');
+	setmemory('MDN784','bananas');
+ 	setmemory('MDN771','pineapple ');
+ 	setmemory('MDN789','waiting to drive up on 80 to Tahoe to ski at alpine meadows and sip hot chocolate');      
+ 	setmemory('MDN701','that.');
+ 	setmemory('MDN783','this.');
+ 	setmemory('MDN780','not.');
+    setmemory('MDN765','and.');
+ 	setmemory('MDN777','6  more .');
+ 	setmemory('MDN781','1.');
+ 	setmemory('MDN782','2.');
+ 	setmemory('MDN875','3.');
+ 	setmemory('MDN755','4.');
+ 	setmemory('MDN715','money.');
+   	setmemory('MDN716','fame.');
+   	setmemory('MDN717','glory.');
+   	setmemory('MDN741','snowfall.');
+   	setmemory('MDN742','skating.');
+   	setmemory('MDN743','tahoe cabin.');
+	setmemory('MDN781','practicing with data here');
+ 	setmemory('MDN786','ski <br>tim cars');
+	setmemory('MDN701','4test1.');
+ 	setmemory('MDN702','test2.');
+ 	setmemory('MDN703','test3.');
+ 	setmemory('MDN737','morning tennis is slow.');
+    setmemory('MDN704','test4.');
+ 	setmemory('MDN705','test5.');
+ 	setmemory('MDN706','test6.');
+  	setmemory('MDN709','helicopter trick.');
+  	setmemory('MDN725','one.');
+  	setmemory('MDN726','two.');
+  	setmemory('MDN727','three.');
+  	setmemory('MDN515','starbucks coffee time in cool.');
+  	setmemory('MDN728','four.');
+  	setmemory('MDN001','no one like it in the world - the best programmer on earth.');
+  	setmemory('MDN722','maverics wave.');
+ 	setmemory('MDN381','snowboaring at Squaw.');
+ 	setmemory('MDN500','minion party rave.');
+  	setmemory('MDN100','cats everywhere this is what we need<br>more kittens.');
+  	setmemory('MDN745','avalanche closes highway 80 near Auburn '    +
+  	'keep adding more content here to see what we can put into this' +
+  	'and to manage the string length and how easy it is to update'   +
+  	'and only then will we know whats truly possible for now; just ' +
+  	'a little bit more.');
+  
+  
+  //I could use a global array to store the info in  also instead of a field
+  var minion = [];                  //creation of array
+      minion[minion.length] = "";   // nothing for slot 0
+      minion[1]  = "front";
+      minion[2]  = "front";
+  
+      
+//Note: this function requires the minion arrays to work
+  /*     SWAP PICS          */
+ 
+  
+ function swap_pics(x,y,z){
+  var image = eval("document.getElementById('circle" + z + "')");   //circle#
+           if(eval("minion["     + z + "]")  == "front"){
+              eval("image.src='" + y + ".jpg';");                 
+              eval("minion["     + z + "]  = 'back'");            
+         }else{
+              eval("image.src='" + x + ".jpg';");                  
+              eval("minion["     + z + "]  = 'front'");            
+         } //end if 
+  }//end func
+ //------------------------------------------
+  
+
+
+
+//this is new and exclusively for the details page
+//this is for teh details page only and takes in x and y and works for add to basket and save changes
+//makes the picture of the item clickable front view to backview then backview to front view
+
+ function change1(x,y){
+  var image = document.getElementById('circle1');  //the circle names are different
+  if(document.getElementById("noway").value == "back"){
+     eval("image.src='" + x + ".jpg';");
+     document.getElementById("noway").value = "front";
+   }else{
+     eval("image.src='" + y + ".jpg';");
+     document.getElementById("noway").value= "back";
+  }//end if
+ } //end function
+
+ 
+ //============================
+ 
+ 
+  /*
+  tuesday, november 21st2017 11:40 am
+  I think I will put a description and pic toggle buttons
+  on this page so it's faster and easier to see without changing 
+  too much. and I can reuse the two buttons that I have on the checkout page
+  for this. 
+  that means that I replace the pic with words so it means
+  that the pic itself and the word details need to share a div
+  which should work.
+  
+  
+  */
+  
+  
+  
+// wednesday, november 8th, 2017 half moon bay
+// I need to edit another if scenario here 
+//so if nothing has been chosen yet and someone clicks on details page?
+// I was just thinking what if someone comes from other than shop and basket page
+//there shouldn't be anything on this page because nothing has been selected.
+// so I need to make a mode for that that I didn't think of until now on november 8th in half moon bay
+
+
+
+function setmemory(v1,v2){  //key and value both strings
+    eval("localStorage.setItem('" + v1 + "','"  +  v2 + "'" + ");" );
+} // end func
+
+
+
+
+
+
+
+
+
+
+
+
+//this has to be called onload
+  /*   FORK DECISION FUNCTION   */
+  function fork_decision(){
+  setmemory('recent_page_memory_flag','details');
+   //read the flag first
+   var mode = getmemory('editmode');  //perhaps I need a special last row scenario
+   if(mode == 'true'){
+  
+  //this grabs the data for editing an item already in the shopping cart
+   var wild = localStorage.getItem('ChocolateBean'); 
+   loader();  //brand new function that does things differently for ChocolateBean rather than CoffeeBean
+   mocha();
+   //setting flag to false here now done.
+    //setmemory('editmode','false'); //this is new
+    //don't call loader(); up here because it's in already selected here
+    
+   }else{  //edit mode = false below
+   //not edit mode triggers this code chunk
+   
+   
+   // edit mode = false therefore this page is normal set quantity and color and click to add to basket
+   //normal mode show selected item using CoffeeBean memory 
+ //means mode == 'false' so regular display from CoffeeBean
+ //this means that in select mode arriving here from shop.html site clicked beneath a picture
+   loader(); //what do these do, calls latte();
+   latte(); 
+   } //end if else
+ } //end function
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//==================================
+/*    getmemory()   get memory   */
+function getmemory(x1){  //using the key it returns the value
+  eval("var atm = localStorage.getItem(" + "'" + x1 + "');" );
+  return atm;
+}//end func
+
+
+
+//thursday, november 9th, 2017 starbucks half moon bay
+//I need to flip the flag when this page loads for editmode = true
+// and if so then what I do  is change the "add to basket" to "save changes"
+// and change the link that is triggered. and for now just have it go to the basket page 
+// to reflect the changes - that makes sense. 
+
+// this new function will be called loadertwo() after I make it and called in fork_decision
+// wednesday, november 8, 2017
+// I need a function here for presetting teh menus for edit mode when
+// arriving here from the basket to edit an already selected item 
+//I need a function to call after getting data from the ChocolateBean
+// if the flag for editmode = true
+// that gets the numbrer for quantity and color and 
+//then calls the correct menu functions for each
+
+/*
+ I need a diagram of the flow of control of the program and functions and
+  then what each does and then the
+ how to steps then pseudocode.
+
+thursday - changing the function called on click and the button add to basket to save changes 
+also prefill and call the two menus quantity and color
+
+*/
+
+
+//w hen i selecte delete and click on a row edit turns green ? strange
+
+
+
+
+
+
+
+
+
+ /*   LOADER FUNCTION */  //details page
+ function loader(){
+  document.getElementById("noway").value = "front";
+  
+//if edit mode = FALSE
+ setmemory('tap_dancer_flag','edit'); //sets edit mode by default for basket page here 
+  var mode  = getmemory('editmode');
+   if(mode == 'false'){
+
+    //EDIT MODE = FALSE 
+ //put an if else here brilliant 
+ //this is the normal condition with nothing selected yet and just showing the defaults
+   document.getElementById("f_cool").value     = "1"; fun1();      //default setting for menus
+   document.getElementById("f_quantity").value = "1"; quan1(); //default settings for menus
+   
+   latte(); //triggered here and fired down below this
+  
+  
+  }else{
+   // EDIT MODE = TRUE
+ //this fills the info into chocolate bean
+ 
+  //edit mode = true here to edit changes from data from ChocolateBean
+  //I need to extra chocolate bean and grab the last two numbers from it 
+  var candy = localStorage.getItem('ChocolateBean'); 
+  var temp = new Array();
+  var temp = candy.split(','); 
+ 
+
+  var the_quantity = temp[11];      //quantity
+  var the_color    = temp[12];      //color these are right 
+  
+  //I need the slot number that the data came from now here 
+  var fly = getmemory('edit_this_slot_number');
+   document.getElementById("f_cool").value =  the_color; 
+       
+   //brute force method force feeding it not using eval here anymore
+   ////alert("about to do the color menus ");
+   if (the_color == '1'){ fun1();}
+   if (the_color == '2'){ fun2();}
+   if (the_color == '3'){ fun3();}
+   if (the_color == '4'){ fun4();}
+   if (the_color == '5'){ fun5();}
+      
+   
+    //in memory setting for menus
+   document.getElementById("f_quantity").value = the_quantity; 
+     //about to do the quantity menu function  call
+   if(the_quantity == '1'){ quan1();}
+   if(the_quantity == '2'){ quan2();}
+   if(the_quantity == '3'){ quan3();}
+   if(the_quantity == '4'){ quan4();}
+   if(the_quantity == '5'){ quan5();}
+   
+   } //end if
+} //end function
+//------------------ -------------
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+  //late wednesday night debugging november 8th on skyline with big storm outside rain and wind
+  //############################# this also might explain the counter messing up and data put into slot0 which is ignored 
+  //on the basket page 
+//need to fix some bugs
+//if editing something it should say "save changes" and NOT "add to basket"
+// and don't add to counter if in edit mode = true
+//and after it makes the changes and the user clicks on save changes go to basket page I decided
+//also look at what the menus are for quantity and color and call those functions to reflect that
+
+//call mocha instead of latte 
+//this is called if an item from the basket will be edited and changed
+
+
+
+//show counter value 
+
+function show_counter_value(){
+var cheese = parseInt(getmemory('lecounter')); 
+ if(cheese === "undefined" || cheese == null){
+    cheese = "undefined";
+} //end if
+    cheese = cheese.toString();
+    document.getElementById("f_counter_now").value   = cheese;
+} //end funtion
+//---------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*    MOCHA FUNCTION      */  //data to edit after coming from basket page.
+ // grabs data from Chocolate Bean from memory put into it on Basketpage
+function mocha(){ //if in edit mode call this instead of latte
+var candy = localStorage.getItem('ChocolateBean'); 
+var temp  = new Array();
+var temp  = candy.split(','); 
+document.getElementById("poof").value= candy;
+  
+    //changes the shirt to the selected one after changing the data at top of page for testing
+beertwo(); //changes image to the selected image
+shirt_name_and_pricetwo(); //changes name to selected name and price for this item
+new_shirt();
+} //end func
+//-------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  //this is called if the person came over from the shop.html page selecting an item
+  /*    LATTE FUNCTION      */
+ // grabs various values from the row at the top
+function latte(){
+var candy = localStorage.getItem('CoffeeBean'); 
+var temp  = new Array();
+var temp  = candy.split(','); 
+document.getElementById("poof").value= candy;
+  
+        //changes the shirt to the selected one after changing the data at top of page for testing
+beer(); //changes image to the selected image
+shirt_name_and_price(); //changes name to selected name and price for this item
+new_shirt();
+} //end func
+//-----------------------------------
+
+
+
+
+
+
+//this changes the part above the picture  the name and size and gender
+/*    NEW SHIRT     */
+function new_shirt(){
+var mode = getmemory('editmode');
+if(mode == 'true'){ //arrived from shopping basket site to make changes to an item
+    var candy = localStorage.getItem('ChocolateBean'); 
+    var xmas  = new Array();
+    var xmas  = candy.split(','); 
+    //this means that the user was on the shopping basket
+    // and clicked on edit to edit an item
+  }else{  //arrived from the shop page and just clicked on SELECT to choose 
+         //quantity and color
+ 
+ //mode = false therefore just did search and from shop site clicked on SELECT
+ //beneath the bottom of the picture
+  var candy  = localStorage.getItem('CoffeeBean'); 
+    var xmas = new Array();
+    var xmas = candy.split(','); 
+ } //end if
+    
+    //this is the top and it fills the div called shirt_description on page load
+    //this is the top tier of the info about the item
+    // name of description       gender       size
+    
+ var nolight = "<div id='shirt_description'><table width = 410 ";
+     nolight += " border =0 style='border: 0px solid #d8d8d8;' bgcolor=white><tr><td>";
+     
+  
+     //============ surgery here tuesday, november 21st
+     nolight += "<table width = 200 border=0  >";
+     nolight += "<tr> <td width = 100% align=center><font face='Menlo'>";
+     nolight += xmas[6];     //the_shirt_name;// "Nike Golf
+     nolight += "&nbsp;</font></td> ";
+     //===============================================
+    
+     nolight += "<td align=center><font face='Menlo'>";
+     nolight += "&nbsp;</font></td>";
+     nolight += "</tr></table> </td><td align=right>";
+     nolight += "<table width = 190 border=0  style='border: 1px solid #d8d8d8;'>";
+     nolight += "<tr> <td width = 23% align=left><font face='Menlo'>&nbsp;";
+     
+     if(xmas[2] == "mens"){
+     nolight += "Mens";
+     }
+      if(xmas[2] == "womens"){
+     nolight += "Womens";
+     }
+      if(xmas[2] == "girls"){
+     nolight += "Girls";
+     }
+      if(xmas[2] == "boys"){
+     nolight += "Boys";
+     }
+     nolight += "</font></td>";
+     nolight += "<td width =78% align=center><font face='Menlo'>&nbsp;&nbsp;Size:";
+     nolight += xmas[3]; //the_size; //XL
+     nolight += "&nbsp;</font></td>";
+     nolight += "</tr></table> ";
+     nolight += "</td></tr></table></div>";
+    document.getElementById("shirt_description").innerHTML = nolight;
+} //end func
+//------------------------------------------------------
+//------------------------------------------------------
+
+
+
+
+
+
+
+/// grabs memory from CoffeeBean for row number for item selected
+//this grabs the picturename for the shirt item and displays it in a div.
+//changes the shirt image to the front for the item selected
+//shirt image name front
+
+
+
+
+/*        BEER  FUNCTION        */
+ var train3 = '1'; //this value will always be only 1
+ 
+  function beer(){   //it's only supposed to show one shirt though. 
+      var candy = localStorage.getItem('CoffeeBean'); 
+      var overtime = new Array();
+      var overtime = candy.split(','); 
+      var snow = " <div id='shirtless'><td align=center bgcolor=white>";   //pic id = shirtless  onclick=swap_pics(3 params)
+          snow += "<img src='";
+          snow += overtime[8];  //picture name                         //change takes in 2 params
+          snow += ".jpg' alt=' ' id='circle1' height= '250px;' width='180px;' onclick=";
+          snow += '"';
+          snow += "change1('";
+          snow += overtime[8];
+          snow += "','";
+          snow += overtime[9];
+          snow += "');";
+          snow += '"';
+          snow += "> ";
+          snow += "</td></div>";
+          document.getElementById("shirtless").innerHTML = snow;
+          var coffee = eval("words_below('" + overtime[5] + "');");
+    } //end function
+//----------------------------------------
+
+
+
+
+
+
+
+
+
+
+//this words in add to basket mode but NOT in edit mode. Need to look at why not
+
+//#############################
+/*     WORDS BELOW   */
+function words_below(x){  //this takes in the idtag# as input as a parameter
+ //this grabs the string from memory for the idtag
+ var goodness = eval("getmemory('" + x + "');");  
+  var snow = "<br><div id='words_describing'>";
+      snow += "<table width = 190><tr><td align=center><table bgcolor= #ebf4fa ";
+      snow += "style='border:1px solid black;'><tr><td align=center width= 130  ";
+      snow += "bgcolor=#ebf4fa><font face = 'Menlo'>Description</font></td></tr>";
+      snow += "</table></td></tr></table><BR>";
+      snow += "<table bgcolor=white style='border:1px solid black;' width = 204 ";
+      snow += "height= 250 valign=top align=top>";
+      snow += "<tr><td valign=top align = top >";
+      //if there is no string in the memory localStorage for an idtag then display: no data.
+    if (goodness == null || goodness ==="undefined" ){
+      snow += "no data.";
+      }else{
+      snow += goodness;      // this is the long string stored in the memory slot based on the item idtag number
+    }//end if
+    
+      snow += "</td></tr></table>";
+      snow += "</div>";
+      document.getElementById("words_describing").innerHTML = snow;
+
+}//end func
+//------------------------
+
+
+
+
+
+
+
+
+
+
+
+/*    BEER two  FUNCTION        */
+//this loads the picture on the left hand side whether it's a shirt or a hat
+
+  function beertwo(){   //it's only supposed to show one shirt though. 
+          var candy = localStorage.getItem('ChocolateBean'); //chocolatebean
+          var overtime = new Array();
+          var overtime = candy.split(','); 
+              document.getElementById("intothewild").value= candy; 
+              
+          var snow = "<div id='shirt'><tr><td align=center bgcolor=white>";
+          snow += "<img src='";
+          
+          //only one pic so it will be circle1 and the z number will be 1      onclick=swap_pics(3 params)
+          snow += overtime[8];  //picture name
+          snow += ".jpg' alt=' ' id='circle1' height= '250px;' width='180px;' onclick='change1();'> ";
+          snow += "</td></tr></div>";
+     // document.getElementById("shirt").innerHTML = snow;
+      
+      
+      
+      //========
+      
+          var candy = localStorage.getItem('ChocolateBean'); 
+          var overtime = new Array();
+          var overtime = candy.split(','); 
+     
+      var snow = " <div id='shirtless'><td align=center bgcolor=white>";   //pic id = shirtless  onclick=swap_pics(3 params)
+          snow += "<img src='";
+          snow += overtime[8];  //picture name                         //change takes in 2 params
+          snow += ".jpg' alt=' ' id='circle1' height= '250px;' width='180px;' onclick=";
+          snow += '"';
+          snow += "change1('";
+          snow += overtime[8];
+          snow += "','";
+          snow += overtime[9];
+          snow += "');";
+          snow += '"';
+          snow += "> ";
+          snow += "</td></div>";
+          document.getElementById("shirtless").innerHTML = snow;
+      
+      //just added this on thanksgiving to add descirptive details on edit mode for details page
+          document.getElementById("shirtless").innerHTML = snow;
+     var coffee = eval("words_below('" + overtime[5] + "');");
+     
+      //so two different divs: shirt and shirtless perhaps if a hat or not a shirt
+    } //end function
+
+//=---------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Copy Item To Memory Slot #    */
+function CopyItemToSlot(){ 
+  var counter_value = parseInt(getmemory('lecounter'));  //this is the counter number
+      counter_value = counter_value - 0;
+  var candy = localStorage.getItem('CoffeeBean'); //this is the selected item row in CoffeeBean 
+  var temp = new Array();
+  var temp = candy.split(','); 
+  var snowfall = temp ; 
+  var n = counter_value.toString();     // changed the counter_value to a string here.
+  var theslot = eval("slot" + n);  
+      eval("setmemory('" +  theslot + "'" + ", snowfall);" );
+  var coolhandluke = eval("getmemory('" +  theslot + "'" + ", snowfall);" );
+} //end function CopyItemToSlot
+//-----------------
+
+
+//####################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Copy Item To Slot Just Edited   */
+function CopyItemToSlotJustEdited(){ 
+setmemory('editmode','true');
+     var counter_value = parseInt(getmemory('lecounter'));  //this is the counter number
+         counter_value = counter_value - 0;
+      //I will need to choose the selected number from edit from basket from teh beginning
+
+      var candy = localStorage.getItem('ChocolateBean'); //this is the selected item row in ChocolateBean 
+      var temp = new Array();
+      var temp = candy.split(','); 
+      var snowfall = temp ; 
+      var cup = new Array();
+          cup = temp; //cup is an array
+          cup[11] = document.getElementById("f_quantity").value;
+          cup[12] = document.getElementById("f_cool").value ;
+//now the new changes to quantity and color menus should be in the array cup
+      setmemory("ChocolateBean",cup);
+      var road = getmemory("ChocolateBean");
+//up to here is correct 
+/*
+
+TESTING thursday editing an item using details page - trouble with menus 
+  put contents of array from Chocolate bean into an array
+  then change  11 and 12 elemetns of array
+  
+  people[0] = "Georgie";
+  then put array back into chocolate bean
+  then copy chocolate bean into slot number  below 
+  
+  the bug is that for slot 1, 2 and 3 it works but not for slot 4 - bizarre bug 
+  I need to look at variable values and the control of flow to make sure that it's
+  consistent and see what's working and what's not working 
+  
+  */
+
+
+  //######## starbucks editing half moon bay thursday 
+  //this is where I get the correct slot number to put ChocolateBean into 
+  var fly = getmemory('edit_this_slot_number');
+  var n = counter_value.toString();// changed the counter_value to a string here.
+  var theslot = eval("slot" + fly);  
+  var weasel = getmemory("ChocolateBean");
+  eval("setmemory('" +  theslot + "'" + ", cup);" );
+  var whynot = eval("getmemory('" + theslot + "'" + ", cup);");
+  setmemory('editmode','true');
+} //end function CopyItemToSlotJustEdited
+//-----------------
+//===========================================
+
+
+
+
+
+
+//it's using CoffeeBean as the default for x so I just need y which is the slot number
+
+function   copymemory(x,y){  //from key name, to key name. I really don't need either
+  var candy = getmemory('CoffeeBean'); //remember it's a string of the row of the selected item 
+  var dandy = getmemory('K2');         //quantity and color numbers in menus on details page
+  var counter_value = parseInt(getmemory('lecounter')); 
+      counter_value = counter_value - 0;    //turning a string into a number
+      counter_value = counter_value - 0;    //forcing the string into a number by doing it twice
+  var snowfall = candy + dandy;         //adding the quantity and color to the tail end of coffeebean row data
+  var theslot = eval("slot" + counter_value);
+  eval("setmemory('" +  theslot + "'" + ", snowfall);" );
+}//end func
+//-------------------------
+
+
+
+
+
+
+
+
+
+
+//-----------------------
+function x_times_y(x,y){
+var x = parseInt(x);
+    x = x -0;
+var y = parseInt(y);
+    y = y -0;
+    var z = x * y;
+ return z;
+}//end function x_times_y
+//-------------------------
+
+
+
+
+
+
+
+
+//grab this from CoffeeBean
+//positions 8(price) x 12(quantity);
+
+//---------------------------------------
+function multiply_the_price_by_quantity(){
+ var candy = getmemory('CoffeeBean'); 
+ var money  = new Array();
+     money = apple.split(',');
+ var Mason = parseInt(money[8]);
+ var newmorning = parseInt(money[12]);
+ var cocacola = x_times_y(Mason,newmorning);
+}
+
+
+
+
+
+
+
+
+
+
+/* FUNCTION BARISTA APPENDS COFFEEBEAN ADDING QUANITY AND COLOR SELECTED BY USER */
+//when the "add to basket" blue button is clicked the array is appended correctly
+//this is not called on load but is called when the blue button add to basket is clicked
+//taking the user to the basket page. actually I wonder if the user would rather
+//rather be transported back to navigation page or to shop page rather than the basket
+// I will need to have settings at the top of the instructions of the yellow part of filter search
+
+
+ 
+// so this is called when the blue button add to basket it clicked and not on load.
+// Onload  trapeze is called and the CoffeeBean is not messed around with
+
+//this is called when the blue button "add to basket" is clicked
+//and what it does is append the quanity (number) and color(a  number) to the array inside of CoffeeBean
+// and then on the basket page it's copied into the appropriate slot number in localStorage
+
+
+
+
+
+
+
+
+
+
+
+/*  BARISATA FUNCTION   */  //oct 30, 2017
+
+// this is clicked when "adding to basket" by clicking on button 
+//  WORKING ON THIS ONE RIGHT NOW .STARBUCKS CODING OCTOBER 30TH 1:11 PM
+function barista(){ //this is called when an item has been selected on the shop page 
+    setmemory('adding_item_mode','true');
+var the_quantity, the_color; var space = " ";
+    the_quantity = document.getElementById("f_quantity").value; 
+    the_color    = document.getElementById("f_cool").value;   
+var travel =  the_quantity + space + the_color;
+var apple =   localStorage.getItem('CoffeeBean'); //string here
+    money  = new Array();
+var money = apple.split(',');
+    //these are from above
+    money.push(the_quantity);
+    money.push(the_color); //this will be a number not a word
+     //now reload into CoffeeBean
+    deletememory('CoffeeBean');
+    localStorage.setItem('CoffeeBean',money);
+} //end functon
+//-------------------------
+
+
+
+
+
+
+
+function test_this(){
+   var royalrealty = localStorage.getItem('ChocolateBean');
+
+}
+
+
+
+
+
+
+function test_this_two(){
+   var royalrealty = localStorage.getItem('CoffeeBean');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  MERMAID FUNCTION   */  //nov 9th, 2017  instead of calling Barista
+// this is clicked when save change by clicking on button 
+//  WORKING ON THIS ONE RIGHT NOW .STARBUCKS CODING OCTOBER 30TH 1:11 PM
+//get the slot number that was originally chosen since that will be the same and use ChocolateBean again
+
+function mermaid(){
+  var fly = getmemory('edit_this_slot_number');
+  var the_quantity, the_color; var space = " ";
+      the_quantity = document.getElementById("f_quantity").value; 
+      the_color    = document.getElementById("f_cool").value;   
+  var apple =   localStorage.getItem('ChocolateBean'); //string here
+  var money  = new Array();
+      money = apple.split(',');
+      money[11] = document.getElementById("f_quantity").value;    //quantity
+      money[12] = document.getElementById("f_cool").value
+
+  
+  //if this doesn't work see how the quantity and price are added to CoffeeBean
+  //when in select mode that is then read by the basket page
+  //this is pure and utter nonsense if this doesn't work yet 
+  
+  setmemory('editmode','true');  //this is new friday november 10th
+  setmemory('adding_item_mode','false');
+  var fly = getmemory('edit_this_slot_number');
+  var slotnumber = "slot" + fly; //why was this missing????
+  eval("setmemory('" + slotnumber + "'" + ", money);" );
+  var baby = eval("getmemory('" + slotnumber + "');" );  // 4 parantheses
+} //end functon mermaid
+//---------------
+
+
+
+
+
+
+
+
+/*
+IMPORRTANT  IMPORTANT   IMPORTANT  IMPORTANT 
+###################  thursday, nov 9th starbucks half moon bay
+
+  var the_quantity = temp[11];      //quantity
+  var the_color    = temp[12]; 
+  
+  var fly = getmemory('edit_this_slot_number');
+  document.getElementById("f_quantity").value = the_quantity; 
+  document.getElementById("f_cool").value =  the_color; 
+
+ //I need to put them into Chcolate bean 
+  put the menu choice into the fields at the bottom
+  and then forcefeed it into Chocolate bean
+  
+  onclick of changes grab those two values from the field into the slotnumber
+  on click of save changes 
+
+*/
+
+
+
+
+
+
+
+
+//I think I am not calling this function anymore
+/*   TRAPEZE FUNCTION ADDS MENU QUANTITY AND COLOR INTO MEMORY */
+
+/*      TRAPEZE FUNCTION     */
+function trapeze(){
+   localStorage.setItem('K2','nothing'); //nothi am not using K2 anymore I think
+} //end function
+
+
+
+
+
+
+
+
+//=================================================================
+function setmemory(v1,v2){  //key and value both strings
+  eval("localStorage.setItem('" + v1 + "','"  +  v2 + "'" + ");" );
+} // end func
+
+
+
+
+
+
+//==================================
+/*     GET MEMORY     */
+function getmemory(x1){  //using the key it returns the value
+  eval("var atm = localStorage.getItem(" + "'" + x1 + "');" );
+  return atm;
+}//end func
+
+
+
+
+
+
+
+
+
+// working on adding the click on a pic to show the back view 
+// and then click again and it shows the front again
+
+//this is for managing the swapping of the picture front to back 
+//call on load to put front into the field
+ function smartypants(){
+   window.document.cool.pic_counter.value = "front";
+
+ }
+//--------------------------
+
+
+
+
+
+
+
+
+//tests for if NaN in the counter value inside of lecounter flag
+  //updated sunday, november 19th, 2017 to defeat bugs in the counter on add to basket
+  
+  //this is where I make sure that the lecounter has 0 in it if it shows NaN, null, undefined
+ 
+//this function was majorly worked on Sunday, November 19th, 2017
+// to deal with NaN
+
+
+
+
+
+
+/*   ADD TO COUNTER function()   */
+function addtocounter(){
+  var myvalue = parseInt(getmemory('lecounter'));  //this retrieves the counter variable stored in memory of localStorage
+
+  var coolness = myvalue.toString();
+if(isNaN(myvalue) == 'true'){ //fal
+    //just tests but does nothing except coughs up an alert
+  }
+  
+  //this only runs if counter = NaN and then the counter is reset to 0 otherwise this if is ignored
+  //this if is only run if the value = NaN
+  if(coolness == "NaN"){
+        var genius = "0";
+        setmemory('lecounter','0');  //this puts 0 into lecounter.
+        genius = genius -0;
+        genius = genius -0;
+        genius = parseInt(genius);
+        //this is where I add +1 to the number for the counter
+        var addition = plus1(genius); 
+        deletememory('lecounter'); //deleted previous value
+
+        //this puts the new number (now a string) back into the same memory slot lecounter
+        setmemory('lecounter',addition);
+        var whynot = localStorage.getItem('lecounter');
+        show_counter_value();
+
+        return; //bail from this function 
+} //end if
+///===============================================
+
+ //this runs by default if NaN = false so it's a number run this chunk of code
+  
+       /*  anything that gets to this part is normal behavior  */
+      var myvalue = parseInt(getmemory('lecounter'));
+   
+    /// I need to add 1 to the counter here
+     var thevalue = parseInt(getmemory('lecounter'));
+     var baby = thevalue -0;
+         baby = baby -0;
+         baby = parseInt(baby);
+         //this is where I add +1 to the number for the counter
+     var myaddition = plus1(baby); 
+         setmemory('lecounter',myaddition);  //creates new number in the counter 
+     var guesswhat = getmemory('lecounter');
+     show_counter_value();
+
+} //end function 
+//-------------------------------------
+
+
+
+
+
+
+//+ 1 function
+function plus1(x) { 
+ return x+1;
+}
+
+
+
+//copyright link to see the counter value on each page
+  function showthecounter(){
+  var cheesey = parseInt(getmemory('lecounter')); 
+  alert("counter = " + cheesey);
+} //end function
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*   SHIRT NAME AND PRICE FUNCITON */
+// changes the div when the select item page loads
+function shirt_name_and_price(){
+    var candy = localStorage.getItem('CoffeeBean'); 
+    var xmas = new Array();
+    var xmas = candy.split(','); 
+    document.getElementById("coldfusion").value= candy; 
+      
+    var chilly = "<div id ='name_and_price'><td align=center bgcolor=white><table width=190 bgcolor=yellow border=0><tr><td bgcolor=yellow width=85% align=left>&nbsp;";
+        chilly += xmas[6];
+        chilly += "</td><td width=15% align=right>&nbsp;$";
+        chilly += xmas[7];
+        chilly += "&nbsp;</td></tr></table>";
+        chilly += "</td></div>"
+ //document.getElementById("name_and_price").innerHTML = chilly;
+} //end function
+
+
+
+
+
+
+
+// changes the div when the select item page loads
+
+
+/*   SHIRT NAME AND PRICEtwo  FUNCITON */
+function shirt_name_and_pricetwo(){
+    var candy = localStorage.getItem('ChocolateBean'); 
+    var xmas = new Array();
+    var xmas = candy.split(','); 
+        document.getElementById("coldfusion").value= candy; 
+      
+ var chilly = "<div id ='name_and_price'><td align=center bgcolor=white><table width=190 bgcolor=hotpink border=0><tr><td bgcolor=yellow width=85% align=left>&nbsp;";
+ chilly += xmas[6];
+ chilly += "</td><td width=15% align=right>&nbsp;$";
+ chilly += xmas[7];
+ chilly += "&nbsp;</td></tr></table>";
+ chilly += "</td></div>"
+ //document.getElementById("name_and_price").innerHTML = chilly;
+} //end function
+
+
+
+
+
+
+function deletememory(x1){ 
+    eval("localStorage.removeItem('" + x1 + "');");
+}//end func
+
+
+
+
+
+
+//  menu selectors for quantity and color
+
+
+var razzle1 = " <div id ='vertical_menu' > <table width = 80 bgcolor=white CELLPADDING='2' border=1 style='border-collapse:collapse;border: 1px solid #D8D8D8;'>";
+    razzle1 += " <tr><td >&nbsp;&nbsp;&nbsp;<b>Color</b>";
+    razzle1 += "</td></tr>";
+    razzle1 += " <tr><td bgcolor=#99ccff>";
+    razzle1 += "<a href='#' onclick='fun1()' style='display:block;text-decoration:none;'>";
+    razzle1 += "&nbsp;&nbsp;White</a></td></tr>";
+    razzle1 += "<tr><td>";
+    razzle1 += "<a href='#' onclick='fun2()' style='display:block;text-decoration:none;'>";
+    razzle1 += "&nbsp;&nbsp;Grey</a></td></tr>";
+    razzle1 += " <tr><td>";
+    razzle1 += "<a href='#' onclick='fun3()' style='display:block;text-decoration:none;'>";
+    razzle1 += "&nbsp;&nbsp;Black</td></tr>";
+    razzle1 += " <tr><td>";
+    razzle1 += "<a href='#' onclick='fun4()' style='display:block;text-decoration:none;'>";
+    razzle1 += " &nbsp;&nbsp;Blue</td></tr>";
+    razzle1 += "<tr><td>";
+    razzle1 += "<a href='#' onclick='fun5()' style='display:block;text-decoration:none;'>";
+    razzle1 += "&nbsp;&nbsp;Pink</td></tr>";
+    razzle1 += " </table></div>";
+     function fun1(){      //mens
+  document.getElementById("vertical_menu").innerHTML = razzle1;
+  document.getElementById("f_cool").value= "1";
+} //end fucn
+
+
+
+//======  THIS IS THE COLOR SELECTOR MENU ON THE RIGHT HAND SIDE
+
+var razzle2 = " <div id ='vertical_menu' > <table width = 80 bgcolor=white CELLPADDING='2' border=1 style='border-collapse:collapse;border: 1px solid #D8D8D8;'>";
+    razzle2 += " <tr><td >&nbsp;&nbsp;&nbsp;<b>Color</b></td></tr>";
+    razzle2 += " <tr><td bgcolor=white>";
+    razzle2 += "<a href='#' onclick='fun1()' style='display:block;text-decoration:none;'>";
+    razzle2 += "&nbsp;&nbsp;White</a></td></tr>";
+    razzle2 += "<tr><td bgcolor=#99ccff>";
+    razzle2 += "<a href='#' onclick='fun2()' style='display:block;text-decoration:none;'>";
+    razzle2 += "&nbsp;&nbsp;Grey</a></td></tr>";
+    razzle2 += " <tr><td>";
+    razzle2 += "<a href='#' onclick='fun3()' style='display:block;text-decoration:none;'>";
+    razzle2 += "&nbsp;&nbsp;Black</td></tr>";
+    razzle2 += " <tr><td>";
+    razzle2 += "<a href='#' onclick='fun4()' style='display:block;text-decoration:none;'>";
+    razzle2 += " &nbsp;&nbsp;Blue</td></tr>";
+    razzle2 += "<tr><td>";
+    razzle2 += "<a href='#' onclick='fun5()' style='display:block;text-decoration:none;'>";
+    razzle2 += "&nbsp;&nbsp;Pink</td></tr>";
+    razzle2 += " </table></div>";
+     function fun2(){ //mens
+  document.getElementById("vertical_menu").innerHTML = razzle2;
+  document.getElementById("f_cool").value= "2";
+} //end fucn
+
+//=======
+//======
+
+var razzle3 = " <div id ='vertical_menu' > <table width = 80 bgcolor=white CELLPADDING='2' border=1 style='border-collapse:collapse;border: 1px solid #D8D8D8;'>";
+    razzle3 += " <tr><td >&nbsp;&nbsp;&nbsp;<b>Color</b></td></tr>";
+    razzle3 += " <tr><td bgcolor=white>";
+    razzle3 += "<a href='#' onclick='fun1()' style='display:block;text-decoration:none;'>";
+    razzle3 += "&nbsp;&nbsp;White</a></td></tr>";
+    razzle3 += "<tr><td bgcolor=white>";
+    razzle3 += "<a href='#' onclick='fun2()' style='display:block;text-decoration:none;'>";
+    razzle3 += "&nbsp;&nbsp;Grey</a></td></tr>";
+    razzle3 += " <tr><td bgcolor=#99ccff>";
+    razzle3 += "<a href='#' onclick='fun3()' style='display:block;text-decoration:none;'>";
+    razzle3 += "&nbsp;&nbsp;Black</td></tr>";
+    razzle3 += " <tr><td>";
+    razzle3 += "<a href='#' onclick='fun4()' style='display:block;text-decoration:none;'>";
+    razzle3 += " &nbsp;&nbsp;Blue</td></tr>";
+    razzle3 += "<tr><td>";
+    razzle3 += "<a href='#' onclick='fun5()' style='display:block;text-decoration:none;'>";
+    razzle3 += "&nbsp;&nbsp;Pink</td></tr>";
+    razzle3 += " </table></div>";
+     function fun3(){ //menus
+  document.getElementById("vertical_menu").innerHTML = razzle3;
+  document.getElementById("f_cool").value= "3";
+} //end fucn
+
+
+// color menu more
+var razzle4 = " <div id ='vertical_menu' > <table width = 80 bgcolor=white CELLPADDING='2' border=1 style='border-collapse:collapse;border: 1px solid #D8D8D8;'>";
+    razzle4 += " <tr><td >&nbsp;&nbsp;&nbsp;<b>Color</b></td></tr>";
+    razzle4 += " <tr><td bgcolor=white>";
+    razzle4 += "<a href='#' onclick='fun1()' style='display:block;text-decoration:none;'>";
+    razzle4 += "&nbsp;&nbsp;White</a></td></tr>";
+    razzle4 += "<tr><td bgcolor=white>";
+    razzle4 += "<a href='#' onclick='fun2()' style='display:block;text-decoration:none;'>";
+    razzle4 += "&nbsp;&nbsp;Grey</a></td></tr>";
+    razzle4 += " <tr><td bgcolor=white>";
+    razzle4 += "<a href='#' onclick='fun3()' style='display:block;text-decoration:none;'>";
+    razzle4 += "&nbsp;&nbsp;Black</td></tr>";
+    razzle4 += " <tr><td bgcolor=#99ccff>";
+    razzle4 += "<a href='#' onclick='fun4()' style='display:block;text-decoration:none;'>";
+    razzle4 += " &nbsp;&nbsp;Blue</td></tr>";
+    razzle4 += "<tr><td>";
+    razzle4 += "<a href='#' onclick='fun5()' style='display:block;text-decoration:none;'>";
+    razzle4 += "&nbsp;&nbsp;Pink</td></tr>";
+    razzle4 += " </table></div>";
+     function fun4(){ //mens
+  document.getElementById("vertical_menu").innerHTML = razzle4;
+  document.getElementById("f_cool").value= "4";
+} //end fucn
+
+
+
+//color menu 
+var razzle5 = " <div id ='vertical_menu' > <table width = 80 bgcolor=white CELLPADDING='2' border=1 style='border-collapse:collapse;border: 1px solid #D8D8D8;'>";
+    razzle5 += " <tr><td >&nbsp;&nbsp;&nbsp;<b>Color</b></td></tr>";
+    razzle5 += " <tr><td bgcolor=white>";
+    razzle5 += "<a href='#' onclick='fun1()' style='display:block;text-decoration:none;'>";
+    razzle5 += "&nbsp;&nbsp;White</a></td></tr>";
+    razzle5 += "<tr><td bgcolor=white>";
+    razzle5 += "<a href='#' onclick='fun2()' style='display:block;text-decoration:none;'>";
+    razzle5 += "&nbsp;&nbsp;Grey</a></td></tr>";
+    razzle5 += " <tr><td bgcolor=white>";
+    razzle5 += "<a href='#' onclick='fun3()' style='display:block;text-decoration:none;'>";
+    razzle5 += "&nbsp;&nbsp;Black</td></tr>";
+    razzle5 += " <tr><td bgcolor=white>";
+    razzle5 += "<a href='#' onclick='fun4()' style='display:block;text-decoration:none;'>";
+    razzle5 += " &nbsp;&nbsp;Blue</td></tr>";
+    razzle5 += "<tr><td bgcolor=#99ccff>";
+    razzle5 += "<a href='#' onclick='fun5()' style='display:block;text-decoration:none;'>";
+    razzle5 += "&nbsp;&nbsp;Pink</td></tr>";
+    razzle5 += " </table></div>";
+     function fun5(){ //menu
+  document.getElementById("vertical_menu").innerHTML = razzle5;
+  document.getElementById("f_cool").value= "5";
+} //end fucn
+
+
+
+
+//===========================================================
+
+
+//====== QUANTITY MENUS
+
+var q1 = " <div id ='quan_menu' > <table width = 80 bgcolor=white CELLPADDING='2' border=1 style='border-collapse:collapse;border: 1px solid #D8D8D8;'>";
+    q1 += " <tr><td align=center><b>Quantity</b></td></tr>";
+    q1 += " <tr><td align=center bgcolor=#99ccff>";
+    q1 += "<a href='#' onclick='quan1()' style='display:block;text-decoration:none;'>";
+    q1 += "1</a></td></tr>";
+    q1 += "<tr><td align=center>";
+    q1 += "<a href='#' onclick='quan2()' style='display:block;text-decoration:none;'>";
+    q1 += "2</a></td></tr>";
+    q1 += " <tr><td align=center>";
+    q1 += "<a href='#' onclick='quan3()' style='display:block;text-decoration:none;'>";
+    q1 += "3</td></tr>";
+    q1 += " <tr><td align=center>";
+    q1 += "<a href='#' onclick='quan4()' style='display:block;text-decoration:none;'>";
+    q1 += " 4</td></tr>";
+    q1 += "<tr><td align=center>";
+    q1 += "<a href='#' onclick='quan5()' style='display:block;text-decoration:none;'>";
+    q1 += "5</td></tr>";
+    q1 += " </table></div>";
+     function quan1(){ //mens
+  document.getElementById("quan_menu").innerHTML = q1;
+  document.getElementById("f_quantity").value= "1";
+} //end fucn
+
+//  QUANTITY MENUS
+
+var q2 = " <div id ='quan_menu' > <table width = 80 bgcolor=white CELLPADDING='2' border=1 style='border-collapse:collapse;border: 1px solid #D8D8D8;'>";
+    q2 += " <tr><td align=center><b>Quantity</b></td></tr>";
+    q2 += " <tr><td align=center>";
+    q2 += "<a href='#' onclick='quan1()' style='display:block;text-decoration:none;'>";
+    q2 += "1</a></td></tr>";
+    q2 += "<tr><td align=center bgcolor=#99ccff>";
+    q2 += "<a href='#' onclick='quan2()' style='display:block;text-decoration:none;'>";
+    q2 += "2</a></td></tr>";
+    q2 += " <tr><td align=center>";
+    q2 += "<a href='#' onclick='quan3()' style='display:block;text-decoration:none;'>";
+    q2 += "3</td></tr>";
+    q2 += " <tr><td align=center>";
+    q2 += "<a href='#' onclick='quan4()' style='display:block;text-decoration:none;'>";
+    q2 += " 4</td></tr>";
+    q2 += "<tr><td align=center>";
+    q2 += "<a href='#' onclick='quan5()' style='display:block;text-decoration:none;'>";
+    q2 += "5</td></tr>";
+    q2 += " </table></div>";
+     function quan2(){ //mens
+  document.getElementById("quan_menu").innerHTML = q2;
+  document.getElementById("f_quantity").value= "2";
+} //end fucn
+
+ //QUANTITY MENUS
+var q3 = " <div id ='quan_menu' > <table width = 80 bgcolor=white CELLPADDING='2' border=1 style='border-collapse:collapse;border: 1px solid #D8D8D8;'>";
+    q3 += " <tr><td align=center><b>Quantity</b></td></tr>";
+    q3 += " <tr><td align=center >";
+    q3 += "<a href='#' onclick='quan1()' style='display:block;text-decoration:none;'>";
+    q3 += "1</a></td></tr>";
+    q3 += "<tr><td  align=center>";
+    q3 += "<a href='#' onclick='quan2()' style='display:block;text-decoration:none;'>";
+    q3 += "2</a></td></tr>";
+    q3 += " <tr><td align=center bgcolor=#99ccff>";
+    q3 += "<a href='#' onclick='quan3()' style='display:block;text-decoration:none;'>";
+    q3 += "3</td></tr>";
+    q3 += " <tr><td align=center>";
+    q3 += "<a href='#' onclick='quan4()' style='display:block;text-decoration:none;'>";
+    q3 += " 4</td></tr>";
+    q3 += "<tr><td align=center>";
+    q3 += "<a href='#' onclick='quan5()' style='display:block;text-decoration:none;'>";
+    q3 += "5</td></tr>";
+    q3 += " </table></div>";
+     function quan3(){ //mens
+  document.getElementById("quan_menu").innerHTML = q3;
+  document.getElementById("f_quantity").value= "3";
+} //end fucn
+
+
+
+ //QUANTITY MENUS
+var q4 = " <div id ='quan_menu' > <table width = 80 bgcolor=white CELLPADDING='2' border=1 style='border-collapse:collapse;border: 1px solid #D8D8D8;'>";
+    q4 += " <tr><td align=center><b>Quantity</b></td></tr>";
+    q4 += " <tr><td align=center>";
+    q4 += "<a href='#' onclick='quan1()' style='display:block;text-decoration:none;'>";
+    q4 += "1</a></td></tr>";
+    q4 += "<tr><td align=center>";
+    q4 += "<a href='#' onclick='quan2()' style='display:block;text-decoration:none;'>";
+    q4 += "2</a></td></tr>";
+    q4 += " <tr><td align=center>";
+    q4 += "<a href='#' onclick='quan3()' style='display:block;text-decoration:none;'>";
+    q4 += "3</td></tr>";
+    q4 += " <tr><td align=center bgcolor=#99ccff>";
+    q4 += "<a href='#' onclick='quan4()' style='display:block;text-decoration:none;'>";
+    q4 += " 4</td></tr>";
+    q4 += "<tr><td align=center>";
+    q4 += "<a href='#' onclick='quan5()' style='display:block;text-decoration:none;'>";
+    q4 += "5</td></tr>";
+    q4 += " </table></div>";
+     function quan4(){ //menu
+  document.getElementById("quan_menu").innerHTML = q4;
+  document.getElementById("f_quantity").value= "4";
+} //end fucn
+
+
+//QUANTITY MENUS
+
+var q5 = " <div id ='quan_menu' > <table width = 80 bgcolor=white CELLPADDING='2' border=1 ";
+    q5 += "style='border-collapse:collapse;border: 1px solid #D8D8D8;'>";
+    q5 += "<tr><td align=center><b>Quantity</b></font></td></tr>";
+    q5 += "<tr><td align=center>";
+    q5 += "<a href='#' onclick='quan1()' style='display:block;text-decoration:none;'>";
+    q5 += "1</a></td></tr>";
+    q5 += "<tr><td align=center>";
+    q5 += "<a href='#' onclick='quan2()' style='display:block;text-decoration:none;'>";
+    q5 += "2</a></td></tr>";
+    q5 += " <tr><td align=center>";
+    q5 += "<a href='#' onclick='quan3()' style='display:block;text-decoration:none;'>";
+    q5 += "3</td></tr>";
+    q5 += " <tr><td align=center>";
+    q5 += "<a href='#' onclick='quan4()' style='display:block;text-decoration:none;'>";
+    q5 += " 4</td></tr>";
+    q5 += "<tr><td align=center bgcolor=#99ccff>";
+    q5 += "<a href='#' onclick='quan5()' style='display:block;text-decoration:none;'>";
+    q5 += "5</td></tr>";
+    q5 += " </table></div>";
+     function quan5(){ //menu
+  document.getElementById("quan_menu").innerHTML = q5;
+  document.getElementById("f_quantity").value= "5";
+} //end fucn
+
+
+
+ function navmenu(){
+   alert("testing menu system");
+} //end function
+
+ 
+ //---------------------                                                    
+function setmemory(v1,v2){  //key and value both strings
+    eval("localStorage.setItem('" + v1 + "','"  +  v2 + "'" + ");" );
+} // end func
+
+function getmemory(x1){  //using the key it returns the value
+  eval("var atm = localStorage.getItem(" + "'" + x1 + "');" );
+  return atm;
+}//end func
+
+
+function setflag(){
+setmemory('recent_page_memory_flag','aboutus');
+} //end func
+
+
+/* NAV MENU HAMBURGER OVERLAY */
+function navmenu(){
+   //alert("testing menu system");
+} //end function
+
+
+
+//each page would have it's own preset id which is the number
+// and the variable is set on the second line of the same function
+// on each page. 
+
+
+
+
+
+//#######################################
+//      OPEN MENU 
+//#######################################
+function open_menu(){ 
+  hamburger_id_of_page_came_from();
+}
+//-------------------
+//########################################
+//     HAMBURGER ID OF PAGE CAME FROM 
+//#########################################
+function hamburger_id_of_page_came_from(){
+var this_page = "6.3";    
+setmemory('fedex',this_page);                                            
+window.location.href = "iphone_hamburger_menu.html";                                           
+  } //end                                                        
+//---------------------                                                    
+                                                     
+
+
+//-------------------------------------------------------------------------------------------------------------------------------
+       </script>
+
+
+</head> <!-- I need a different function to call for add to basket different from onload for trapeze   -->
+<body onload="fork_decision();show_counter_value();">
+
+
+         <!--   <table border=0><tr><td height=3></td></tr></table> -->
+ <!-- <table width = 500>
+<tr><td width=25 height = 18 valign=center align=right>
+<a href='#' onclick='open_menu();return false;'>
+<img src="hamburger2.jpg" alt="navigation" height="20" width="20"></a>   </td>
+<td width = 95></td><td><font face="Menlo"><font size=4>Modern Day News&nbsp;<font color=mediumpurple><font size=1><b></b></font></font></td></tr>
+</table>
+-->
+<table width = 500>
+<tr><td width=25 height = 18 valign=bottom align=left>
+<a href='#' onclick='open_menu();return false;'>
+<img src="hamburger2.jpg" alt="navigation" height="16" width="20"></a>   </td>
+<td width = 95></td><td><font face="Menlo"><font size=4>Modern Day News&nbsp;<font color=mediumpurple><font size=1><b></b></font></font></td></tr>
+</table>
+
+     
+<!--  =============== instructions column ==============-->
+<!--
+<table width = 500>
+<tr><td width = 110></td><td><font face="Menlo"><font size=4>Modern Day News</font></td></tr>
+</table>
+-->
+
+
+
+<!-- fresh code from checkout page -->
+<table   CELLPADDING='3' style='border-collapse:collapse;border: 
+1px solid black; '  width = 410  border = 1 bgcolor=white  >
+
+<tr><td  align=center><font size=1><font face='Menlo'><a href='iphone_home.html' 
+ style='display:block;text-decoration:none'><FONT COLOR=BLACK>Home</a></td>
+
+
+     <td align=center><font size=1><font face='Menlo'><a href='iphone_characters.html'
+     style='display:block;text-decoration:none'>Characters</a></td>
+      
+     <td align=center ><font size=1><font face='Menlo'><a href='iphone_news.html' 
+      style='display:block;text-decoration:none'>News</a></td>
+     
+    <td align=center><font size=1><font face='Menlo'><a href='iphone_videos.html' 
+     style='display:block;text-decoration:none'>Videos</a></td>
+     
+  
+     
+     <td align=center bgcolor=palegreen><font size=1><font face='Menlo'><a href='#' 
+     style='display:block;text-decoration:none'>Merchandise</a></td>
+     
+      <td align=center nowrap><font size=1><font face='Menlo'><a href='iphone_aboutus.html'
+       style='display:block;text-decoration:none'>About Us</a></td>
+     
+     <td align=center nowrap><font size=1><font face='Menlo'><a href='iphone_contactus.html'
+  style='display:block;text-decoration:none'>Contact Us</a></td>
+     </tr></table>
+    
+    
+<table CELLPADDING='1' style='border-collapse:collapse;border: 1px solid #e8e8e8; '  width = 410  border = 1 bgcolor=white  >
+<tr><td  width= 20%  bgcolor=white align=center><font size=1><font face='Menlo'><a href='iphone_merchandise_filter.html' style='text-decoration:none'><FONT COLOR=black>Filter </a></font></td>
+<td width= 20% bgcolor=white align=center><font size=1><font face='Menlo'><a href='iphone_merchandise_shop.html' style='text-decoration:none'><FONT COLOR=black><font color=black>Shop</a></font></td>
+<td width= 20% bgcolor=#81D4FA align=center><font size=1><font face='Menlo'><font color=black>Details</font></td>
+<td width= 20%  align=center><font size=1><font face='Menlo'><font color=lightgrey>Basket</font></td>
+<td width= 20%  bgcolor=white align=center><font size=1><font face='Menlo'><font color=lightgrey>Check Out</font></td>
+</tr></table>
+
+
+<!-- fresh code from checkout page -->
+
+
+
+    
+<table   CELLPADDING='3' style='border-collapse:collapse;border: 
+1px solid #D8D8D8; '  width = 410  border = 1 bgcolor=white  >
+<tr></table>
+
+    <table><tr><td height=6></td></tr></table> <!-- spacer -->
+    
+    
+    
+ 
+    
+    
+    <!-- begins here just below top tabs -->
+<!-- outer table --> 
+
+
+
+
+
+
+<!-- ==========  surgery here thursday november 16th 2017 ===========
+
+///////////////////////////////////////////////////////
+
+=================================  -->
+
+<!-- top table  -->
+
+<table width = 440 bgcolor=white border=0>
+<tr><td  height=30>
+
+
+ <div id ='shirt_description'><table width = 419 border =0 bgcolor=white><tr><td>
+&nbsp;</td></tr></table> </div></td></tr>
+</table>
+
+
+
+<!-- bottom of top table -->
+
+
+
+<!-- middle table set holding picture on left and menus on right -->
+<table width = 440  border=0 bgcolor= white border=0>
+
+<!-- left table picture image here -->
+<tr><td align=left valign=top width=50% height = >
+ <div id='shirtless'><!-- new dynamically put picture here-->
+
+     </div> <!-- new dynamically put picture here-->    
+ </td>
+
+
+<!-- right side table Menus-->
+<td valign= top align=left width=50% bgcolor=white>
+
+
+
+
+ <div id ="rightside_menus" >  
+ <table width  = 200 border=0  bgcolor=white><tr><td valign=top>
+ <!--
+<table height = 10><tr><td>&nbsp;</td></tr></table>
+-->
+ <div id ="vertical_menu" >  
+ <table width = 80 bgcolor=white CELLPADDING='2' border=1 style='border-collapse:collapse;border: 1px solid #D8D8D8;'>
+ <tr><td >&nbsp;&nbsp;<b>Color</b></td></tr>
+ <tr><td>&nbsp;&nbsp;<a href='#'  onclick='fun1()' style='display:block;text-decoration:none;'>White<a/></td></tr>
+  <tr><td>&nbsp;&nbsp;<a href='#' onclick='fun2()' style='display:block;text-decoration:none;'>Grey<a/></td></tr>
+  <tr><td>&nbsp;&nbsp;<a href='#' onclick='fun3()' style='display:block;text-decoration:none;'>Black</a></td></tr>
+ <tr><td>&nbsp;&nbsp;<a href='#'  onclick='fun4()' style='display:block;text-decoration:none;'>Blue</a></td></tr>
+ <tr><td>&nbsp;&nbsp;<a href='#'  onclick='fun5()' style='display:block;text-decoration:none;'>Pink</a></td></tr>
+ </table></div>
+ </td><td align=left valign=top>
+ 
+ <!--<table height = 10><tr><td>&nbsp;</td></tr></table>-->
+ <div id ="quan_menu" >  
+ <table width = 80 bgcolor=white CELLPADDING='2' border=1 style='border-collapse:collapse;border: 1px solid #D8D8D8;'>
+ <tr><td align=center><b>Quantity</b></td></tr>
+ <tr><td>&nbsp;&nbsp;<a href='#'  onclick='quan1()' style='display:block;text-decoration:none;'>1<a/></td></tr>
+  <tr><td>&nbsp;&nbsp;<a href='#' onclick='quan2()' style='display:block;text-decoration:none;'>2<a/></td></tr>
+  <tr><td>&nbsp;&nbsp;<a href='#' onclick='quan3()' style='display:block;text-decoration:none;'>3</a></td></tr>
+ <tr><td>&nbsp;&nbsp;<a href='#'  onclick='quan4()' style='display:block;text-decoration:none;'>4</a></td></tr>
+ <tr><td>&nbsp;&nbsp;<a href='#'  onclick='quan5()' style='display:block;text-decoration:none;'>5</a></td></tr>
+ </table></div>
+ </td></tr></table>
+ <!-- </td></tr></table> -->
+
+ </div> <!-- end of rightside_menus -->
+
+
+</td></tr></table></td></tr></table>
+
+<!-- description below -->
+
+
+</td></tr></table>
+
+
+
+
+
+
+
+
+
+<!-- price  bottom table  button -->
+<table width = 440 bgcolor=white border=0>
+<tr><td width=45% height=25 align=center>
+
+<script>
+ //this grabs the price of the item from ChocolateBean memory slot
+
+
+   //this is the price underneath the picture 
+
+  var mode = getmemory('editmode');
+ if(mode == 'true'){ //arrived from shopping basket site to make changes to an item
+  var candy = localStorage.getItem('ChocolateBean'); 
+    var xmas = new Array();
+    var xmas = candy.split(','); 
+    //this means that the user was on the shopping basket
+    // and clicked on edit to edit an item
+     var out = "<font face='Menlo'>$";
+        out += xmas[7];
+        out += "</font>&nbsp;&nbsp;&nbsp;&nbsp;";
+    document.write(out);
+    
+ }else{  //arrived from the shop page and just clicked on SELECT to choose 
+         //quantity and color
+  //mode = false therefore just did search and from shop site clicked on SELECT
+ //beneath the bottom of the picture
+  var candy = localStorage.getItem('CoffeeBean'); 
+    var xmas = new Array();
+    var xmas = candy.split(','); 
+   var out = "<font face='Menlo'>$";
+        out += xmas[7];
+        out += "</font>&nbsp;&nbsp;&nbsp;&nbsp;";
+    document.write(out);
+ 
+ } //end if
+ 
+</script>
+
+
+
+
+</td><td width=46%>
+ <script>
+ //----------------------------------------------------
+ //this is working correctly now  10:15 am
+ var mode = getmemory('editmode');
+   if(mode == 'false'){ //normal mode add to basket
+                        //blue color
+   document.write("<table width = 190 ><tr><td align=center height = 3 width=160 bgcolor=lightskyblue style='border:1px solid black;'> ");
+   document.write("<a href='iphone_merchandise_basket.html' onclick='barista();addtocounter();CopyItemToSlot()' style='display:block;text-decoration:none'>");
+   document.write("<font face='Menlo'>add to basket&nbsp;&nbsp;</a></td></tr></table>");
+ //                ADD TO BASKET 
+ 
+
+            //thursday editing for editing an existing item in the basket on the details page and changing it's slot# memory
+            // but not adding to the counter whatsoever. so changes to the counter. 
+     }else{ //this will redirect to basket page afterwards. I will have to save the new edits to the proper slot#
+    //if the above is false then this section has to be true 
+    //if (mode == 'true') //means edit mode is "on" save changes after editing an existing item in the basket - don't add to counter
+    document.write("<table width = 200 ><tr><td align=center height=30 width =160 bgcolor=lightgoldenRodYellow style='border:1px solid black;'>"); //href to left just below is link to basket
+    document.write("<a href='iphone_merchandise_basket.html' onclick='mermaid();CopyItemToSlotJustEdited()' style='display:block;text-decoration:none'>");
+    document.write("<font face ='Menlo'>save changes&nbsp;&nbsp;</td></a></tr></table>");
+ 
+   }//end if        SAVE CHANGES
+ //---------------------------------------------------  -----
+ </script>
+
+ </td></tr>
+</table>
+
+<div id='words_describing'>
+<table border-1 bgcolor=white height= 25><tr><td>&nbsp;
+</td></tr></table>
+</div>
+
+
+
+
+<form name = cool>
+<input type = hidden id="f_counter_now"  name ="counter_real_time" size = 4><br>
+ <input type = hidden  id="noway"  name ="ten" size = 10><br>
+<input type = hidden id="pic_counter" name = "zero" size = 10><br>
+ <input type = hidden  id="f_category"  name ="one" size = 20><br>
+ <input type = hidden  id="f_gender"  name ="two" size = 20><br>
+ 
+ <input type = hidden  id="f_cool"  name ="two2" size = 20><br>
+ <input type = hidden  id="f_quantity"  name ="two3" size = 20><br>
+ <input type = hidden id="f_size"  name ="three" size = 20><br>
+ <input type = hidden  id="f_type"  name ="four" size = 20><br>
+ <input type = hidden  id="f_5"  name ="five" size = 20><br>
+ <input type = hidden  id="f_6"  name ="six" size = 20><br>
+ <input type = hidden  id="f_7"  name ="seven" size = 20><br>
+  <input type = hidden  id="countervalue"  name ="seven" size = 20><br>
+ </form>
+
+
+
+      <form name='trouble'>
+      <input type = hidden id = "excellent" name = "cherry" size = 150>
+      <input type = hidden id = "poof" name = "strawberry" size = 150>
+      <input type = hidden id = "intothewild" name = "blueberry" size = 150>
+      <input type = hidden id = "coldfusion" name = "blackberry" size = 150>
+      <input type = hidden id = "test3" name = "blackberry" size = 150>
+      <input type = hidden id = "test3" name = "blackberry" size = 150>
+      <input type = hidden id = "test3" name = "blackberry" size = 150>
+       <input type = hidden id = "hat_status" name = "hat_memory" size = 150>
+      
+      </form>
+      
+
+<table bgcolor=white width = 386><tr><td align=center>
+<font color=silver><font size=1><a href='#' onclick='showthecounter();return false;'>Copyright 2018 Modern Day News.</a></font>
+
+</td></tr></table>
+</body>
+</html>
+

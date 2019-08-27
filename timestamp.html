@@ -1,0 +1,200 @@
+
+
+<!--  iphone test -->
+<!DOCTYPE html>
+<html>
+<title>Modern Day News</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
+<link rel="stylesheet" href="/lib/w3-theme-teal.css">
+
+
+<body style="max-width:600px">
+
+
+<style>
+
+</style>
+
+
+<script>
+//november 21st
+function compare_date(){
+//get current date
+//compare with stored date stamp
+//get year   2017 onwards
+//get month 1 thru 12
+//get day of month 1 thru 31
+
+
+}
+//november 21st
+function compare_time(){
+//get current time
+//compare with stored time stamp
+//1 thru 12 noon and 12 thru 24(midnight
+//compare am with pm  hours midnight to 11;59am and 12 noon till 11:59pm
+//compare hrs   1 - 24
+//compare minutes 1 thru 60
+//compare seconds 1 thru 60
+
+//by definition all times and dates will be after the time stamp
+//because the date might be the same(most likely)
+//but the time will change , so it's merely a formality and
+//no comparison is actually required nor necessary
+
+}
+
+
+
+/*      TIME MACHINE             */
+function time_machine(){
+
+var d = new Date();
+var theyear = d.getFullYear();
+var buildit = "<table><tr><td>";
+var d = new Date();
+var coolness = d.getDay();
+var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var cooler = days[d.getDay()];
+
+    buildit += cooler;
+    buildit += "</td><td> ";
+
+var d = new Date();
+var month = d.getMonth();
+month = month.toString()
+
+switch(month){
+case "0" : month = "Jan"; break;
+case "1" : month = "Feb"; break;
+case "2" : month = "Mar"; break;
+case "3" : month = "Apr"; break;
+case "4" : month = "May"; break;
+case "5" : month = "Jun"; break;
+case "6" : month = "Jul"; break;
+case "7" : month = "Aug"; break;
+case "8" : month = "Sep"; break;
+case "9" : month = "Oct"; break;
+case "10": month = "Nov"; break;
+case "11": month = "Dec"; break;
+
+default: 
+
+}//end switch case
+
+    buildit += month;
+    buildit += "</td><td> ";
+
+var d = new Date();
+var dayofmonth = d.getDate();
+
+    buildit += dayofmonth;
+    buildit += "</td><td>&nbsp; ";
+    buildit += theyear;
+    buildit += "&nbsp;&nbsp;</td><td> ";
+
+var d = new Date();
+var hours = d.getHours();
+
+    buildit += hours;
+    buildit += "</td><td> ";
+ 
+var d = new Date();
+var minutes = d.getMinutes(); 
+    minutes = minutes.toString();
+var n = minutes.length;  //minutes length of course da
+if(n == '1'){
+   minutes ="0" +  minutes;
+}//end if
+
+    buildit += minutes;
+    buildit += "&nbsp;";
+    buildit += "</td><td> ";
+    
+
+var d = new Date();
+var seconds = d.getSeconds();
+ 
+    buildit += seconds;
+    buildit += "&nbsp;secs</td><td>";
+ 
+
+     buildit += "</tr></table>";
+     document.getElementById("mytimestamp").innerHTML = buildit;
+ 
+ } //end function
+//---------------------------------------------------------
+/*
+numbers 
+mon 1
+tuz 2
+wed 3
+thr 4
+fri 5
+sat 6
+sun 7
+
+month
+jan 01
+feb 02
+mar 03
+apr 04
+may 05
+jun 06
+jul 07
+aug 08
+sep 09
+oct 10
+nov 11
+dec 12
+
+*/
+
+/*
+//day of week   05
+month name    11
+day of month  24
+year          17
+hours         21
+minutes       13
+seconds       06
+
+so the time stamp would be the day of the week doesn't really matter
+date stamp and time stamp
+   11.24.17::21.13.06
+*/
+
+
+
+
+
+
+</script>
+</head>
+<body onload="time_machine()">
+
+<div id ='mytimestamp'>
+
+</div>
+
+<!--  ===================  -->
+<form name = cool>
+counter<input type = text id="f_counter_now"  name ="counter_real_time" size = 4><br>
+ <input type = hidden  id="f_cat"       name ="one" size = 20><br>
+ <input type = hidden  id="f_gender"    name ="two" size = 20><br>
+ <input type = hidden  id="f_size"      name ="three" size = 20><br>
+ <input type = hidden  id="f_type"      name ="four" size = 20><br>
+ <input type = hidden  id="f_5"         name ="five" size = 20><br>
+ <input type = hidden  id="f_6"         name ="six" size = 20><br>
+ <input type = hidden  id="f_7"         name ="seven" size = 20><br>
+ </form>
+
+
+<table bgcolor=white width = 386><tr><td align=center>
+<font color=silver><font size=1>Copyright 2017 Modern Day News.</font>
+</td></tr></table>
+
+</body>
+</html>

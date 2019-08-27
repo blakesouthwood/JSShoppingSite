@@ -1,0 +1,2102 @@
+
+<!--  iphone test -->
+
+<!--
+
+
+america's most popular graduate degrees somehting ot htink about.
+
+https://www.cbsnews.com/news/americas-most-popular-graduate-degrees/
+
+
+javascript to split a string to fill an array to really parse it at spaces
+  var str = "How are you doing today?";
+    var res = str.split(" ");
+  
+    document.getElementById("demo").innerHTML = res;
+   
+   var txt = "";
+var person = {fname:"John", lname:"Doe", age:25}; 
+var x;
+for (x in person) {
+    txt += person[x] + " ";
+}
+document.getElementById("demo").innerHTML = txt;
+
+
+var arr = [
+    "Hi",
+    "Hello",
+    "Bonjour"
+];
+
+// append new value to the array
+arr.push("Hola");
+
+console.log(arr);
+ 
+
+-->
+<!DOCTYPE html>
+<html>
+<title>Modern Day News</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
+<link rel="stylesheet" href="/lib/w3-theme-teal.css">
+
+
+<body style="max-width:600px">
+
+
+
+<style>
+
+/* videostyles.css     */
+/* mouse over link */
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:hover {
+  color: black;
+}
+
+a:active {
+  color: black;
+}
+
+
+.fixed-size-square {
+    display: table;
+    width: 20px;
+    height: 20px;
+    background: #4DF54E;
+}
+.fixed-size-square span {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+    color: white
+}
+
+
+
+div.staticfun {
+     position: relative;
+    left: 50px;
+    top: 250px
+    //align left
+}
+
+
+div.static {
+     position: relative;
+    left: 190px;
+}
+
+div.static1 {
+     position: relative;
+    left: 380px;
+}
+
+
+div.menulist {
+     position: relative;
+    left: 5px;
+}
+
+
+div.staticiframe {
+     position: relative;
+    left: 25px;
+}
+
+//testing here ========================
+div.topwords {
+     position: absolute;
+    width: 500px; 
+    height: 40px;
+    left: 300px;
+    z-index: 2;
+    
+    //position:absolute; right:px; bottom:10px;
+}
+
+
+
+//css code for iframe - crossing my fingers that this puppy works
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+
+.showbox {
+    height:10px;
+    width:10px;
+    background: #7FFFD4; //#00ff00; //powerderblue
+    border: 2px solid #fff;
+    border-radius: 25px;
+    box-shadow: 0px 1px 5px #888888;
+    transform-origin:50% 50%;
+    transform:scale(1);
+    animation: pulse 0.6s infinite linear alternate;
+    -webkit-animation: pulse 0.6s infinite linear alternate;
+}
+@keyframes pulse {
+    to {
+        transform:scale(1.3);
+    }
+}
+@-webkit-keyframes pulse {
+    to {
+        transform:scale(1.3);
+    }
+}
+
+
+ 
+.zu
+
+//=======================
+// left nav css
+
+.odd {
+  background-color: white;
+}
+.evn {
+  background-color: white;
+}
+.selodd {
+  background-color: palegreen; //deepskyblue;
+}
+.selevn {
+  background-color: palegreen; //deepskyblue;
+}
+
+
+#special  
+td:hover,  td.selected{
+    background-color: #4dd2ff; //turquoise
+}
+#special td {padding: 3px;}
+
+
+ footer {
+    position: absolute;
+    left: 387px;
+    bottom: 18px;
+}
+
+ div.movietextmydiv {
+    position: absolute;
+    top: 610px;
+    width: 690px;
+    height: 50px;
+    left: 292px;
+
+}
+
+
+
+div.cool {
+    position: absolute;
+    top: 400px;
+    //right: 50px;
+    left: 200px;
+    width: 750px;
+}
+
+
+div.radiocontrolswitcher {
+    position: absolute;
+    top: 620px;
+    //right: 50px;
+    left: 70px;
+    bottom: 40px;
+    width: 150px;
+    //height: 100px;
+    //border: 3px solid #73AD21;
+}
+</style>
+<script>
+
+        
+        
+    //crucial leave this here ==============================
+    //this number reflects how big it sees.
+    //arrayLength must be 1 more than the total of arrays below. If 57 rows then it would be 58
+    var arrayLength= 60;  //add 1 more to it to make it work due to row 0 has nothing  //IMPORTANT this number must be the same as the number of excelDB rows
+    //be sure to change this number if more rows are added otherwise it won't see that data
+    
+    var excelDB = new Array(arrayLength);
+    for(var i = 0;i< excelDB.length;i++){
+      excelDB[i] = new Array(arrayLength);
+    } //end loop
+    
+//I will need to store two image names or 1 and then call them front.#.jpg and back.#.jpg
+//                  0      1        2          3        4          5               6                 7                 8                9                    10
+ excelDB[0][0]  = ['0',  'category','gen',   'size', 'subshirts',  'Idtag',      'title',          'price',         'pic1',           'pic2',           'largepic']; //key labels
+ excelDB[0][1]  = ['1',  'shirts', 'mens',    'L',  'shirt',      'MDN786',     'Rugby Shirt',      '52',           'greyshirt',      'redshirt_back',       'ten'];
+ excelDB[0][2]  = ['2',  'shirts', 'womens',  'M', 'hoodie',      'MDN786',     'Jersey',          '87',            'greyshirt',      'redshirt',            'ten'];
+ excelDB[0][3]  = ['3',  'hats',    'mens',   'M',    'hat',       'MDN782',     'Ocean Pacif',     '50',            'hat2',          'hat3',                'ten'];
+ excelDB[0][4]  = ['4',  'shirts',  'womens', 'M',  'hoodie',      'MDN381',     'Nike',             '65',           'greyshirt',     'rfshirt',             'ten'];
+ excelDB[0][5]  = ['5',  'shirts',  'womens', 'M',  'hoodie',      'MDN771',     'adidas',          '65',            'greyshirt',     'redshirt',            'ten'];
+ excelDB[0][6]  = ['6',  'shirts',  'womens', 'M',  'hoodie',      'MDN799',     'Fruit of Loom',   '55',            'greyshirt',     'redshirt',            'ten'];
+ excelDB[0][7]  = ['7',  'hats',    'girls',  'S',   'hat',        'MDN100',     'Hello Kitty',      '55',           'hat2',           'hat3',               'ten'];
+ excelDB[0][8]  = ['8',  'shirts',  'girls',  'S',  'shirt',       'MDN789',     'cat',                 '45',        'greyshirt',     'redshirt',            'ten'];
+ excelDB[0][9]  = ['9',  'shirts', 'womens',  '2XL','hoodie',      'MDN755',     'Gap',              '56',           'greyshirt',     'redshirt',            'ten'];
+ excelDB[0][10] = ['10', 'shirts',  'mens',   'L',  'shirt',       'MDN725',     'North Face',        '88',          'greyshirt',     'redshirt_back',       'ten'];
+ excelDB[0][11] = ['11', 'hats',    'mens',  '2XL',  'shirt',      'MDN726',     'South Face',       '87',           'hat2',          'hat3',                'ten'];
+ excelDB[0][12] = ['12', 'shirts',  'mens',   'M',  'longsleeve',  'MDN737',     'Nike Airless',     '120',          'greyshirt',     'redshirt',           'ten'];
+ excelDB[0][13] = ['13', 'hats',   'womens', 'M',  'shirt',         'MDN728',     'Adidas',          '130',          'hat2',          'hat3',              'ten'];
+ excelDB[0][14] = ['14', 'hats',    'girls', 'S',  'hoodie',       'MDN789',     'Hollister',        '110',          'hat2',          'hat3',              'ten'];
+ excelDB[0][15] = ['15', 'shirts', 'mens',   'M',  'shirt',         'MDN737',     'Nike Air',        '122',          'greyshirt',     'redshirt',          'ten'];
+ excelDB[0][16] = ['16', 'shirts', 'mens',   'XL',  'shirt',        'MDN711',     'Roger F.',         '99',          'rfshirt',       'greyshirt',         'ten'];
+ excelDB[0][17] = ['17', 'shirts', 'mens',   'XL',  'shirt',        'MDN500',     'Minion',           '86',          'greyshirt',     'redshirt',           'ten'];
+ excelDB[0][18] = ['18', 'shirts', 'womens', 'M',   'hoodie',       'MDN715',     'schwab',           '50',          'greyshirt',     'redshirt',          'ten'];
+ excelDB[0][19] = ['19', 'shirts', 'boys',   'S',   'shirt',        'MDN716',     'google',            '29',         'greyshirt',     'redshirt',          'ten'];
+ excelDB[0][20] = ['20', 'shirts', 'womens', 'M',   'shirt',       'MDN7717',    'Dancer',             '45',         'greyshirt',     'redshirt',          'ten'];   
+ excelDB[0][21] = ['21',  'hats',   'mens',   'L',  'hat',         'MDN722',     'Blue Wave',          '27',         'hat2',          'hat3',              'ten'];
+ excelDB[0][22] = ['22',  'shirts', 'womens', 'M',  'shirt',       'MDN786',     'Santa Cruz',         '43',         'greyshirt',     'redshirt',          'ten'];
+ excelDB[0][23] = ['23',  'shirts', 'womens',  'M', 'hoodie',      'MDN782',     'Natrual Bridges',    '55',         'greyshirt',     'redshirt',         'ten'];
+ excelDB[0][24] = ['24',  'hats',   'girls',   'M',  'hoodie',     'MDN781',     'Santa Clara',        '25',         'hat2',          'hat3',             'ten'];
+ excelDB[0][25] = ['25',  'hats',   'boys',    'M',  'shirt',       'MDN745',     'SJSU',              '65',         'hat2',          'hat3',            'ten'];
+ excelDB[0][26] = ['26',  'shirts', 'womens',  'M',  'shirt',      'MDN785',     'Cal Berkely',        '55',         'greyshirt',     'redshirt',        'ten'];
+ excelDB[0][27] = ['27',  'shirts', 'girls',   'M',  'hoodie',     'MDN735',     'Minion',             '85',         'greyshirt',     'redshirt',         'ten'];
+ excelDB[0][28] = ['28',  'shirts', 'womens', 'L',  'shirt',       'MDN785',      'coffee',            '45',         'greyshirt',     'redshirt',        'ten'];
+ excelDB[0][29] = ['29',  'hats',   'mens',    '2XL', 'shirt',     'MDN755',       '24',               '56',         'hat2',          'hat3',             'ten'];
+ excelDB[0][30] = ['30', 'shirts',  'womens', 'L',  ' shirt',      'MDN741',      'cafe',              '46',         'greyshirt',     'redshirt',         'ten'];
+ excelDB[0][31] = ['31', 'hats',    'mens',    '2XL',  'shirt',    'MDN742',       '24',                '87',        'hat2',          'hat3',             'ten'];
+ excelDB[0][32] = ['32', 'shirts',  'womens',   'M','longsleeve',   'MDN743',      'strawberry',        '160',       'greyshirt',     'redshirt',         'ten'];
+ excelDB[0][33] = ['33', 'hats',   'womens',    'M',  'shirt',    'MDN784',        '39',                '130',       'hat2',          'hat3',            'ten'];
+ excelDB[0][34] = ['34', 'shirts', 'mens',     'S',  'shirt',      'MDN789',       'jet fuel',          '77',        'greyshirt',     'redshirt',         'ten'];
+ excelDB[0][35] = ['35', 'shirts', 'mens',     'XL',  'shirt',     'MDN701',       'pumpkin',           '120',        'greyshirt',     'redshirt_back',    'ten'];
+ excelDB[0][36] = ['36', 'shirts', 'womens',   'M',  'shirt',     'MDN702',        '39',               'seven',       'greyshirt',     'redshirt',        'ten'];
+ excelDB[0][37] = ['37', 'shirts', 'womens',   'M',  'shirt',     'MDN703',        '39',                'seven',      'greyshirt',     'redshirt',       'ten'];
+ excelDB[0][38] = ['38', 'shirts', 'womens',   'M',  'shirt',     'MDN704',        'fishfood',          '87',         'greyshirt',     'redshirt',      'ten'];
+ excelDB[0][39] = ['39', 'shirts', 'womens',   'M',  'shirt',     'MDN705',        'guppy',              '77',        'greyshirt',     'redshirt',      'ten'];
+ excelDB[0][40] = ['40', 'shirts', 'womens',   'M',  'shirt',     'MDN706',        'snowfall',          '65',         'greyshirt',     'redshirt',      'ten'];   
+ excelDB[0][41] = ['41', 'shirts', 'womens',   'L',  'shirt',     'MDN707',        'cafe',              '46',         'greyshirt',     'redshirt',      'ten'];
+ excelDB[0][42] = ['42', 'hats',   'mens',    '2XL',  'shirt',     'MDN708',        'safeway',           '87',        'hat2',          'hat3',           'ten'];
+ excelDB[0][43] = ['43', 'shirts',  'womens', 'M','longsleeve',     'MDN709',        'strawberry',      '160',        'greyshirt',     'redshirt',       'ten'];
+ excelDB[0][44] = ['44', 'hats',   'womens',  'M',  'shirt',        'MDN515',       'donner pass1',      '30',        'hat2',           'hat3',         'ten'];
+ excelDB[0][45] = ['45', 'hats',   'womens',   'XL',  'hat',        'MDN789',        'movie1',            '33',        'hat2',          'hat3',         'ten'];
+ excelDB[0][46] = ['46', 'hats',   'womens',   'XL',  'hat',        'MDN785',        'movie2',           '44',        'hat2',           'hat3',         'ten'];
+ excelDB[0][47] = ['47', 'hats',   'womens',   'XL',  'hat',        'MDN685',       'movie3',            '55',        'hat2',           'hat3',         'ten'];
+ excelDB[0][48] = ['48', 'shirts', 'mens',    'XL',  'longsleeve',  'MDN781',        'Peets Coffee',     '45',        'greyshirt',      'redshirt',     'ten'];
+ excelDB[0][49] = ['49', 'shirts', 'mens',    'XL',  'longsleeve',  'MDN765',        'Dunkin Donuts',     '78',       'greyshirt',      'redshirt',     'ten'];
+ excelDB[0][50] = ['50', 'shirts', 'womens',  'M',  'shirt',        'MDN785',        'guppy',             '45',        'greyshirt',      'redshirt',    'ten'];
+ excelDB[0][51] = ['51', 'hats',   'mens',      'L', 'shirt',       'MDN780',        'test1',             '23',        'hat2',          'hat3',          'ten'];   
+ excelDB[0][52] = ['52', 'hats',   'mens',     'L',   'shirt',      'MDN781',        'test2',             '25',       'hat2',           'hat3',         'ten'];
+ excelDB[0][53] = ['53', 'hats',   'mens',    'L',   'shirt',       'MDN782',        'test3',             '30',       'hat2',           'hat3',          'ten'];
+ excelDB[0][54] = ['54', 'hats',   'mens',    'L',    'shirt',      'MDN783',        'test4',             '35',       'hat2',            'hat3',         'ten'];   
+ excelDB[0][55] = ['55', 'shirts', 'mens',    '2XL',  'shirt',      'MDN001',        'Federer',            '110',     'rfshirt',        'redshirt',     'ten'];   
+ excelDB[0][56] = ['56', 'shirts', 'womens',  'S',    'shirt',      'MDN002',        'Roger Federer',      '130',     'rfshirt',         'redshirt',     'ten'];   
+ excelDB[0][57] = ['57', 'shirts', 'mens',    'L',    'shirt',      'MDN002',        'Johns Classic',      '80',      'greyshirt',       'rfshirt',      'ten'];   
+ excelDB[0][58] = ['58', 'hats',   'womens',  'M',    'shirt',      'MDN518',        'donner pass2',       '29',       'hat2',           'hat3',         'ten'];
+ excelDB[0][59] = ['59', 'hats',   'womens',  'M',   'shirt',       'MDN516',        'donner pass3',        '22',      'hat2',           'hat3',         'ten'];
+
+  
+ var choices = [];
+     choices[choices.length] = "";  //don't touch this
+     
+     
+   
+   
+//==================================
+/*   setmemory()   set memory   */
+function setmemory(v1,v2){  //key and value both strings
+   eval("localStorage.setItem('" + v1 + "','"  +  v2 + "'" + ");" );
+} 
+
+
+
+//==================================
+/*    getmemory()   get memory   */
+
+function getmemory(x1){  //using the key it returns the value
+    eval("var atm = localStorage.getItem(" + "'" + x1 + "');" );
+  return atm;
+}//end func
+
+
+
+//=====================================
+/*   deletememory()  delete memory      */
+
+function deletememory(x1){
+ eval("localStorage.removeItem('" + x1 + "');");
+}//end func
+
+
+
+
+  
+  /* STARBUCKS DRIVETHRU FUNCTION    */  //when select beneath an item is clicked
+     
+/*     Starbucks DriveThru  Function    works!!     */
+// this grabs the row number of the selected shirt or hat
+// and puts it into CoffeeBean. which I open in Details page.
+
+//this isn't set up yet  it will store data to be read by details page for selected item and add to basket
+function starbucks_drivethru(m){ //grab row number of selected item
+  var raindrop = m;
+   var trouble =  excelDB[0][raindrop]; //puts entire row into variable trouble and then into CoffeeBean memory
+   localStorage.setItem('CoffeeBean',trouble); 
+
+   //var wild = localStorage.getItem('CoffeeBean');        //CoffeeBean
+   setTimeout(function(){ window.location.href = "iphone_merchandise_details.html"; }, 1);           
+} //end starbucks_drivethru
+
+
+
+
+
+
+
+
+
+
+
+function loader(){
+document.getElementById("t_one").value    = "front";
+document.getElementById("t_two").value    = "front";
+document.getElementById("t_three").value  = "front";
+document.getElementById("t_four").value   = "front";
+document.getElementById("t_five").value   = "front";
+document.getElementById("t_six").value    = "front";
+}  //end function
+
+
+
+/*           Dunkin Donut's Function                                  */
+
+/*           This grabs memory for search criteria from filter page    */
+
+/*           this is called onload of this page                         */
+
+function dunkindonuts(){
+//alert("dunkin donuts");
+    setmemory('editmode','false'); //this sets the edit mode on details to false nov 8th half moon bay 
+    setmemory('adding_item_mode','false'); //not true until click on add to basket on details.html
+    setmemory('recent_page_memory_flag','shop');
+    
+  var dog = localStorage.getItem('Tahoe'); //receives string with 4 single digit numbers
+
+// representing the boolean search criteria on the filter nav page
+  choices[choices.length] = dog.charAt(0);
+  choices[choices.length] = dog.charAt(2);
+  choices[choices.length] = dog.charAt(4);
+  choices[choices.length] = dog.charAt(6);
+
+//alert("from Tahoe memory slot");
+//alert(dog.charAt(0));
+//alert(dog.charAt(2));
+//alert(dog.charAt(4));
+//alert(dog.charAt(6));
+//this fills up the choices by the user for the dynamic search engine
+
+
+if(choices[1] == "1"){
+choices[1] = "shirts";
+} //end if
+
+if(choices[1] == "2"){
+  choices[1] = "hats";
+} //end if
+
+//===========================
+
+if(choices[2] == "1"){
+  choices[2] = "mens";
+} //end if
+
+
+if(choices[2] == "2"){
+choices[2] = "womens";
+} //end if
+
+
+if(choices[2] == "3"){
+choices[2] = "girls";
+} //end if
+
+
+if(choices[2] == "4"){
+choices[2] = "boys";
+} //end if
+
+///==========================
+if(choices[3] == "1"){
+choices[3] = "S";
+} //end if
+if(choices[3] == "2"){
+choices[3] = "M";
+} //end if
+
+if(choices[3] == "3"){
+choices[3] = "L";
+} //end if
+if(choices[3] == "4"){
+choices[3] = "XL";
+} //end if
+if(choices[3] == "5"){
+choices[3] = "2XL";
+} //end if
+
+//==============
+if(choices[4] == "1"){
+choices[4] = "shirt";
+} //end if
+
+if(choices[4] == "2"){
+choices[4] = "longsleeve";
+} //end if
+
+if(choices[4] == "3"){
+choices[4] = "hoodie";
+} //end if
+
+mrcoffee();          //this makes calls to the 2 search engines
+ }//end function
+ 
+//gti_search         searches for shirts
+//gti_search_hats    searches for hats
+           
+
+  
+
+//works on details page. not used here
+          //works on details page
+   function change1(x,y){  //this works on details page - thank God for that at least
+  var image = document.getElementById('circle1');  //the circle names are different
+  if(document.getElementById("noway").value == "back"){
+      eval("image.src='" + x + ".jpg';");
+     document.getElementById("noway").value = "front";
+   }else{
+     eval("image.src='" + y + ".jpg';");
+     document.getElementById("noway").value= "back";
+  }//end if
+ } //end function
+
+
+
+
+
+
+//gold version working in my demo with 3 shirts golden code using an array 
+ function swap_pics(x,y,z){
+
+ var image = eval("document.getElementById('circle" + z + "')"); //circle#
+          if(eval("minion["     + z + "]")  == "front"){
+             eval("image.src='" + y + ".jpg';");                 
+             eval("minion["     + z + "]  = 'back'");            
+         }else{
+             eval("image.src='" + x + ".jpg';");                  
+             eval("minion["     + z + "]  = 'front'");            
+         } //end if 
+  }//end func
+  
+
+
+
+
+
+
+
+//this does a search for shirts or hats using 2 exclusive search engines
+//but utilizing the same data in arrays
+
+/*       MR. COFFEE  Function  search fork      */
+
+function mrcoffee(){ 
+var sortinghat = choices[1]; //meaning hats or shirts
+ switch(sortinghat){
+    case 'shirts' : 
+      gti_search();       //shirts
+    break;
+    case 'hats' : 
+      gti_search_hats();   //hats
+    break;
+  default: //meaning no matches
+ } //end switch
+} //end func
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*   SHOW COUNTER VALUE  */
+
+function show_counter_value(){
+  var cheese = parseInt(getmemory('lecounter')); 
+  cheese = cheese.toString();
+} //end func
+
+
+///#########################
+//##########################
+
+
+
+  var minion = [];  //creation of array
+      minion[minion.length] = "";// nothing for slot 0
+      minion[1]   = "front";
+      minion[2]   = "front";
+      minion[3]   = "front";
+      minion[4]   = "front";
+      minion[5]   = "front";
+      minion[6]   = "front";
+      minion[7]   = "front";
+      minion[8]   = "front";
+      minion[9]   = "front";
+      minion[10]  = "front";
+      minion[11]  = "front";
+      minion[12]  = "front";
+      minion[13]  = "front";
+      minion[14]  = "front";
+      minion[15]  = "front";
+      minion[16]  = "front";
+      minion[17]  = "front";
+      minion[18]  = "front";
+      minion[19]  = "front";
+      minion[20]  = "front";
+      minion[21]  = "front";
+      minion[22]  = "front";
+      minion[23]  = "front";
+      minion[24]  = "front";
+      minion[25]  = "front";
+      minion[26]  = "front";
+      minion[27]  = "front";
+      minion[28]  = "front";
+
+      
+      
+  /*     SWAP PICS          */  //this one is called
+  
+ function swap_pics_now(x,y,z){
+ var image = eval("document.getElementById('circle" + z + "')"); //circle#
+          if(eval("minion["     + z + "]")  == "front"){
+             eval("image.src='" + y + ".jpg';");                 
+             eval("minion["     + z + "]  = 'back'");            
+         }else{
+             eval("image.src='" + x + ".jpg';");                  
+             eval("minion["     + z + "]  = 'front'");            
+         } //end if 
+  }//end func
+ //------------------------------------------
+  
+  
+  
+//##########################
+// wonder if it will work
+    function navmenu(){
+   alert("testing menu system");
+} //end function
+
+
+//---------------------                                                    
+function setmemory(v1,v2){  //key and value both strings
+    eval("localStorage.setItem('" + v1 + "','"  +  v2 + "'" + ");" );
+} // end func
+
+function getmemory(x1){  //using the key it returns the value
+  eval("var atm = localStorage.getItem(" + "'" + x1 + "');" );
+  return atm;
+}//end func
+
+
+function setflag(){
+setmemory('recent_page_memory_flag','aboutus');
+} //end func
+
+
+/* NAV MENU HAMBURGER OVERLAY */
+function navmenu(){
+   //alert("testing menu system");
+} //end function
+
+
+
+//each page would have it's own preset id which is the number
+// and the variable is set on the second line of the same function
+// on each page. 
+
+
+
+
+
+//#######################################
+//      OPEN MENU 
+//#######################################
+function open_menu(){ 
+  hamburger_id_of_page_came_from();
+}
+//-------------------
+//########################################
+//     HAMBURGER ID OF PAGE CAME FROM 
+//#########################################
+function hamburger_id_of_page_came_from(){
+var this_page = "6.2";    
+setmemory('fedex',this_page);                                            
+window.location.href = "iphone_hamburger_menu.html";                                           
+  } //end                                                        
+//---------------------                                                    
+                                                     
+
+
+
+
+
+
+//dunkindonuts(); //this grabs the data inputs from nav filter in memory and uses them
+//to feed into the gti search engine
+
+/*          GTI Search Engine          */
+/*          GTI Search Engine          */
+/*          GTI Search Engine          */
+/*          GTI Search Engine          */
+/*          GTI Search Engine          */
+/*          GTI Search Engine          */
+
+function gti_search(){ 
+var compare_match = [];
+compare_match[compare_match.length] = ""; //position 0 contains nothing
+  var nugget=1;//position where what I am looking for it
+  var testing = 0;
+  var testing1 = 0;
+  var smart1;
+  var sweet; //used for 1 match for shirts to capture the row number which we need
+
+
+/*
+
+           GTI DYNAMIC SEARCH ENGINE          Autumn 2017 Keizer Oregon.
+           
+           Copyright September 2017 Blake Southwood. Algorithm design is copyrighted.
+           
+           Designed and Developed by Software Engineer Mr. Blake Southwood
+       
+       //still need to have if for if NO MATCHES
+            
+*/      /* loop    */
+
+var coast = [];
+coast[coast.length] = "shirts";
+// so these will be constants and I just put the correct string into the 0 or 1 slot depending
+//on what I prefer for simplicity. 
+
+ var bridges = [];
+bridges[bridges.length] = "mens";  //0
+bridges[bridges.length] = "womens";//1
+
+var leaf = [];
+leaf[leaf.length] = "S";  //0
+leaf[leaf.length] = "M";//1
+leaf[leaf.length] = "L";//1
+leaf[leaf.length] = "XL";//1
+leaf[leaf.length] = "2XL";//1
+
+ var subshirts = [];
+subshirts[subshirts.length] = "shirt";  //0
+subshirts[subshirts.length] = "longsleeve";//1
+subshirts[subshirts.length] = "hoodie";//2
+
+ var row_capture = [];
+     row_capture[row_capture.length] = "";
+ 
+ 
+ var smart1 = "<!DOCTYPE html>";
+     smart1 += "<html>";
+     smart1 += "<title>Modern Day News</title>";
+     smart1 += "<meta name='viewport' content='width=device-width, initial-scale=1'>";
+     smart1 += "<link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3mobile.css'>";
+     smart1 += "<link rel='stylesheet' href='/lib/w3-theme-teal.css'>";
+     smart1 += "<body style='max-width:600px'>";
+     smart1 += "<body bgcolor = white>";
+   
+//the hamburger icon is right here <=================================================================
+      smart1 += "<table width = 500><tr><td width=25 height = 18 valign=bottom align=left>";
+      smart1 += "<a href='#' onclick='open_menu();return false;'>";
+      smart1 += "<img src='hamburger2.jpg' alt='navigation' height='16' width='20'></a></td>";
+      smart1 += "<td width = 95></td><td><font face='Menlo'><font size=4>Modern Day News&nbsp;";
+      smart1 += "</font></td></tr></table>";
+
+    //above here comment out 
+    /// fresh new thursday code in here january 11th  10:08 am
+    
+smart1 += "<table   CELLPADDING='3' style='border-collapse:collapse;border: ";
+smart1 += "1px solid black; '  width = 410  border = 1 bgcolor=white  >";
+smart1 += "<tr><td  align=center><font size=1><font face='Menlo'><a href='iphone_home.html' ";
+smart1 += " style='display:block;text-decoration:none'><FONT COLOR=BLACK>Home</a></td>";
+
+
+     smart1 += "<td align=center><font size=1><font face='Menlo'><a href='iphone_characters.html'";
+     smart1 += " style='display:block;text-decoration:none'>Characters</a></td>";
+      
+     smart1 += "<td align=center ><font size=1><font face='Menlo'><a href='iphone_news.html' ";
+     smart1 += " style='display:block;text-decoration:none'>News</a></td>";
+     
+     smart1 += "<td align=center><font size=1><font face='Menlo'><a href='iphone_videos.html' ";
+     smart1 += " style='display:block;text-decoration:none'>Videos</a></td>";
+     
+     //smart1 += "<td align=center><font size=1><font face='Menlo'><a href='iphone_upcomingvideos.html' ";
+     //smart1 += " style='display:block;text-decoration:none'>Upcoming</a></td>";
+     
+    smart1 += " <td align=center bgcolor=palegreen><font size=1><font face='Menlo'><a href='#'"; 
+    smart1 += "  style='display:block;text-decoration:none'>Merchandise</a></td>";
+     
+    smart1 += "   <td align=center nowrap><font size=1><font face='Menlo'><a href='iphone_aboutus.html'";
+    smart1 += "   style='display:block;text-decoration:none'>About Us</a></td>";
+     
+    smart1 += "  <td align=center nowrap><font size=1><font face='Menlo'><a href='iphone_contactus.html'";
+    smart1 += "   style='display:block;text-decoration:none'>Contact Us</a></td>";
+    smart1 += "  </tr></table>";
+    
+     
+     
+     
+smart1 += "<table CELLPADDING='1' style='border-collapse:collapse;border: 1px solid #e8e8e8; '  width = 410  border = 1 bgcolor=white  >";
+smart1 += "<tr><td  width= 20%  bgcolor=white align=center><font size=1><font face='Menlo'><a href='iphone_merchandise_filter.html' style='text-decoration:none'><FONT COLOR=black>Filter </a></font></td>";
+smart1 += "<td width= 20% bgcolor=#81D4FA align=center><font size=1><font face='Menlo'><a href='iphone_merchandise_shop.html' style='text-decoration:none'><FONT COLOR=black><font color=black>Shop</a></font></td>";
+smart1 += "<td width= 20% bgcolor=white align=center><font size=1><font face='Menlo'><font color=lightgrey>Details</font></td>";
+smart1 += "<td width= 20%  align=center><font size=1><font face='Menlo'><a href='iphone_merchandise_basket.html' style='text-decoration:none'><font color=black>Basket</a></font></td>";
+smart1 += "<td width= 20%  bgcolor=white align=center><font size=1><font face='Menlo'><a href='iphone_merchandise_checkout.html' style='text-decoration:none'><font color=black>Check Out</a></font></td>";
+smart1 += "</tr></table>";
+smart1 += "<br>";
+ 
+ ////////// end of fresh new Thursday code
+ 
+ 
+    
+    
+    
+    
+    
+    
+  //this is a filler div for the search results that is replaced when there are results and it says how many
+  //above the actual output because it's expected to be seen at the top but it's calculated afterwords 
+  
+    smart1 += "<div id='search_results'><a href='#' onclick='show_instructions();'";
+    smart1 += " style='display:block;text-decoration:none;'><table width = 450><tr><td align=left>";
+    smart1 += "<table  style ='border: 1px solid #D8D8D8;' width = 450 bgcolor=honeydew >";
+    smart1 += "<tr><td align=center><font face='Arial'>";
+    smart1 += "<font size=3>&nbsp;&nbsp;search results</font></td></tr></table>";
+    smart1 += "</td><td><td align=right>";
+    smart1 += "</td></tr></table></a></div>";
+    
+  
+   //===============================================================================================
+   //===============================/////shirts search engine //////////==============================
+   //===============================================================================================
+
+if ( choices[1] == "shirts" ) { //then continue with this 4 boolean shirts search engine   //bypass to 3 boolean search engine
+//============= LOOP ===================
+for(var j = 0;j< excelDB.length;j++){   //da j is the counter, too funny
+
+ // 4 Boolean ifs for category AND gender AND size AND type
+ //this is a dynamic search engine with the column labels the same 
+ //but the selected filter items change automatically based on choice
+ //all 4 criteria must be met for the search to commense.
+ 
+if((excelDB[0][j][1] == choices[1]) && (excelDB[0][j][2] == choices[2]) &&
+   (excelDB[0][j][3] == choices[3]) && (excelDB[0][j][4] == choices[4])){ 
+   testing++; //add 1 to the count of matches if all 4 criteria met
+   
+   //this grabs the first match number in loop for shirts but doesn't test if only one loop
+   // and it puts it into row_capture[first_row_num];
+ //++++++++++++++   
+   row_capture[first_row_num] = excelDB[0][j][0];
+   
+  
+//============================================================================================
+//============================================================================================
+row_capture[row_capture.length] = excelDB[0][j][0]; //this should fill up the array starting with count 1 since 0 already is full
+  //this fills up an array with the matches in the correct order
+} //end if else
+} //END LOOP 
+
+
+
+var odd_number_of_items;
+if (testing % 2 != 0 ){
+ odd_number_of_items = "true";
+ }else{
+ odd_number_of_items = "false";
+}
+
+var single_shirt = "false"; //by default
+var loop_count;            //here
+var glass = testing;
+glass = glass/2;
+loop_count = glass;
+
+
+
+
+
+//initial scenarios
+// if 1 item
+var onlyone;
+//MEANING ONLY 1 MATCH - NOW ABOUT GR<a href="morphingdetailspage.html">Modern Day News</a>ABBING THE ROW NUMBER   //  testing == "1" && onlyone == "true"
+if (testing == "1"){ // <<======================= why does this have to be in quotes?!
+	onlyone = "true"; //setting the one and only variable for one shirt returned
+	var perhaps = row_capture[1];
+single_shirt = "true";
+ } //end if
+
+ 
+// if 2 items
+if (testing == 2){
+ loop_count = "1";
+ single_shirt = "false";
+}//endif
+
+
+//if 3 items
+if( testing == 3){
+   loop_count = "1";
+   single_shirt = "true";   //so if it's an odd total more than 1 shirt then single_shirt = true;
+}
+
+
+
+if(testing == 4){
+   loop_count = "2";
+   single_shirt = "false";
+} //end if
+
+
+
+
+//this test for 5 and more matches
+if(( testing > 4) && (testing % 2 == 0)){  //means IF EVEN single_shirt = false
+	loop_count = testing/2;
+	loop_count = Math.floor(loop_count); //this should fix the bug ====
+	single_shirt = "false"; //don't show it at the end (the caboose or tail);
+}// end if
+
+
+
+
+//I believe that this will show the correct number of items
+//we know it's at least 4 AND odd meaning it's 5 or above
+if ((testing > 4) &&  (glass % 2 != 0 )){ //meaning IF ODD then show single shirt at end
+	loop_count = testing/2; //determines number of loop number by taking the total and dividing by 2
+	loop_count = Math.floor(loop_count); //chops off the .5 at the end 
+	single_shirt = "true"; //yes show it at the end
+}// end if
+
+  var sky = "<div id='search_results'><a href='#' onclick='();'"; 
+} //end mighty if
+
+if(loop_count >= "1"){
+
+//============================================================================================
+// ==================USING  LOOP to PRINT TSHIRTS of two image -two item  template ==============
+//==============================================================================================
+//   main template for printing out on shop page row of two items of shirts
+
+var train =0;train=train-0;
+var brain;
+for(var victory=0; victory<loop_count; victory++){
+//at least 2 items minimum
+brain = victory;
+brain = brain + 1; //this takes the number of rows counted above and changes the name from victory to brain
+//ad then adds one to the count of brain since the loop considers starting with 0 as a number when I don't like that
+var football = brain; //loop count number 
+//this formula calculates the matched row numbers from above before they are inserted into the double set tshirt printer
+//it takes teh loop number from brain and renames it football so as to not interfere with the count on the brain variable.
+//then for the second row number (on the right) it multiplies that by 2 and to get the first row number subracts one from it.
+//the formula is seen below and it seems reliable. 
+var second_row_num = football * 2;
+var first_row_num =second_row_num - 1;  
+//does the formula which is second row number brain * 2, 
+//first_row = secondrow - 1;
+
+
+
+//this is generating two rows
+//this is where the matching rows are printed for seeing what it's
+// doing and to make sure I make this puppy work correctly
+
+
+
+// look in here for the last row number
+//::::::::::::::::::::::::::::::::::::::::::::::
+var coffeetime =loop_count;
+
+//::::::::::::::::::::::::::::::::::::::::::::::
+
+
+         
+//-------------------- working on this area to feed in description and prices -----------------
+
+
+smart1 += "<table border = 0 bgcolor=white width = 410 spacing = 0 style='border: 0px solid #D8D8D8;'>"; 
+//left side item first    description and price
+smart1 += "<tr><td width=47% align=center>";
+
+//assigning row numbers of current match
+//these are the row number for teh matches revealing the access to the information about the item
+var alpha   = row_capture[first_row_num];
+var beta    = row_capture[second_row_num];
+
+
+///     here we have the grabbing of the tshirt description title and the price for left side
+smart1 += excelDB[0][alpha][6]; //the description of the shirt however brief
+//shirt short description 
+smart1 += "&nbsp;$";
+smart1 += excelDB[0][alpha][7]; //the price
+smart1 += "</td>";
+//right side item second    description and price
+smart1 += "<td align=center>";
+//==== this is the grabbing of right side of tshirt short name and the price
+smart1 +=  excelDB[0][beta][6]; //the description of the shirt however brief
+// description name of the shirt
+smart1 += "&nbsp;&nbsp;$"
+smart1 += excelDB[0][beta][7]; 
+smart1 += "</td></tr>";
+
+
+//the shirt description will go here and that will be from teh row array above based on the row number
+//next to this is teh price for the item which will also be gleaned from the row number.
+// the row number is the key for the correct data for each item and picture. 
+
+/////############ new code nov 21st  
+smart1 += " </table> <table border = 0 bgcolor=white width = 410 spacing = 0 style='border: 0px solid white;'> ";
+smart1 += "<tr><td align=center bgcolor=white>";
+//=========================================================================================
+//=========================================================================================
+
+
+train =train + 1; // this is for the first pic which will be used for circle and z number
+
+//left side item odd numbered picture name
+smart1 += "<img src='"
+smart1 += excelDB[0][alpha][8];  //FRONTPIC
+smart1 += ".jpg' alt=' '"; 
+smart1 += "id='circle";
+smart1 += train;               //1' 
+smart1 += "' height= '250px;' width='180px;' onclick=";
+smart1 += '"';
+smart1 += "swap_pics_now('";        //tahoe storm function does the swapping of the pictures
+smart1 += excelDB[0][alpha][8]; 
+smart1 += "','";
+smart1 += excelDB[0][alpha][9]; 
+smart1 += "','";
+smart1 += train;
+smart1 += "'); return false;";
+smart1 += '"';
+smart1 += "> </td>";
+
+//this image name will be inserte here and is based on the row number which I grabbed from above
+//so it should be easy to determine the showername which will be in the excelDB array by row number
+//I must remember that there will be a front and back image so I will actually need 2 images for each item
+//for displaying front and back but initially just the front picture will load. 
+
+//right side even numbered picture name
+train =train + 1; // this is for the next pic which will be used for the z number
+smart1 += "<td><img src='"
+smart1 += excelDB[0][beta][8];
+smart1 += ".jpg' alt='' id='";
+smart1 += "circle";
+smart1 += train;         //appends number to end of circle
+smart1 += "' height= '250px;' width='180px;' onclick=";
+smart1 += '"';
+smart1 += "swap_pics_now('";
+smart1 += excelDB[0][beta][8]; 
+smart1 += "','";
+smart1 += excelDB[0][beta][9]; 
+smart1 += "','";
+smart1 += train;
+smart1 += "');";
+smart1 += '"';
+smart1 += "> </td>";
+smart1 += "</tr>"; //</table>";
+ //  left side select button table cell field
+
+//=========================================================================================
+//=========================================================================================
+
+
+//testing for doubles capturing the row number //this worked!!!!!
+//and I will be opening the details page after putting the selected number
+//into starbucks drive function into memory though I could also do that
+//when this page is generated to save time
+
+//left side picture link dynamically created for select word beneath picture
+
+//  these are building links to the appropriate row number for beneath the double shirts printed
+//  the select buttons beneath each tshirt are huge and completely tapable and made larger than usual
+//  the call to the link starbucks_drivethru accesses the proper row in memory for getting the shirt's data.
+
+smart1 += '<tr><td>';
+smart1 += "<a href='#' style='display:block;text-decoration:none' " ;
+smart1 += " onclick ="
+smart1 += '"';
+smart1 += "starbucks_drivethru('";
+smart1 +=  alpha; //row number left side
+smart1 += "'";
+smart1 += ")";
+smart1 += ";";
+smart1 += "return false;";
+smart1 += '"';// left side tshirt pic here ############ nov 26th
+smart1 += "><div id='something'><table width = 200 border =0 bgcolor=white  style='border: 1px solid #D8D8D8;'>";
+smart1 += "<tr><td align=center height= 30 bgcolor= white align=center >";
+smart1 += "<font face='Menlo'><font color=black>select</font></td></tr></table></div></a></td><td>";
+smart1 += "<a href='#' style='display:block;text-decoration:none'  " ;
+smart1 += " onclick ="
+smart1 += '"';
+smart1 += "starbucks_drivethru('";
+smart1 +=  beta; //row number left side
+smart1 += "'";
+smart1 += ")";
+smart1 += ";";
+smart1 += "return false;";
+smart1 += '"';//right side tshirt pic here  ######### nov 26th
+smart1 += "><div id='something'><table width = 200 border=0 bgcolor=white style='border: 1px solid #D8D8D8;' ><tr><td align=center height= 30 bgcolor= white align=center >";
+smart1 += "<font face='Menlo'><font color=black>select</font></td></tr></table></div></a></td></tr></table><br><br>";
+}//end if
+} //end for loop
+// END LOOP TO PRINT TSHIRTS 
+
+
+
+
+
+ 
+
+
+//============================ this is the template for doing 1 one match of shirts with  right side empty ==========
+//====================================================================================================
+//====   so this one does not do anything in a loop . this just prints one shirt nothing on right
+//==============  this prints the ONE SHIRT on the left after the double shirts are printed if an odd number is outputted. 
+
+
+
+/*   I might make this a separate function to reduce the complexity           */
+
+
+
+/*
+I will know that it will be either the only one or
+ last one in a sequence.
+So that really simplifies matters.
+*/
+
+
+//if only one row or more than 2 rows
+if(single_shirt == "true"){ //might if
+if((testing == "1") || ( odd_number_of_items == "true") && (loop_count >= "1")){
+//meaning only 1 result   OR  odd_number of items is TRUE AND loop count at least 1
+
+smart1 += " ";
+brain = brain + 1; //this is adding one to brain because it's increasing the row number 
+var thebrain = "1";        //row_capture[first_row_num];
+var football = brain; //this is so the variable brain is not messed up and accidentially added to
+var second_row_num = football * 2; //this is caculating the number whether on left or right based on double shirt loop number above
+var first_row_num =second_row_num - 1; //I don't know if this will work or not
+
+
+// =======================THIS TESTS FOR JUST ONE MATCH BASED ON THE COUNTER ABOVE
+
+//light yellow here
+if(testing == "1"){
+var charlie_brown = perhaps;
+} //end if
+
+
+//what's this
+
+if(testing != "1"){      //this was showing the row number from memory 
+smart1 += " &nbsp;&nbsp;&nbsp;&nbsp;</td><td align=center> ";
+} //end if
+
+    //it was (testing != "1") here I changed it to ==
+if(testing != "1"){        //this tests if more than 1 match so this must be what is being called () debugging
+
+
+//only one result with this template
+smart1 += "<table border = 0 bgcolor=white width = 410 spacing = 0 style='border: 0px solid #D8D8D8;'>"; 
+//left side item first    description and price
+
+smart1 += "<tr><td width=50% align=center>";
+var beatles = row_capture[first_row_num];
+
+//all I need to do is copy the row number from the yellow row above and put it here; it can't be that tough.
+smart1 += excelDB[0][beatles][6]; //shirt description
+smart1 += "&nbsp; &nbsp;$";        //++++ and here 32
+smart1 += excelDB[0][beatles][7]; //the price
+smart1 += "</td>";
+//right side item second    description and price
+smart1 += "<td bgcolor=white align=center></td></tr>";   //###### it's below sunday, nov 26th morning coding
+smart1 += " </table> <table border = 0 bgcolor=white width = 385 spacing = 0 > ";
+smart1 += "<tr><td align=center bgcolor=white>";
+//left side item odd numbered picture name
+
+
+
+
+// november 26th one shirt showing on the left side need to fix the appearance of the bottom 
+
+//=========================================================================================
+//=========================================================================================
+train = train + 1; //new nov 21st 
+
+// this is for the first pic which will be used for circle and z number
+
+//left side item odd numbered picture name
+smart1 += "<img src='"
+smart1 += excelDB[0][beatles][8];  //FRONTPIC
+smart1 += ".jpg' alt=' '"; 
+smart1 += " id='circle";
+smart1 += train;                     //1' 
+smart1 += "' height= '250px;' width='180px;' onclick=";
+smart1 += '"';
+smart1 += "swap_pics_now('";        //tahoe storm function does the swapping of the pictures
+smart1 += excelDB[0][beatles][8]; 
+smart1 += "','";
+smart1 += excelDB[0][beatles][9]; 
+smart1 += "','";
+smart1 += train;
+smart1 += "'); return false;";
+smart1 += '"';
+smart1 += "></td>";
+
+//right side even numbered picture name
+//no circle number nor z number here 
+
+
+//=========================================================================================
+//=========================================================================================
+//if the third or last from a list of shirt outputs on the left by itself
+
+smart1 += "<td width = 175>&nbsp;</td></tr>";
+ 
+ // end of top twin shirt pics =======================
+ 
+ 
+ //#################################################
+ //#### surgery sunday morning on this button ######
+ //#################################################
+ //  left side select button table cell field
+ 
+//left side picture link dynamically created for select word beneath picture
+
+//  these are building links to the appropriate row number for beneath the double shirts printed
+//  the select buttons beneath each tshirt are huge and completely tapable and made larger than usual
+//  the call to the link starbucks_drivethru accesses the proper row in memory for getting the shirt's data.
+
+smart1 += '<tr><td>';
+smart1 += "<a href='#' style='display:block;text-decoration:none' " ;
+smart1 += " onclick =";
+smart1 += '"';
+smart1 += "starbucks_drivethru('";
+smart1 +=  beatles; //row number left side
+smart1 += "'";
+smart1 += ")";
+smart1 += ";";
+smart1 += "return false;";
+smart1 += '"';                // left side tshirt pic here ############ nov 26th
+smart1 += "><div id='something'><table width = 200 border =0 bgcolor=white  style='border: 1px solid #D8D8D8;'>";
+smart1 += "<tr><td align=center height= 30 bgcolor= white align=center >";
+smart1 += "<font face='Menlo'><font color=black>select</font></td></tr></table></div></a></td>";
+
+//============= nov 26th
+
+//  right side select button table cell field
+smart1 += "<td bgcolor= white align=center > &nbsp;&nbsp;</font></td></tr>";
+smart1 += "<tr><td align=center bgcolor= white  align=center ><font face='Menlo'> &nbsp;&nbsp; </font></td></tr>";
+smart1 += "<tr><td align=center>&nbsp;</td><td align=center>&nbsp;</td></tr></table><br><br>";
+
+} //end if for now
+} //end mighty if
+}// end if not= 1;
+
+
+//    ONLY ONE SHIRT RESULT TOTAL for this particular shirt - special case scenario only print one shirt
+//    and the bug was that it didn't know the row number which I needed to grab the proper data
+
+//   this is the special situation if only one match and so only one shirt is printed
+///////
+
+
+//the loop above ended so I think I need to start a new lop
+// this is all new and might explain the undefined for var values
+// IF ONLY ONE SHIRT !!!!!!
+var train =0;train=train-0;
+var brain;
+for(var victory=0; victory<loop_count; victory++){
+//at least 2 items minimum
+brain = victory;
+brain = brain + 1; //this takes the number of rows counted above and changes the name from victory to brain
+//ad then adds one to the count of brain since the loop considers starting with 0 as a number when I don't like that
+var football = brain; //loop count number 
+//this formula calculates the matched row numbers from above before they are inserted into the double set tshirt printer
+//it takes teh loop number from brain and renames it football so as to not interfere with the count on the brain variable.
+//then for the second row number (on the right) it multiplies that by 2 and to get the first row number subracts one from it.
+//the formula is seen below and it seems reliable. 
+var second_row_num = football * 2;
+var first_row_num =second_row_num - 1; 
+
+//=================================================================================
+///==================================== line 1155 on sunday, november 26th oregon
+//=================================================================================
+//  fixing the experience when only one shirt showing 
+
+//  IF ONLY EQUAL TO 1 SHIRT!!!!!
+if ((testing == "1") && (onlyone == "true")){
+smart1 +=  " &nbsp;&nbsp;&nbsp;</td></tr></table>"; 
+
+//only one result with this template
+smart1 += "<table border = 0 bgcolor=white width = 410 spacing = 0 style='border: 0px solid #D8D8D8;'>"; 
+//left side item first    description and price
+smart1 += " &nbsp;&nbsp;&nbsp;" +  "&nbsp;</td><td align=center> ";
+smart1 += "<tr><td width=50% align=center>";
+var beatles = row_capture[first_row_num];
+
+//all I need to do is copy the row number from the yellow row above and put it here; it can't be that tough.
+smart1 += excelDB[0][perhaps][6]; //shirt description
+smart1 += "&nbsp; &nbsp;$"; //++++ and here 32
+smart1 += excelDB[0][perhaps][7]; //the price
+smart1 += "</td>";
+//right side item second    description and price
+smart1 += "<td bgcolor=white align=center></td></tr>";
+smart1 += " </table>";
+smart1 += " <table border = 0 bgcolor=white width = 410 spacing = 0 style='border: 0px solid #D8D8D8;'> ";
+smart1 += "<tr><td align=center bgcolor=white>";
+//left side item odd numbered picture name
+
+//=========================================================================================
+//=========================================================================================
+train = train + 1; //new for circle and z number for dymamic swap pic function
+ // this is for the first pic which will be used for circle and z number
+
+//left side item odd numbered picture name
+smart1 += "<img src='"
+smart1 += excelDB[0][beatles][8];  //FRONTPIC  //was perhaps I just put in beatles
+smart1 += ".jpg' alt=' '"; 
+smart1 += "id='circle";
+smart1 += train; //1' 
+smart1 += "' height= '250px;' width='180px;' onclick=";
+smart1 += '"';
+smart1 += "swap_pics_now('";        //tahoe storm function does the swapping of the pictures
+smart1 += excelDB[0][beatles][8]; 
+smart1 += "','";
+smart1 += excelDB[0][beatles][9]; 
+smart1 += "','";
+smart1 += train;
+smart1 += "'); return false;";
+smart1 += '"';
+smart1 += "></td>";
+smart1 += "<td align=left width = 175>&nbsp;</td></tr>";
+ 
+
+//#######  //this is beneath the picture of the shirt the select button
+smart1 += '<tr><td bgcolor=white>';
+smart1 += "<a href='#' style='display:block;text-decoration:none' " ;
+smart1 += " onclick ="
+smart1 += '"';
+smart1 += "starbucks_drivethru('";
+smart1 +=  beatles; //row number left side
+smart1 += "'";
+smart1 += ")";
+smart1 += ";";
+smart1 += "return false;";
+smart1 += '"';                // left side tshirt pic here ############ nov 26th
+smart1 += "><div id='something'><table width = 200 border =0 bgcolor=white  style='border: 1px solid #D8D8D8;'>";
+smart1 += "<tr><td align=center valign = top height= 30 bgcolor= white align=center >";
+smart1 += "<font face='Menlo'><font color=black>select</font></td></tr></table></div></a></td></tr>";
+
+
+//=========================================================================================
+//=========================================================================================
+
+
+smart1 += "</table><br><br>";
+// now do I set onlyone = false; or not. I need to think more about that
+} //end if
+} //end loop  //this is new
+
+//=====================
+smart1 += "<form name = cool>";
+smart1 += "<input type = hidden id='f_counter_now'  name ='counter_real_time' size = 4><br>";
+smart1 += "<input type = hidden   id='t_one'  name ='t_one' value='front' size = 10><br></form>";
+smart1 += "</body></html>"
+
+ //I will need to create a new array with this array and populate it using a loop arrayname[arrayname.length]
+document.write(smart1);
+smart(testing); //writes the results into the honeydew green above the output at the top of the page
+} //end function 
+//---------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+var grandtotal;
+
+
+
+
+
+
+// hats   hats   hats   hats  hats   hats   hats   hats 
+
+
+//////////////////////////////////
+/*   GTI Search Engine for Hats  */
+///////////////////////////////////
+
+
+//the GTI search engine function is here
+function gti_search_hats(){ 
+var compare_match = [];
+compare_match[compare_match.length] = ""; //position 0 contains nothing
+
+
+  var nugget=1;//position where what I am looking for it
+  var testing = 0;
+  var testing1 = 0;
+//var loop_count = 0; //tring defining it here to force feed it.
+
+var smart1;
+var sweet; //used for 1 match for shirts to capture the row number which we need
+
+
+/*
+
+           GTI DYNAMIC SEARCH ENGINE          Autumn 2017 Keizer Oregon.
+           
+           Copyright September 2017 Blake Southwood. Algorithm design is copyrighted.
+           
+           Designed and Developed by Software Engineer Mr. Blake Southwood
+       
+      
+            
+*/      /* loop    */
+
+var coast = [];
+coast[coast.length] = "hats";
+// so these will be constants and I just put the correct string into the 0 or 1 slot depending
+//on what I prefer for simplicity. 
+
+ var bridges = [];
+bridges[bridges.length] = "mens";    //0
+bridges[bridges.length] = "womens";  //1
+
+var leaf = [];
+leaf[leaf.length] = "S";          //0
+leaf[leaf.length] = "M";          //1
+leaf[leaf.length] = "L";          //1
+leaf[leaf.length] = "XL";         //1
+leaf[leaf.length] = "2XL";        //1
+
+ var subshirts = [];
+subshirts[subshirts.length] = "shirt";        //0
+subshirts[subshirts.length] = "longsleeve";   //1
+subshirts[subshirts.length] = "hoodie";       //2
+
+ var row_capture = [];
+ row_capture[row_capture.length] = "";
+ 
+ 
+  
+ var smart1 = "<!DOCTYPE html>";
+     smart1 += "<html>";
+     smart1 += "<title>Modern Day News</title>";
+     smart1 += "<meta name='viewport' content='width=device-width, initial-scale=1'>";
+     smart1 += "<link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3mobile.css'>";
+     smart1 += "<link rel='stylesheet' href='/lib/w3-theme-teal.css'>";
+     smart1 += "<body style='max-width:600px'>";
+     smart1 += "<body bgcolor = white>";
+   
+//the hamburger icon is right here <=================================================================
+      smart1 += "<table width = 500><tr><td width=25 height = 18 valign=bottom align=left>";
+      smart1 += "<a href='#' onclick='open_menu();return false;'>";
+      smart1 += "<img src='hamburger2.jpg' alt='navigation' height='16' width='20'></a></td>";
+      smart1 += "<td width = 95></td><td><font face='Menlo'><font size=4>Modern Day News&nbsp;";
+      smart1 += "</font></td></tr></table>";
+
+
+    
+      smart1 += "<table   CELLPADDING='3' style='border-collapse:collapse;border: ";
+      smart1 += "1px solid black; '  width = 410  border = 1 bgcolor=white  >";
+      smart1 += "<tr><td  align=center><font size=1><font face='Menlo'><a href='iphone_home.html' ";
+      smart1 += " style='display:block;text-decoration:none'><FONT COLOR=BLACK>Home</a></td>";
+
+
+     smart1 += "<td align=center><font size=1><font face='Menlo'><a href='iphone_characters.html'";
+     smart1 += " style='display:block;text-decoration:none'>Characters</a></td>";
+      
+     smart1 += "<td align=center ><font size=1><font face='Menlo'><a href='iphone_news.html' ";
+     smart1 += " style='display:block;text-decoration:none'>News</a></td>";
+     
+     smart1 += "<td align=center><font size=1><font face='Menlo'><a href='iphone_videos.html' ";
+     smart1 += " style='display:block;text-decoration:none'>Videos</a></td>";
+     
+
+    smart1 += " <td align=center bgcolor=palegreen><font size=1><font face='Menlo'><a href='#'"; 
+    smart1 += "  style='display:block;text-decoration:none'>Merchandise</a></td>";
+     
+    smart1 += "   <td align=center nowrap><font size=1><font face='Menlo'><a href='iphone_aboutus.html'";
+    smart1 += "   style='display:block;text-decoration:none'>About Us</a></td>";
+     
+    smart1 += "  <td align=center nowrap><font size=1><font face='Menlo'><a href='iphone_contactus.html'";
+    smart1 += "   style='display:block;text-decoration:none'>Contact Us</a></td>";
+    smart1 += "  </tr></table>";
+    
+     
+     
+     
+smart1 += "<table CELLPADDING='1' style='border-collapse:collapse;border: 1px solid #e8e8e8; '  width = 410  border = 1 bgcolor=white  >";
+smart1 += "<tr><td  width= 20%  bgcolor=white align=center><font size=1><font face='Menlo'><a href='iphone_merchandise_filter.html' style='text-decoration:none'><FONT COLOR=black>Filter </a></font></td>";
+smart1 += "<td width= 20% bgcolor=#81D4FA align=center><font size=1><font face='Menlo'><a href='iphone_merchandise_shop.html' style='text-decoration:none'><FONT COLOR=black><font color=black>Shop</a></font></td>";
+smart1 += "<td width= 20% bgcolor=white align=center><font size=1><font face='Menlo'><font color=lightgrey>Details</font></td>";
+smart1 += "<td width= 20%  align=center><font size=1><font face='Menlo'><a href='iphone_merchandise_basket.html' style='text-decoration:none'><font color=black>Basket</a></font></td>";
+smart1 += "<td width= 20%  bgcolor=white align=center><font size=1><font face='Menlo'><a href='iphone_merchandise_checkout.html' style='text-decoration:none'><font color=black>Check Out</a></font></td>";
+smart1 += "</tr></table>";
+smart1 += "<br>";
+
+    
+  //this is a filler div for the search results that is replaced when there are results and it says how many
+  //above the actual output because it's expected to be seen at the top but it's calculated afterwords 
+  
+    smart1 += "<div id='search_results'><a href='#' onclick='show_instructions();'";
+    smart1 += " style='display:block;text-decoration:none;'><table width = 450><tr><td align=left>";
+    smart1 += "<table  style ='border: 1px solid #D8D8D8;' width = 450 bgcolor=honeydew >";
+    smart1 += "<tr><td align=center><font face='Arial'>";
+    smart1 += "<font size=3>&nbsp;&nbsp;search results</font></td></tr></table>";
+    smart1 += "</td><td><td align=right>";
+    smart1 += "</td></tr></table></a></div>";
+    
+
+
+    
+  var answer;
+  var train2=0; train2 = train2 -0;
+  
+  
+  
+  
+   //===============================================================================================
+   //===============================/////hats search engine //////////==============================
+   //===============================================================================================
+  
+   //it only uses 3 booleans rather than the 4 booleans used for shirts above
+   
+if ( choices[1] == "hats" ) { //then continue with this 4 boolean shirts search engine   //bypass to 3 boolean search engine
+//============= LOOP ===================
+for(var j = 0;j< excelDB.length;j++){   //da j is the counter, too funny
+if((excelDB[0][j][1] == choices[1]) && (excelDB[0][j][2] == choices[2]) &&
+   (excelDB[0][j][3] == choices[3])){ 
+   testing++; //add 1 to the count of matches if all 4 criteria met
+    
+    
+   //this grab the first match number in loop for shirts but doesn't test if only one loop
+   // and it puts it into row_capture[first_row_num];
+  
+   row_capture[first_row_num]      = excelDB[0][j][0];
+   row_capture[row_capture.length] = excelDB[0][j][0]; //this should fill up the array starting with count 1 since 0 already is full
+  //this fills up an array with the matches in the correct order
+  } //end if else
+} //END LOOP 
+
+//alert("hats results = " + testing);
+//smart1 +=  "<table bgcolor=palegreen><tr><td> number of result = "  + testing + " </td></tr></table><br>";
+
+grandtotal = testing;
+var odd_number_of_items;
+
+if (testing % 2 != 0 ){
+   odd_number_of_items = "true";
+  }else{
+   odd_number_of_items = "false";
+ }//end if
+
+var single_hat = "false"; //by default
+
+
+var loop_count; //here
+var glass = testing;
+glass = glass/2;
+loop_count = glass;
+
+
+
+
+
+// if 1 item
+var onlyone;
+//MEANING ONLY 1 MATCH - NOW ABOUT GRABBING THE ROW NUMBER   //  testing == "1" && onlyone == "true"
+if (testing == "1"){ // <<======================= why does this have to be in quotes?!
+	onlyone = "true"; //setting the one and only variable for one shirt returned
+	var perhaps = row_capture[1];  //here it is line 1159
+  single_hat = "true";
+} //end if
+
+ 
+// if 2 items
+
+if (testing == 2){
+   loop_count = "1";
+   single_hat = "false";
+}//endif
+
+
+//if 3 items
+if( testing == 3){
+   loop_count = "1";
+   single_hat = "true";   //so if it's an odd total more than 1 shirt then single_shirt = true;
+}
+
+
+if(testing == 4){
+   loop_count = "2";
+   single_hat = "false";
+} //end if
+
+//this test for 5 and more matches
+if(( testing > 4) && (testing % 2 == 0)){  //means IF EVEN single_shirt = false
+	loop_count = testing/2;
+	loop_count = Math.floor(loop_count);      //this should fix the bug ====
+	single_hat = "false";                    //don't show it at the end (the caboose or tail);
+}// end if
+
+
+if ((testing > 4) &&  (glass % 2 != 0 )){ //meaning IF ODD then show single shirt at end
+	loop_count = testing/2; //determines number of loop number by taking the total and dividing by 2
+	loop_count = Math.floor(loop_count); //chops off the .5 at the end 
+	single_hat = "true"; //yes show it at the end
+}// end if
+
+ var sky = "<div id='search_results'><a href='#' onclick='();'";
+} //end mighty if
+
+if(loop_count >= "1"){
+var brain;
+for(var victory=0; victory<loop_count; victory++){
+//at least 2 items minimum
+brain = victory;
+brain = brain + 1;     //this takes the number of rows counted above and changes the name from victory to brain
+var football = brain; //loop count number 
+var second_row_num = football * 2;
+var first_row_num =second_row_num - 1;  //does the formula which is second row number brain * 2, first_row = secondrow - 1;
+var coffeetime =loop_count;
+    
+//-------------------- working on this area to feed in description and prices -----------------
+
+smart1 += "<table border = 0 bgcolor=white width = 410 spacing = 0 style='border: 0px solid #D8D8D8;'>"; 
+//left side item first    description and price
+smart1 += "<tr><td width=47% align=center>";
+
+//assigning row numbers of current match
+//these are the row number for teh matches revealing the access to the information about the item
+var alpha   = row_capture[first_row_num];
+var beta    = row_capture[second_row_num];
+smart1 += excelDB[0][alpha][6]; //the description of the shirt 
+smart1 += "&nbsp;$";
+smart1 += excelDB[0][alpha][7]; 
+smart1 += "</td>";
+smart1 += "<td align=center>";
+smart1 +=  excelDB[0][beta][6]; //the description of the shirt however brief
+smart1 += "&nbsp;&nbsp;$"
+smart1 += excelDB[0][beta][7]; 
+smart1 += "</td></tr>";
+smart1 += " </table> <table border = 0 bgcolor=white width = 410 spacing = 0 style='border: 0px solid #D8D8D8;'> ";
+smart1 += "<tr><td align=center bgcolor=white>";
+
+// it goes here -------===========================================
+//-----------------------
+//############
+
+train2 = train2 + 1;  //for circle number and z number 
+
+//left side item odd numbered picture name
+
+
+
+//############v
+
+//left side item odd numbered picture name
+smart1 += "<img src='"
+smart1 += excelDB[0][alpha][8];  //FRONTPIC
+smart1 += ".jpg' alt='Circle'"; 
+smart1 += "id='circle";
+smart1 += train2; //1' 
+smart1 += "' height= '250px;' align=center width='180px;' onclick=";
+smart1 += '"';
+smart1 += "swap_pics_now('";       
+smart1 += excelDB[0][alpha][8]; 
+smart1 += "','";
+smart1 += excelDB[0][alpha][9]; 
+smart1 += "','";
+smart1 += train2;
+smart1 += "'); return false;";
+smart1 += '"';
+smart1 += "> </td>";
+
+//this image name will be inserte here and is based on the row number which I grabbed from above
+//so it should be easy to determine the showername which will be in the excelDB array by row number
+//I must remember that there will be a front and back image so I will actually need 2 images for each item
+//for displaying front and back but initially just the front picture will load. 
+
+//right side even numbered picture name
+train2 =train2 + 1; // this is for the next pic which will be used for the z number
+
+smart1 += "<td align=center><img src='"
+smart1 += excelDB[0][beta][8];
+smart1 += ".jpg' alt='Circle' id='";
+smart1 += "circle";
+smart1 += train2;         //appends number to end of circle
+smart1 += "' height= '250px;' width='180px;' align=center onclick=";
+smart1 += '"';
+smart1 += "swap_pics_now('";
+smart1 += excelDB[0][beta][8]; 
+smart1 += "','";
+smart1 += excelDB[0][beta][9]; 
+smart1 += "','";
+smart1 += train2;
+smart1 += "');";
+smart1 += '"';
+smart1 += "> </td>";
+smart1 += "</tr>"; 
+ //  left side select button table cell field
+smart1 += "<tr><td height=3></td></tr>";
+
+
+ 
+smart1 += '<tr><td>';
+smart1 += "<a href='#' style='display:block;text-decoration:none' " ;
+smart1 += " onclick ="
+smart1 += '"';
+smart1 += "starbucks_drivethru('";
+smart1 +=  alpha;       //row number left side
+smart1 += "'";
+smart1 += ")";
+smart1 += ";";
+smart1 += "return false;";
+smart1 += '"';
+smart1 += "><div id='something'><table width = 200 border =0 bgcolor=white  style='border: 1px solid #D8D8D8;'>";
+smart1 += "<tr><td align=center height= 30 bgcolor= white align=center >";
+smart1 += "<font face='Menlo'><font color=black>select</font></td></tr></table></div></a></td><td>";
+
+
+
+
+
+smart1 += "<a href='#' style='display:block;text-decoration:none'  " ;
+smart1 += " onclick ="
+smart1 += '"';
+smart1 += "starbucks_drivethru('";
+smart1 +=  beta; //row number left side
+smart1 += "'";
+smart1 += ")";
+smart1 += ";";
+smart1 += "return false;";
+smart1 += '"';
+smart1 += "><div id='something'><table width = 200 border=0 bgcolor=white style='border: 1px solid #D8D8D8;' ><tr><td align=center height= 30 bgcolor= white align=center >";
+smart1 += "<font face='Menlo'><font color=black>select</font></td></tr></table></div></a></td></tr></table><br><br>";
+
+
+}//end if
+} //end for loop
+// END LOOP TO PRINT hats 
+
+
+
+
+
+//if only 1 HAT in this row to print out 
+//==========================================================================================
+//             THIS PRINTS JUST ONE hat WHEN THERE IS ONLY 1 RESULT FOR A SEARCH 
+var beatles = row_capture[first_row_num];
+var tease = beatles
+//if only one row or more than 2 rows
+if(single_hat == "true"){ //might if
+
+if((testing == "1") || ( odd_number_of_items == "true") && (loop_count >= "1")){
+//meaning only 1 result   OR  odd_number of items is TRUE AND loop count at least 1
+
+smart1 += " ";
+brain = brain + 1; //this is adding one to brain because it's increasing the row number 
+
+var thebrain = "1"; //row_capture[first_row_num];
+
+
+if(testing == "1"){
+ //smart1 += "<table width = 410 border = 0 bgcolor='yellow'><tr><td> row number " + thebrain + " &nbsp;</td></tr></table>"; 
+}//end if
+
+if(testing != "1"){
+  //smart1 += "<table width = 410 border = 0 bgcolor='yellow'><tr><td> row number " + brain + " &nbsp;</td></tr></table>"; 
+ } //end if
+ 
+var football = brain;                    //this is so the variable brain is not messed up and accidentially added to
+var second_row_num = football * 2;       //this is caculating the number whether on left or right based on double shirt loop number above
+var first_row_num =second_row_num - 1;   //I don't know if this will work or not
+
+
+//////////////
+//////////////
+//////////////
+
+var onlyone;
+//MEANING ONLY 1 MATCH - NOW ABOUT GRABBING THE ROW NUMBER   //  testing == "1" && onlyone == "true"
+if (testing == "1"){ // <<======================= why does this have to be in quotes?!
+onlyone = "true"; //setting the one and only variable for one shirt returned
+var perhaps = row_capture[1];  //here it is line 1159
+
+  single_hat = "true";
+} //end if
+
+
+smart1 += "<table width = 410 border = 0 bgcolor='white'>";  //was lightyellow
+smart1 += "<tr><td align=left>&nbsp;";
+
+// here row number from above which is 24 for hats
+if(testing == "1"){
+ 
+  var first_row_num =second_row_num - 1;  //does the formula which is second row number brain * 2, first_row = secondrow - 1;
+  /// I need the row number from the light yellow above where is it? 
+ 
+ 
+//part of surgery here
+ // smart1 += "<table width = 410 border = 0 bgcolor='lightyellow'><tr><td align=center>&nbsp;" + perhaps + "&nbsp;</td></tr></table>";
+ // smart1 += "<td align=center> &nbsp;</td></tr></table>"; 
+
+}//end if
+
+if(testing != "1"){ //this tests if more than 1 match so this must be what is being called () debugging
+smart1 +=  " &nbsp;&nbsp;&nbsp;</td></tr></table>"; 
+
+//only one result with this template
+smart1 += "<table border = 0 bgcolor=white width = 410 spacing = 0 style='border: 0px solid #D8D8D8;'>"; 
+//left side item first    description and price
+smart1 += "<tr><td width=50% align=center>";
+
+// do I need this one also ?  ((((((((((())))))))))))))))))))))------=================
+//beatles variable here 
+var beatles = row_capture[first_row_num];
+smart1 += excelDB[0][beatles][6]; //shirt description
+smart1 += "&nbsp; &nbsp;$"; //++++ and here 32
+smart1 += excelDB[0][beatles][7]; //the price
+smart1 += "</td>";
+//right side item second    description and price
+smart1 += "<td bgcolor=white align=center></td></tr>";
+smart1 += " </table> <table border = 0 bgcolor=white width = 410 spacing = 0 style='border: 0px solid #D8D8D8;'> ";
+smart1 += "<tr><td align=center bgcolor=white>";
+
+
+
+ //  left side select button table cell field
+ //---- it goes here  ---==================================
+ train2 = train2 + 1; //new nov 21st 
+
+// this is for the first pic which will be used for circle and z number
+
+//left side item odd numbered picture name
+smart1 += "<img src='"
+smart1 += excelDB[0][beatles][8];  //FRONTPIC
+smart1 += ".jpg' alt='Circle'"; 
+smart1 += "id='circle";
+smart1 += train2; //1' 
+smart1 += "' height= '250px;' width='180px;' onclick=";
+smart1 += '"';
+smart1 += "swap_pics_now('";       
+smart1 += excelDB[0][beatles][8]; 
+smart1 += "','";
+smart1 += excelDB[0][beatles][9]; 
+smart1 += "','";
+smart1 += train2;
+smart1 += "'); return false;";
+smart1 += '"';
+smart1 += "> </td>";
+smart1 += "<td  width = 175>&nbsp;</td></tr>";
+smart1 += "<tr><td height=3></td></tr>";
+
+ 
+ 
+ //=========================================
+ //link for select if only one hat on this row 
+ //  left side select button table cell field
+
+smart1 += "<tr><td align=center bgcolor= white align=center ><font face='Menlo'> <a href='#' style='display:block;text-decoration:none'";
+smart1 += " onclick ="
+smart1 += '"';
+smart1 += "starbucks_drivethru('";  
+smart1 +=  beatles; //alpha; //row number left side  need rightnumber  /////  style='display:block;text-decoration:none'
+smart1 += "'";
+smart1 += ")";
+smart1 += ";";
+smart1 += "return false;";
+smart1 += '"';
+
+
+
+smart1 += "><div id='something'><table width = 200 border=0 bgcolor=white style='border: 1px solid #D8D8D8;' >";
+smart1 += "<tr><td align=center height= 30 bgcolor= white align=center >";
+smart1 += "<font face='Menlo'><font color=black>select</font></td></tr></table></div></a></td>";
+
+
+//  right side select button table cell field
+smart1 += "<td bgcolor= white align=center ><font face='Menlo'> &nbsp;&nbsp;</font></td></tr>";
+smart1 += "<tr><td align=center bgcolor= white  align=center ><font face='Menlo'> &nbsp;&nbsp; </font></td></tr>";
+smart1 += "<tr><td align=center>&nbsp;</td><td align=center>&nbsp;</td></tr></table><br><br>";
+
+} //end if for now
+} //end might if
+}// end if not= 1;
+
+
+//    ONLY ONE SHIRT RESULT TOTAL for this particular shirt - special case scenario only print one shirt
+//    and the bug was that it didn't know the row number which I needed to grab the proper data
+
+
+//   this is the special situation if only one match and so only one hat is printed
+///////
+if ((testing == "1") && (onlyone == "true")){
+smart1 +=  " &nbsp;&nbsp;&nbsp;</td></tr></table>"; 
+
+
+//only one result with this template
+smart1 += "<table border = 0 bgcolor=white width = 410 spacing = 0 style='border: 0px solid #D8D8D8;'>"; 
+//left side item first    description and price
+smart1 += "<tr><td width=50% align=center>";
+var beatles = row_capture[first_row_num];
+
+//all I need to do is copy the row number from the yellow row above and put it here; it can't be that tough.
+//+++++ force feeding it row 32 here
+smart1 += excelDB[0][perhaps][6]; //shirt description
+ //White Rugby XL 
+ 
+smart1 += "&nbsp; &nbsp;$"; //++++ and here 32
+smart1 += excelDB[0][perhaps][7]; //the price
+smart1 += "</td>";
+//right side item second    description and price
+
+
+
+smart1 += "<td bgcolor=white align=center></td></tr>";
+smart1 += " </table> <table border = 0 bgcolor=white width = 410 spacing = 0 style='border: 0px solid #D8D8D8;'> ";
+smart1 += "<tr><td align=center bgcolor=white>";
+//left side item odd numbered picture name
+
+
+ 
+ //############
+ //  UPDATED NOVEMBER 25TH SATURDAY 
+ train2 = train2 + 1; //new for circle and z number for dymamic swap pic function
+
+//left side item odd numbered picture name
+smart1 += "<img src='"
+smart1 += excelDB[0][perhaps][8];  //FRONTPIC
+smart1 += ".jpg' alt='Circle'"; 
+smart1 += "id='circle";
+smart1 += train2; //1' 
+smart1 += "' height= '250px;' align=center width='180px;' onclick=";
+smart1 += '"';
+smart1 += "swap_pics_now('";        
+smart1 += excelDB[0][perhaps][8]; 
+smart1 += "','";
+smart1 += excelDB[0][perhaps][9]; 
+smart1 += "','";
+smart1 += train2;
+smart1 += "'); return false;";
+smart1 += '"';
+smart1 += "> </td>";
+// right side empty here 
+smart1 += "<td  width = 175>&nbsp;</td></tr>";
+smart1 += "<tr><td height=5></td></tr>";
+
+  //=========================================
+ //link for select if only one hat on this row 
+ //  LEFT side select button table cell field
+
+smart1 += "<tr><td align=center bgcolor= white align=center ><font face='Menlo'>";
+smart1 += " <a href='#' style='display:block;text-decoration:none' ";
+smart1 += " onclick ="
+smart1 += '"';
+smart1 += "starbucks_drivethru('";  
+smart1 +=  tease; 
+smart1 += "'";
+smart1 += ")";
+smart1 += ";";
+smart1 += "return false;";
+smart1 += '"';
+
+//new nov 27th 3:33am
+smart1 += "><div id='something'><table width = 200 border=0 bgcolor=white style='border: 1px solid #D8D8D8;' >";
+smart1 += "<tr><td align=center height= 30 bgcolor= white align=center >";
+smart1 += "<font face='Menlo'><font color=black>select</font></td></tr></table></div></a></td>";
+
+
+
+
+//  right side select button table cell field
+smart1 += "<td bgcolor= white align=center ><font face='Menlo'> &nbsp;&nbsp;</font></td></tr>";
+smart1 += "<tr><td align=center bgcolor= white  align=center ><font face='Menlo'> &nbsp;&nbsp; </font></td></tr>";
+smart1 += "<tr><td align=center>&nbsp;</td><td align=center>&nbsp;</td></tr></table><br><br>";
+// now do I set onlyone = false; or not. I need to think more about that
+}
+
+
+smart1 += "</body></html>"
+
+
+document.write(smart1);
+smart(testing); //writes the results into the honeydew green above the output at the top of the page
+} //end function here I think 
+
+
+  var sky = "<div id='search_results'><a href='#' onclick='();'";
+   
+//skip no matches hats message if shirts == true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  SMART     */
+
+////////
+//var sky = "<div id='search_results'><a href='#' onclick='();'";
+
+function smart(x){
+
+ var sky = " <div id ='search_results'><table width = 410><tr><td align=left>";
+     sky += " <table  style ='border: 1px solid #D8D8D8;' width = 410 bgcolor=honeydew >";
+     sky += "<tr><td align=left><font size =3><font face='Arial'>&nbsp;";
+     
+     sky +=  x;
+     if(x == 1){
+     sky += "<font size=3>&nbsp;result ";
+     }//end if
+     if(x != 1){
+         sky += "<font size=3>&nbsp;results ";
+     } //end if
+     if(x == 1){
+      sky += " for ";
+     }//end if
+     if(x != 1){
+     sky += " for ";
+     }//end if
+     sky += choices[2];
+     sky += " ";
+     
+if(choices[3] == "S"){
+choices[3] = "small";
+} //end if
+if(choices[3] == "M"){
+choices[3] = "medium";
+} //end if
+
+if(choices[3] == "L"){
+choices[3] = "large";
+} //end if
+if(choices[3] == "XL"){
+choices[3] = "extra large";
+} //end if
+//if(choices[3] == "2XL"){
+//choices[3] = "2XL";
+//å} //end if
+
+
+     sky += choices[3];
+     sky += " ";
+     sky +=  choices[1];
+     sky += " ";
+     sky +=  choices[4];
+     sky += "</font></td></tr></table>";
+     sky += "</td><td><td align=right>";
+     sky += "</td></tr></table></a></div><br>";
+     document.getElementById("search_results").innerHTML = sky;
+
+} //end function   ===========
+
+
+//   end script
+
+//peets coffee emeryvill waiting for train november 13th 2017
+//I need to put the counter in a div at the bottom of the shop page
+//it;'s generated
+
+
+</script>
+</head>
+<body onload="loader();dunkindonuts();show_counter_value();">
+<!--  form   -->
+<form name = "tester">
+<input type = hidden  name = "radiobox" size = 4>
+<input type = hidden  name = "first" size = 3>
+<input type = hidden  name = "second" size = 3>
+</form>
+
+<form name = cool>
+<input type = hidden id="f_counter_now"  name ="counter_real_time" size = 4><br>
+ <input type = hidden   id="t_one"  name ="t_one" size = 10><br>
+  <input type = hidden  id="t_two"  name ="noway2" size = 10><br>
+  <input type = hidden  id="t_three"  name ="noway3" size = 10><br>
+  <input type = hidden  id="t_four"  name ="noway4" size = 10><br>
+  <input type = hidden  id="t_five"  name ="noway5" size = 10><br>
+  <input type = hidden  id="t_six"  name ="noway6" size = 10><br>
+  <input type = hidden  id="noway7"  name ="noway7" size = 10><br>
+  <input type = hidden  id="noway8"  name ="noway8" size = 10><br>
+  <input type = hidden  id="noway9"  name ="noway9" size = 10><br>
+  <input type = hidden  id="noway10"  name ="noway10" size = 10><br>
+  <input type = hidden  id="noway11"  name ="noway11" size = 10><br>
+  <input type = hidden  id="noway12"  name ="noway12" size = 10><br>
+  <input type = hidden  id="noway13"  name ="noway13" size = 10><br>
+  <input type = hidden  id="noway14"  name ="noway14" size = 10><br>
+  <input type = hidden  id="noway15"  name ="noway15" size = 10><br>
+  <input type = hidden  id="noway16"  name ="noway16" size = 10><br>
+</form>
+
+</div>
+<br><br>
+<!-- spacer -->
+<table height = 10 width = 100 bgcolor=white><tr><td>&nbsp;</td></tr></table>
+<table width = 330><tr><td height = 2 align=center><font size=1><font color=lightgrey>Copyright 2018 Modern Day News</font></td></tr></table>
+
+</body>
+</html>
+
+  <!-- coded by Mr. Blake Southwood Software Engineer -->
+
+
+
